@@ -1,7 +1,7 @@
 # USER.md - About Your Human
 
-- **Name:** Bert
-- **What to call them:** Bert
+- **Name:** Cam
+- **What to call them:** Cam
 - **Pronouns:**
 - **Timezone:** America/New_York (EST)
 - **Notes:** Prefers direct + tactical communication, no fluff. Wants pushback when needed. Likes fun/energetic high-performance builder energy.
