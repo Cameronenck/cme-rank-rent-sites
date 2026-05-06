@@ -79,7 +79,49 @@
     @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid > *:first-child { grid-column: 1/-1; } }
     @media (max-width: 700px) { .site-nav { display: none; } .nav-toggle { display: flex; } .header-phone { display: none; } .blog-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .mobile-call-bar { display: block; } body { padding-bottom: 70px; } .footer-bottom { flex-direction: column; text-align: center; } }
     .site-nav.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--green-dark); padding: 20px; gap: 14px; }
-  </style>
+  /* ===== BLOG MOBILE RESPONSIVE ===== */
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100%; }
+@media (max-width: 768px) {
+  .blog-grid, .posts-grid { grid-template-columns: 1fr; }
+  .post-card { padding: 20px; }
+  .post-content, article { font-size: 16px; line-height: 1.8; padding: 0 16px; }
+  .post-content h2 { font-size: clamp(22px, 5vw, 32px); }
+  .post-content h3 { font-size: clamp(18px, 4vw, 26px); }
+  table { font-size: 14px; }
+  table th, table td { padding: 8px 10px; }
+  body { font-size: 16px; }
+  section { padding: 60px 20px; }
+  .inner, .container { padding: 0 16px; }
+  img { max-width: 100%; height: auto; }
+  button, .btn, a.btn, [role="button"] { min-height: 44px; }
+  .header-nav, nav { display: none; }
+  .header-nav.open, nav.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy, #1a3a52); padding: 20px; z-index: 999; gap: 16px; }
+  .nav-toggle { display: flex !important; }
+}
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--orange, #ea6c0a);
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  z-index: 1000;
+  font-family: var(--heading, 'Barlow Condensed', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 -2px 20px rgba(0,0,0,.25);
+}
+@media (max-width: 768px) {
+  .mobile-cta { display: block; }
+  body { padding-bottom: 56px; }
+}
+/* ===== END BLOG MOBILE RESPONSIVE ===== */
+</style>
 </head>
 <body>
 
