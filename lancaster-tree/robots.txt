@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://treeremovallancaster.com/sitemap.xml
