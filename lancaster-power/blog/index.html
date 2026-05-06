@@ -1,229 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Power Washing Tips &amp; Guides | Lancaster Power Washing Pros</title>
-  <meta name="description" content="Power washing tips, pricing guides, and local insights from Lancaster Power Washing Pros. Serving all of Lancaster County, PA.">
-  <link rel="canonical" href="https://powerwashinglancaster.com/blog/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #0a2240;
-      --navy-light: #0d2d56;
-      --yellow: #f5c518;
-      --yellow-dark: #e0b210;
-      --white: #ffffff;
-      --gray-light: #f4f6f9;
-      --gray: #6b7280;
-      --text: #1a1a2e;
-    }
-    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: #fff; }
-    h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; }
-
-    .announce-bar {
-      background: var(--yellow);
-      color: var(--navy);
-      text-align: center;
-      padding: 8px 16px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--navy);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 70px;
-      gap: 16px;
-    }
-    .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 1.5rem;
-      color: var(--yellow);
-      text-decoration: none;
-    }
-    nav { display: flex; gap: 28px; align-items: center; }
-    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color 0.2s; }
-    nav a:hover { color: var(--yellow); }
-    .header-right { display: flex; align-items: center; gap: 16px; }
-    .header-phone { color: var(--yellow); font-weight: 600; text-decoration: none; font-size: 1rem; }
-    .btn-primary {
-      background: var(--yellow); color: var(--navy); padding: 10px 22px;
-      border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem;
-    }
-
-    .blog-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0d3460 100%);
-      color: #fff;
-      padding: 60px 24px;
-      text-align: center;
-    }
-    .blog-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
-    .blog-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); }
-
-    .blog-section { padding: 72px 24px; background: var(--gray-light); }
-    .blog-inner { max-width: 1000px; margin: 0 auto; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
-
-    .post-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .post-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
-    .post-thumb {
-      background: linear-gradient(135deg, var(--navy) 0%, #0d3460 100%);
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-    }
-    .post-body { padding: 24px; }
-    .post-meta { font-size: 0.8rem; color: var(--gray); margin-bottom: 10px; }
-    .post-body h2 { font-size: 1.25rem; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
-    .post-body p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
-    .post-link {
-      display: inline-block;
-      margin-top: 14px;
-      color: var(--yellow-dark);
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #060f1c;
-      color: rgba(255,255,255,0.6);
-      padding: 40px 24px 24px;
-      text-align: center;
-    }
-    footer .logo { display: inline-block; margin-bottom: 12px; }
-    footer p { font-size: 0.82rem; }
-    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
-    footer a:hover { color: var(--yellow); }
-
-    @media (max-width: 700px) { nav { display: none; } }
-  /* ===== BLOG MOBILE RESPONSIVE ===== */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Washing Tips &amp; Guides | Lancaster Power Washing Pros</title>
+<meta name="description" content="Power washing tips, pricing guides, and local insights from Lancaster Power Washing Pros. Serving all of Lancaster County, PA.">
+<link rel="canonical" href="https://powerwashinglancaster.com/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--navy: #0a2240;
+--navy-light: #0d2d56;
+--yellow: #f5c518;
+--yellow-dark: #e0b210;
+--white: #ffffff;
+--gray-light: #f4f6f9;
+--gray: #6b7280;
+--text: #1a1a2e;
+}
+body { font-family: 'DM Sans', sans-serif; color: var(--text); background: #fff; }
+h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; }
+.announce-bar {
+background: var(--yellow);
+color: var(--navy);
+text-align: center;
+padding: 8px 16px;
+font-size: 0.9rem;
+font-weight: 600;
+}
+header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: var(--navy);
+box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.header-inner {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 70px;
+gap: 16px;
+}
+.logo {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: 1.5rem;
+color: var(--yellow);
+text-decoration: none;
+}
+nav { display: flex; gap: 28px; align-items: center; }
+nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: var(--yellow); }
+.header-right { display: flex; align-items: center; gap: 16px; }
+.header-phone { color: var(--yellow); font-weight: 600; text-decoration: none; font-size: 1rem; }
+.btn-primary {
+background: var(--yellow); color: var(--navy); padding: 10px 22px;
+border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem;
+}
+.blog-hero {
+background: linear-gradient(135deg, var(--navy) 0%, #0d3460 100%);
+color: #fff;
+padding: 60px 24px;
+text-align: center;
+}
+.blog-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
+.blog-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); }
+.blog-section { padding: 72px 24px; background: var(--gray-light); }
+.blog-inner { max-width: 1000px; margin: 0 auto; }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+.post-card {
+background: #fff;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+text-decoration: none;
+color: inherit;
+display: block;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+.post-thumb {
+background: linear-gradient(135deg, var(--navy) 0%, #0d3460 100%);
+height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 3.5rem;
+}
+.post-body { padding: 24px; }
+.post-meta { font-size: 0.8rem; color: var(--gray); margin-bottom: 10px; }
+.post-body h2 { font-size: 1.25rem; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+.post-body p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+.post-link {
+display: inline-block;
+margin-top: 14px;
+color: var(--yellow-dark);
+font-weight: 700;
+font-size: 0.9rem;
+text-decoration: none;
+}
+footer {
+background: #060f1c;
+color: rgba(255,255,255,0.6);
+padding: 40px 24px 24px;
+text-align: center;
+}
+footer .logo { display: inline-block; margin-bottom: 12px; }
+footer p { font-size: 0.82rem; }
+footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+footer a:hover { color: var(--yellow); }
+@media (max-width: 700px) { nav { display: none; } }
+/* ===== BLOG MOBILE RESPONSIVE ===== */
 * { box-sizing: border-box; }
 html, body { overflow-x: hidden; max-width: 100%; }
 @media (max-width: 768px) {
-  .blog-grid, .posts-grid { grid-template-columns: 1fr; }
-  .post-card { padding: 20px; }
-  .post-content, article { font-size: 16px; line-height: 1.8; padding: 0 16px; }
-  .post-content h2 { font-size: clamp(22px, 5vw, 32px); }
-  .post-content h3 { font-size: clamp(18px, 4vw, 26px); }
-  table { font-size: 14px; }
-  table th, table td { padding: 8px 10px; }
-  body { font-size: 16px; }
-  section { padding: 60px 20px; }
-  .inner, .container { padding: 0 16px; }
-  img { max-width: 100%; height: auto; }
-  button, .btn, a.btn, [role="button"] { min-height: 44px; }
-  .header-nav, nav { display: none; }
-  .header-nav.open, nav.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy, #1a3a52); padding: 20px; z-index: 999; gap: 16px; }
-  .nav-toggle { display: flex !important; }
+.blog-grid, .posts-grid { grid-template-columns: 1fr; }
+.post-card { padding: 20px; }
+.post-content, article { font-size: 16px; line-height: 1.8; padding: 0 16px; }
+.post-content h2 { font-size: clamp(22px, 5vw, 32px); }
+.post-content h3 { font-size: clamp(18px, 4vw, 26px); }
+table { font-size: 14px; }
+table th, table td { padding: 8px 10px; }
+body { font-size: 16px; }
+section { padding: 60px 20px; }
+.inner, .container { padding: 0 16px; }
+img { max-width: 100%; height: auto; }
+button, .btn, a.btn, [role="button"] { min-height: 44px; }
+.header-nav, nav { display: none; }
+.header-nav.open, nav.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy, #1a3a52); padding: 20px; z-index: 999; gap: 16px; }
+.nav-toggle { display: flex !important; }
 }
 .mobile-cta {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  background: var(--orange, #ea6c0a);
-  color: #fff;
-  text-align: center;
-  padding: 14px 20px;
-  z-index: 1000;
-  font-family: var(--heading, 'Barlow Condensed', sans-serif);
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: 0 -2px 20px rgba(0,0,0,.25);
+display: none;
+position: fixed;
+bottom: 0; left: 0; right: 0;
+background: var(--orange, #ea6c0a);
+color: #fff;
+text-align: center;
+padding: 14px 20px;
+z-index: 1000;
+font-family: var(--heading, 'Barlow Condensed', sans-serif);
+font-size: 18px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+text-decoration: none;
+box-shadow: 0 -2px 20px rgba(0,0,0,.25);
 }
 @media (max-width: 768px) {
-  .mobile-cta { display: block; }
-  body { padding-bottom: 56px; }
+.mobile-cta { display: block; }
+body { padding-bottom: 56px; }
 }
 /* ===== END BLOG MOBILE RESPONSIVE ===== */
 </style>
 </head>
 <body>
-
-<div class="announce-bar">⚡ Free Estimates &nbsp;·&nbsp; Eco-Friendly Solutions &nbsp;·&nbsp; Residential &amp; Commercial</div>
-
+<div class="announce-bar"> Free Estimates &nbsp;·&nbsp; Eco-Friendly Solutions &nbsp;·&nbsp; Residential &amp; Commercial</div>
 <header>
-  <div class="header-inner">
-    <a href="/" class="logo">LANCASTER POWER WASH PROS</a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/#services">Services</a>
-      <a href="/blog/">Blog</a>
-      <a href="/#areas">Areas We Serve</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-    <div class="header-right">
-      <a href="tel:7178077599" class="header-phone">717-807-7599</a>
-      <a href="tel:7178077599" class="btn-primary">Get Free Quote</a>
-    </div>
-  </div>
+<div class="header-inner">
+<a href="/" class="logo">LANCASTER POWER WASH PROS</a>
+<nav>
+<a href="/">Home</a>
+<a href="/#services">Services</a>
+<a href="/blog/">Blog</a>
+<a href="/#areas">Areas We Serve</a>
+<a href="/#contact">Contact</a>
+</nav>
+<div class="header-right">
+<a href="tel:7178077599" class="header-phone">717-807-7599</a>
+<a href="tel:7178077599" class="btn-primary">Get Free Quote</a>
+</div>
+</div>
 </header>
-
 <section class="blog-hero">
-  <h1>Power Washing Tips &amp; Guides</h1>
-  <p>Local insights, pricing breakdowns, and how-to guides from the Lancaster Power Wash Pros team.</p>
+<h1>Power Washing Tips &amp; Guides</h1>
+<p>Local insights, pricing breakdowns, and how-to guides from the Lancaster Power Wash Pros team.</p>
 </section>
-
 <section class="blog-section">
-  <div class="blog-inner">
-    <div class="blog-grid">
-      <a href="/blog/how-much-does-power-washing-cost-in-lancaster-pa/" class="post-card">
-        <div class="post-thumb">💧</div>
-        <div class="post-body">
-          <div class="post-meta">May 6, 2026 &nbsp;·&nbsp; Pricing Guide</div>
-          <h2>How Much Does Power Washing Cost in Lancaster PA? [2026 Guide]</h2>
-          <p>Real pricing for house washing, driveways, decks, and roofs in Lancaster County. What affects the cost and how to get the best value.</p>
-          <span class="post-link">Read More →</span>
-        </div>
-      </a>
-    </div>
-  </div>
+<div class="blog-inner">
+<div class="blog-grid">
+<a href="/blog/how-much-does-power-washing-cost-in-lancaster-pa/" class="post-card">
+<div class="post-thumb"></div>
+<div class="post-body">
+<div class="post-meta">May 6, 2026 &nbsp;·&nbsp; Pricing Guide</div>
+<h2>How Much Does Power Washing Cost in Lancaster PA? [2026 Guide]</h2>
+<p>Real pricing for house washing, driveways, decks, and roofs in Lancaster County. What affects the cost and how to get the best value.</p>
+<span class="post-link">Read More →</span>
+</div>
+</a>
+</div>
+</div>
 </section>
-
 <footer>
-  <a href="/" class="logo">LANCASTER POWER WASH PROS</a>
-  <p>&copy; 2026 Lancaster Power Washing Pros. Serving Lancaster County, PA. &nbsp;|&nbsp; <a href="tel:7178077599">717-807-7599</a></p>
+<a href="/" class="logo">LANCASTER POWER WASH PROS</a>
+<p>&copy; 2026 Lancaster Power Washing Pros. Serving Lancaster County, PA. &nbsp;|&nbsp; <a href="tel:7178077599">717-807-7599</a></p>
 </footer>
-
 <script>
 (function(){
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('nav, .header-nav');
-  if(toggle && nav){
-    toggle.addEventListener('click', function(){
-      nav.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-  }
+var toggle = document.querySelector('.nav-toggle');
+var nav = document.querySelector('nav, .header-nav');
+if(toggle && nav){
+toggle.addEventListener('click', function(){
+nav.classList.toggle('open');
+toggle.classList.toggle('active');
+});
+}
 })();
 </script>
 </body>
