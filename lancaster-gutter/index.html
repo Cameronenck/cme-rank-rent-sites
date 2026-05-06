@@ -119,40 +119,10 @@
     .hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
 
     /* HERO */
-    .hero {
-  background-image: url('./images/gutter-installation-lancaster-pa.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-
-      
-      color: var(--white);
-      padding: 80px 24px 90px;
-      
-      overflow: hidden;
-    }
     
-    .hero-inner {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(229,62,62,0.15);
-      border: 1px solid var(--accent);
-      color: #fc8181;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
+    
+    
+    
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
@@ -161,31 +131,11 @@
       letter-spacing: 0.01em;
     }
     .hero h1 span { color: var(--accent); }
-    .hero-sub {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 32px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-    }
+    
     .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
-    .trust-badges {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .trust-badge {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.75);
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    .trust-badge .icon { font-size: 1.1rem; }
+    
+    
+    
 
     /* STATS BAR */
     .stats-bar {
@@ -542,16 +492,16 @@ html, body { overflow-x: hidden; max-width: 100%; }
   .btn-quote { padding: 8px 16px; font-size: 13px; }
 }
 
-/* Hero */
+
 @media (max-width: 768px) {
-  .hero { min-height: 500px; padding: 0; }
+  
   .hero-content { padding: 60px 20px; }
   .hero h1 { font-size: clamp(32px, 8vw, 52px); }
-  .hero-sub { font-size: 16px; }
-  .hero-btns { flex-direction: column; gap: 12px; }
+  
+  
   .btn-hero { padding: 14px 28px; font-size: 16px; width: 100%; justify-content: center; }
   .btn-ghost { width: 100%; justify-content: center; }
-  .hero-trust { gap: 16px; }
+  
 }
 
 /* Stats */
@@ -649,16 +599,131 @@ html, body { overflow-x: hidden; max-width: 100%; }
 }
 /* ===== END MOBILE RESPONSIVE ===== */
 
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.58);
   z-index: 0;
 }
-.hero * {
-  position: relative;
-  z-index: 1;
+.hero * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 900px;
+  padding: 80px 40px;
+  color: #fff;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+.hero-h1 {
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-h1-line1 { color: #fff; }
+.hero-h1-line2 { color: #c0392b; }
+.hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.88);
+  max-width: 600px;
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.btn-primary {
+  background: #c0392b;
+  color: #fff;
+  padding: 16px 32px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.hero-trust {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.trust-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.trust-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #c0392b;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .hero-inner { padding: 60px 20px; }
+  .hero-btns { flex-direction: column; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .hero-trust { gap: 12px; }
+}
+
+
+.hero {
+  background-image: url('./images/gutter-installation-lancaster-pa.jpg');
 }
 </style>
 </head>
@@ -693,18 +758,18 @@ html, body { overflow-x: hidden; max-width: 100%; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <span class="hero-badge">Lancaster County's #1 Gutter Pros</span>
-    <h1>Gutter Installation <span>Lancaster PA</span> — Protect Your Home From Water Damage</h1>
-    <p class="hero-sub">Seamless aluminum gutters custom-cut on-site. No seams, no leaks, no callbacks. Serving Lancaster and surrounding communities for over 20 years.</p>
-    <div class="hero-ctas">
-      <a href="tel:+17177166410" class="btn btn-accent btn-lg">📞 Call 717-716-6410</a>
-      <a href="#contact" class="btn btn-outline btn-lg">Get Free Estimate →</a>
+    <div class="hero-badge">SERVING LANCASTER, PA & SURROUNDING AREAS</div>
+    <h1 class="hero-h1">
+      <span class="hero-h1-line1">TOP-RATED GUTTER INSTALLATION</span>
+      <span class="hero-h1-line2" style="color:#c0392b">YOU CAN TRUST</span>
+    </h1>
+    <p class="hero-sub">Professional gutter installation serving Lancaster, PA and surrounding communities. Licensed, insured, and ready to help.</p>
+    <div class="hero-btns">
+      <a href="tel:7177166410" class="btn btn-primary">CALL 717-716-6410</a>
+      <a href="#services" class="btn btn-outline">VIEW OUR SERVICES &rarr;</a>
     </div>
-    <div class="trust-badges">
-      <div class="trust-badge"><span class="icon">✅</span> Licensed &amp; Insured</div>
-      <div class="trust-badge"><span class="icon">🏆</span> 25-Year Warranty</div>
-      <div class="trust-badge"><span class="icon">⭐</span> 4.9/5 Stars (218 Reviews)</div>
-      <div class="trust-badge"><span class="icon">🔧</span> Same-Week Installs</div>
+    <div class="hero-trust">
+      <div class="trust-badge"><span>Licensed & Insured</span></div><div class="trust-badge"><span>Same-Day Service</span></div><div class="trust-badge"><span>Free Estimates</span></div><div class="trust-badge"><span>Locally Owned</span></div>
     </div>
   </div>
 </section>
