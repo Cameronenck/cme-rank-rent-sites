@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
 
-Sitemap: https://{domain}/sitemap.xml
+Sitemap: https://peoriasprayfoam.org/sitemap.xml
