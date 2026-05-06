@@ -162,22 +162,9 @@
     .btn-secondary:hover { background: var(--yellow); color: var(--navy); }
 
     /* HERO */
-    .hero {
-  background-image: url('./images/power-washing-lancaster-pa.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-
-      
-      color: #fff;
-      padding: 90px 24px 80px;
-      text-align: center;
-      
-      overflow: hidden;
-    }
     
-    .hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+    
+    
     .hero h1 {
       font-size: clamp(2.2rem, 5vw, 3.4rem);
       line-height: 1.1;
@@ -197,7 +184,7 @@
     .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
     .hero-ctas .btn-primary { padding: 14px 32px; font-size: 1rem; }
     .hero-ctas .btn-secondary { padding: 14px 32px; font-size: 1rem; }
-    .trust-badges { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    
     .badge {
       display: flex;
       align-items: center;
@@ -513,16 +500,16 @@ html, body { overflow-x: hidden; max-width: 100%; }
   .btn-quote { padding: 8px 16px; font-size: 13px; }
 }
 
-/* Hero */
+
 @media (max-width: 768px) {
-  .hero { min-height: 500px; padding: 0; }
+  
   .hero-content { padding: 60px 20px; }
   .hero h1 { font-size: clamp(32px, 8vw, 52px); }
-  .hero-sub { font-size: 16px; }
-  .hero-btns { flex-direction: column; gap: 12px; }
+  
+  
   .btn-hero { padding: 14px 28px; font-size: 16px; width: 100%; justify-content: center; }
   .btn-ghost { width: 100%; justify-content: center; }
-  .hero-trust { gap: 16px; }
+  
 }
 
 /* Stats */
@@ -620,16 +607,131 @@ html, body { overflow-x: hidden; max-width: 100%; }
 }
 /* ===== END MOBILE RESPONSIVE ===== */
 
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.58);
   z-index: 0;
 }
-.hero * {
-  position: relative;
-  z-index: 1;
+.hero * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 900px;
+  padding: 80px 40px;
+  color: #fff;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+.hero-h1 {
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-h1-line1 { color: #fff; }
+.hero-h1-line2 { color: #f5c518; }
+.hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.88);
+  max-width: 600px;
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.btn-primary {
+  background: #f5c518;
+  color: #fff;
+  padding: 16px 32px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.hero-trust {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.trust-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.trust-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f5c518;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .hero-inner { padding: 60px 20px; }
+  .hero-btns { flex-direction: column; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .hero-trust { gap: 12px; }
+}
+
+
+.hero {
+  background-image: url('./images/power-washing-lancaster-pa.jpg');
 }
 </style>
 </head>
@@ -659,17 +761,18 @@ html, body { overflow-x: hidden; max-width: 100%; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>Power Washing <span>Lancaster PA</span> — Restore Your Property's Curb Appeal</h1>
-    <p>Lancaster County's most trusted power washing crew. We remove dirt, mold, algae, and grime from homes, driveways, decks, and roofs — fast, affordable, and eco-friendly.</p>
-    <div class="hero-ctas">
-      <a href="tel:7178077599" class="btn-primary">📞 Call for a Free Estimate</a>
-      <a href="#services" class="btn-secondary">See Our Services</a>
+    <div class="hero-badge">SERVING LANCASTER, PA & SURROUNDING AREAS</div>
+    <h1 class="hero-h1">
+      <span class="hero-h1-line1">TOP-RATED POWER WASHING</span>
+      <span class="hero-h1-line2" style="color:#f5c518">YOU CAN TRUST</span>
+    </h1>
+    <p class="hero-sub">Professional power washing serving Lancaster, PA and surrounding communities. Licensed, insured, and ready to help.</p>
+    <div class="hero-btns">
+      <a href="tel:7178077599" class="btn btn-primary">CALL 717-807-7599</a>
+      <a href="#services" class="btn btn-outline">VIEW OUR SERVICES &rarr;</a>
     </div>
-    <div class="trust-badges">
-      <span class="badge"><span class="badge-icon">⭐</span> 5-Star Rated</span>
-      <span class="badge"><span class="badge-icon">🌿</span> Eco-Friendly Solutions</span>
-      <span class="badge"><span class="badge-icon">🛡️</span> Fully Insured</span>
-      <span class="badge"><span class="badge-icon">⚡</span> Fast Turnaround</span>
+    <div class="hero-trust">
+      <div class="trust-badge"><span>Licensed & Insured</span></div><div class="trust-badge"><span>Eco-Friendly</span></div><div class="trust-badge"><span>Free Estimates</span></div><div class="trust-badge"><span>Locally Owned</span></div>
     </div>
   </div>
 </section>
