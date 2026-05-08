@@ -102,7 +102,8 @@ nav a:hover{color:#fff}
 .hero h1{font-family:var(--heading);font-size:clamp(40px,6vw,76px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.0;margin-bottom:20px;max-width:860px}
 .hero h1 .orange{color:#E8622A}
 .hero-sub{font-size:18px;color:rgba(255,255,255,.88);max-width:550px;margin-bottom:32px;line-height:1.7}
-.search-bar{display:flex;max-width:600px;gap:0;margin-bottom:18px;border-radius:6px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.45)}
+.search-wrap{position:relative;max-width:600px;margin-bottom:18px}
+.search-bar{display:flex;gap:0;border-radius:6px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.45)}
 .search-bar input{flex:1;padding:17px 22px;font-size:16px;border:none;font-family:var(--font);outline:none;color:var(--charcoal);background:#fff}
 .search-bar button{background:#E8622A;color:#fff;border:none;padding:17px 32px;font-size:15px;font-weight:700;cursor:pointer;font-family:var(--heading);letter-spacing:1px;text-transform:uppercase;transition:background var(--t);white-space:nowrap}
 .search-bar button:hover{background:#c94f1e}
@@ -226,7 +227,7 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   .hero-inner{padding:90px 20px 60px}
   .hero h1{font-size:clamp(34px,8vw,52px)}
   .hero-sub{font-size:16px;max-width:100%}
-  .search-bar{max-width:100%}
+  .search-wrap{max-width:100%}
   .hero-call{font-size:14px}
   .trust-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .trust-card{font-size:12px;padding:10px 12px}
@@ -244,6 +245,7 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
 @media(max-width:480px){
   .cities-grid{grid-template-columns:repeat(2,1fr)}
   .alpha-grid{grid-template-columns:repeat(2,1fr)}
+  .search-wrap{max-width:100%}
   .search-bar{flex-direction:column;border-radius:var(--r-btn)}
   .search-bar input,.search-bar button{border-radius:var(--r-btn);width:100%;text-align:center}
   .trust-row{grid-template-columns:1fr 1fr}
@@ -315,9 +317,11 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
     <div class="hero-pill">Serving All 88 Ohio Counties</div>
     <h1>Find Licensed HVAC Contractors<br><span class="orange">Across Ohio</span></h1>
     <p class="hero-sub">Compare quotes from vetted Ohio HVAC companies. Free estimates. No obligation. Contractors licensed, bonded, and insured.</p>
-    <div class="search-bar">
-      <input type="text" id="city-search" placeholder="Enter your city or zip code..." aria-label="Search for HVAC contractors by city or zip code">
-      <button onclick="handleSearch()" aria-label="Search for HVAC contractors">Search</button>
+    <div class="search-wrap">
+      <div class="search-bar">
+        <input type="text" id="city-search" placeholder="Enter your city or zip code..." aria-label="Search for HVAC contractors by city or zip code" autocomplete="off">
+        <button onclick="handleSearch()" aria-label="Search for HVAC contractors">Search</button>
+      </div>
     </div>
     <p class="hero-call">Or call for immediate service: <a href="tel:6143444851">614-344-4851</a></p>
     <div class="trust-row">
@@ -1149,9 +1153,8 @@ const ohioCities = [
   var input = document.getElementById('city-search');
   if(!input) return;
 
-  // Wrap input in a positioned container for dropdown
-  var wrapper = input.parentNode;
-  wrapper.style.position = 'relative';
+  // Append dropdown to .search-wrap (parent of search-bar) — avoids overflow:hidden clip
+  var wrapper = input.closest('.search-wrap') || input.parentNode.parentNode;
 
   // Create dropdown
   var dropdown = document.createElement('ul');
