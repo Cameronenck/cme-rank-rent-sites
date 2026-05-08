@@ -206,10 +206,9 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:40px 24px 24px}
           <h3>Emergency HVAC Help</h3>
           <p>Call now for same-day emergency service across Ohio. Technicians available 24 hours, 365 days a year.</p>
           <a href="tel:6143444851" class="emerg-phone">614-344-4851</a>
-          <form class="sidebar-form ohio-hvac-form" name="ohio-hvac-lead" data-netlify="true" netlify-honeypot="bot-field" onsubmit="ohvacSubmit(event)">
+          <form class="sidebar-form ohio-hvac-form" name="ohio-hvac-lead" netlify onsubmit="ohvacSubmit(event)">
   <input type="hidden" name="form-name" value="ohio-hvac-lead">
-  <input type="text" name="bot-field" style="display:none" aria-hidden="true">
-            <input type="text" name="name" placeholder="Your name" required>
+  <input type="text" name="name" placeholder="Your name" required>
             <input type="tel" name="phone" placeholder="Phone number" required>
             <input type="text" name="city" placeholder="Your city" required>
             <select required>

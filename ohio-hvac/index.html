@@ -571,10 +571,9 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
       </div>
       <div class="lead-form">
         <h3>Request Free Quotes</h3>
-        <form name="ohio-hvac-lead" class="ohio-hvac-form" data-netlify="true" netlify-honeypot="bot-field" onsubmit="ohvacSubmit(event)">
+        <form name="ohio-hvac-lead" class="ohio-hvac-form" netlify onsubmit="ohvacSubmit(event)">
   <input type="hidden" name="form-name" value="ohio-hvac-lead">
-  <input type="text" name="bot-field" style="display:none" aria-hidden="true">
-          <div class="form-row">
+  <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" placeholder="John Smith" required>
