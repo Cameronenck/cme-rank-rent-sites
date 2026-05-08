@@ -97,6 +97,7 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:40px 24px 24px}
 .footer-simple p{font-size:13px;color:rgba(255,255,255,.4)}
 @media(max-width:768px){.content-grid{grid-template-columns:1fr}.sidebar-card{position:static}nav{display:none}}
 </style>
+<script src="//cdn.callrail.com/companies/209039279/feee2673bb472b064f05/12/swap.js"></script>
 </head>
 <body>
 <div class="announce">Heat Pump Installation Across Ohio &mdash; IRA Tax Credits Available &mdash; <a href="tel:6143444851" style="color:#fff;font-weight:700">614-344-4851</a></div>
@@ -192,10 +193,12 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:40px 24px 24px}
           <h3>Get Heat Pump Quotes</h3>
           <p>Licensed Ohio contractors will assess your home and provide options. Free estimates, no obligation.</p>
           <a href="tel:6143444851" class="sidebar-phone">614-344-4851</a>
-          <form class="sidebar-form" onsubmit="event.preventDefault();window.location.href='tel:6143444851'">
-            <input type="text" placeholder="Your name" required>
-            <input type="tel" placeholder="Phone number" required>
-            <input type="text" placeholder="Your city" required>
+          <form class="sidebar-form ohio-hvac-form" name="ohio-hvac-lead" data-netlify="true" netlify-honeypot="bot-field" onsubmit="ohvacSubmit(event)">
+  <input type="hidden" name="form-name" value="ohio-hvac-lead">
+  <input type="text" name="bot-field" style="display:none" aria-hidden="true">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="tel" name="phone" placeholder="Phone number" required>
+            <input type="text" name="city" placeholder="Your city" required>
             <select required>
               <option value="">System type...</option>
               <option>Air-Source Heat Pump</option>
@@ -233,5 +236,6 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:40px 24px 24px}
   </div>
 </footer>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open')})});</script>
+<script src="/js/form-handler.js"></script>
 </body>
 </html>

@@ -168,6 +168,7 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:48px 24px 24px}
 @media(max-width:768px){nav{display:none}.two-col{grid-template-columns:1fr}.svc-cards{grid-template-columns:1fr}.nearby-grid{grid-template-columns:repeat(2,1fr)}.footer-inner{grid-template-columns:1fr}}
 @media(max-width:390px){.nearby-grid{grid-template-columns:1fr}}
 </style>
+<script src="//cdn.callrail.com/companies/209039279/feee2673bb472b064f05/12/swap.js"></script>
 </head>
 <body>
 
@@ -279,12 +280,15 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:48px 24px 24px}
       <div class="lead-form-wrap">
         <h3>Request Free Quotes</h3>
         <p>Licensed Silver Lake HVAC contractors — free estimates, no obligation.</p>
-        <form onsubmit="event.preventDefault();window.location.href='tel:6143444851'">
-          <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+        <form name="ohio-hvac-lead" class="ohio-hvac-form" data-netlify="true" netlify-honeypot="bot-field" onsubmit="ohvacSubmit(event)">
+  <input type="hidden" name="form-name" value="ohio-hvac-lead">
+  <input type="hidden" name="source-city" value="silver-lake">
+  <input type="text" name="bot-field" style="display:none" aria-hidden="true">
+          <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your name" required></div>
           <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(SIL) 555-0100" required></div>
-          <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com" required></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="you@example.com" required></div>
           <div class="form-group"><label>Service Needed</label>
-            <select required>
+            <select name="service" required>
               <option value="">Select service...</option>
               <option>AC Installation</option>
               <option>Furnace Repair</option>
@@ -372,5 +376,6 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:48px 24px 24px}
 </footer>
 
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open')});});</script>
+<script src="/js/form-handler.js"></script>
 </body>
 </html>
