@@ -94,18 +94,23 @@ nav a:hover{color:#fff}
 .mob-nav a:last-child{border-bottom:none}
 
 /* HERO */
-.hero{background:var(--navy-dark);padding:80px 24px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url('images/hvac-ohio-hero.jpg') center/cover no-repeat;opacity:.25}
-.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
-.hero h1{font-family:var(--heading);font-size:clamp(42px,6vw,72px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.05;margin-bottom:20px;max-width:800px}
-.hero h1 span{color:var(--orange)}
-.hero-sub{font-size:19px;color:rgba(255,255,255,.82);max-width:580px;margin-bottom:36px;line-height:1.65}
-.search-bar{display:flex;max-width:560px;gap:0;margin-bottom:40px;border-radius:var(--r-btn);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3)}
-.search-bar input{flex:1;padding:16px 20px;font-size:16px;border:none;font-family:var(--font);outline:none;color:var(--charcoal)}
-.search-bar button{background:var(--orange);color:#fff;border:none;padding:16px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:var(--heading);letter-spacing:1px;text-transform:uppercase;transition:background var(--t)}
-.search-bar button:hover{background:var(--orange-hover)}
-.trust-badges{display:flex;flex-wrap:wrap;gap:16px}
-.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;white-space:nowrap}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--navy-dark)}
+.hero-bg{position:absolute;inset:0;background:url('images/ohio-hvac-contractor-hero.jpg') center/cover no-repeat;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.60);z-index:1}
+.hero-inner{max-width:var(--max);margin:0 auto;padding:100px 24px 80px;position:relative;z-index:2;width:100%}
+.hero-pill{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:28px}
+.hero h1{font-family:var(--heading);font-size:clamp(40px,6vw,76px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.0;margin-bottom:20px;max-width:860px}
+.hero h1 .orange{color:#E8622A}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.88);max-width:550px;margin-bottom:32px;line-height:1.7}
+.search-bar{display:flex;max-width:600px;gap:0;margin-bottom:18px;border-radius:6px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.45)}
+.search-bar input{flex:1;padding:17px 22px;font-size:16px;border:none;font-family:var(--font);outline:none;color:var(--charcoal);background:#fff}
+.search-bar button{background:#E8622A;color:#fff;border:none;padding:17px 32px;font-size:15px;font-weight:700;cursor:pointer;font-family:var(--heading);letter-spacing:1px;text-transform:uppercase;transition:background var(--t);white-space:nowrap}
+.search-bar button:hover{background:#c94f1e}
+.hero-call{font-size:15px;color:rgba(255,255,255,.82);margin-bottom:40px}
+.hero-call a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.trust-row{display:flex;flex-wrap:wrap;gap:12px}
+.trust-card{background:#fff;color:#1a1a2e;padding:12px 18px;border-radius:6px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+.trust-card svg{width:18px;height:18px;fill:#E8622A;flex-shrink:0}
 
 /* FEATURED CITIES */
 .cities-section{background:var(--offwhite)}
@@ -138,8 +143,12 @@ nav a:hover{color:#fff}
 .step p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.65}
 
 /* STATS BAR */
-.stats-bar{background:var(--orange);padding:40px 24px}
-.stats-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stats-bar{background:#E8622A;padding:32px 24px}
+.stats-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+.stat-block{padding:8px 16px;border-right:1px solid rgba(255,255,255,.25)}
+.stat-block:last-child{border-right:none}
+.stat-num{font-family:var(--heading);font-size:42px;font-weight:800;color:#fff;line-height:1;display:block}
+.stat-label{font-size:12px;font-weight:700;color:rgba(255,255,255,.85);letter-spacing:2px;text-transform:uppercase;display:block;margin-top:4px}
 .stat-item strong{display:block;font-family:var(--heading);font-size:36px;font-weight:800;color:#fff;line-height:1}
 .stat-item span{font-size:14px;color:rgba(255,255,255,.88);font-weight:600;margin-top:4px;display:block}
 
@@ -213,7 +222,14 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   nav{display:none}
   .hamburger{display:flex}
   .mob-nav.open{display:block}
-  .hero h1{font-size:clamp(36px,8vw,52px)}
+  .hero{min-height:100vh}
+  .hero-inner{padding:90px 20px 60px}
+  .hero h1{font-size:clamp(34px,8vw,52px)}
+  .hero-sub{font-size:16px;max-width:100%}
+  .search-bar{max-width:100%}
+  .hero-call{font-size:14px}
+  .trust-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .trust-card{font-size:12px;padding:10px 12px}
   .cities-grid{grid-template-columns:repeat(2,1fr)}
   .services-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr;gap:32px}
@@ -229,8 +245,14 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   .cities-grid{grid-template-columns:repeat(2,1fr)}
   .alpha-grid{grid-template-columns:repeat(2,1fr)}
   .search-bar{flex-direction:column;border-radius:var(--r-btn)}
-  .search-bar input,.search-bar button{border-radius:var(--r-btn);width:100%}
-  .trust-badges .badge{font-size:12px;padding:6px 12px}
+  .search-bar input,.search-bar button{border-radius:var(--r-btn);width:100%;text-align:center}
+  .trust-row{grid-template-columns:1fr 1fr}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-block{border-right:none;border-bottom:1px solid rgba(255,255,255,.2);padding:14px 8px}
+  .stat-block:nth-child(odd){border-right:1px solid rgba(255,255,255,.2)}
+  .stat-block:last-child,.stat-block:nth-last-child(2):nth-child(odd){border-bottom:none}
+  .stat-num{font-size:34px}
+  .hero-pill{font-size:10px;letter-spacing:1.5px}
 }
 </style>
 </head>
@@ -267,19 +289,35 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Ohio HVAC Contractor Directory Hero">
+  <div class="hero-bg" role="img" aria-label="Suburban Ohio home in autumn — HVAC service season"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <h1>Find Licensed HVAC Contractors <span>Across Ohio</span></h1>
+    <div class="hero-pill">Serving All 88 Ohio Counties</div>
+    <h1>Find Licensed HVAC Contractors<br><span class="orange">Across Ohio</span></h1>
     <p class="hero-sub">Compare quotes from vetted Ohio HVAC companies. Free estimates. No obligation. Contractors licensed, bonded, and insured.</p>
     <div class="search-bar">
-      <input type="text" id="city-search" placeholder="Enter your city or zip code..." aria-label="Search for HVAC contractors by city or zip">
-      <button onclick="handleSearch()">Search</button>
+      <input type="text" id="city-search" placeholder="Enter your city or zip code..." aria-label="Search for HVAC contractors by city or zip code">
+      <button onclick="handleSearch()" aria-label="Search for HVAC contractors">Search</button>
     </div>
-    <div class="trust-badges">
-      <span class="badge">500+ Ohio Contractors</span>
-      <span class="badge">All 88 Counties</span>
-      <span class="badge">Licensed &amp; Insured Only</span>
-      <span class="badge">Free Quotes</span>
+    <p class="hero-call">Or call for immediate service: <a href="tel:6143444851">614-344-4851</a></p>
+    <div class="trust-row">
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        500+ Ohio Contractors
+      </div>
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        All 88 Counties Covered
+      </div>
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Licensed &amp; Insured Only
+      </div>
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        Free Quotes
+      </div>
     </div>
   </div>
 </section>
@@ -475,21 +513,21 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item">
-      <strong>500+</strong>
-      <span>Vetted Ohio HVAC Contractors</span>
+    <div class="stat-block">
+      <span class="stat-num">500+</span>
+      <span class="stat-label">HVAC Contractors</span>
     </div>
-    <div class="stat-item">
-      <strong>88</strong>
-      <span>Ohio Counties Covered</span>
+    <div class="stat-block">
+      <span class="stat-num">88</span>
+      <span class="stat-label">Ohio Counties</span>
     </div>
-    <div class="stat-item">
-      <strong>$0</strong>
-      <span>Cost to Homeowners</span>
+    <div class="stat-block">
+      <span class="stat-num">24/7</span>
+      <span class="stat-label">Emergency Service</span>
     </div>
-    <div class="stat-item">
-      <strong>24/7</strong>
-      <span>Emergency Services Available</span>
+    <div class="stat-block">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Free Quotes</span>
     </div>
   </div>
 </div>
