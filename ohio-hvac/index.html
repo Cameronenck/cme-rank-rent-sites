@@ -896,14 +896,382 @@ function handleSearch(){
   var slug = val.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   window.location.href = '/' + slug + '/';
 }
-document.getElementById('city-search').addEventListener('keypress',function(e){
-  if(e.key==='Enter') handleSearch();
-});
 function handleFormSubmit(e){
   e.preventDefault();
-  var phone = document.getElementById('phone').value;
   window.location.href = 'tel:6143444851';
 }
+
+/* ---- CITY SEARCH AUTOCOMPLETE ---- */
+const ohioCities = [
+  {name:"Columbus",slug:"columbus"},
+  {name:"Cleveland",slug:"cleveland"},
+  {name:"Cincinnati",slug:"cincinnati"},
+  {name:"Toledo",slug:"toledo"},
+  {name:"Akron",slug:"akron"},
+  {name:"Dayton",slug:"dayton"},
+  {name:"Parma",slug:"parma"},
+  {name:"Canton",slug:"canton"},
+  {name:"Youngstown",slug:"youngstown"},
+  {name:"Lorain",slug:"lorain"},
+  {name:"Hamilton",slug:"hamilton"},
+  {name:"Springfield",slug:"springfield"},
+  {name:"Kettering",slug:"kettering"},
+  {name:"Elyria",slug:"elyria"},
+  {name:"Lakewood",slug:"lakewood"},
+  {name:"Cuyahoga Falls",slug:"cuyahoga-falls"},
+  {name:"Euclid",slug:"euclid"},
+  {name:"Middletown",slug:"middletown"},
+  {name:"Newark",slug:"newark"},
+  {name:"Mansfield",slug:"mansfield"},
+  {name:"Mentor",slug:"mentor"},
+  {name:"Fairfield",slug:"fairfield"},
+  {name:"Dublin",slug:"dublin"},
+  {name:"Beavercreek",slug:"beavercreek"},
+  {name:"Strongsville",slug:"strongsville"},
+  {name:"Findlay",slug:"findlay"},
+  {name:"Lancaster",slug:"lancaster"},
+  {name:"Lima",slug:"lima"},
+  {name:"Warren",slug:"warren"},
+  {name:"Maple Heights",slug:"maple-heights"},
+  {name:"Gahanna",slug:"gahanna"},
+  {name:"Huber Heights",slug:"huber-heights"},
+  {name:"Reynoldsburg",slug:"reynoldsburg"},
+  {name:"Grove City",slug:"grove-city"},
+  {name:"Fairborn",slug:"fairborn"},
+  {name:"Zanesville",slug:"zanesville"},
+  {name:"Marysville",slug:"marysville"},
+  {name:"Delaware",slug:"delaware"},
+  {name:"Marion",slug:"marion"},
+  {name:"Brunswick",slug:"brunswick"},
+  {name:"Medina",slug:"medina"},
+  {name:"Rocky River",slug:"rocky-river"},
+  {name:"Bay Village",slug:"bay-village"},
+  {name:"Brecksville",slug:"brecksville"},
+  {name:"Broadview Heights",slug:"broadview-heights"},
+  {name:"North Olmsted",slug:"north-olmsted"},
+  {name:"Olmsted Falls",slug:"olmsted-falls"},
+  {name:"Willoughby",slug:"willoughby"},
+  {name:"Eastlake",slug:"eastlake"},
+  {name:"Painesville",slug:"painesville"},
+  {name:"Ashtabula",slug:"ashtabula"},
+  {name:"Sandusky",slug:"sandusky"},
+  {name:"Fremont",slug:"fremont"},
+  {name:"Tiffin",slug:"tiffin"},
+  {name:"Defiance",slug:"defiance"},
+  {name:"Bryan",slug:"bryan"},
+  {name:"Bowling Green",slug:"bowling-green"},
+  {name:"Napoleon",slug:"napoleon"},
+  {name:"Chillicothe",slug:"chillicothe"},
+  {name:"Circleville",slug:"circleville"},
+  {name:"Portsmouth",slug:"portsmouth"},
+  {name:"Ironton",slug:"ironton"},
+  {name:"Gallipolis",slug:"gallipolis"},
+  {name:"Marietta",slug:"marietta"},
+  {name:"Athens",slug:"athens"},
+  {name:"Cambridge",slug:"cambridge"},
+  {name:"Steubenville",slug:"steubenville"},
+  {name:"East Liverpool",slug:"east-liverpool"},
+  {name:"Salem",slug:"salem"},
+  {name:"Massillon",slug:"massillon"},
+  {name:"Alliance",slug:"alliance"},
+  {name:"Ravenna",slug:"ravenna"},
+  {name:"Kent",slug:"kent"},
+  {name:"Barberton",slug:"barberton"},
+  {name:"Norton",slug:"norton"},
+  {name:"Tallmadge",slug:"tallmadge"},
+  {name:"Wooster",slug:"wooster"},
+  {name:"Ashland",slug:"ashland"},
+  {name:"Shelby",slug:"shelby"},
+  {name:"Galion",slug:"galion"},
+  {name:"Mount Vernon",slug:"mount-vernon"},
+  {name:"Waverly",slug:"waverly"},
+  {name:"Jackson",slug:"jackson"},
+  {name:"Xenia",slug:"xenia"},
+  {name:"Piqua",slug:"piqua"},
+  {name:"Troy",slug:"troy"},
+  {name:"Urbana",slug:"urbana"},
+  {name:"Bellefontaine",slug:"bellefontaine"},
+  {name:"Kenton",slug:"kenton"},
+  {name:"Washington Court House",slug:"washington-court-house"},
+  {name:"Wilmington",slug:"wilmington"},
+  {name:"Hillsboro",slug:"hillsboro"},
+  {name:"Greenfield",slug:"greenfield"},
+  {name:"Miamisburg",slug:"miamisburg"},
+  {name:"West Carrollton",slug:"west-carrollton"},
+  {name:"Trotwood",slug:"trotwood"},
+  {name:"Oakwood",slug:"oakwood"},
+  {name:"Moraine",slug:"moraine"},
+  {name:"Centerville",slug:"centerville"},
+  {name:"Springboro",slug:"springboro"},
+  {name:"Lebanon",slug:"lebanon"},
+  {name:"Mason",slug:"mason"},
+  {name:"Loveland",slug:"loveland"},
+  {name:"Blue Ash",slug:"blue-ash"},
+  {name:"Avon",slug:"avon"},
+  {name:"Avon Lake",slug:"avon-lake"},
+  {name:"North Ridgeville",slug:"north-ridgeville"},
+  {name:"Amherst",slug:"amherst"},
+  {name:"Oberlin",slug:"oberlin"},
+  {name:"Vermilion",slug:"vermilion"},
+  {name:"Norwalk",slug:"norwalk"},
+  {name:"Bellevue",slug:"bellevue"},
+  {name:"Port Clinton",slug:"port-clinton"},
+  {name:"Oak Harbor",slug:"oak-harbor"},
+  {name:"Clyde",slug:"clyde"},
+  {name:"Fostoria",slug:"fostoria"},
+  {name:"Bucyrus",slug:"bucyrus"},
+  {name:"Upper Sandusky",slug:"upper-sandusky"},
+  {name:"Ada",slug:"ada"},
+  {name:"Bluffton",slug:"bluffton"},
+  {name:"Delphos",slug:"delphos"},
+  {name:"Van Wert",slug:"van-wert"},
+  {name:"Celina",slug:"celina"},
+  {name:"Coldwater",slug:"coldwater"},
+  {name:"St Marys",slug:"st-marys"},
+  {name:"Wapakoneta",slug:"wapakoneta"},
+  {name:"Sidney",slug:"sidney"},
+  {name:"Tipp City",slug:"tipp-city"},
+  {name:"Vandalia",slug:"vandalia"},
+  {name:"Englewood",slug:"englewood"},
+  {name:"Brookville",slug:"brookville"},
+  {name:"Germantown",slug:"germantown"},
+  {name:"Eaton",slug:"eaton"},
+  {name:"Oxford",slug:"oxford"},
+  {name:"Richmond Heights",slug:"richmond-heights"},
+  {name:"South Euclid",slug:"south-euclid"},
+  {name:"University Heights",slug:"university-heights"},
+  {name:"Shaker Heights",slug:"shaker-heights"},
+  {name:"Garfield Heights",slug:"garfield-heights"},
+  {name:"Bedford",slug:"bedford"},
+  {name:"Solon",slug:"solon"},
+  {name:"Aurora",slug:"aurora"},
+  {name:"Twinsburg",slug:"twinsburg"},
+  {name:"Stow",slug:"stow"},
+  {name:"Hudson",slug:"hudson"},
+  {name:"Westlake",slug:"westlake"},
+  {name:"Fairview Park",slug:"fairview-park"},
+  {name:"Brook Park",slug:"brook-park"},
+  {name:"North Royalton",slug:"north-royalton"},
+  {name:"Parma Heights",slug:"parma-heights"},
+  {name:"Berea",slug:"berea"},
+  {name:"Wadsworth",slug:"wadsworth"},
+  {name:"Rittman",slug:"rittman"},
+  {name:"Orrville",slug:"orrville"},
+  {name:"Millersburg",slug:"millersburg"},
+  {name:"Dover",slug:"dover"},
+  {name:"New Philadelphia",slug:"new-philadelphia"},
+  {name:"Coshocton",slug:"coshocton"},
+  {name:"Loudonville",slug:"loudonville"},
+  {name:"Pataskala",slug:"pataskala"},
+  {name:"Granville",slug:"granville"},
+  {name:"Heath",slug:"heath"},
+  {name:"Sunbury",slug:"sunbury"},
+  {name:"Milford",slug:"milford"},
+  {name:"Mcconnelsville",slug:"mcconnelsville"},
+  {name:"Caldwell",slug:"caldwell"},
+  {name:"St Clairsville",slug:"st-clairsville"},
+  {name:"Barnesville",slug:"barnesville"},
+  {name:"Bridgeport",slug:"bridgeport"},
+  {name:"Martins Ferry",slug:"martins-ferry"},
+  {name:"Bellaire",slug:"bellaire"},
+  {name:"Wauseon",slug:"wauseon"},
+  {name:"Perrysburg",slug:"perrysburg"},
+  {name:"Sylvania",slug:"sylvania"},
+  {name:"Maumee",slug:"maumee"},
+  {name:"Oregon",slug:"oregon"},
+  {name:"Independence",slug:"independence"},
+  {name:"Seven Hills",slug:"seven-hills"},
+  {name:"Middleburg Heights",slug:"middleburg-heights"},
+  {name:"Macedonia",slug:"macedonia"},
+  {name:"Lodi",slug:"lodi"},
+  {name:"Grafton",slug:"grafton"},
+  {name:"Olmsted Township",slug:"olmsted-township"},
+  {name:"Willard",slug:"willard"},
+  {name:"Plymouth",slug:"plymouth"},
+  {name:"Caledonia",slug:"caledonia"},
+  {name:"Mount Gilead",slug:"mount-gilead"},
+  {name:"Prospect",slug:"prospect"},
+  {name:"Hebron",slug:"hebron"},
+  {name:"Buckeye Lake",slug:"buckeye-lake"},
+  {name:"Thornville",slug:"thornville"},
+  {name:"Woodsfield",slug:"woodsfield"},
+  {name:"Dennison",slug:"dennison"},
+  {name:"Newcomerstown",slug:"newcomerstown"},
+  {name:"Greenwich",slug:"greenwich"},
+  {name:"Rootstown",slug:"rootstown"},
+  {name:"Streetsboro",slug:"streetsboro"},
+  {name:"Richfield",slug:"richfield"},
+  {name:"Uhrichsville",slug:"uhrichsville"},
+  {name:"Munroe Falls",slug:"munroe-falls"},
+  {name:"Silver Lake",slug:"silver-lake"},
+  {name:"Wadsworth Township",slug:"wadsworth-township"},
+  {name:"Westerville",slug:"westerville"},
+  {name:"Hilliard",slug:"hilliard"},
+  {name:"Upper Arlington",slug:"upper-arlington"},
+  {name:"Worthington",slug:"worthington"},
+  {name:"Powell",slug:"powell"},
+  {name:"New Albany",slug:"new-albany"},
+  {name:"Pickerington",slug:"pickerington"},
+  {name:"Trotwood Township",slug:"trotwood-township"},
+  {name:"Green",slug:"green"},
+  {name:"Norton Township",slug:"norton-township"},
+  {name:"Hartville",slug:"hartville"},
+  {name:"Louisville",slug:"louisville"},
+  {name:"North Canton",slug:"north-canton"},
+  {name:"Boardman",slug:"boardman"},
+  {name:"Austintown",slug:"austintown"},
+  {name:"Niles",slug:"niles"},
+  {name:"Girard",slug:"girard"},
+  {name:"Canfield",slug:"canfield"},
+  {name:"Poland",slug:"poland"},
+  {name:"Cortland",slug:"cortland"},
+  {name:"Hubbard",slug:"hubbard"},
+  {name:"Chardon",slug:"chardon"},
+  {name:"Madison",slug:"madison"},
+  {name:"Conneaut",slug:"conneaut"},
+  {name:"Geneva",slug:"geneva"},
+  {name:"Andover",slug:"andover"},
+  {name:"Wickliffe",slug:"wickliffe"},
+  {name:"Huron",slug:"huron"},
+  {name:"Milan",slug:"milan"},
+  {name:"Senecaville",slug:"senecaville"},
+  {name:"Proctorville",slug:"proctorville"},
+  {name:"West Chester",slug:"west-chester"},
+  {name:"Pickerington East",slug:"pickerington-east"},
+  {name:"Powell North",slug:"powell-north"},
+  {name:"Tipp City North",slug:"tipp-city-north"},
+  {name:"Marysville Union",slug:"marysville-union"},
+  {name:"Port Clinton Lake",slug:"port-clinton-lake"},
+  {name:"Beachwood",slug:"beachwood"},
+  {name:"Highland Heights",slug:"highland-heights"},
+  {name:"Lyndhurst",slug:"lyndhurst"},
+  {name:"Mayfield Heights",slug:"mayfield-heights"}
+];
+
+(function(){
+  var input = document.getElementById('city-search');
+  if(!input) return;
+
+  // Wrap input in a positioned container for dropdown
+  var wrapper = input.parentNode;
+  wrapper.style.position = 'relative';
+
+  // Create dropdown
+  var dropdown = document.createElement('ul');
+  dropdown.id = 'city-dropdown';
+  dropdown.setAttribute('role','listbox');
+  dropdown.setAttribute('aria-label','Ohio city suggestions');
+  dropdown.style.cssText = [
+    'position:absolute',
+    'top:100%',
+    'left:0',
+    'right:0',
+    'background:#fff',
+    'border:1px solid #e2e8f0',
+    'border-top:none',
+    'border-radius:0 0 6px 6px',
+    'list-style:none',
+    'margin:0',
+    'padding:0',
+    'z-index:9999',
+    'box-shadow:0 8px 24px rgba(0,0,0,0.15)',
+    'display:none',
+    'max-height:320px',
+    'overflow-y:auto'
+  ].join(';');
+  wrapper.appendChild(dropdown);
+
+  var activeIdx = -1;
+  var currentItems = [];
+
+  function normalize(str){
+    return str.toLowerCase().replace(/[^a-z0-9 ]/g,'');
+  }
+
+  function showDropdown(items){
+    currentItems = items;
+    activeIdx = -1;
+    dropdown.innerHTML = '';
+    if(!items.length){
+      var li = document.createElement('li');
+      li.innerHTML = '<a href="/#all-cities" style="display:block;padding:14px 18px;font-size:14px;color:#E8622A;font-weight:600;text-decoration:none;border-bottom:1px solid #f0f0f0">View all Ohio cities &rarr;</a>';
+      dropdown.appendChild(li);
+    } else {
+      items.forEach(function(city, i){
+        var li = document.createElement('li');
+        li.setAttribute('role','option');
+        li.setAttribute('data-idx', i);
+        li.style.cssText = 'cursor:pointer;border-bottom:1px solid #f5f5f5';
+        li.innerHTML = '<a href="/' + city.slug + '/" style="display:flex;align-items:center;padding:0 18px;min-height:44px;font-size:15px;font-weight:500;color:#1a1a2e;text-decoration:none;gap:10px">' +
+          '<svg width="14" height="14" viewBox="0 0 24 24" fill="#E8622A" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>' +
+          city.name + ' <span style="font-size:12px;color:#888;margin-left:auto">HVAC Contractors</span></a>';
+        li.addEventListener('mousedown', function(e){
+          e.preventDefault();
+          window.location.href = '/' + city.slug + '/';
+        });
+        li.addEventListener('mouseover', function(){
+          setActive(i);
+        });
+        dropdown.appendChild(li);
+      });
+    }
+    dropdown.style.display = 'block';
+  }
+
+  function hideDropdown(){
+    dropdown.style.display = 'none';
+    activeIdx = -1;
+    currentItems = [];
+  }
+
+  function setActive(idx){
+    var items = dropdown.querySelectorAll('li');
+    items.forEach(function(el,i){
+      el.style.background = i === idx ? '#f8f4f1' : '';
+    });
+    activeIdx = idx;
+  }
+
+  input.addEventListener('input', function(){
+    var val = normalize(this.value.trim());
+    if(val.length < 2){ hideDropdown(); return; }
+    var matches = ohioCities.filter(function(c){
+      return normalize(c.name).indexOf(val) === 0 || normalize(c.name).split(' ').some(function(w){ return w.indexOf(val) === 0; });
+    }).slice(0,6);
+    showDropdown(matches);
+  });
+
+  input.addEventListener('keydown', function(e){
+    var items = dropdown.querySelectorAll('li');
+    if(dropdown.style.display === 'none') return;
+    if(e.key === 'ArrowDown'){
+      e.preventDefault();
+      setActive(Math.min(activeIdx + 1, items.length - 1));
+    } else if(e.key === 'ArrowUp'){
+      e.preventDefault();
+      setActive(Math.max(activeIdx - 1, 0));
+    } else if(e.key === 'Enter'){
+      e.preventDefault();
+      if(activeIdx >= 0 && currentItems[activeIdx]){
+        window.location.href = '/' + currentItems[activeIdx].slug + '/';
+      } else {
+        handleSearch();
+      }
+    } else if(e.key === 'Escape'){
+      hideDropdown();
+      input.blur();
+    }
+  });
+
+  input.addEventListener('focus', function(){
+    if(normalize(this.value.trim()).length >= 2) input.dispatchEvent(new Event('input'));
+  });
+
+  document.addEventListener('click', function(e){
+    if(!wrapper.contains(e.target)) hideDropdown();
+  });
+})();
+
 </script>
 </body>
 </html>

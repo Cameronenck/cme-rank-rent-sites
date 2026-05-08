@@ -143,10 +143,10 @@ nav{display:flex;align-items:center;gap:28px}nav a{color:rgba(255,255,255,.85);f
 .form-note{font-size:12px;color:rgba(255,255,255,.6);text-align:center;margin-top:10px}
 .nearby-section{background:var(--offwhite)}
 .nearby-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
-.nearby-card{background:#fff;border:1px solid var(--grey);border-radius:var(--r-card);padding:14px 16px;text-align:center;transition:transform .2s,box-shadow .2s}
+.nearby-card{background:#fff;border:1px solid var(--grey);border-left:3px solid var(--orange);border-radius:var(--r-card);padding:16px 18px;text-align:left;transition:transform .2s,box-shadow .2s;min-height:64px;display:flex;flex-direction:column;justify-content:center}
 .nearby-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
 .nearby-card span{display:block;font-family:var(--heading);font-size:16px;font-weight:700;color:var(--navy)}
-.nearby-card small{font-size:12px;color:var(--text-mid)}
+.nearby-card small{font-size:12px;color:var(--orange);font-weight:600;margin-top:3px}
 .faq-section{background:#fff}
 .faq-list{margin-top:28px;display:flex;flex-direction:column;gap:14px}
 .faq-item{background:var(--offwhite);border-radius:var(--r-card);border:1px solid var(--grey);overflow:hidden}
@@ -308,11 +308,11 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:48px 24px 24px}
     <h2 class="section-title">HVAC Contractors Near Bellaire</h2>
     <p class="section-sub">Also serving these nearby Ohio communities:</p>
     <div class="nearby-grid">
-      <a href="/martins-ferry/" class="nearby-card"><span>Martins Ferry</span><small>View HVAC contractors</small></a>
-<a href="/bridgeport/" class="nearby-card"><span>Bridgeport</span><small>View HVAC contractors</small></a>
-<a href="/st-clairsville/" class="nearby-card"><span>St Clairsville</span><small>View HVAC contractors</small></a>
-<a href="/shadyside/" class="nearby-card"><span>Shadyside</span><small>View HVAC contractors</small></a>
-<a href="/powhatan-point/" class="nearby-card"><span>Powhatan Point</span><small>View HVAC contractors</small></a>
+      <a href="/martins-ferry/" class="nearby-card"><span>Martins Ferry</span><small>View HVAC Contractors &rarr;</small></a>
+<a href="/bridgeport/" class="nearby-card"><span>Bridgeport</span><small>View HVAC Contractors &rarr;</small></a>
+<a href="/st-clairsville/" class="nearby-card"><span>St Clairsville</span><small>View HVAC Contractors &rarr;</small></a>
+<a href="/shadyside/" class="nearby-card"><span>Shadyside</span><small>View HVAC Contractors &rarr;</small></a>
+<a href="/powhatan-point/" class="nearby-card"><span>Powhatan Point</span><small>View HVAC Contractors &rarr;</small></a>
 
     </div>
   </div>
