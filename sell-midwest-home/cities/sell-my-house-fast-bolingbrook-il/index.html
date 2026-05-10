@@ -276,6 +276,38 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   .section-title{font-size:clamp(28px,7vw,40px)}
   .faq-question h3{font-size:17px}
 }
+
+/* ── City/State hero + legacy class fixes ── */
+.container{max-width:var(--max);margin:0 auto}
+.hero-city-wrap{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:start}
+.hero-badge{display:inline-block;background:transparent;border:1px solid var(--gold);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:20px}
+.hero h1{font-family:var(--heading);font-size:clamp(36px,6vw,68px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.0;margin-bottom:16px}
+.hero p.hero-sub,.hero-sub{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:24px;line-height:1.7;max-width:100%}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.btn{background:var(--gold);color:var(--navy) !important;padding:14px 28px;border-radius:var(--r-btn);font-family:var(--heading);font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:background var(--t);display:inline-block;border:none}
+.btn:hover{background:var(--gold-hover)}
+.btn-white{background:transparent !important;border:2px solid rgba(255,255,255,0.55);color:#fff !important}
+.btn-white:hover{background:rgba(255,255,255,0.12) !important}
+.trust-bar{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.trust-item{background:#fff;color:#1a1a2e;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2);display:inline-block}
+.trust-item::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+.form-wrap{background:#fff;border-radius:var(--r-card);padding:32px;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.form-wrap h3{font-family:var(--heading);font-size:22px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:8px}
+.form-wrap>p{font-size:14px;color:var(--text-mid);margin-bottom:20px}
+.form-wrap .form-row{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px}
+.form-wrap input,.form-wrap select{width:100%;padding:13px 14px;border:1.5px solid var(--grey);border-radius:var(--r-btn);font-size:15px;font-family:var(--font);color:var(--charcoal);outline:none;background:#fff;transition:border-color var(--t);display:block;margin-bottom:0}
+.form-wrap input:focus,.form-wrap select:focus{border-color:var(--gold)}
+.form-wrap .btn{width:100%;text-align:center;margin-top:8px;font-size:15px;padding:15px;display:block}
+/* Responsive hero grid */
+@media(max-width:900px){
+  .hero-city-wrap{grid-template-columns:1fr !important}
+  section.hero{padding:100px 16px 60px !important;min-height:auto !important}
+}
+@media(max-width:600px){
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn,.hero-cta a.btn{width:100%;text-align:center;box-sizing:border-box}
+  .form-wrap{padding:24px 16px}
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,59 +343,27 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   </div>
 </header>
 
-<section class="hero" style="padding:140px 20px 80px;">
-  <div class="container" style="display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;">
-    <div>
-      <div class="hero-badge">Cash Buyers in Bolingbrook, IL</div>
-      <h1>Sell My House Fast in Bolingbrook, Illinois</h1>
-      <p>Bolingbrook homeowners choose us when speed and certainty matter most. Whether you are facing a difficult situation or simply want to skip the traditional sale process, we make fair cash offers for Bolingbrook, Illinois properties in any condition.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn">Get My Cash Offer</a>
-        <a href="tel:3128152536" class="btn btn-white">312-815-2536</a>
-      </div>
-      <div class="trust-bar">
-        <span class="trust-item">Cash Offer in 24 Hours</span>
-        <span class="trust-item">Close in 7-14 Days</span>
-        <span class="trust-item">Zero Fees</span>
-      </div>
+<section class="hero">
+<div class="hero-bg" role="img" aria-label="Bolingbrook home exterior"></div>
+<div class="hero-overlay"></div>
+<div class="hero-inner" style="position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:120px 24px 80px;width:100%;">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <div class="hero-pill">Cash Buyers in Bolingbrook, IL</div>
+    <h1 style="font-family:var(--heading);font-size:clamp(36px,7vw,72px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.0;margin-bottom:20px;">Sell My House Fast in Bolingbrook,<br><span style="color:var(--gold)">Illinois</span></h1>
+    <p style="font-size:18px;color:rgba(255,255,255,.85);margin-bottom:32px;line-height:1.7;max-width:600px;margin-left:auto;margin-right:auto;">Bolingbrook homeowners choose us when speed and certainty matter most. Whether you are facing a difficult situation or simply want to skip the traditional sale process, we make fair cash offers for Bolingbrook, Illinois properties in any condition.</p>
+    <div style="max-width:520px;margin:0 auto 16px;">
+      <input type="text" id="hero-address" placeholder="Enter your property address..." style="width:100%;padding:16px 20px;font-size:16px;border:none;border-radius:6px 6px 0 0;outline:none;color:#1a1a2e;font-family:var(--font);">
+      <button onclick="heroSubmit()" style="width:100%;background:var(--gold);color:var(--navy);border:none;padding:16px;font-size:16px;font-weight:700;cursor:pointer;font-family:var(--heading);letter-spacing:1px;text-transform:uppercase;border-radius:0 0 6px 6px;transition:background .2s;">GET MY CASH OFFER &rarr;</button>
     </div>
-    <div class="form-wrap">
-      <h3>Get Your Free Cash Offer in Bolingbrook</h3>
-      <p>Takes 60 seconds. No obligation.</p>
-      <form name="cash-offer-request" method="POST" data-netlify="true" netlify>
-  <input type="hidden" name="form-name" value="cash-offer-request" />
-  <div class="form-row">
-    <input type="text" name="address" placeholder="Property address..." required />
-    <input type="text" name="city" placeholder="City" value="Bolingbrook" required />
-    <select name="state" required>
-      <option value="">State</option>
-      <option value="IL" selected>Illinois</option>
-      <option value="OH">Ohio</option>
-      <option value="IN">Indiana</option>
-      <option value="MI">Michigan</option>
-      <option value="MO">Missouri</option>
-      <option value="KY">Kentucky</option>
-    </select>
-  </div>
-  <div class="form-row">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="tel" name="phone" placeholder="Phone number" required />
-    <select name="situation" required>
-      <option value="">Situation</option>
-      <option>Foreclosure</option>
-      <option>Inherited Property</option>
-      <option>Divorce</option>
-      <option>Repairs Needed</option>
-      <option>Job Relocation</option>
-      <option>Behind on Payments</option>
-      <option>Other</option>
-    </select>
-  </div>
-  <button type="submit" class="btn">Get My Cash Offer &rarr;</button>
-  <p style="font-size:13px;color:#6b7280;margin-top:10px;">Free. No obligation. Takes 60 seconds.</p>
-</form>
+    <p style="font-size:14px;color:rgba(255,255,255,.65);margin-bottom:32px;">Free. No obligation. Or call: <a href="tel:3128152536" style="color:#fff;font-weight:700;">312-815-2536</a></p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+      <div style="background:#fff;color:#1a1a2e;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2);">Cash Offer in 24 Hours</div>
+      <div style="background:#fff;color:#1a1a2e;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2);">Close in 7-14 Days</div>
+      <div style="background:#fff;color:#1a1a2e;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2);">Zero Fees</div>
+      <div style="background:#fff;color:#1a1a2e;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2);">Any Condition</div>
     </div>
   </div>
+</div>
 </section>
 
 <section>
@@ -527,6 +527,14 @@ function goToOffer(){var addr=document.getElementById('address-search');var t=do
 function goToOfferCta(){var addr=document.getElementById('cta-address');var t=document.getElementById('contact');if(t)t.scrollIntoView({behavior:'smooth'});if(addr&&addr.value.trim()){setTimeout(function(){var el=document.getElementById('address');if(el)el.value=addr.value.trim();},600);}}
 document.addEventListener('keydown',function(e){if(e.key==='Enter'){if(document.activeElement&&document.activeElement.id==='address-search')goToOffer();if(document.activeElement&&document.activeElement.id==='cta-address')goToOfferCta();}});
 
+
+function heroSubmit(){
+  var addr=document.getElementById('hero-address');
+  var t=document.getElementById('contact');
+  if(t)t.scrollIntoView({behavior:'smooth'});
+  if(addr&&addr.value.trim()){setTimeout(function(){var el=document.querySelector('#contact input[name="address"]');if(el)el.value=addr.value.trim();},600);}
+}
+document.addEventListener('keydown',function(e){if(e.key==='Enter'&&document.activeElement&&document.activeElement.id==='hero-address')heroSubmit();});
 // ── Lead Form Submission ──────────────────────────────────────
 (function(){
   function submitLead(form) {

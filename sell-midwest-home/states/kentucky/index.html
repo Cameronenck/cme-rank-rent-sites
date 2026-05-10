@@ -276,6 +276,38 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   .section-title{font-size:clamp(28px,7vw,40px)}
   .faq-question h3{font-size:17px}
 }
+
+/* ── City/State hero + legacy class fixes ── */
+.container{max-width:var(--max);margin:0 auto}
+.hero-city-wrap{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:start}
+.hero-badge{display:inline-block;background:transparent;border:1px solid var(--gold);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:20px}
+.hero h1{font-family:var(--heading);font-size:clamp(36px,6vw,68px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.0;margin-bottom:16px}
+.hero p.hero-sub,.hero-sub{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:24px;line-height:1.7;max-width:100%}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.btn{background:var(--gold);color:var(--navy) !important;padding:14px 28px;border-radius:var(--r-btn);font-family:var(--heading);font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:background var(--t);display:inline-block;border:none}
+.btn:hover{background:var(--gold-hover)}
+.btn-white{background:transparent !important;border:2px solid rgba(255,255,255,0.55);color:#fff !important}
+.btn-white:hover{background:rgba(255,255,255,0.12) !important}
+.trust-bar{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.trust-item{background:#fff;color:#1a1a2e;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,.2);display:inline-block}
+.trust-item::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+.form-wrap{background:#fff;border-radius:var(--r-card);padding:32px;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.form-wrap h3{font-family:var(--heading);font-size:22px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:8px}
+.form-wrap>p{font-size:14px;color:var(--text-mid);margin-bottom:20px}
+.form-wrap .form-row{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px}
+.form-wrap input,.form-wrap select{width:100%;padding:13px 14px;border:1.5px solid var(--grey);border-radius:var(--r-btn);font-size:15px;font-family:var(--font);color:var(--charcoal);outline:none;background:#fff;transition:border-color var(--t);display:block;margin-bottom:0}
+.form-wrap input:focus,.form-wrap select:focus{border-color:var(--gold)}
+.form-wrap .btn{width:100%;text-align:center;margin-top:8px;font-size:15px;padding:15px;display:block}
+/* Responsive hero grid */
+@media(max-width:900px){
+  .hero-city-wrap{grid-template-columns:1fr !important}
+  section.hero{padding:100px 16px 60px !important;min-height:auto !important}
+}
+@media(max-width:600px){
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn,.hero-cta a.btn{width:100%;text-align:center;box-sizing:border-box}
+  .form-wrap{padding:24px 16px}
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,7 +343,7 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   </div>
 </header>
 
-<section class="hero" style="padding:140px 20px 80px;">
+<section class="hero"><div class="hero-bg" role="img" aria-label="Midwest home exterior"></div><div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-badge">Cash Buyers in Kentucky</div>
     <h1>Sell Your Kentucky Home Fast for Cash</h1>
