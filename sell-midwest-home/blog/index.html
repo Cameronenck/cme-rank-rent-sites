@@ -444,9 +444,11 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
 </footer>
 
 <script>
+// Nav
 document.querySelector('.hamburger')?.addEventListener('click',function(){
   document.querySelector('.mob-nav').classList.toggle('open');
 });
+// FAQ
 document.querySelectorAll('.faq-question').forEach(function(q){
   q.addEventListener('click',function(){
     var item=q.closest('.faq-item');
@@ -455,6 +457,77 @@ document.querySelectorAll('.faq-question').forEach(function(q){
     if(!isOpen)item.classList.add('open');
   });
 });
+// City filter
+if(document.getElementById('city-filter')){
+  document.getElementById('city-filter').addEventListener('input',function(){
+    var val=this.value.toLowerCase().trim();
+    document.querySelectorAll('[data-state-group]').forEach(function(group){
+      var links=group.querySelectorAll('a');var anyVisible=false;
+      links.forEach(function(a){var match=!val||a.textContent.toLowerCase().indexOf(val)>-1;a.style.display=match?'':'none';if(match)anyVisible=true;});
+      group.style.display=anyVisible?'':'none';
+    });
+  });
+}
+// Hero search
+function goToOffer(){var addr=document.getElementById('address-search');var t=document.getElementById('contact');if(t)t.scrollIntoView({behavior:'smooth'});if(addr&&addr.value.trim()){setTimeout(function(){var el=document.getElementById('address');if(el)el.value=addr.value.trim();},600);}}
+function goToOfferCta(){var addr=document.getElementById('cta-address');var t=document.getElementById('contact');if(t)t.scrollIntoView({behavior:'smooth'});if(addr&&addr.value.trim()){setTimeout(function(){var el=document.getElementById('address');if(el)el.value=addr.value.trim();},600);}}
+document.addEventListener('keydown',function(e){if(e.key==='Enter'){if(document.activeElement&&document.activeElement.id==='address-search')goToOffer();if(document.activeElement&&document.activeElement.id==='cta-address')goToOfferCta();}});
+
+// ── Lead Form Submission ──────────────────────────────────────
+(function(){
+  function submitLead(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var data = {
+        name:      (form.querySelector('[name="name"]')      || {}).value || '',
+        phone:     (form.querySelector('[name="phone"]')     || {}).value || '',
+        address:   (form.querySelector('[name="address"]')   || {}).value || '',
+        city:      (form.querySelector('[name="city"]')      || {}).value || '',
+        state:     (form.querySelector('[name="state"]')     || {}).value || '',
+        situation: (form.querySelector('[name="situation"]') || {}).value || '',
+        timeline:  (form.querySelector('[name="timeline"]')  || {}).value || '',
+        source:    window.location.href,
+        submitted: new Date().toLocaleString('en-US', {
+          timeZone: 'America/Chicago',
+          month:'short', day:'numeric', year:'numeric',
+          hour:'numeric', minute:'2-digit', hour12:true
+        }),
+      };
+
+      var firstName = data.name.trim().split(' ')[0] || 'there';
+
+      // Show thank-you immediately (optimistic UX)
+      var parent = form.parentNode;
+      var thankyou = document.createElement('div');
+      thankyou.style.cssText = 'background:#f8f6f0;border:2px solid #c9a84c;border-radius:10px;padding:32px 28px;text-align:center;';
+      thankyou.innerHTML = '<div style="font-size:40px;margin-bottom:16px">&#10003;</div>'
+        + '<h3 style="font-family:Barlow Condensed,Impact,sans-serif;font-size:28px;color:#0a1628;font-weight:700;text-transform:uppercase;margin-bottom:12px">You're All Set, ' + firstName + '!</h3>'
+        + '<p style="font-size:16px;color:#374151;line-height:1.7;max-width:420px;margin:0 auto 16px">We received your information and will be in touch within 24 hours with your cash offer.</p>'
+        + '<p style="font-size:15px;color:#6b7280">Questions? Call us at <a href="tel:3128152536" style="color:#c9a84c;font-weight:700;text-decoration:none;">312-815-2536</a></p>';
+      form.style.display = 'none';
+      parent.appendChild(thankyou);
+
+      // Post to Netlify function (Slack)
+      fetch('/.netlify/functions/submit-lead', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data),
+      }).catch(function(err){ console.error('Lead post error:', err); });
+
+      // Also submit to Netlify Forms as backup
+      var fd = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(fd).toString(),
+      }).catch(function(err){ console.error('Netlify forms backup error:', err); });
+    });
+  }
+
+  // Wire all lead forms on the page
+  document.querySelectorAll('form[name="cash-offer-request"]').forEach(submitLead);
+})();
 </script>
 </body>
 </html>
