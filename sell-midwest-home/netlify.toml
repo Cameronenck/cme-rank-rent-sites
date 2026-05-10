@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/cities/*"
+  to = "/cities/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/states/*"
+  to = "/states/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/situations/*"
+  to = "/situations/:splat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/:splat/index.html"
+  status = 200
