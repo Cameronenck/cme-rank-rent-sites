@@ -600,4 +600,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset><!-- deploy trigger 20260510T150800 -->
+  <url>
+    <loc>https://www.sellmidwesthome.com/blog/sell-rental-property-fast-midwest/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset><!-- deploy trigger 20260511T150100 -->
+
