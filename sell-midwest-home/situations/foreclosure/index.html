@@ -276,6 +276,21 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   .section-title{font-size:clamp(28px,7vw,40px)}
   .faq-question h3{font-size:17px}
 }
+
+/* RELATED ARTICLES */
+.related-articles{background:#f4f1ea;padding:64px 24px}
+.related-articles .inner{max-width:1280px;margin:0 auto}
+.related-articles .section-label{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c8a02b;margin-bottom:12px;display:block}
+.related-articles h2{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;text-transform:uppercase;color:#1a2744;margin-bottom:36px}
+.ra-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ra-card-s{background:#fff;border-radius:8px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.ra-card-s h3{font-size:17px;font-weight:700;color:#1a2744;margin-bottom:10px;line-height:1.3}
+.ra-card-s h3 a{color:inherit;text-decoration:none}
+.ra-card-s h3 a:hover{color:#c8a02b;text-decoration:underline}
+.ra-card-s p{font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:14px}
+.ra-card-s .ra-link{font-size:13px;font-weight:700;color:#c8a02b}
+@media(max-width:768px){.ra-grid-3{grid-template-columns:1fr}}
+@media(max-width:960px){.ra-grid-3{grid-template-columns:repeat(2,1fr)}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -389,6 +404,31 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   </div>
 </section>
 
+
+<!-- RELATED ARTICLES -->
+<section class="related-articles">
+  <div class="inner">
+    <span class="section-label">Related Guides</span>
+    <h2>Related Articles</h2>
+    <div class="ra-grid-3">
+      <div class="ra-card-s">
+        <h3><a href="/blog/foreclosure-timeline-illinois/">Foreclosure Timeline in Illinois: What Homeowners Need to Know</a></h3>
+        <p>Illinois is a judicial foreclosure state. Learn the stage-by-stage timeline, your rights as a homeow...</p>
+        <a href="/blog/foreclosure-timeline-illinois/" class="ra-link">Read More &rarr;</a>
+      </div>
+      <div class="ra-card-s">
+        <h3><a href="/blog/5-signs-time-to-sell-house-fast/">5 Signs It's Time to Sell Your House Fast</a></h3>
+        <p>Waiting too long can cost you equity and options. Five clear indicators that a fast cash sale may be...</p>
+        <a href="/blog/5-signs-time-to-sell-house-fast/" class="ra-link">Read More &rarr;</a>
+      </div>
+      <div class="ra-card-s">
+        <h3><a href="/blog/how-we-determine-fair-cash-offer/">How We Determine a Fair Cash Offer for Your Home</a></h3>
+        <p>Transparent breakdown of how SellMidwestHome calculates fair cash offers — comparable sales, repair ...</p>
+        <a href="/blog/how-we-determine-fair-cash-offer/" class="ra-link">Read More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-top">

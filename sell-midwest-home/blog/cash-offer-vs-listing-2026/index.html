@@ -101,6 +101,17 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
 .footer-bottom a:hover{color:var(--gold)}
 @media(max-width:900px){nav{display:none}.hamburger{display:flex}.mob-nav.open{display:block}.footer-top{grid-template-columns:1fr 1fr;gap:32px}.sticky-sidebar{position:static}}
 @media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+
+/* SERVING YOUR AREA */
+.serving-area{background:#f4f1ea;padding:56px 24px}
+.serving-area .inner{max-width:860px;margin:0 auto}
+.serving-area .section-label{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c8a02b;margin-bottom:12px;display:block}
+.serving-area h2{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(24px,3.5vw,38px);font-weight:800;text-transform:uppercase;color:#1a2744;margin-bottom:20px}
+.serving-area p{font-size:15px;color:#4b5563;line-height:1.7;margin-bottom:24px}
+.city-links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.city-link-btn{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:12px 16px;font-size:14px;font-weight:600;color:#1a2744;text-decoration:none;transition:border-color .2s,color .2s}
+.city-link-btn:hover{border-color:#c8a02b;color:#c8a02b}
+@media(max-width:600px){.city-links-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -243,6 +254,23 @@ footer{background:#060e1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
 
   </div>
 </div>
+
+<!-- SERVING YOUR AREA -->
+<section class="serving-area">
+  <div class="inner">
+    <span class="section-label">We Buy Houses Near You</span>
+    <h2>Serving Your Area</h2>
+    <p>We buy houses throughout the Midwest for fair cash prices. No repairs needed, no agent fees, close in as few as 7 days. Select your city for local information.</p>
+    <div class="city-links-grid">
+      <a href="/cities/sell-my-house-fast-chicago-il/" class="city-link-btn">Sell in Chicago, IL</a>
+      <a href="/cities/sell-my-house-fast-peoria-il/" class="city-link-btn">Sell in Peoria, IL</a>
+      <a href="/cities/sell-my-house-fast-columbus-oh/" class="city-link-btn">Sell in Columbus, OH</a>
+      <a href="/cities/sell-my-house-fast-indianapolis-in/" class="city-link-btn">Sell in Indianapolis, IN</a>
+      <a href="/cities/sell-my-house-fast-detroit-mi/" class="city-link-btn">Sell in Detroit, MI</a>
+      <a href="/cities/sell-my-house-fast-st-louis-mo/" class="city-link-btn">Sell in St. Louis, MO</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-top">
