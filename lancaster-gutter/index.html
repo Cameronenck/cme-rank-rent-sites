@@ -38,6 +38,8 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); }
 h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; }
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: 0.8; }
 /* ANNOUNCEMENT BAR */
 .announcement-bar {
 background: var(--accent);
@@ -194,15 +196,21 @@ box-shadow: 0 12px 32px rgba(0,0,0,0.1);
 border-color: var(--accent);
 }
 .service-icon {
-width: 52px;
-height: 52px;
-background: linear-gradient(135deg, var(--accent), var(--accent2));
-border-radius: 12px;
+width: 32px;
+height: 32px;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 1.5rem;
 margin-bottom: 16px;
+}
+.service-icon svg {
+width: 32px;
+height: 32px;
+stroke: var(--accent);
+fill: none;
+stroke-width: 1.75;
+stroke-linecap: round;
+stroke-linejoin: round;
 }
 .service-card h3 {
 font-size: 1.2rem;
@@ -770,32 +778,32 @@ Free Estimates &nbsp;·&nbsp; Licensed &amp; Insured &nbsp;·&nbsp; 25-Year Warr
 <p class="section-sub">From new installations to repairs and guards, we handle every aspect of your home's gutter system.</p>
 <div class="services-grid">
 <div class="service-card">
-<div class="service-icon"></div>
+<div class="service-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 22h24v4H4z"/><path d="M4 22l4-8h16l4 8"/><path d="M26 26v2"/><path d="M8 22l2-6"/><path d="M24 22l-2-6"/></svg></div>
 <h3>Seamless Gutter Installation</h3>
 <p>Custom-formed seamless aluminum gutters cut to exact length on-site. No seams mean no weak points, no leaks, and dramatically longer life. Available in 20+ colors.</p>
 </div>
 <div class="service-card">
-<div class="service-icon"></div>
+<div class="service-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10"/><path d="M12 16h8"/><path d="M18 13l3 3-3 3"/><path d="M14 13l-3 3 3 3"/></svg></div>
 <h3>Gutter Replacement</h3>
 <p>Old, sagging, or rusted gutters failing you? We remove and dispose of old sections and install new seamless systems — often in a single day.</p>
 </div>
 <div class="service-card">
-<div class="service-icon"></div>
+<div class="service-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 4l11 6v8c0 6-5 10-11 12C10 28 5 24 5 18v-8l11-6z"/><path d="M11 17l3 3 7-7"/></svg></div>
 <h3>Gutter Guards</h3>
 <p>Lancaster County's trees are beautiful — until they fill your gutters. Our micro-mesh and reverse-curve guards stop debris while letting water flow freely.</p>
 </div>
 <div class="service-card">
-<div class="service-icon"></div>
+<div class="service-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="4" width="8" height="20" rx="1"/><path d="M12 24H8v4h16v-4h-4"/><path d="M16 24v4"/><path d="M13 14l3 4 3-4"/></svg></div>
 <h3>Downspout Installation</h3>
 <p>Proper downspout placement and extension is critical to protect your foundation. We size, place, and route downspouts to carry water safely away from your home.</p>
 </div>
 <div class="service-card">
-<div class="service-icon"></div>
+<div class="service-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M8 24l4-4 10-10 4 4-10 10-4 4-4-4z"/><path d="M20 6l2-2 4 4-2 2"/><path d="M8 24l-3 3 1 1 3-3"/></svg></div>
 <h3>Fascia Repair</h3>
 <p>Water damage to fascia boards? We repair or replace rotted fascia before installing new gutters, ensuring a solid anchor point and preventing future damage.</p>
 </div>
 <div class="service-card">
-<div class="service-icon"></div>
+<div class="service-icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 6c-2 0-4 2-3 5l-5 8c-1 1 0 3 2 3h12c2 0 3-2 2-3l-5-8c1-3-1-5-3-5z"/><path d="M13 19c0 2 6 2 6 0"/><path d="M10 26h12"/></svg></div>
 <h3>Gutter Cleaning</h3>
 <p>Clogged gutters overflow into your foundation and siding. We offer seasonal cleaning throughout Lancaster County to keep your gutters flowing right year-round.</p>
 </div>
