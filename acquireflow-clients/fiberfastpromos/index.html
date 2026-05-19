@@ -53,8 +53,13 @@ nav{background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);-webkit-backdro
 .mobile-close{position:absolute;top:24px;right:28px;font-size:30px;cursor:pointer;color:var(--text);background:none;border:none;line-height:1}
 
 /* HERO */
-.hero{background:linear-gradient(rgba(10,15,30,0.55),rgba(10,15,30,0.55)),url(https://replicate.delivery/xezq/qIYnTw3gUaKXPVUYqTzQWtixBlnllkcqM5bJe1lPXGEynUTLA/tmpwyc23_j4.webp) center 30%/cover no-repeat;min-height:75vh;display:flex;align-items:center;padding:60px 24px;margin-top:0}
-.hero-inner{max-width:700px}
+.hero{background:linear-gradient(rgba(10,15,30,0.55),rgba(10,15,30,0.55)),url(https://replicate.delivery/xezq/qIYnTw3gUaKXPVUYqTzQWtixBlnllkcqM5bJe1lPXGEynUTLA/tmpwyc23_j4.webp) center 30%/cover no-repeat;min-height:85vh;display:flex;align-items:center;padding:60px 24px;margin-top:0}
+.hero-split{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;gap:60px}
+.hero-left{flex:1;min-width:0}
+.hero-right{flex:0 0 460px;max-width:460px}
+.hero-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 24px 80px rgba(0,0,0,0.4)}
+.hero-form-title{font-size:22px;font-weight:700;color:#0A0F1E;margin-bottom:6px;line-height:1.3}
+.hero-form-sub{font-size:14px;color:#4b5563;margin-bottom:24px;line-height:1.6}
 .hero-badge{display:inline-block;background:rgba(0,201,167,0.15);border:1px solid rgba(0,201,167,0.45);color:var(--teal);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:20px;margin-bottom:24px}
 .hero h1{font-size:58px;font-weight:700;color:#fff;line-height:1.08;margin-bottom:24px;text-transform:uppercase;letter-spacing:-0.5px}
 .hero h1 .accent{color:var(--teal)}
@@ -184,6 +189,9 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
   nav{gap:16px}
   .nav-links{display:none}
   .hamburger{display:flex}
+  .hero{min-height:auto;padding:40px 24px}
+  .hero-split{flex-direction:column;gap:32px}
+  .hero-right{flex:none;width:100%;max-width:100%}
   .hero h1{font-size:38px}
   .stats-inner{grid-template-columns:repeat(2,1fr);gap:0}
   .stat-item:not(:last-child)::after{display:none}
@@ -226,9 +234,9 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
       <a href="#plans">Plans</a>
       <a href="#why-fiber">Why Fiber</a>
       <a href="#faq">FAQ</a>
-      <a href="#optin">Contact</a>
+      <a href="#hero-form">Contact</a>
     </div>
-    <a href="#optin" class="nav-cta">Check Availability</a>
+    <a href="#hero-form" class="nav-cta">Check Availability</a>
     <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
   </nav>
 </div>
@@ -237,26 +245,74 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
   <a href="#plans" onclick="closeMenu()">Plans</a>
   <a href="#why-fiber" onclick="closeMenu()">Why Fiber</a>
   <a href="#faq" onclick="closeMenu()">FAQ</a>
-  <a href="#optin" onclick="closeMenu()">Contact</a>
-  <a href="#optin" class="nav-cta" onclick="closeMenu()">Check Availability</a>
+  <a href="#hero-form" onclick="closeMenu()">Contact</a>
+  <a href="#hero-form" class="nav-cta" onclick="closeMenu()">Check Availability</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Fiber Internet &mdash; Direct to Your Home</div>
-    <h1>Fast. Reliable.<br>Fiber Internet<br>Starting at <span class="accent">$39/mo</span></h1>
-    <p class="hero-sub">Pure fiber optic internet delivered directly to your home. No throttling, no contracts on most plans, no surprises. Price for Life options available on select packages.</p>
-    <div class="hero-btns">
-      <a href="#plans" class="btn-primary">See Plans &amp; Pricing</a>
-      <a href="tel:+13607679510" class="btn-ghost">Call 360-767-9510</a>
+  <div class="hero-split">
+
+    <!-- LEFT: Hero content -->
+    <div class="hero-left">
+      <div class="hero-badge">Fiber Internet &mdash; Direct to Your Home</div>
+      <h1>Fast. Reliable.<br>Fiber Internet<br>Starting at <span class="accent">$39/mo</span></h1>
+      <p class="hero-sub">Pure fiber optic internet delivered directly to your home. No throttling, no contracts on most plans, no surprises. Price for Life options available on select packages.</p>
+      <div class="trust-badges">
+        <span class="trust-badge">Price for Life Options Available</span>
+        <span class="trust-badge">No Throttling</span>
+        <span class="trust-badge">Pure Fiber &mdash; Not Cable</span>
+        <span class="trust-badge">Ask About Our Promotions</span>
+      </div>
     </div>
-    <div class="trust-badges">
-      <span class="trust-badge">Price for Life Options Available</span>
-      <span class="trust-badge">No Throttling</span>
-      <span class="trust-badge">Pure Fiber &mdash; Not Cable</span>
-      <span class="trust-badge">Ask About Our Promotions</span>
+
+    <!-- RIGHT: Opt-in form card -->
+    <div class="hero-right">
+      <div class="hero-card" id="hero-form">
+        <h3 class="hero-form-title">Get Your Free Quote</h3>
+        <p class="hero-form-sub">Takes 60 seconds. No obligation.</p>
+        <div class="form-success" id="form-success"></div>
+        <form name="fiber-optin" method="POST" data-netlify="true" id="optin-form">
+          <input type="hidden" name="form-name" value="fiber-optin">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full_name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Full Address Including City and State</label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, Seattle, WA 98101" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Cell Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(360) 555-5555" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="plan">Which Plan Interests You?</label>
+            <select id="plan" name="plan_interest">
+              <option value="">Select a plan</option>
+              <option>500 Mbps &mdash; $39/mo</option>
+              <option>1 Gig &mdash; $49/mo</option>
+              <option>2 Gigs &mdash; $69/mo</option>
+              <option>Not sure yet &mdash; help me choose</option>
+            </select>
+          </div>
+          <div class="consent-box">
+            <label>
+              <input type="checkbox" id="tcpa-consent" name="tcpa_consent">
+              <span>By checking this box and submitting this form, I provide my express written consent to FiberFastPromos.com and its authorized partners and representatives to contact me at the phone number and email address provided above using autodialed calls, prerecorded messages, and/or automated text messages (SMS/MMS) regarding fiber internet service offers, promotions, and availability in my area. I understand that my consent is not a condition of purchase and that I can opt out at any time. Message and data rates may apply. Message frequency varies. To opt out of text messages reply STOP at any time. To opt out of email unsubscribe using the link in any email. For help text HELP or call <a href="tel:+13607679510">360-767-9510</a>. View our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-of-service/">Terms of Service</a>.</span>
+            </label>
+          </div>
+          <div class="consent-error" id="consent-error">Please review and agree to the terms above to continue.</div>
+          <button type="submit" class="form-submit">Check Availability &amp; Get Contacted &rarr;</button>
+          <p class="form-note">We respect your privacy. Your information is never sold to third parties outside our authorized partner network.</p>
+        </form>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -458,52 +514,13 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
   </div>
 </section>
 
-<!-- OPT-IN FORM -->
-<section class="optin-section" id="optin">
-  <span class="section-label">Check Availability</span>
-  <h2 class="optin-heading">See If Fiber Is Available at Your Address</h2>
-  <div class="optin-accent"></div>
-  <p class="optin-sub">Enter your information below. A representative will contact you to confirm availability and walk you through the best plan for your home.</p>
-  <div class="form-card">
-    <div class="form-success" id="form-success"></div>
-    <form name="fiber-optin" method="POST" data-netlify="true" id="optin-form">
-      <input type="hidden" name="form-name" value="fiber-optin">
-      <div class="form-group">
-        <label for="full-name">Full Name</label>
-        <input type="text" id="full-name" name="full_name" placeholder="Your full name" required>
-      </div>
-      <div class="form-group">
-        <label for="address">Full Address Including City and State</label>
-        <input type="text" id="address" name="address" placeholder="123 Main St, Seattle, WA 98101" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Cell Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="(360) 555-5555" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@email.com" required>
-      </div>
-      <div class="form-group">
-        <label for="plan">Which Plan Interests You?</label>
-        <select id="plan" name="plan_interest">
-          <option value="">Select a plan</option>
-          <option>500 Mbps &mdash; $39/mo</option>
-          <option>1 Gig &mdash; $49/mo</option>
-          <option>2 Gigs &mdash; $69/mo</option>
-          <option>Not sure yet &mdash; help me choose</option>
-        </select>
-      </div>
-      <div class="consent-box">
-        <label>
-          <input type="checkbox" id="tcpa-consent" name="tcpa_consent">
-          <span>By checking this box and submitting this form, I provide my express written consent to FiberFastPromos.com and its authorized partners and representatives to contact me at the phone number and email address provided above using autodialed calls, prerecorded messages, and/or automated text messages (SMS/MMS) regarding fiber internet service offers, promotions, and availability in my area. I understand that my consent is not a condition of purchase and that I can opt out at any time. Message and data rates may apply. Message frequency varies. To opt out of text messages reply STOP at any time. To opt out of email unsubscribe using the link in any email. For help text HELP or call <a href="tel:+13607679510">360-767-9510</a>. View our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-of-service/">Terms of Service</a>.</span>
-        </label>
-      </div>
-      <div class="consent-error" id="consent-error">Please review and agree to the terms above to continue.</div>
-      <button type="submit" class="form-submit">Check Availability &amp; Get Contacted &rarr;</button>
-      <p class="form-note">We respect your privacy. Your information is never sold to third parties outside our authorized partner network.</p>
-    </form>
+<!-- CTA BANNER -->
+<section style="background:#0057FF;padding:80px 24px;text-align:center">
+  <div style="max-width:700px;margin:0 auto">
+    <h2 style="font-size:36px;font-weight:700;color:#fff;margin-bottom:16px;line-height:1.2">Ready to Get Connected?</h2>
+    <p style="color:rgba(255,255,255,0.8);font-size:18px;margin-bottom:36px;line-height:1.7">Check availability at your address and get a free quote in minutes. Plans starting at $39/mo with Price for Life options available.</p>
+    <button onclick="document.getElementById('hero-form').scrollIntoView({behavior:'smooth'})" style="background:#fff;color:#0057FF;font-weight:700;padding:16px 48px;border-radius:50px;font-size:18px;border:none;cursor:pointer;font-family:'Inter',sans-serif">Check Availability &rarr;</button>
+    <p style="color:rgba(255,255,255,0.7);margin-top:16px;font-size:15px">360-767-9510</p>
   </div>
 </section>
 
@@ -520,7 +537,7 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
         <li><a href="#plans">500 Mbps</a></li>
         <li><a href="#plans">1 Gig</a></li>
         <li><a href="#plans">2 Gigs</a></li>
-        <li><a href="#optin">Price for Life Info</a></li>
+        <li><a href="#hero-form">Price for Life Info</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -529,7 +546,7 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
         <li><a href="#why-fiber">Why Fiber</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#optin">Contact</a></li>
+        <li><a href="#hero-form">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -553,7 +570,7 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 <script>
 function openMenu(){document.getElementById('mobile-menu').style.display='flex';}
 function closeMenu(){document.getElementById('mobile-menu').style.display='none';}
-function scrollToForm(){var el=document.getElementById('optin');if(el){var top=el.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:top,behavior:'smooth'});}}
+function scrollToForm(){var el=document.getElementById('hero-form');if(el){el.scrollIntoView({behavior:'smooth'});} }
 function toggleFaq(btn){
   var item=btn.parentElement;
   var isOpen=item.classList.contains('open');
