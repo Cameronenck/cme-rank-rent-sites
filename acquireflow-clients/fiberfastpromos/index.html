@@ -9,165 +9,196 @@
 <meta property="og:description" content="Pure fiber internet direct to your home. No throttling, no contracts on most plans. Plans from $39/mo.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fiberfastpromos.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"FiberFastPromos.com","url":"https://fiberfastpromos.com"},{"@type":"LocalBusiness","name":"FiberFast Promos","description":"Pure fiber internet direct to your home. Plans from $39/mo.","telephone":"+13607679510","email":"support@fiberfastpromos.com","url":"https://fiberfastpromos.com"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is fiber internet and why is it better?","acceptedAnswer":{"@type":"Answer","text":"Fiber internet uses light signals through glass cables instead of electricity through copper. The result is faster speeds, lower latency, and far more reliability than cable or DSL."}},{"@type":"Question","name":"What does Price for Life mean?","acceptedAnswer":{"@type":"Answer","text":"Price for Life means your monthly rate is locked in and will never increase as long as you stay on your plan. Ask your representative which plans include this option."}},{"@type":"Question","name":"Is fiber available at my address?","acceptedAnswer":{"@type":"Answer","text":"Fiber availability varies by location. Call 360-767-9510 or fill out the form and we will confirm availability at your exact address."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"FiberFastPromos.com","url":"https://fiberfastpromos.com"},{"@type":"LocalBusiness","name":"FiberFast Promos","description":"Pure fiber internet direct to your home. Plans from $39/mo.","telephone":"+13607679510","email":"support@fiberfastpromos.com","url":"https://fiberfastpromos.com"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is fiber internet and why is it better?","acceptedAnswer":{"@type":"Answer","text":"Fiber internet uses light signals through glass cables instead of electricity through copper. The result is faster speeds, lower latency, and far more reliability than cable or DSL."}},{"@type":"Question","name":"What does Price for Life mean?","acceptedAnswer":{"@type":"Answer","text":"Price for Life means your monthly rate is locked in and will never increase as long as you stay on your plan."}},{"@type":"Question","name":"Is fiber available at my address?","acceptedAnswer":{"@type":"Answer","text":"Fiber availability varies by location. Call 360-767-9510 or fill out the form and we will confirm availability at your exact address."}}]}]}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--blue:#0057FF;--teal:#00C9A7;--dark:#0A0F1E;--white:#fff;--gray:#f4f6fb;--text:#1a1a2e;--muted:#6b7280}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);line-height:1.6}
+:root{
+  --blue:#0057FF;--teal:#00C9A7;--dark:#0A0F1E;
+  --white:#fff;--gray:#f4f6fb;--text:#1a1a2e;--muted:#4b5563;
+  --border:#e5e7eb;--light-blue:#f0f5ff;--faq-bg:#f8faff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;font-size:16px}
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-.section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.section-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:block}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header h2{font-size:40px;font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:14px}
+.section-header p{color:var(--muted);font-size:16px;line-height:1.7;max-width:560px;margin:0 auto}
 
 /* ANNOUNCEMENT BAR */
-.announcement-bar{background:var(--blue);color:#fff;text-align:center;padding:10px 24px;font-size:14px;font-weight:500}
+.announcement-bar{background:var(--blue);color:#fff;text-align:center;padding:10px 24px;font-size:14px;font-weight:500;position:relative;z-index:2000}
 .announcement-bar a{color:#fff;font-weight:700}
 
 /* NAV */
-.nav-wrap{position:fixed;top:16px;left:0;right:0;z-index:1000;display:flex;justify-content:center;padding:0 24px}
-nav{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-radius:30px;padding:12px 28px;display:flex;align-items:center;gap:32px;box-shadow:0 4px 24px rgba(0,0,0,0.12);max-width:900px;width:100%}
-.nav-logo{font-size:17px;font-weight:800;color:var(--blue);white-space:nowrap}
-.nav-links{display:flex;gap:24px;align-items:center;flex:1;justify-content:center}
-.nav-links a{color:var(--text);font-size:14px;font-weight:600;transition:color 0.2s}
+.nav-wrap{position:sticky;top:0;z-index:1000;padding:14px 24px;background:transparent;pointer-events:none}
+nav{background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:30px;padding:12px 28px;display:flex;align-items:center;gap:28px;box-shadow:0 4px 24px rgba(0,0,0,0.10);max-width:940px;margin:0 auto;pointer-events:all}
+.nav-logo{font-size:17px;font-weight:700;color:var(--blue);white-space:nowrap}
+.nav-links{display:flex;gap:22px;align-items:center;flex:1;justify-content:center}
+.nav-links a{color:var(--text);font-size:14px;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--blue)}
-.nav-cta{background:var(--blue);color:#fff;padding:10px 20px;border-radius:20px;font-weight:700;font-size:13px;white-space:nowrap;transition:opacity 0.2s}
+.nav-cta{background:var(--blue);color:#fff !important;padding:10px 20px;border-radius:20px;font-weight:600;font-size:13px;white-space:nowrap;transition:opacity 0.2s}
 .nav-cta:hover{opacity:0.88}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto}
 .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
-.mobile-menu a{font-size:20px;font-weight:700;color:var(--text)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(255,255,255,0.98);z-index:1500;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-menu a{font-size:20px;font-weight:600;color:var(--text)}
 .mobile-menu .nav-cta{font-size:16px;padding:14px 36px}
-.mobile-close{position:absolute;top:24px;right:24px;font-size:28px;cursor:pointer;color:var(--text)}
+.mobile-close{position:absolute;top:24px;right:28px;font-size:30px;cursor:pointer;color:var(--text);background:none;border:none;line-height:1}
 
 /* HERO */
-.hero{background:linear-gradient(rgba(10,15,30,0.60),rgba(10,15,30,0.60)),url(https://replicate.delivery/xezq/P63YoQoE0gqCIBLxwUhgWivLXbUNJojX193SxSdV78KNOqpF/tmpmikjk8k8.webp) center/cover no-repeat;min-height:100vh;display:flex;align-items:center;padding:120px 24px 80px}
+.hero{background:linear-gradient(rgba(10,15,30,0.55),rgba(10,15,30,0.55)),url(https://replicate.delivery/xezq/qIYnTw3gUaKXPVUYqTzQWtixBlnllkcqM5bJe1lPXGEynUTLA/tmpwyc23_j4.webp) center/cover no-repeat;min-height:100vh;display:flex;align-items:center;padding:80px 24px 80px;margin-top:-14px}
 .hero-inner{max-width:700px}
-.hero-badge{display:inline-block;background:rgba(0,201,167,0.15);border:1px solid rgba(0,201,167,0.4);color:var(--teal);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:20px;margin-bottom:24px}
-.hero h1{font-size:60px;font-weight:900;color:#fff;line-height:1.05;margin-bottom:24px;text-transform:uppercase}
+.hero-badge{display:inline-block;background:rgba(0,201,167,0.15);border:1px solid rgba(0,201,167,0.45);color:var(--teal);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:20px;margin-bottom:24px}
+.hero h1{font-size:58px;font-weight:700;color:#fff;line-height:1.08;margin-bottom:24px;text-transform:uppercase;letter-spacing:-0.5px}
 .hero h1 .accent{color:var(--teal)}
-.hero-sub{color:rgba(255,255,255,0.82);font-size:18px;line-height:1.75;margin-bottom:36px;max-width:560px}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px}
-.btn-primary{background:var(--blue);color:#fff;padding:15px 32px;border-radius:8px;font-weight:700;font-size:16px;border:none;cursor:pointer;display:inline-block;transition:opacity 0.2s}
+.hero-sub{color:rgba(255,255,255,0.82);font-size:18px;line-height:1.75;margin-bottom:36px;max-width:580px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.btn-primary{background:var(--blue);color:#fff;padding:15px 32px;border-radius:8px;font-weight:600;font-size:16px;border:none;cursor:pointer;display:inline-block;transition:opacity 0.2s;font-family:'Inter',sans-serif}
 .btn-primary:hover{opacity:0.88}
-.btn-ghost{background:transparent;color:#fff;padding:14px 30px;border-radius:8px;font-weight:700;font-size:16px;border:2px solid rgba(255,255,255,0.5);display:inline-block;transition:border-color 0.2s}
+.btn-ghost{background:transparent;color:#fff;padding:14px 30px;border-radius:8px;font-weight:600;font-size:16px;border:2px solid rgba(255,255,255,0.5);display:inline-block;transition:border-color 0.2s}
 .btn-ghost:hover{border-color:#fff}
 .trust-badges{display:flex;flex-wrap:wrap;gap:10px}
-.trust-badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:600}
+.trust-badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:500}
 
 /* STATS BAR */
-.stats-bar{background:var(--blue);padding:36px 24px}
-.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.stat-item strong{display:block;font-size:26px;font-weight:900;color:#fff}
-.stat-item span{font-size:14px;color:rgba(255,255,255,0.8);font-weight:500}
+.stats-bar{background:var(--blue);padding:40px 24px;position:relative;z-index:1}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat-item{padding:0 20px;position:relative}
+.stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;height:80%;width:1px;background:var(--teal);opacity:0.6}
+.stat-item strong{display:block;font-size:28px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:4px}
+.stat-item span{font-size:11px;color:rgba(255,255,255,0.75);font-weight:600;text-transform:uppercase;letter-spacing:0.08em}
 
 /* PLANS */
-.plans{padding:88px 24px;background:var(--gray)}
-.section-header{text-align:center;margin-bottom:16px}
-.section-header h2{font-size:36px;font-weight:800;color:var(--text);margin-bottom:12px}
-.section-header p{color:var(--muted);font-size:16px;max-width:560px;margin:0 auto}
-.plans-grid{max-width:1100px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
-.plan-card{background:#fff;border-radius:14px;padding:36px 28px;border:2px solid #e8ecf4;position:relative;transition:box-shadow 0.2s}
-.plan-card:hover{box-shadow:0 12px 40px rgba(0,87,255,0.10)}
-.plan-card.featured{border-color:var(--blue);box-shadow:0 12px 40px rgba(0,87,255,0.15)}
-.popular-badge{display:inline-block;background:var(--blue);color:#fff;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:16px}
-.plan-name{font-size:14px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
-.plan-speed{font-size:32px;font-weight:900;color:var(--text);margin-bottom:4px}
-.plan-price{font-size:42px;font-weight:900;color:var(--blue);margin-bottom:4px}
-.plan-price span{font-size:18px;font-weight:600;color:var(--muted)}
-.plan-divider{height:1px;background:#e8ecf4;margin:20px 0}
+.plans{padding:96px 24px;background:var(--gray)}
+.plans-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.plan-card{background:#fff;border-radius:16px;padding:32px;border:1px solid var(--border);position:relative;transition:box-shadow 0.2s}
+.plan-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08)}
+.plan-card.featured{background:var(--blue);border-color:var(--blue);padding:40px 32px;box-shadow:0 20px 60px rgba(0,87,255,0.30);transform:scale(1.03);z-index:2}
+.popular-badge{display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.plan-name{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.plan-card.featured .plan-name{color:rgba(255,255,255,0.7)}
+.plan-speed{font-size:32px;font-weight:700;color:var(--dark);margin-bottom:8px;line-height:1}
+.plan-card.featured .plan-speed{color:#fff}
+.plan-price{font-size:42px;font-weight:700;color:var(--blue);line-height:1;margin-bottom:4px}
+.plan-price span{font-size:17px;font-weight:500;color:var(--muted)}
+.plan-card.featured .plan-price{color:#fff}
+.plan-card.featured .plan-price span{color:rgba(255,255,255,0.7)}
+.plan-divider{height:1px;background:var(--border);margin:20px 0}
+.plan-card.featured .plan-divider{background:rgba(255,255,255,0.15)}
 .plan-features{list-style:none;margin-bottom:28px}
-.plan-features li{padding:7px 0;font-size:15px;color:#444;display:flex;align-items:flex-start;gap:8px}
-.plan-features li::before{content:"";display:inline-block;width:16px;height:16px;background:var(--teal);border-radius:50%;flex-shrink:0;margin-top:3px}
-.plan-features li.featured-item::before{background:var(--blue)}
-.btn-plan-outline{width:100%;padding:13px;border:2px solid var(--blue);color:var(--blue);background:transparent;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:background 0.2s,color 0.2s}
+.plan-features li{padding:7px 0;font-size:15px;color:#374151;display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+.plan-card.featured .plan-features li{color:rgba(255,255,255,0.9)}
+.plan-features li svg{flex-shrink:0;margin-top:2px}
+.btn-plan-outline{width:100%;padding:13px;border:2px solid var(--blue);color:var(--blue);background:transparent;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;transition:background 0.2s,color 0.2s;font-family:'Inter',sans-serif}
 .btn-plan-outline:hover{background:var(--blue);color:#fff}
-.btn-plan-filled{width:100%;padding:13px;border:none;background:var(--blue);color:#fff;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:opacity 0.2s}
-.btn-plan-filled:hover{opacity:0.88}
-.plans-disclaimer{max-width:1100px;margin:20px auto 0;text-align:center;font-size:13px;color:var(--muted);line-height:1.6}
+.btn-plan-filled{width:100%;padding:13px;border:none;background:#fff;color:var(--blue);border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:opacity 0.2s;font-family:'Inter',sans-serif}
+.btn-plan-filled:hover{opacity:0.92}
+.plans-disclaimer{max-width:1100px;margin:20px auto 0;text-align:center;font-size:12px;color:#9ca3af;font-style:italic}
 
 /* WHY FIBER */
-.why-fiber{padding:88px 24px;background:#fff}
-.why-grid{max-width:1100px;margin:48px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why-card{padding:28px 24px;border-top:4px solid var(--teal);background:var(--gray);border-radius:0 0 10px 10px}
-.why-card h3{font-size:17px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.why-fiber{padding:96px 24px;background:#fff}
+.why-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-card{padding:28px;background:var(--light-blue);border-left:3px solid var(--blue);border-radius:0 12px 12px 0}
+.why-card svg{display:block;margin-bottom:16px}
+.why-card h3{font-size:18px;font-weight:600;color:var(--dark);margin-bottom:10px;line-height:1.3}
 .why-card p{color:var(--muted);font-size:15px;line-height:1.7}
 
 /* HOW IT WORKS */
-.how-it-works{padding:88px 24px;background:var(--gray)}
-.steps{max-width:1100px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.step{text-align:center;padding:28px}
-.step-num{width:56px;height:56px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;margin:0 auto 20px}
-.step h3{font-size:19px;font-weight:700;margin-bottom:12px;color:var(--text)}
-.step p{color:var(--muted);line-height:1.7;font-size:15px}
+.how-it-works{padding:96px 24px;background:var(--blue)}
+.how-it-works .section-header h2{color:#fff}
+.how-it-works .section-header .section-label{color:rgba(255,255,255,0.7)}
+.how-it-works .section-header p{color:rgba(255,255,255,0.75)}
+.steps-wrap{position:relative;max-width:1100px;margin:0 auto}
+.steps-line{position:absolute;top:50px;left:calc(16.66% + 16px);right:calc(16.66% + 16px);height:2px;border-top:2px dashed var(--teal);opacity:0.5;pointer-events:none}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative;z-index:1}
+.step{background:#fff;border-radius:12px;padding:28px;position:relative}
+.step-pill{display:inline-block;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.5px}
+.step h3{font-size:20px;font-weight:700;color:var(--dark);margin-bottom:10px}
+.step p{color:var(--muted);font-size:15px;line-height:1.7}
+.step p a{color:var(--blue);font-weight:600}
 
 /* FAQ */
-.faq-section{padding:88px 24px;background:#fff}
-.faq-list{max-width:780px;margin:48px auto 0}
-.faq-item{background:var(--gray);border-radius:10px;margin-bottom:12px;overflow:hidden}
-.faq-q{width:100%;padding:20px 24px;text-align:left;background:none;border:none;font-size:16px;font-weight:700;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.faq-q:hover{background:rgba(0,87,255,0.04)}
-.faq-icon{font-size:20px;color:var(--blue);flex-shrink:0;transition:transform 0.25s;font-weight:400;line-height:1}
+.faq-section{padding:96px 24px;background:var(--faq-bg)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{background:#fff;border-radius:10px;margin-bottom:10px;border:1px solid var(--border);overflow:hidden;transition:border-color 0.2s}
+.faq-item.open{border-left:3px solid var(--blue)}
+.faq-q{width:100%;padding:20px 24px;text-align:left;background:none;border:none;font-size:16px;font-weight:500;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif}
+.faq-q:hover{background:rgba(0,87,255,0.03)}
+.faq-icon{font-size:22px;color:var(--blue);flex-shrink:0;transition:transform 0.25s;font-weight:400;line-height:1;width:24px;text-align:center}
 .faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;color:var(--muted);font-size:15px;line-height:1.75}
 .faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
 .faq-item.open .faq-icon{transform:rotate(45deg)}
 
 /* OPT-IN FORM */
-.optin-section{background:var(--dark);padding:88px 24px;text-align:center}
+.optin-section{background:var(--dark);padding:96px 24px;text-align:center}
 .optin-section .section-label{color:var(--teal)}
-.optin-section h2{font-size:36px;font-weight:800;color:#fff;margin-bottom:12px}
-.optin-section .optin-sub{color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
-.form-card{background:#fff;border-radius:16px;padding:40px;max-width:600px;margin:0 auto;text-align:left}
+.optin-heading{font-size:38px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.2}
+.optin-accent{display:inline-block;width:60px;height:3px;background:var(--blue);border-radius:2px;margin:0 auto 20px}
+.optin-sub{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.form-card{background:#fff;border-radius:20px;padding:40px;max-width:620px;margin:0 auto;text-align:left;box-shadow:0 24px 80px rgba(0,0,0,0.40)}
 .form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:13px;font-weight:700;color:#444;margin-bottom:5px}
-.form-group input,.form-group select{width:100%;padding:11px 14px;border:1.5px solid #dde2ec;border-radius:8px;font-size:15px;color:var(--text);outline:none;transition:border-color 0.2s;background:#fff}
-.form-group input:focus,.form-group select:focus{border-color:var(--blue)}
-.consent-box{margin:20px 0;padding:14px;background:#f8faff;border-radius:8px;border:1.5px solid #dde2ec}
-.consent-box label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:12px;color:#555;line-height:1.6}
+.form-group label{display:block;font-size:14px;font-weight:500;color:#374151;margin-bottom:5px}
+.form-group input,.form-group select{width:100%;padding:14px 16px;border:1.5px solid #d1d5db;border-radius:8px;font-size:15px;color:var(--text);outline:none;transition:border-color 0.2s,box-shadow 0.2s;background:#fff;font-family:'Inter',sans-serif}
+.form-group input:focus,.form-group select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,87,255,0.12)}
+.consent-box{margin:20px 0;padding:16px;background:#f9fafb;border-radius:8px;border:1px solid var(--border)}
+.consent-box label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:12px;color:#6b7280;line-height:1.6}
 .consent-box input[type=checkbox]{margin-top:2px;flex-shrink:0;width:16px;height:16px;accent-color:var(--blue)}
 .consent-box a{color:var(--blue)}
-.consent-error{display:none;color:#e53e3e;font-size:13px;margin-bottom:12px;font-weight:600}
-.form-submit{width:100%;background:var(--blue);color:#fff;border:none;padding:17px;font-size:18px;font-weight:700;border-radius:8px;cursor:pointer;transition:opacity 0.2s;letter-spacing:0.3px}
-.form-submit:hover{opacity:0.88}
-.form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}
-.form-success{display:none;background:#f0fdf4;border:1.5px solid #86efac;border-radius:10px;padding:24px;text-align:center;color:#166534;font-size:16px;font-weight:600;line-height:1.6}
+.consent-box a:hover{text-decoration:underline}
+.consent-error{display:none;color:#dc2626;font-size:13px;margin-bottom:12px;font-weight:600}
+.form-submit{width:100%;height:56px;background:linear-gradient(135deg,var(--blue),#0047dd);color:#fff;border:none;font-size:17px;font-weight:600;border-radius:10px;cursor:pointer;letter-spacing:0.02em;transition:opacity 0.2s;font-family:'Inter',sans-serif}
+.form-submit:hover{opacity:0.90}
+.form-note{text-align:center;font-size:12px;color:#9ca3af;margin-top:12px;line-height:1.6}
+.form-success{display:none;background:#f0fdf4;border:1.5px solid #86efac;border-radius:10px;padding:28px;text-align:center;color:#166534;font-size:16px;font-weight:500;line-height:1.7}
 
 /* FOOTER */
 footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-logo{font-size:20px;font-weight:800;color:var(--blue);margin-bottom:12px}
-.footer-tagline{color:rgba(255,255,255,0.5);font-size:14px;line-height:1.7}
-.footer-col h4{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;color:rgba(255,255,255,0.5)}
+.footer-logo{font-size:20px;font-weight:700;color:var(--blue);margin-bottom:12px}
+.footer-tagline{color:rgba(255,255,255,0.45);font-size:14px;line-height:1.7}
+.footer-col h4{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;color:rgba(255,255,255,0.45)}
 .footer-col ul{list-style:none}
 .footer-col ul li{margin-bottom:10px}
-.footer-col ul li a{color:rgba(255,255,255,0.65);font-size:14px;transition:color 0.2s}
+.footer-col ul li a{color:rgba(255,255,255,0.60);font-size:14px;transition:color 0.2s}
 .footer-col ul li a:hover{color:var(--teal)}
 .footer-bottom{max-width:1100px;margin:0 auto;padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.footer-bottom p{color:rgba(255,255,255,0.35);font-size:13px}
+.footer-bottom p{color:rgba(255,255,255,0.30);font-size:13px}
 .footer-bottom-links{display:flex;gap:20px}
-.footer-bottom-links a{color:rgba(255,255,255,0.35);font-size:13px;transition:color 0.2s}
+.footer-bottom-links a{color:rgba(255,255,255,0.30);font-size:13px;transition:color 0.2s}
 .footer-bottom-links a:hover{color:var(--teal)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
   .why-grid{grid-template-columns:repeat(2,1fr)}
   .footer-inner{grid-template-columns:repeat(2,1fr)}
+  .steps-line{display:none}
 }
 @media(max-width:768px){
   nav{gap:16px}
   .nav-links{display:none}
   .hamburger{display:flex}
-  .hero h1{font-size:40px}
-  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:38px}
+  .stats-inner{grid-template-columns:repeat(2,1fr);gap:0}
+  .stat-item:not(:last-child)::after{display:none}
+  .stat-item{padding:16px 12px;border-bottom:1px solid rgba(0,201,167,0.3)}
+  .stat-item:nth-child(1),.stat-item:nth-child(2){border-right:1px solid rgba(0,201,167,0.3)}
   .plans-grid{grid-template-columns:1fr}
+  .plan-card.featured{transform:none}
   .why-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr 1fr}
+  .section-header h2{font-size:30px}
 }
 @media(max-width:480px){
-  .hero{padding:100px 20px 60px}
-  .hero h1{font-size:30px}
+  .hero{padding:90px 20px 60px}
+  .hero h1{font-size:28px}
   .hero-btns{flex-direction:column}
   .btn-primary,.btn-ghost{text-align:center}
   .stats-inner{grid-template-columns:1fr 1fr}
@@ -175,7 +206,8 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
   .footer-inner{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;text-align:center}
   .form-card{padding:28px 20px}
-  .nav-wrap{top:8px;padding:0 12px}
+  .nav-wrap{padding:10px 16px}
+  .optin-heading{font-size:28px}
 }
 </style>
 </head>
@@ -201,7 +233,7 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
   </nav>
 </div>
 <div class="mobile-menu" id="mobile-menu">
-  <span class="mobile-close" onclick="closeMenu()">&times;</span>
+  <button class="mobile-close" onclick="closeMenu()">&times;</button>
   <a href="#plans" onclick="closeMenu()">Plans</a>
   <a href="#why-fiber" onclick="closeMenu()">Why Fiber</a>
   <a href="#faq" onclick="closeMenu()">FAQ</a>
@@ -242,30 +274,30 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 <section class="plans" id="plans">
   <div class="container">
     <div class="section-header">
-      <div class="section-label">Our Plans</div>
+      <span class="section-label">Our Plans</span>
       <h2>Simple Pricing. Pure Fiber. No Surprises.</h2>
       <p>All plans include pure fiber connection direct to your home. Price for Life options available on select packages &mdash; ask your representative for details.</p>
     </div>
     <div class="plans-grid">
 
-      <!-- CARD 1 -->
+      <!-- Starter -->
       <div class="plan-card">
         <div class="plan-name">Starter Fiber</div>
         <div class="plan-speed">500 Mbps</div>
         <div class="plan-price">$39<span>/mo</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>500 Mbps download &amp; upload</li>
-          <li>Pure fiber optic connection</li>
-          <li>No data caps</li>
-          <li>Free installation on qualifying plans</li>
-          <li>24/7 customer support</li>
-          <li>Ask about Price for Life options</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>500 Mbps download &amp; upload</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pure fiber optic connection</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No data caps</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free installation on qualifying plans</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 customer support</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ask about Price for Life options</li>
         </ul>
-        <button class="btn-plan-outline" onclick="document.getElementById('optin').scrollIntoView({behavior:'smooth'})">Get Started</button>
+        <button class="btn-plan-outline" onclick="scrollToForm()">Get Started</button>
       </div>
 
-      <!-- CARD 2 FEATURED -->
+      <!-- Gig FEATURED -->
       <div class="plan-card featured">
         <div class="popular-badge">Most Popular</div>
         <div class="plan-name">Gig Fiber</div>
@@ -273,33 +305,33 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
         <div class="plan-price">$49<span>/mo</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li class="featured-item">1 Gig (1,000 Mbps) download &amp; upload</li>
-          <li class="featured-item">Pure fiber optic connection</li>
-          <li class="featured-item">No data caps</li>
-          <li class="featured-item">Free installation on qualifying plans</li>
-          <li class="featured-item">Priority customer support</li>
-          <li class="featured-item">Price for Life available on this plan</li>
-          <li class="featured-item">Perfect for streaming, gaming, working from home</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>1 Gig (1,000 Mbps) download &amp; upload</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pure fiber optic connection</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No data caps</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free installation on qualifying plans</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority customer support</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Price for Life available on this plan</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Perfect for streaming, gaming, working from home</li>
         </ul>
-        <button class="btn-plan-filled" onclick="document.getElementById('optin').scrollIntoView({behavior:'smooth'})">Get Started</button>
+        <button class="btn-plan-filled" onclick="scrollToForm()">Get Started</button>
       </div>
 
-      <!-- CARD 3 -->
+      <!-- Ultra -->
       <div class="plan-card">
         <div class="plan-name">Ultra Fiber</div>
         <div class="plan-speed">2 Gigs</div>
         <div class="plan-price">$69<span>/mo</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>2 Gig (2,000 Mbps) download &amp; upload</li>
-          <li>Pure fiber optic connection</li>
-          <li>No data caps</li>
-          <li>Free installation on qualifying plans</li>
-          <li>Premium 24/7 support</li>
-          <li>Ask about Price for Life options</li>
-          <li>Ideal for smart homes, power users, home offices</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>2 Gig (2,000 Mbps) download &amp; upload</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pure fiber optic connection</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No data caps</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free installation on qualifying plans</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Premium 24/7 support</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ask about Price for Life options</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00C9A7"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ideal for smart homes, power users, home offices</li>
         </ul>
-        <button class="btn-plan-outline" onclick="document.getElementById('optin').scrollIntoView({behavior:'smooth'})">Get Started</button>
+        <button class="btn-plan-outline" onclick="scrollToForm()">Get Started</button>
       </div>
 
     </div>
@@ -311,23 +343,48 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 <section class="why-fiber" id="why-fiber">
   <div class="container">
     <div class="section-header">
-      <div class="section-label">Why Fiber</div>
+      <span class="section-label">Why Fiber</span>
       <h2>Not All Internet Is Created Equal</h2>
     </div>
     <div class="why-grid">
       <div class="why-card">
+        <!-- House + wifi icon -->
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 18L20 6l14 12v16a2 2 0 01-2 2H8a2 2 0 01-2-2V18z" stroke="#0057FF" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M15 34V22h10v12" stroke="#0057FF" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M20 14a6 6 0 016 6" stroke="#00C9A7" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M20 11a9 9 0 019 9" stroke="#00C9A7" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="1.5" fill="#0057FF"/>
+        </svg>
         <h3>Pure Fiber to Your Home</h3>
         <p>Not fiber to the neighborhood &mdash; fiber all the way to your door. That means faster speeds, more reliability, and no slowdowns during peak hours.</p>
       </div>
       <div class="why-card">
+        <!-- Up/down arrows icon -->
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 28V12" stroke="#0057FF" stroke-width="2" stroke-linecap="round"/>
+          <path d="M7 17l5-5 5 5" stroke="#0057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 12v16" stroke="#00C9A7" stroke-width="2" stroke-linecap="round"/>
+          <path d="M23 23l5 5 5-5" stroke="#00C9A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <h3>Symmetrical Speeds</h3>
         <p>Equal upload and download speeds. Upload large files, video conference, and stream simultaneously without any degradation.</p>
       </div>
       <div class="why-card">
+        <!-- Lightning bolt icon -->
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 6L10 22h12l-4 12 18-18H24L22 6z" stroke="#0057FF" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <path d="M10 22h12" stroke="#00C9A7" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
         <h3>No Throttling. Ever.</h3>
         <p>We do not slow your connection during peak hours or when you have streamed too much. Your speed is your speed, all day, every day.</p>
       </div>
       <div class="why-card">
+        <!-- Shield + check icon -->
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 5l12 4v10c0 7-5 12-12 14C13 31 8 26 8 19V9l12-4z" stroke="#0057FF" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M14 20l4 4 8-8" stroke="#00C9A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <h3>Price for Life Options</h3>
         <p>Lock in your rate and never worry about price increases again. Ask your representative about which plans include Price for Life protection.</p>
       </div>
@@ -336,27 +393,30 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="how-it-works">
+<section class="how-it-works" id="how-it-works">
   <div class="container">
     <div class="section-header">
-      <div class="section-label">The Process</div>
+      <span class="section-label">The Process</span>
       <h2>Up and Running in 3 Simple Steps</h2>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Check Availability</h3>
-        <p>Enter your address below or call <a href="tel:+13607679510" style="color:var(--blue);font-weight:600">360-767-9510</a>. We will confirm fiber service is available at your location and walk you through the best plan for your needs.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Pick Your Plan</h3>
-        <p>Choose from 500 Mbps, 1 Gig, or 2 Gig. Ask your representative about Price for Life options and any available promotions for new customers.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Get Connected</h3>
-        <p>We schedule your installation at a time that works for you. Our technicians handle everything &mdash; you just enjoy the speed.</p>
+    <div class="steps-wrap">
+      <div class="steps-line"></div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-pill">Step 1</div>
+          <h3>Check Availability</h3>
+          <p>Enter your address below or call <a href="tel:+13607679510">360-767-9510</a>. We will confirm fiber service is available at your location and walk you through the best plan for your needs.</p>
+        </div>
+        <div class="step">
+          <div class="step-pill">Step 2</div>
+          <h3>Pick Your Plan</h3>
+          <p>Choose from 500 Mbps, 1 Gig, or 2 Gig. Ask your representative about Price for Life options and any available promotions for new customers.</p>
+        </div>
+        <div class="step">
+          <div class="step-pill">Step 3</div>
+          <h3>Get Connected</h3>
+          <p>We schedule your installation at a time that works for you. Our technicians handle everything &mdash; you just enjoy the speed.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -366,7 +426,7 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 <section class="faq-section" id="faq">
   <div class="container">
     <div class="section-header">
-      <div class="section-label">FAQ</div>
+      <span class="section-label">FAQ</span>
       <h2>Questions About Fiber Internet</h2>
     </div>
     <div class="faq-list">
@@ -400,13 +460,12 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 
 <!-- OPT-IN FORM -->
 <section class="optin-section" id="optin">
-  <div class="section-label">Check Availability</div>
-  <h2>See If Fiber Is Available at Your Address</h2>
+  <span class="section-label">Check Availability</span>
+  <h2 class="optin-heading">See If Fiber Is Available at Your Address</h2>
+  <div class="optin-accent"></div>
   <p class="optin-sub">Enter your information below. A representative will contact you to confirm availability and walk you through the best plan for your home.</p>
   <div class="form-card">
-    <div class="form-success" id="form-success">
-      Thank you! A representative will be in touch within 24 hours to confirm fiber availability at your address and walk you through your options. Questions? Call us at <a href="tel:+13607679510" style="color:var(--blue)">360-767-9510</a>.
-    </div>
+    <div class="form-success" id="form-success"></div>
     <form name="fiber-optin" method="POST" data-netlify="true" id="optin-form">
       <input type="hidden" name="form-name" value="fiber-optin">
       <div class="form-group">
@@ -492,43 +551,36 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 </footer>
 
 <script>
-// Mobile menu
 function openMenu(){document.getElementById('mobile-menu').style.display='flex';}
 function closeMenu(){document.getElementById('mobile-menu').style.display='none';}
-
-// FAQ accordion
+function scrollToForm(){var el=document.getElementById('optin');if(el){var top=el.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:top,behavior:'smooth'});}}
 function toggleFaq(btn){
   var item=btn.parentElement;
-  document.querySelectorAll('.faq-item.open').forEach(function(el){if(el!==item){el.classList.remove('open');}});
-  item.classList.toggle('open');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
+  if(!isOpen){item.classList.add('open');}
 }
-
-// Form validation + success
 document.getElementById('optin-form').addEventListener('submit',function(e){
   var cb=document.getElementById('tcpa-consent');
   var err=document.getElementById('consent-error');
   if(!cb.checked){
     e.preventDefault();
     err.style.display='block';
-    cb.closest('.consent-box').style.borderColor='#e53e3e';
+    cb.closest('.consent-box').style.borderColor='#dc2626';
     cb.closest('.consent-box').scrollIntoView({behavior:'smooth',block:'center'});
     return;
   }
   err.style.display='none';
-  // Show success message for non-Netlify environments
-  var name=document.getElementById('full-name').value.split(' ')[0];
-  var successEl=document.getElementById('form-success');
-  if(successEl){
-    successEl.innerHTML='Thank you '+name+'! A representative will be in touch within 24 hours to confirm fiber availability at your address and walk you through your options. Questions? Call us at <a href="tel:+13607679510" style="color:var(--blue)">360-767-9510</a>.';
-  }
+  var name=document.getElementById('full-name').value.split(' ')[0]||'there';
+  var s=document.getElementById('form-success');
+  if(s){s.innerHTML='Thank you, '+name+'! A representative will be in touch within 24 hours to confirm fiber availability at your address and walk you through your options. Questions? Call us at <a href="tel:+13607679510" style="color:#0057FF">360-767-9510</a>.';s.style.display='block';}
 });
-
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     var id=this.getAttribute('href').substring(1);
+    if(!id)return;
     var target=document.getElementById(id);
-    if(target){e.preventDefault();var offset=80;var top=target.getBoundingClientRect().top+window.scrollY-offset;window.scrollTo({top:top,behavior:'smooth'});}
+    if(target){e.preventDefault();var top=target.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:top,behavior:'smooth'});}
   });
 });
 </script>
