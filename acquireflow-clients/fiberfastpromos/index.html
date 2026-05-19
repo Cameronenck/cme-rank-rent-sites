@@ -303,8 +303,9 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
           <div class="consent-box">
             <label>
               <input type="checkbox" id="tcpa-consent" name="tcpa_consent">
-              <span>By checking this box and submitting this form, I provide my express written consent to FiberFastPromos.com and its authorized partners and representatives to contact me at the phone number and email address provided above using autodialed calls, prerecorded messages, and/or automated text messages (SMS/MMS) regarding fiber internet service offers, promotions, and availability in my area. I understand that my consent is not a condition of purchase and that I can opt out at any time. Message and data rates may apply. Message frequency varies. To opt out of text messages reply STOP at any time. To opt out of email unsubscribe using the link in any email. For help text HELP or call <a href="tel:+13607679510">360-767-9510</a>. View our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-of-service/">Terms of Service</a>.</span>
+              <span>I agree to receive calls, texts &amp; emails from FiberFastPromos.com and partners about fiber offers. Msg &amp; data rates may apply. Reply STOP to opt out. <span id="terms-toggle" style="color:#0057FF;cursor:pointer;text-decoration:underline;white-space:nowrap" onclick="toggleTerms()">View full terms</span></span>
             </label>
+            <div id="full-terms" style="display:none;margin-top:8px;font-size:11px;color:#6b7280;line-height:1.6;padding:10px;background:#f9fafb;border-radius:6px;border:1px solid #e5e7eb">By checking this box and submitting this form, I provide my express written consent to FiberFastPromos.com and its authorized partners and representatives to contact me at the phone number and email address provided above using autodialed calls, prerecorded messages, and/or automated text messages (SMS/MMS) regarding fiber internet service offers, promotions, and availability in my area. I understand that my consent is not a condition of purchase and that I can opt out at any time. Message and data rates may apply. Message frequency varies. To opt out of text messages reply STOP at any time. To opt out of email unsubscribe using the link in any email. For help text HELP or call <a href="tel:+13607679510">360-767-9510</a>. View our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-of-service/">Terms of Service</a>.</div>
           </div>
           <div class="consent-error" id="consent-error">Please review and agree to the terms above to continue.</div>
           <button type="submit" class="form-submit">Check Availability &amp; Get Contacted &rarr;</button>
@@ -571,6 +572,12 @@ footer{background:var(--dark);color:#fff;padding:64px 24px 0}
 function openMenu(){document.getElementById('mobile-menu').style.display='flex';}
 function closeMenu(){document.getElementById('mobile-menu').style.display='none';}
 function scrollToForm(){var el=document.getElementById('hero-form');if(el){el.scrollIntoView({behavior:'smooth'});} }
+function toggleTerms(){
+  var d=document.getElementById('full-terms');
+  var t=document.getElementById('terms-toggle');
+  if(d.style.display==='none'){d.style.display='block';t.textContent='Hide terms';}
+  else{d.style.display='none';t.textContent='View full terms';}
+}
 function toggleFaq(btn){
   var item=btn.parentElement;
   var isOpen=item.classList.contains('open');
