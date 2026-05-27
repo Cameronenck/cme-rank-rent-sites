@@ -9,3 +9,4 @@
   for = "/*.html"
   [headers.values]
     Content-Type = "text/html; charset=utf-8"
+# restored 2026-05-27T15:33:38Z
