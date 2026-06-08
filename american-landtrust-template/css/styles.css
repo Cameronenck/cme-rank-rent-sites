@@ -2075,6 +2075,12 @@ button:hover .icon-svg {
     display: none;
   }
 
+  /* Force smaller icons in trust strip on mobile */
+  .trust-item .icon-svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
   .trust-item {
     font-size: 0.75rem;
     flex-shrink: 0;
@@ -2207,6 +2213,12 @@ button:hover .icon-svg {
   .floating-bar a {
     font-size: 0.68rem;
     padding: 14px 6px;
+  }
+
+  /* Even smaller trust strip icons for tiny screens */
+  .trust-item .icon-svg {
+    width: 8px !important;
+    height: 8px !important;
   }
 }
 
