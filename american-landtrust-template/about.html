@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>About — American Land Trust</title>
   <meta name="description" content="Meet the team behind American Land Trust. We're dedicated to working with landowners who take pride in their property and heritage.">
+  <meta property="og:title" content="About — American Land Trust">
+  <meta property="og:description" content="Meet the team behind American Land Trust. Dedicated to working with landowners who take pride in their property and heritage.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500076656116-558758c991c1?w=1200&q=80">
   <meta name="theme-color" content="#213a7e">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23213a7e'/><text y='.72em' x='50' text-anchor='middle' font-size='55' fill='white'>ALT</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
   <script src="js/icons.js" defer></script>
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -125,7 +132,7 @@
           <div class="expand-content" style="display:none;">
             <p>When I'm not serving or working with landowners, I'm spending time with my family, enjoying the great Texas outdoors, or lending a hand to fellow veterans. Service isn't just a job—it's a way of life.</p>
           </div>
-          <button class="expand-btn" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display==='none'?'block':'none'; this.textContent=this.textContent==='Open Full Story →'?'Close Story ←':'Open Full Story →'" aria-expanded="false">Open Full Story →</button>
+          <button class="expand-btn" onclick="var c=this.previousElementSibling;var show=c.style.display==='none';c.style.display=show?'block':'none';this.textContent=show?'Close Story ←':'Open Full Story →';this.setAttribute('aria-expanded',show)" aria-expanded="false">Open Full Story →</button>
         </div>
         <div class="team-image">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Dan Roberts, Managing Director" loading="lazy">
@@ -166,7 +173,7 @@
           <div class="expand-content" style="display:none;">
             <p>With years of experience in land acquisitions, I know how to navigate the complexities of property transactions while keeping things straightforward for our clients.</p>
           </div>
-          <button class="expand-btn" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display==='none'?'block':'none'; this.textContent=this.textContent==='Open Full Story →'?'Close Story ←':'Open Full Story →'" aria-expanded="false">Open Full Story →</button>
+          <button class="expand-btn" onclick="var c=this.previousElementSibling;var show=c.style.display==='none';c.style.display=show?'block':'none';this.textContent=show?'Close Story ←':'Open Full Story →';this.setAttribute('aria-expanded',show)" aria-expanded="false">Open Full Story →</button>
         </div>
         <div class="team-image">
           <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Jenny Mann, Acquisition Manager" loading="lazy">

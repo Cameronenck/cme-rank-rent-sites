@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExitIntent();
   initTrustSignals();
   replaceEmojis();
+  updateCopyrightYear();
 });
 
 /* ----------------------------------------
@@ -25,6 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function replaceEmojis() {
   // Replace header phone emoji (CSS ::before handled by removing it)
   // This function catches any stragglers in text content
+}
+
+/* ----------------------------------------
+   Dynamic Copyright Year
+   ---------------------------------------- */
+function updateCopyrightYear() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('.footer-bottom span').forEach(el => {
+    if (el.textContent.includes('©')) {
+      el.textContent = el.textContent.replace(/© \d{4}/, `© ${year}`);
+    }
+  });
 }
 
 /* ----------------------------------------
@@ -45,6 +58,7 @@ function initMobileMenu() {
 
   function openMenu() {
     toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
     nav.classList.add('open');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -52,6 +66,7 @@ function initMobileMenu() {
 
   function closeMenu() {
     toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
     nav.classList.remove('open');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
