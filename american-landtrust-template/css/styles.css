@@ -2495,3 +2495,166 @@ button:hover .icon-svg {
 .skip-link:focus {
   top: 10px;
 }
+
+/* ========================================
+   Enhanced Design Polish - V2
+   ======================================== */
+
+/* Improved hero gradient for more premium feel */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(33, 58, 126, 0.75) 0%, rgba(17,17,17,0.55) 50%, rgba(33,58,126,0.4) 100%);
+}
+
+/* Better hero subtitle styling */
+.hero h3 strong {
+  color: white;
+}
+
+/* Enhanced trust strip design */
+.trust-strip {
+  background: linear-gradient(90deg, var(--light-gray) 0%, white 50%, var(--light-gray) 100%);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Better process card numbers */
+.process-number {
+  box-shadow: 0 4px 12px rgba(193, 32, 55, 0.3);
+}
+
+/* Enhanced review card styling */
+.review-card {
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Better article hover effects */
+.article-card {
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Enhanced CTA button styling */
+.btn-red {
+  box-shadow: 0 2px 10px rgba(193, 32, 55, 0.2);
+}
+
+/* Better why-section check icons */
+.why-item .icon-check {
+  box-shadow: 0 2px 6px rgba(40, 167, 69, 0.25);
+}
+
+/* Enhanced footer design */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--navy), var(--red));
+}
+
+.footer {
+  position: relative;
+}
+
+/* Better floating bar design */
+.floating-bar {
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+
+/* Enhanced contact badge hover */
+.contact-badge {
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Mission section image overlay effect */
+.mission-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(33,58,126,0.1) 100%);
+  pointer-events: none;
+}
+
+.mission-image {
+  position: relative;
+}
+
+/* Better section transitions */
+.process-section {
+  background: linear-gradient(180deg, var(--cream-alpha) 0%, rgba(235,232,221,0.5) 100%);
+}
+
+/* Enhanced scroll indicator */
+@media (min-width: 768px) {
+  .scroll-indicator {
+    opacity: 0.5;
+  }
+}
+
+/* Owner photo section improvements */
+.owner-photo-placeholder {
+  overflow: hidden;
+}
+
+/* Better about-hero with gradient enhancement */
+.about-hero .hero-overlay {
+  background: linear-gradient(135deg, rgba(33,58,126,0.75) 0%, rgba(17,17,17,0.6) 100%);
+}
+
+/* Team section improvements */
+.team-member:last-child {
+  border-bottom: none;
+}
+
+/* Contact page form wrapper enhancement */
+.contact-form-wrapper {
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Better exit popup styling */
+.exit-popup {
+  box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+}
+
+/* Improved mobile experience */
+@media (max-width: 767px) {
+  /* Better mobile spacing */
+  .mission-section,
+  .why-section {
+    padding: 50px 0;
+  }
+
+  .process-section {
+    padding: 50px 0;
+  }
+  
+  /* Better mobile footer */
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  /* Mobile hero improvements */
+  .hero-content h1 {
+    letter-spacing: -0.5px;
+  }
+  
+  /* Better mobile review cards */
+  .review-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 16px;
+  }
+  
+  /* Mobile process cards */
+  .process-number {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+  
+  /* Better mobile team images */
+  .team-image img {
+    height: 250px;
+  }
+}

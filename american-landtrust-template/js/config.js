@@ -94,22 +94,22 @@ const SITE_CONFIG = {
     {
       title: "Unlock the True Value of Your Land: A Hassle-Free Way to Secure Your Legacy",
       category: "MARKET REPORT",
-      link: "#"
+      link: "blog/unlock-true-value-of-your-land.html"
     },
     {
       title: "Why Now Is the Perfect Time to Sell Your Land",
       category: "RETIREMENT PLANNING",
-      link: "#"
+      link: "blog/why-now-is-perfect-time-to-sell.html"
     },
     {
       title: "A Letter to Landowners: Honor Your Legacy, Embrace a New Chapter",
       category: "FARM LIFE",
-      link: "#"
+      link: "blog/letter-to-landowners.html"
     },
     {
       title: "Why Holding Onto Unused Land Could Be Costing You More Than You Think",
       category: "INVESTMENT",
-      link: "#"
+      link: "blog/unused-land-costing-you.html"
     }
   ],
 
@@ -146,7 +146,7 @@ const SITE_CONFIG = {
   footerLinks: [
     { text: "About the Process", href: "index.html#process" },
     { text: "About", href: "about.html" },
-    { text: "Articles & Insights", href: "#" }
+    { text: "Articles & Insights", href: "blog/" }
   ],
 
   // SEO

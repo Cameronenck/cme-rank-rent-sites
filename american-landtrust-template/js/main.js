@@ -622,29 +622,26 @@ function initTrustSignals() {
 }
 
 /* ----------------------------------------
-   Facebook Pixel Integration Ready
+   Analytics Integration Ready
    ---------------------------------------- */
-// Pixel should be added to head tag. This provides helper functions.
+// Provides helper functions for tracking events.
 window.ALT_Track = {
   // Track form submission
   formSubmit: function(formName) {
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead', { content_name: formName });
-    }
     if (typeof gtag !== 'undefined') {
       gtag('event', 'generate_lead', { event_category: 'form', event_label: formName });
     }
   },
   // Track phone click
   phoneClick: function() {
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Contact', { content_name: 'phone_click' });
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'contact', { event_category: 'phone', event_label: 'phone_click' });
     }
   },
   // Track email click
   emailClick: function() {
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Contact', { content_name: 'email_click' });
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'contact', { event_category: 'email', event_label: 'email_click' });
     }
   }
 };

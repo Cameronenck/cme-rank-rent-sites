@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.unsplash.com/photo-1500076656116-558758c991c1?w=1200&q=80">
   <meta name="theme-color" content="#213a7e">
-  <link rel="stylesheet" href="css/styles.css?v=20260608">
+  <link rel="stylesheet" href="css/styles.css?v=20260608b">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23213a7e'/><text y='.72em' x='50' text-anchor='middle' font-size='55' fill='white'>ALT</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
         <a href="index.html">Home</a>
         <a href="index.html#process">Sell Your Land</a>
         <a href="about.html" class="active">About</a>
-        <a href="#">Articles and Insights</a>
+        <a href="blog/">Articles and Insights</a>
         <a href="contact.html">Contact</a>
       </nav>
       <a href="tel:832-558-3227" class="header-phone" aria-label="Call us at 832-558-3227">
@@ -81,7 +81,7 @@
       </div>
       <div class="proof-item" role="listitem">
         <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-        BBB Accredited
+        Fully Licensed &amp; Insured
       </div>
     </div>
   </div>
@@ -102,10 +102,8 @@
   <section class="owner-photo-section">
     <div class="container">
       <div class="owner-photo-wrapper">
-        <div class="owner-photo-placeholder" aria-label="Business owner photo placeholder">
-          <span class="icon-svg" style="width:64px;height:64px;color:var(--navy);opacity:0.4;" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-          <p class="placeholder-label">Owner &amp; Daughter Photo</p>
-          <p>Upload your family photo here to build a personal connection with landowners</p>
+        <div class="owner-photo-placeholder" style="border:none;background:none;padding:0;">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="American Land Trust business owner" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);" loading="lazy">
         </div>
         <div class="owner-bio-content fade-in-right">
           <h2>Meet the Family Behind ALT</h2>
@@ -141,14 +139,14 @@
           <button class="expand-btn" onclick="var c=this.previousElementSibling;var show=c.style.display==='none';c.style.display=show?'block':'none';this.textContent=show?'Close Story ←':'Open Full Story →';this.setAttribute('aria-expanded',show)" aria-expanded="false">Open Full Story →</button>
         </div>
         <div class="team-image">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Dan Roberts, Managing Director" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Dan Roberts, Managing Director" loading="lazy">
         </div>
       </div>
 
       <!-- Reddy Family -->
       <div class="team-member fade-in">
         <div class="team-image">
-          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80" alt="Reddy Family, Founders" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Reddy Family, Founders" loading="lazy">
         </div>
         <div class="team-info">
           <h2>Reddy Family</h2>
@@ -194,7 +192,7 @@
     <div class="container">
       <div class="articles-header">
         <h3><strong>Recent Articles &amp; Insights</strong></h3>
-        <a href="#" class="btn btn-outline" style="border-color:var(--dark);color:var(--dark);">
+        <a href="blog/" class="btn btn-outline" style="border-color:var(--dark);color:var(--dark);">
           See all
           <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
         </a>
@@ -207,7 +205,7 @@
           </div>
           <div class="article-body">
             <h4>Unlock the True Value of Your Land: A Hassle-Free Way to Secure Your Legacy</h4>
-            <a href="#" class="article-link">
+            <a href="blog/unlock-true-value-of-your-land.html" class="article-link">
               Read more
               <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </a>
@@ -220,7 +218,7 @@
           </div>
           <div class="article-body">
             <h4>Why Now Is the Perfect Time to Sell Your Land</h4>
-            <a href="#" class="article-link">
+            <a href="blog/why-now-is-perfect-time-to-sell.html" class="article-link">
               Read more
               <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </a>
@@ -233,7 +231,7 @@
           </div>
           <div class="article-body">
             <h4>A Letter to Landowners: Honor Your Legacy, Embrace a New Chapter</h4>
-            <a href="#" class="article-link">
+            <a href="blog/letter-to-landowners.html" class="article-link">
               Read more
               <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </a>
@@ -262,7 +260,7 @@
             <h3>Information</h3>
             <a href="index.html#process">About the Process</a>
             <a href="about.html">About</a>
-            <a href="#">Articles &amp; Insights</a>
+            <a href="blog/">Articles &amp; Insights</a>
           </div>
         </div>
         <div class="footer-contact">
