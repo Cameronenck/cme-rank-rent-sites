@@ -230,6 +230,21 @@ button:hover .icon-svg {
   line-height: 1.1;
 }
 
+/* SVG Logo Icon */
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
   display: flex;
@@ -1806,6 +1821,10 @@ button:hover .icon-svg {
   transform: translateY(20px);
   transition: transform 0.3s ease;
   position: relative;
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .exit-popup-overlay.active .exit-popup {
@@ -1816,8 +1835,8 @@ button:hover .icon-svg {
   position: absolute;
   top: 12px;
   right: 12px;
-  width: 36px;
-  height: 36px;
+  width: var(--touch-min);
+  height: var(--touch-min);
   border: none;
   background: var(--light-gray);
   border-radius: 50%;
@@ -1827,6 +1846,12 @@ button:hover .icon-svg {
   justify-content: center;
   min-width: var(--touch-min);
   min-height: var(--touch-min);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.exit-popup-close:active {
+  background: #e0e0e0;
 }
 
 .exit-popup h2 {
@@ -1834,6 +1859,7 @@ button:hover .icon-svg {
   font-size: 1.5rem;
   margin-bottom: 8px;
   color: var(--text-dark);
+  padding-right: 36px;
 }
 
 .exit-popup p {
@@ -1853,6 +1879,15 @@ button:hover .icon-svg {
 
 .exit-popup .form-group input {
   font-size: 16px;
+  padding: 14px 16px;
+  min-height: var(--touch-min);
+}
+
+.exit-popup .btn {
+  min-height: 48px;
+  font-size: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Trust signals strip */
@@ -1930,6 +1965,196 @@ button:hover .icon-svg {
 }
 
 /* ========================================
+   Mobile-Specific Fixes (max-width: 767px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Logo text sizing on small screens */
+  .logo span {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Exit popup mobile optimization */
+  .exit-popup-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .exit-popup {
+    padding: 28px 20px 24px;
+    max-height: 85vh;
+    max-height: 85dvh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    margin-bottom: 0;
+  }
+
+  .exit-popup h2 {
+    font-size: 1.25rem;
+    padding-right: 40px;
+  }
+
+  .exit-popup p {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+  }
+
+  .exit-popup .form-social-proof {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+  }
+
+  .exit-popup .form-group {
+    margin-bottom: 10px;
+  }
+
+  .exit-popup .form-group input {
+    padding: 12px 14px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  .exit-popup .btn {
+    min-height: 50px;
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+
+  /* Trust strip: scroll horizontally on mobile */
+  .trust-strip {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 14px 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .trust-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trust-item {
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* Floating bar: ensure touch targets */
+  .floating-bar a {
+    padding: 14px 8px;
+    font-size: 0.72rem;
+    min-height: 48px;
+  }
+
+  /* Footer form on mobile */
+  .footer-form input,
+  .footer-form textarea {
+    padding: 12px 14px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  /* Contact badges wrap properly */
+  .contact-badges {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-badge {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 18px;
+  }
+
+  /* Hero section spacing */
+  .hero-content {
+    padding: 90px 16px 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    margin-bottom: 16px;
+  }
+
+  .hero h3 {
+    margin-bottom: 28px;
+  }
+
+  /* Process cards */
+  .process-card {
+    padding: 24px 20px;
+  }
+
+  /* Mission section */
+  .mission-section {
+    padding: 40px 0;
+  }
+
+  .mission-content h3 {
+    font-size: 1.15rem;
+  }
+
+  /* Articles: 2-column on wider mobile */
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .article-img {
+    height: 140px;
+  }
+
+  .article-body {
+    padding: 14px;
+  }
+
+  .article-body h4 {
+    font-size: 0.88rem;
+    line-height: 1.3;
+  }
+}
+
+/* Extra small screens (320px) */
+@media (max-width: 374px) {
+  .logo span {
+    font-size: 0.88rem;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-content {
+    padding: 85px 12px 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exit-popup {
+    padding: 24px 16px 20px;
+  }
+
+  .floating-bar a {
+    font-size: 0.68rem;
+    padding: 14px 6px;
+  }
+}
+
+/* ========================================
    Responsive — Tablet (768px+)
    ======================================== */
 
@@ -1987,6 +2212,11 @@ button:hover .icon-svg {
     width: 50px;
     height: 50px;
     font-size: 0.55rem;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
   }
 
   .hero-content {
