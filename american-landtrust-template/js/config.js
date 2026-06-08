@@ -26,17 +26,17 @@ const SITE_CONFIG = {
     {
       title: "Assessment and Consulting",
       description: 'Tell Us About Your Land. Share the <strong>APN number, county, state,</strong> and <strong>property owner details</strong>—no paperwork is needed upfront. If you have any liens or details you\'d like us to know, we\'ll listen.',
-      icon: "📋"
+      icon: "clipboard"
     },
     {
       title: "Smart Valuation & Honest Offers",
       description: '<strong>We evaluate & make a fair offer.</strong> We use market expertise, advanced data tools, and good old-fashioned common sense to assess your land. We consider location, zoning, size, and current market trends to ensure you receive a fair, no-obligation offer within 48 hours.',
-      icon: "💰"
+      icon: "dollarSign"
     },
     {
       title: "Fast and Secure Closing",
       description: '<strong>Get Paid in 1 to 3 Weeks!</strong> Once you accept the offer, we work with trusted and vetted title companies to handle all the paperwork and legal details. Most sellers receive their payment within 1 to 3 weeks, ensuring a smooth and secure transaction.',
-      icon: "🏡"
+      icon: "home"
     }
   ],
 
