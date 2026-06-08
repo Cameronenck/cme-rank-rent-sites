@@ -2077,8 +2077,15 @@ button:hover .icon-svg {
 
   /* Force smaller icons in trust strip on mobile */
   .trust-item .icon-svg {
-    width: 10px !important;
-    height: 10px !important;
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    max-width: 12px !important;
+  }
+
+  .trust-item .icon-svg svg {
+    width: 12px !important;
+    height: 12px !important;
   }
 
   .trust-item {
