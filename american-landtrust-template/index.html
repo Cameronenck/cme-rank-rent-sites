@@ -10,17 +10,17 @@
   <meta property="og:description" content="Fair cash offers, stress-free closings, and American-sized integrity.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero-landscape-main.jpg">
-  <meta name="theme-color" content="#1a2d5a">
+  <meta name="theme-color" content="#1A1F36">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="canonical" href="/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231a2d5a'/><text y='.72em' x='50' text-anchor='middle' font-size='55' fill='white'>ALT</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231A1F36'/><text y='.72em' x='50' text-anchor='middle' font-size='55' fill='white'>ALT</text></svg>">
 
   <!-- Preload critical resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="images/hero-landscape-main.jpg" as="image">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260608d">
+  <link rel="stylesheet" href="css/styles.css?v=20260608final">
   <script src="js/icons.js" defer></script>
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -64,9 +64,9 @@
       <a href="index.html" class="logo" aria-label="American Land Trust - Home">
         <div class="logo-icon" aria-hidden="true">
           <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-            <rect width="44" height="44" rx="8" fill="#1a2d5a"/>
+            <rect width="44" height="44" rx="8" fill="#1A1F36"/>
             <path d="M22 8L10 34h4l2-5h12l2 5h4L22 8zm0 9l4.5 11h-9L22 17z" fill="white"/>
-            <path d="M14 36h16v2H14z" fill="#c12037"/>
+            <path d="M14 36h16v2H14z" fill="#C8102E"/>
           </svg>
         </div>
         <span>American Land Trust</span>
@@ -75,12 +75,11 @@
         <a href="index.html" class="active">Home</a>
         <a href="index.html#process">Sell Your Land</a>
         <a href="about.html">About</a>
-        <a href="blog/">Articles &amp; Insights</a>
+        <a href="blog/">Articles & Insights</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="tel:832-558-3227" class="header-phone" aria-label="Call us at 832-558-3227">
-        <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-        832-558-3227
+      <a href="contact.html" class="header-cta" aria-label="Get a cash offer">
+        Get a Cash Offer
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -96,146 +95,169 @@
       <img src="images/hero-landscape-main.jpg" alt="Beautiful American landscape with rolling fields at golden hour" loading="eager" fetchpriority="high">
     </div>
     <div class="hero-overlay"></div>
-    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
     
-    <!-- Hero Lead Capture Form Overlay -->
-    <div class="hero-form-overlay" id="heroFormOverlay">
-      <div class="hero-form-container">
-        <button class="hero-form-close" aria-label="Close form">&times;</button>
-        <h3>Get Your Free Cash Offer</h3>
-        <p>Fill out the form below and we'll contact you within 24 hours with a no-obligation offer.</p>
-        <form name="hero-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1><strong>American Land Trust: The Trusted Way to Sell Your Land</strong></h1>
+        <h3><strong>Fair cash offers, stress-free closings, and American-sized integrity.</strong></h3>
+        <div class="hero-cta-group">
+          <a href="contact.html" class="btn btn-white">
+            Get Your Free Cash Offer →
+          </a>
+          <button class="btn btn-dark" onclick="document.querySelector('.hero-form').focus()">
+            Quick Form
+          </button>
+        </div>
+      </div>
+      
+      <div class="hero-form-card">
+        <form name="hero-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="hero-form">
           <input type="hidden" name="form-name" value="hero-contact">
-          <input type="hidden" name="source" value="hero-overlay">
+          <input type="hidden" name="source" value="hero-main">
           <p class="hidden" style="display:none"><input name="bot-field"></p>
+          
           <div class="form-group">
-            <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+            <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
           </div>
           <div class="form-group">
             <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email Address" inputmode="email" autocomplete="email">
+            <input type="text" name="property-address" placeholder="Property Address" required autocomplete="street-address">
           </div>
           <div class="form-group">
-            <textarea name="property-details" placeholder="Tell us about your property (location, size, etc.)" rows="3"></textarea>
+            <textarea name="message" placeholder="Tell us about your property (optional)" rows="3"></textarea>
           </div>
           <div class="tcpa-consent">
-            <p><small>By submitting this form, you consent to receive marketing communications via phone, email, or text. Message and data rates may apply. You can opt out at any time.</small></p>
+            <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message & data rates may apply. Reply STOP to opt out.</small></p>
           </div>
-          <button type="submit" class="btn btn-red" style="width:100%">Get My Free Offer</button>
+          <button type="submit" class="btn btn-red" style="width:100%">Send Message</button>
         </form>
       </div>
     </div>
     
-    <div class="hero-content">
-      <h1><strong>American Land Trust: The Trusted Way to Sell Your Land</strong></h1>
-      <h3><strong>Fair cash offers, stress-free closings, and American-sized integrity.</strong></h3>
-      <div class="hero-cta-group">
-        <a href="contact.html" class="btn btn-white">
-          Get Your Free Cash Offer
-          <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-        </a>
-        <button class="btn btn-outline-white" onclick="document.getElementById('heroFormOverlay').style.display='flex'">
-          Quick Form
-        </button>
-      </div>
-    </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <span></span>
-    </div>
-    
     <!-- Wave Divider -->
     <div class="wave-divider">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
-        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
-        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
-        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#ffffff"/>
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" stroke="none"/>
       </svg>
     </div>
   </section>
 
-  <!-- Trust Signals Strip -->
-  <div class="trust-strip" role="list" aria-label="Trust indicators">
-    <div class="trust-item" role="listitem">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-      Trusted &amp; Verified
+  <!-- Trust Bar Below Hero -->
+  <section class="trust-bar">
+    <div class="trust-item">
+      <span class="trust-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      Trusted & Verified
     </div>
-    <div class="trust-item" role="listitem">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    <div class="trust-item">
+      <span class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </span>
       5-Star Google Reviews
     </div>
-    <div class="trust-item" role="listitem">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+    <div class="trust-item">
+      <span class="trust-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </span>
       Offers in 48 Hours
     </div>
-    <div class="trust-item" role="listitem">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+    <div class="trust-item">
+      <span class="trust-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </span>
       100% Confidential
     </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80" style="transform: scaleY(-1)">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F5F0EB" stroke="none"/>
+    </svg>
   </div>
 
   <!-- Reviews Carousel -->
   <section class="reviews-section" id="reviews" aria-label="Customer testimonials">
     <div class="reviews-track" id="reviewsTrack">
-      <!-- Populated by JS -->
+      <!-- Review Card 1 -->
+      <div class="review-card">
+        <div class="review-avatar">J</div>
+        <div class="review-meta">
+          <div class="review-name">Jenny Mann</div>
+          <div class="review-time">2 weeks ago</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">American Land Trust made selling our family land so much easier than I expected. They were transparent, fair, and handled everything professionally. Highly recommend!</div>
+        <div class="google-badge">
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>Google Review</span>
+        </div>
+      </div>
+      
+      <!-- Review Card 2 -->
+      <div class="review-card">
+        <div class="review-avatar">D</div>
+        <div class="review-meta">
+          <div class="review-name">Dan Roberts</div>
+          <div class="review-time">1 month ago</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">Outstanding service from start to finish. They gave us a fair offer and closed in just 2 weeks. No hidden fees or surprises. This is how business should be done.</div>
+        <div class="google-badge">
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>Google Review</span>
+        </div>
+      </div>
+      
+      <!-- Review Card 3 -->
+      <div class="review-card">
+        <div class="review-avatar">R</div>
+        <div class="review-meta">
+          <div class="review-name">Reddy Family</div>
+          <div class="review-time">3 months ago</div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">We inherited land that we needed to sell quickly. American Land Trust understood our situation and made the process smooth and stress-free. Excellent communication throughout.</div>
+        <div class="google-badge">
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>Google Review</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Mission / About Section -->
-  <section class="mission-section" id="mission">
-    <div class="container">
-      <div class="mission-content fade-in-left">
-        <h3>We believe in <strong>honest deals, fair offers, and treating landowners with the respect they deserve</strong>—because that's the American way. Selling your property doesn't have to be complicated, and we're here to make sure it's <strong>simple, straightforward, and stress-free</strong>.</h3>
-        <p>With deep roots in <strong>American land transactions</strong>, we understand the unique value of property in our great state. Whether it's family land passed down through generations, an investment you no longer need, or a property that no longer fits your plans, <strong>we're here to offer a fair, no-obligation cash deal—quickly and transparently</strong>.</p>
-        <h3 class="cta-text">Call, text and email us today - <strong>we are here to help!</strong></h3>
-        <div class="contact-badges">
-          <a href="tel:832-558-3227" class="contact-badge" aria-label="Call us at 832-558-3227">
-            <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            832-558-3227
-          </a>
-          <a href="mailto:hello@american-landtrust.com" class="contact-badge" aria-label="Email us at hello@american-landtrust.com">
-            <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-            Email Us
-          </a>
-        </div>
-      </div>
-      <div class="mission-image fade-in-right">
-        <img src="images/american-farmland-sunset.jpg" alt="Beautiful American farmland at golden sunset" loading="lazy">
-      </div>
-    </div>
-    
-    <!-- Wave Divider -->
-    <div class="wave-divider inverted">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="transform: scaleY(-1);">
-        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
-        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
-        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
-        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#F5F0EB"/>
-      </svg>
-    </div>
-  </section>
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" stroke="none"/>
+    </svg>
+  </div>
 
   <!-- Process Section -->
   <section class="process-section" id="process">
     <div class="container">
-      <p class="section-label">The Process</p>
-      <div class="process-grid" id="processGrid">
+      <p class="section-label">THE PROCESS</p>
+      <div class="process-grid">
         <!-- Step 1 -->
-        <div class="process-card fade-in">
+        <div class="process-card">
           <div class="process-number">1</div>
           <h2>Assessment & Consulting</h2>
           <p>Tell Us About Your Land. Share the <strong>APN number, county, state,</strong> and <strong>property owner details</strong>—no paperwork is needed upfront. If you have any liens or details you'd like us to know, we'll listen.</p>
         </div>
         <!-- Step 2 -->
-        <div class="process-card fade-in">
+        <div class="process-card">
           <div class="process-number">2</div>
           <h2>Smart Valuation & Honest Offers</h2>
           <p><strong>We evaluate & make a fair offer.</strong> We use market expertise, advanced data tools, and good old-fashioned common sense to assess your land. We consider location, zoning, size, and current market trends to ensure you receive a fair, no-obligation offer within 48 hours.</p>
         </div>
         <!-- Step 3 -->
-        <div class="process-card fade-in">
+        <div class="process-card">
           <div class="process-number">3</div>
           <h2>Fast & Secure Closing</h2>
           <p><strong>Get Paid in 1 to 3 Weeks!</strong> Once you accept the offer, we work with trusted and vetted title companies to handle all the paperwork and legal details. Most sellers receive their payment within 1 to 3 weeks, ensuring a smooth and secure transaction.</p>
@@ -243,81 +265,84 @@
         </div>
       </div>
       <div class="process-cta">
-        <a href="contact.html" class="btn btn-red">
-          Start the Process
-          <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-        </a>
+        <a href="contact.html" class="btn btn-red">Start the Process →</a>
       </div>
     </div>
-    
-    <!-- Wave Divider -->
-    <div class="wave-divider">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
-        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
-        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
-        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#ffffff"/>
-      </svg>
-    </div>
   </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80" style="transform: scaleY(-1)">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" stroke="none"/>
+    </svg>
+  </div>
 
   <!-- Why Choose Us -->
   <section class="why-section" id="why">
     <div class="container">
-      <div class="why-content fade-in-left">
+      <div class="why-content">
         <h2>Why should you choose American Land Trust?</h2>
-        <div class="why-list" role="list">
-          <div class="why-item" role="listitem">
-            <span class="icon-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Fair &amp; Honest Offers</strong> – No lowballing. Just straight-up, market-driven cash offers.</span>
+        <div class="why-list">
+          <div class="why-item">
+            <span class="icon-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span><strong>Fair & Honest Offers</strong> – No lowballing. Just straight-up, market-driven cash offers.</span>
           </div>
-          <div class="why-item" role="listitem">
-            <span class="icon-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Fast &amp; Stress-Free Process</strong> – Get an offer in 48 hours and close quickly.</span>
+          <div class="why-item">
+            <span class="icon-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span><strong>Fast & Stress-Free Process</strong> – Get an offer in 48 hours and close quickly.</span>
           </div>
-          <div class="why-item" role="listitem">
-            <span class="icon-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="why-item">
+            <span class="icon-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
             <span><strong>No Middlemen, No Extra Fees</strong> – You deal directly with us, not a third party.</span>
           </div>
-          <div class="why-item" role="listitem">
-            <span class="icon-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>American-Owned &amp; Operated</strong> – We understand the land, the market, and the people.</span>
+          <div class="why-item">
+            <span class="icon-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span><strong>American-Owned & Operated</strong> – We understand the land, the market, and the people.</span>
           </div>
-          <div class="why-item" role="listitem">
-            <span class="icon-check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Respect &amp; Integrity</strong> – We do business the way Americans expect—<strong>with a handshake and our word</strong>.</span>
+          <div class="why-item">
+            <span class="icon-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span><strong>Respect & Integrity</strong> – We do business the way Americans expect—<strong>with a handshake and our word</strong>.</span>
           </div>
         </div>
         <p class="why-text">At <strong>American Land Trust</strong>, we're not just buying land—we're building trust, one deal at a time. If you're thinking about selling, let's talk. <strong>No pressure, just options.</strong></p>
       </div>
-      <div class="why-image fade-in-right">
+      <div class="why-image">
         <img src="images/happy-family-nature.jpg" alt="Family enjoying their land in beautiful natural setting" loading="lazy">
       </div>
     </div>
-    
-    <!-- Wave Divider -->
-    <div class="wave-divider inverted">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="transform: scaleY(-1);">
-        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
-        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
-        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
-        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#ffffff"/>
-      </svg>
-    </div>
   </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" stroke="none"/>
+    </svg>
+  </div>
 
   <!-- Articles Section -->
   <section class="articles-section" id="articles">
     <div class="container">
       <div class="articles-header">
-        <h3><strong>Recent Articles &amp; Insights</strong></h3>
-        <a href="blog/" class="btn btn-outline" style="border-color:var(--dark);color:var(--dark);">
+        <h3><strong>Recent Articles & Insights</strong></h3>
+        <a href="blog/" class="btn btn-outline">
           See all
-          <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+          <span class="icon-svg">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </span>
         </a>
       </div>
-      <div class="articles-grid" id="articlesGrid">
-        <div class="article-card fade-in">
+      <div class="articles-grid">
+        <div class="article-card">
           <div class="article-img">
             <img src="images/hero-landscape-main.jpg" alt="Rolling golden fields - land value insights" loading="lazy">
             <span class="article-category">MARKET REPORT</span>
@@ -325,12 +350,11 @@
           <div class="article-body">
             <h4>Unlock the True Value of Your Land: A Hassle-Free Way to Secure Your Legacy</h4>
             <a href="blog/unlock-true-value-of-your-land.html" class="article-link">
-              Read more
-              <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              Read more →
             </a>
           </div>
         </div>
-        <div class="article-card fade-in">
+        <div class="article-card">
           <div class="article-img">
             <img src="images/mountain-landscape-property.jpg" alt="Mountain landscape - perfect time to sell" loading="lazy">
             <span class="article-category">RETIREMENT PLANNING</span>
@@ -338,12 +362,11 @@
           <div class="article-body">
             <h4>Why Now Is the Perfect Time to Sell Your Land</h4>
             <a href="blog/why-now-is-perfect-time-to-sell.html" class="article-link">
-              Read more
-              <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              Read more →
             </a>
           </div>
         </div>
-        <div class="article-card fade-in">
+        <div class="article-card">
           <div class="article-img">
             <img src="images/american-farmland-sunset.jpg" alt="Golden farmland - letter to landowners" loading="lazy">
             <span class="article-category">FARM LIFE</span>
@@ -351,12 +374,11 @@
           <div class="article-body">
             <h4>A Letter to Landowners: Honor Your Legacy, Embrace a New Chapter</h4>
             <a href="blog/letter-to-landowners.html" class="article-link">
-              Read more
-              <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              Read more →
             </a>
           </div>
         </div>
-        <div class="article-card fade-in">
+        <div class="article-card">
           <div class="article-img">
             <img src="images/rural-property-sunset.jpg" alt="Rural property - unused land costs" loading="lazy">
             <span class="article-category">INVESTMENT</span>
@@ -364,14 +386,20 @@
           <div class="article-body">
             <h4>Why Holding Onto Unused Land Could Be Costing You More Than You Think</h4>
             <a href="blog/unused-land-costing-you.html" class="article-link">
-              Read more
-              <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              Read more →
             </a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="80" style="transform: scaleY(-1)">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#1A1F36" stroke="none"/>
+    </svg>
+  </div>
 
   <!-- Footer -->
   <footer class="footer" id="footer">
@@ -383,31 +411,37 @@
               <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
                 <rect width="44" height="44" rx="8" fill="rgba(255,255,255,0.12)"/>
                 <path d="M22 8L10 34h4l2-5h12l2 5h4L22 8zm0 9l4.5 11h-9L22 17z" fill="white"/>
-                <path d="M14 36h16v2H14z" fill="#c12037"/>
+                <path d="M14 36h16v2H14z" fill="#C8102E"/>
               </svg>
             </div>
             <span>American Land Trust</span>
           </a>
-          <div class="footer-links" style="margin-top:28px;">
+          <div class="footer-links">
             <h3>Information</h3>
             <a href="index.html#process">About the Process</a>
             <a href="about.html">About</a>
-            <a href="blog/">Articles &amp; Insights</a>
+            <a href="blog/">Articles & Insights</a>
           </div>
         </div>
         <div class="footer-contact">
           <h3>Contact Details</h3>
           <p>
-            <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="icon-svg">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
             <span><strong>Our Office</strong><br>American Land Trust<br>12605 East Fwy, #325, Houston, TX 77015</span>
           </p>
           <p>
-            <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <span><strong>Call or Text Us</strong><br><a href="tel:832-558-3227" style="color:var(--cream)">832-558-3227</a></span>
+            <span class="icon-svg">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span><strong>Call or Text Us</strong><br><a href="tel:832-558-3227">832-558-3227</a></span>
           </p>
           <p>
-            <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-            <span><strong>Email Us</strong><br><a href="mailto:hello@american-landtrust.com" style="color:var(--cream)">hello@american-landtrust.com</a></span>
+            <span class="icon-svg">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <span><strong>Email Us</strong><br><a href="mailto:hello@american-landtrust.com">hello@american-landtrust.com</a></span>
           </p>
         </div>
         <div class="footer-form">
@@ -417,63 +451,61 @@
             <p class="hidden" style="display:none"><input name="bot-field"></p>
             <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
             <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
-            <input type="tel" name="phone" placeholder="Phone" class="full-width" inputmode="tel" autocomplete="tel">
-            <input type="email" name="email" placeholder="Email" class="full-width" inputmode="email" autocomplete="email">
+            <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
+            <input type="text" name="property-address" placeholder="Property Address" required autocomplete="street-address">
             <textarea name="message" placeholder="Tell us about your land..."></textarea>
+            <div class="tcpa-consent">
+              <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message & data rates may apply. Reply STOP to opt out.</small></p>
+            </div>
             <button type="submit" class="btn btn-red" style="width:100%">Send Message</button>
           </form>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2025 American Land Trust. All rights reserved.</span>
-        <span>Built with trust and integrity.</span>
+    </div>
+    
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-content">
+        <a href="tel:832-558-3227" class="footer-contact-item">
+          <span class="icon-svg">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          Call Us
+        </a>
+        <a href="mailto:hello@american-landtrust.com" class="footer-contact-item">
+          <span class="icon-svg">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </span>
+          Email
+        </a>
+        <a href="contact.html" class="footer-cta-button">
+          Get a Cash Offer!
+        </a>
       </div>
+    </div>
+    
+    <div class="footer-copyright">
+      <span>&copy; 2025 American Land Trust. All rights reserved.</span>
+      <span>Built with trust and integrity.</span>
     </div>
   </footer>
 
-  <!-- Floating Contact Bar -->
-  <div class="floating-bar" id="floatingBar" role="navigation" aria-label="Quick contact">
-    <a href="tel:832-558-3227" aria-label="Call 832-558-3227">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a href="tel:832-558-3227" class="mobile-bar-item" aria-label="Call 832-558-3227">
+      <span class="icon-svg">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </span>
       Call Us
     </a>
-    <a href="mailto:hello@american-landtrust.com" aria-label="Email us">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+    <a href="mailto:hello@american-landtrust.com" class="mobile-bar-item" aria-label="Email us">
+      <span class="icon-svg">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </span>
       Email
     </a>
-    <a href="contact.html" aria-label="Get a cash offer">Get a Cash Offer!</a>
-  </div>
-
-  <!-- Exit-Intent Popup -->
-  <div class="exit-popup-overlay" id="exitPopupOverlay" role="dialog" aria-modal="true" aria-label="Get your free cash offer">
-    <div class="exit-popup">
-      <button class="exit-popup-close" aria-label="Close popup">
-        <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-      </button>
-      <h2>Wait! Don't Leave Empty-Handed</h2>
-      <p>Get your <strong>free, no-obligation cash offer</strong> for your land. We respond within 48 hours.</p>
-      <div class="form-social-proof">
-        <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-        <span>Trusted by landowners across America</span>
-      </div>
-      <form name="exit-popup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="exit-popup">
-        <input type="hidden" name="source" value="exit-popup">
-        <p style="display:none"><input name="bot-field"></p>
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-        </div>
-        <div class="form-group">
-          <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Email Address" inputmode="email" autocomplete="email">
-        </div>
-        <button type="submit" class="btn btn-red" style="width:100%">Get My Free Offer</button>
-      </form>
-    </div>
+    <a href="contact.html" class="mobile-bar-cta" aria-label="Get a cash offer">Get a Cash Offer!</a>
   </div>
 
 </body>
 </html>
-<!-- Force deployment with custom images Mon Jun  8 20:25:20 EDT 2026 -->

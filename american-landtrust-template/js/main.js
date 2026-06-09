@@ -188,18 +188,7 @@ function initReviewsCarousel() {
   const emptyStarIcon = Icons ? Icons.starEmpty : '☆';
 
   function renderStars(rating) {
-    if (Icons) {
-      let html = '';
-      for (let i = 0; i < 5; i++) {
-        if (i < rating) {
-          html += `<span class="icon-svg icon-sm" style="color:#F5A623" aria-hidden="true">${Icons.starFilled}</span>`;
-        } else {
-          html += `<span class="icon-svg icon-sm" style="color:#e0e0e0" aria-hidden="true">${Icons.starEmpty}</span>`;
-        }
-      }
-      return html;
-    }
-    return `<span style="color:#F5A623">${'★'.repeat(rating)}</span><span style="color:#e0e0e0">${'☆'.repeat(5 - rating)}</span>`;
+    return `<div class="review-stars" style="color: #F5A623; font-size: 18px; margin: 8px 0; display: block;">${'★'.repeat(rating)}</div>`;
   }
 
   // Generate review cards - duplicate for infinite scroll
