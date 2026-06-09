@@ -2221,7 +2221,7 @@ span[aria-hidden="true"] svg {
 
 /* --- Enhanced Hero Overlay --- */
 .hero-overlay {
-  background: linear-gradient(135deg, rgba(26,31,54,0.7) 0%, rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(135deg, rgba(26,31,54,0.78) 0%, rgba(0,0,0,0.6) 60%, rgba(26,31,54,0.72) 100%);
 }
 
 /* --- Reviews Section Header --- */
@@ -2830,6 +2830,44 @@ span[aria-hidden="true"] svg {
   display: flex;
   justify-content: center;
   gap: 24px;
+}
+
+/* --- Interactive Category Tags --- */
+.blog-category,
+.article-category {
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+.blog-category:hover,
+.article-category:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(200,16,46,0.3);
+  background: var(--red-hover);
+}
+
+/* --- Form Security Badge --- */
+.form-security-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: #888;
+  opacity: 0.75;
+}
+.form-security-badge svg {
+  width: 14px !important;
+  height: 14px !important;
+  stroke: #888;
+  fill: none;
+  stroke-width: 2;
+}
+.footer-form .form-security-badge {
+  color: rgba(255,255,255,0.5);
+}
+.footer-form .form-security-badge svg {
+  stroke: rgba(255,255,255,0.5);
 }
 
 /* --- Mobile Responsive Additions --- */
