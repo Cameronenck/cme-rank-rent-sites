@@ -22,6 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ----------------------------------------
+   Mobile Quick Form Function
+   ---------------------------------------- */
+function scrollToFooterForm() {
+  // On mobile (when hero form is hidden), scroll to footer form
+  // On desktop, focus the hero form
+  if (window.innerWidth <= 768) {
+    const footerForm = document.getElementById('footer-form');
+    if (footerForm) {
+      const headerHeight = document.querySelector('.header')?.offsetHeight || 64;
+      const targetPosition = footerForm.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      
+      // Focus first input after scroll completes
+      setTimeout(() => {
+        const firstInput = footerForm.querySelector('input[type="text"], input[type="tel"]');
+        if (firstInput) firstInput.focus();
+      }, 800);
+    }
+  } else {
+    // Desktop: focus hero form
+    const heroForm = document.querySelector('.hero-form');
+    if (heroForm) {
+      heroForm.focus();
+    }
+  }
+}
+
+/* ----------------------------------------
    Replace remaining emojis in DOM
    ---------------------------------------- */
 function replaceEmojis() {
