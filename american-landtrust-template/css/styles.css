@@ -215,7 +215,7 @@ a {
 }
 
 /* ========================================
-   HERO SECTION — FULL FIX
+   HERO SECTION — TWO COLUMN GRID FIX
    ======================================== */
 
 .hero {
@@ -255,13 +255,13 @@ a {
 .hero-container {
   position: relative;
   z-index: 3;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: center;
+  padding: 120px 80px 100px;
+  max-width: 1400px;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -290,7 +290,7 @@ a {
 /* Hero Form Card — RIGHT COLUMN */
 .hero-form-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.96);
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
@@ -298,6 +298,7 @@ a {
 
 .hero-form .form-group {
   margin-bottom: 16px;
+}
 }
 
 .hero-form input,
@@ -434,13 +435,15 @@ a {
    ======================================== */
 
 .trust-bar {
-  background: var(--white);
+  background: #ffffff;
   padding: 16px 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 48px;
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  box-shadow: none;
 }
 
 .trust-item {
@@ -1830,4 +1833,262 @@ summary::marker {
 span[aria-hidden="true"] svg {
   max-width: 24px !important;
   max-height: 24px !important;
+}
+
+/* ========================================
+   CONTACT PAGE - FULL LAYOUT REBUILD
+   ======================================== */
+
+.contact-hero {
+  padding: 80px 48px;
+  background: #1A1F36;
+  color: white;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact-main {
+  background: white;
+  padding: 80px 48px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  margin: 30px 0 16px 0;
+  font-family: var(--font-heading);
+}
+
+.contact-trust-list {
+  margin-bottom: 30px;
+}
+
+.contact-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.trust-check {
+  width: 20px;
+  height: 20px;
+  color: #C8102E;
+  flex-shrink: 0;
+}
+
+.trust-check svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #C8102E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.contact-detail h4 {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--dark);
+}
+
+.contact-detail a {
+  color: #C8102E;
+  text-decoration: none;
+}
+
+.contact-detail a:hover {
+  text-decoration: underline;
+}
+
+.contact-form-wrapper h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #C8102E;
+  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.1);
+}
+
+.form-footer-trust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+.form-footer-trust svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* Contact Page Mobile */
+@media (max-width: 768px) {
+  .contact-main {
+    padding: 48px 20px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   ABOUT PAGE - TEAM SECTION CARD LAYOUT
+   ======================================== */
+
+.team-section {
+  padding: 80px 48px;
+  background: white;
+}
+
+.team-member {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.team-image {
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.team-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.team-info h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.team-info h3 {
+  font-size: 16px;
+  color: #C8102E;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.team-info .tagline {
+  font-style: italic;
+  margin-bottom: 16px;
+  color: var(--gray);
+}
+
+.team-info p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.team-info .btn {
+  width: auto;
+}
+
+/* Team member alternating layout */
+.team-member:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Team Section Mobile */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 48px 20px;
+  }
+  
+  .team-member {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 24px;
+  }
+  
+  .team-image {
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
