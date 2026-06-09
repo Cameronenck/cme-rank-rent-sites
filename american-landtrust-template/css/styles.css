@@ -1771,3 +1771,63 @@ iframe {
   max-width: 800px;
   margin: 0 auto;
 }
+
+/* Additional specific icon fixes for missed elements */
+.trust-bar .trust-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.trust-bar .trust-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Ensure no giant star shapes in any stats sections */
+.social-proof-banner svg,
+.proof-content svg,
+.team-section svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Fix any remaining large map pins */
+.footer svg,
+.contact-detail svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Stars must always use Unicode, not images */
+.review-stars,
+.stars {
+  font-family: inherit !important;
+  background: none !important;
+  border: none !important;
+}
+
+/* Remove triangular play buttons and arrows from articles */
+.article-card::before,
+.article-body::before,
+details::marker,
+summary::marker {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure proper wave implementation */
+.wave-divider path {
+  vector-effect: non-scaling-stroke;
+}
+
+/* Final comprehensive icon size enforcement */
+.icon-svg svg,
+.icon-check svg,
+.icon-circle svg,
+.google-badge svg,
+.trust-icon svg,
+.footer-contact svg,
+span[aria-hidden="true"] svg {
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
