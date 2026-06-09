@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero-landscape-main.jpg">
   <meta name="theme-color" content="#1a2d5a">
-  <link rel="stylesheet" href="css/styles.css?v=20260609opus46">
+  <link rel="stylesheet" href="css/styles.css?v=20260609v2">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231a2d5a'/><text y='.72em' x='50' text-anchor='middle' font-size='55' fill='white'>ALT</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,19 +128,24 @@
           <p style="display:none"><input name="bot-field"></p>
           <div class="form-row">
             <div class="form-group">
+              <label class="form-label">First Name <span class="required-star">*</span></label>
               <input type="text" name="first-name" required placeholder="First Name" autocomplete="given-name">
             </div>
             <div class="form-group">
+              <label class="form-label">Last Name <span class="required-star">*</span></label>
               <input type="text" name="last-name" required placeholder="Last Name" autocomplete="family-name">
             </div>
           </div>
           <div class="form-group">
+            <label class="form-label">Phone Number</label>
             <input type="tel" name="phone" placeholder="Phone Number" inputmode="tel" autocomplete="tel">
           </div>
           <div class="form-group">
+            <label class="form-label">Email <span class="required-star">*</span></label>
             <input type="email" name="email" required placeholder="Email Address" inputmode="email" autocomplete="email">
           </div>
           <div class="form-group">
+            <label class="form-label">Message</label>
             <textarea name="message" placeholder="Tell us about your land or ask us anything..." rows="4"></textarea>
           </div>
           <button type="submit" class="btn btn-red" style="width:100%">Send Message</button>
@@ -148,8 +153,12 @@
 
         <!-- Trust signal below form ---->
         <div class="form-footer-trust">
-          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span>Your information is 100% secure and confidential</span>
+        </div>
+        <div class="trust-badges" style="margin-top:16px;">
+          <span class="trust-badge"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> BBB Accredited</span>
+          <span class="trust-badge"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg> Licensed & Insured</span>
         </div>
       </div>
     </div>
@@ -193,17 +202,13 @@
           </p>
         </div>
         <div class="footer-form">
-          <h3>Get in Touch</h3>
-          <form name="footer-contact-page" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="footer-contact-page">
-            <p style="display:none"><input name="bot-field"></p>
-            <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
-            <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
-            <input type="tel" name="phone" placeholder="Phone" class="full-width" inputmode="tel" autocomplete="tel">
-            <input type="email" name="email" placeholder="Email" class="full-width" inputmode="email" autocomplete="email">
-            <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit" class="btn btn-red" style="width:100%">Send</button>
-          </form>
+          <h3>Quick Links</h3>
+          <div class="footer-links" style="margin-top:0;">
+            <a href="index.html">Home</a>
+            <a href="index.html#process">Sell Your Land</a>
+            <a href="about.html">About Us</a>
+            <a href="blog/">Articles & Insights</a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">

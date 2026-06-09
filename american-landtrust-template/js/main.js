@@ -62,7 +62,7 @@ function replaceEmojis() {
    ---------------------------------------- */
 function updateCopyrightYear() {
   const year = new Date().getFullYear();
-  document.querySelectorAll('.footer-bottom span').forEach(el => {
+  document.querySelectorAll('.footer-bottom span, .footer-copyright span').forEach(el => {
     if (el.textContent.includes('©')) {
       el.textContent = el.textContent.replace(/© \d{4}/, `© ${year}`);
     }
@@ -140,9 +140,11 @@ function initHeaderScroll() {
       requestAnimationFrame(() => {
         const currentScroll = window.scrollY;
         if (currentScroll > 100) {
+          header.classList.add('scrolled');
           header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
         } else {
-          header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+          header.classList.remove('scrolled');
+          header.style.boxShadow = '';
         }
         ticking = false;
       });
@@ -679,7 +681,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('submit', (e) => {
   const form = e.target;
   if (form.tagName === 'FORM') {
-    ALT_Track.formSubmission();
+    ALT_Track.formSubmit(form.getAttribute('name') || 'unknown');
   }
 });
 
