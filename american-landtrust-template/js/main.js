@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExitIntent();
   initTrustSignals();
   initHeroFormOverlay();
+  initFaqAccordion();
   replaceEmojis();
   updateCopyrightYear();
 });
@@ -713,5 +714,48 @@ function initHeroFormOverlay() {
     if (e.key === 'Escape' && overlay.style.display === 'flex') {
       closeForm();
     }
+  });
+}
+
+/* ----------------------------------------
+   FAQ Accordion Functionality
+   ---------------------------------------- */
+function initFaqAccordion() {
+  const faqButtons = document.querySelectorAll('.faq-question');
+  
+  faqButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const faqItem = this.parentElement;
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const answer = this.nextElementSibling;
+      
+      // Close all other FAQ items
+      faqButtons.forEach(otherButton => {
+        if (otherButton !== this) {
+          otherButton.setAttribute('aria-expanded', 'false');
+          otherButton.parentElement.classList.remove('open');
+          const otherAnswer = otherButton.nextElementSibling;
+          if (otherAnswer) {
+            otherAnswer.style.display = 'none';
+          }
+        }
+      });
+      
+      // Toggle current FAQ item
+      const newState = !isExpanded;
+      this.setAttribute('aria-expanded', newState.toString());
+      
+      if (newState) {
+        faqItem.classList.add('open');
+        if (answer) {
+          answer.style.display = 'block';
+        }
+      } else {
+        faqItem.classList.remove('open');
+        if (answer) {
+          answer.style.display = 'none';
+        }
+      }
+    });
   });
 }
