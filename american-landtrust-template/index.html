@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="images/hero-landscape-main.jpg" as="image">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260609fixed">
+  <link rel="stylesheet" href="css/styles.css?v=20260609opus46">
   <script src="js/icons.js" defer></script>
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -111,16 +111,22 @@
       </div>
       
       <div class="hero-form-card">
+        <div class="hero-form-header">
+          <h3>Get Your Cash Offer</h3>
+          <p>Free evaluation in 48 hours</p>
+        </div>
         <form name="hero-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="hero-form">
           <input type="hidden" name="form-name" value="hero-contact">
           <input type="hidden" name="source" value="hero-main">
           <p class="hidden" style="display:none"><input name="bot-field"></p>
           
-          <div class="form-group">
-            <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
-          </div>
-          <div class="form-group">
-            <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
+            </div>
           </div>
           <div class="form-group">
             <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
@@ -139,12 +145,10 @@
       </div>
     </div>
     
-    <!-- Wave Divider -->
-    <div style="width:100%; overflow:hidden; height:80px; line-height:0;">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" 
-           style="display:block; width:100%; height:80px;">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" 
-              fill="#ffffff" stroke="none"/>
+    <!-- Clean Wave Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
       </svg>
     </div>
   </section>
@@ -178,14 +182,11 @@
   </section>
 
   <!-- Wave Divider -->
-  <div style="width:100%;overflow:hidden;height:80px;line-height:0;
-              background:#ffffff;">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" 
-       style="display:block;width:100%;height:80px;transform:scaleY(-1);">
-    <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" 
-          fill="#F5F0EB" stroke="none"/>
-  </svg>
-</div>
+  <div class="wave-divider" style="background:#ffffff;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="transform:scaleY(-1);">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F5F0EB"/>
+    </svg>
+  </div>
 
   <!-- Reviews Carousel -->
   <section class="reviews-section" id="reviews" aria-label="Customer testimonials">
@@ -238,12 +239,9 @@
   </section>
 
   <!-- Wave Divider -->
-  <div style="width:100%;overflow:hidden;height:80px;line-height:0;
-              background:#F5F0EB;">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" 
-         style="display:block;width:100%;height:80px;">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" 
-            fill="#ffffff" stroke="none"/>
+  <div class="wave-divider" style="background:#F5F0EB;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
     </svg>
   </div>
 
@@ -279,12 +277,9 @@
   </section>
 
   <!-- Wave Divider -->
-  <div style="width:100%;overflow:hidden;height:80px;line-height:0;
-              background:#ffffff;">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" 
-         style="display:block;width:100%;height:80px;transform:scaleY(-1)">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" 
-            fill="#F5F0EB" stroke="none"/>
+  <div class="wave-divider" style="background:#ffffff;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="transform:scaleY(-1);">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F5F0EB"/>
     </svg>
   </div>
 
@@ -334,12 +329,9 @@
   </section>
 
   <!-- Wave Divider -->
-  <div style="width:100%;overflow:hidden;height:80px;line-height:0;
-              background:#F5F0EB;">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" 
-         style="display:block;width:100%;height:80px;">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" 
-            fill="#ffffff" stroke="none"/>
+  <div class="wave-divider" style="background:#F5F0EB;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
     </svg>
   </div>
 
@@ -409,12 +401,9 @@
   </section>
 
   <!-- Wave Divider -->
-  <div style="width:100%;overflow:hidden;height:80px;line-height:0;
-              background:#ffffff;">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" 
-         style="display:block;width:100%;height:80px;transform:scaleY(-1)">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" 
-            fill="#1A1F36" stroke="none"/>
+  <div class="wave-divider" style="background:#ffffff;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="transform:scaleY(-1);">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#1A1F36"/>
     </svg>
   </div>
 
