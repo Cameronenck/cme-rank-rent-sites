@@ -224,7 +224,7 @@ a {
   height: auto;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden; /* Ensure content doesn't bleed beyond hero */
 }
 
 .hero-bg {
@@ -298,7 +298,6 @@ a {
 
 .hero-form .form-group {
   margin-bottom: 16px;
-}
 }
 
 .hero-form input,
@@ -443,7 +442,11 @@ a {
   gap: 48px;
   border-bottom: 1px solid #eee;
   margin: 0;
-  box-shadow: none;
+  /* Remove any existing shadow */
+  box-shadow: none !important;
+  /* Ensure clean background */
+  position: relative;
+  z-index: 1;
 }
 
 .trust-item {
@@ -1909,8 +1912,8 @@ span[aria-hidden="true"] svg {
 }
 
 .contact-icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #C8102E;
   display: flex;
@@ -1921,8 +1924,8 @@ span[aria-hidden="true"] svg {
 }
 
 .contact-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   stroke: currentColor;
   fill: none;
   stroke-width: 2;
@@ -2016,6 +2019,11 @@ span[aria-hidden="true"] svg {
 .team-section {
   padding: 80px 48px;
   background: white;
+}
+
+.team-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .team-member {
