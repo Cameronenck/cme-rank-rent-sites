@@ -1810,6 +1810,67 @@ iframe {
   margin: 0 auto;
 }
 
+
+/* --- About Page Mission/Vision --- */
+.about-mission-vision {
+  background: var(--cream);
+  padding: 60px 48px;
+  text-align: center;
+}
+.about-mission-vision .container {
+  max-width: 900px;
+}
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+.mission-vision-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  text-align: left;
+}
+.mission-vision-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.mission-vision-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+.about-mission {
+  padding: 48px 48px;
+}
+.about-mission .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.about-mission h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #444;
+}
+.owner-photo-section {
+  padding: 48px 0;
+}
+
+@media (max-width: 768px) {
+  .about-mission-vision { padding: 40px 20px; }
+  .mission-vision-grid { grid-template-columns: 1fr; gap: 20px; }
+  .about-mission { padding: 32px 20px; }
+  .about-mission .container { grid-template-columns: 1fr; gap: 24px; }
+  .owner-photo-section { padding: 32px 0; }
+}
+
 /* Additional specific icon fixes for missed elements */
 .trust-bar .trust-icon {
   width: 20px !important;
@@ -2141,13 +2202,21 @@ span[aria-hidden="true"] svg {
    PHASE 1-3: ALL IMPROVEMENTS
    ======================================== */
 
-/* --- Sticky Header with Blur on Scroll --- */
+/* --- Sticky Header with Blur/Shadow on Scroll --- */
 .header.scrolled {
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-bottom-color: transparent;
+}
+.header {
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Sticky header CTA always visible */
+.header-cta {
+  display: inline-flex;
 }
 
 /* --- Enhanced Hero Overlay --- */
@@ -2207,6 +2276,39 @@ span[aria-hidden="true"] svg {
   gap: 12px;
   margin-bottom: 12px;
 }
+
+/* --- Reviews Section Enhanced --- */
+.reviews-section {
+  padding: 80px 0 60px;
+}
+.reviews-header {
+  padding-bottom: 32px;
+}
+.reviews-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin-bottom: 12px;
+}
+.reviews-subtitle {
+  font-size: 1.05rem;
+}
+.reviews-subtitle .stars-inline {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+/* Review card polish */
+.review-card {
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.review-avatar {
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .review-name-stars {
   display: flex;
   flex-direction: column;
@@ -2615,6 +2717,9 @@ span[aria-hidden="true"] svg {
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
+  max-width: 80px !important;
+  min-width: 80px;
+  min-height: 80px;
 }
 .related-card-body h4 {
   font-size: 0.9rem;
