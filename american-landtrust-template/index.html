@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="images/hero-landscape-main.jpg" as="image">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260608c">
+  <link rel="stylesheet" href="css/styles.css?v=20260608d">
   <script src="js/icons.js" defer></script>
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -97,16 +97,62 @@
     </div>
     <div class="hero-overlay"></div>
     <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    
+    <!-- Hero Lead Capture Form Overlay -->
+    <div class="hero-form-overlay" id="heroFormOverlay">
+      <div class="hero-form-container">
+        <button class="hero-form-close" aria-label="Close form">&times;</button>
+        <h3>Get Your Free Cash Offer</h3>
+        <p>Fill out the form below and we'll contact you within 24 hours with a no-obligation offer.</p>
+        <form name="hero-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="hero-contact">
+          <input type="hidden" name="source" value="hero-overlay">
+          <p class="hidden" style="display:none"><input name="bot-field"></p>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" inputmode="email" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <textarea name="property-details" placeholder="Tell us about your property (location, size, etc.)" rows="3"></textarea>
+          </div>
+          <div class="tcpa-consent">
+            <p><small>By submitting this form, you consent to receive marketing communications via phone, email, or text. Message and data rates may apply. You can opt out at any time.</small></p>
+          </div>
+          <button type="submit" class="btn btn-red" style="width:100%">Get My Free Offer</button>
+        </form>
+      </div>
+    </div>
+    
     <div class="hero-content">
       <h1><strong>American Land Trust: The Trusted Way to Sell Your Land</strong></h1>
       <h3><strong>Fair cash offers, stress-free closings, and American-sized integrity.</strong></h3>
-      <a href="contact.html" class="btn btn-red">
-        Get Your Free Cash Offer
-        <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </a>
+      <div class="hero-cta-group">
+        <a href="contact.html" class="btn btn-white">
+          Get Your Free Cash Offer
+          <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <button class="btn btn-outline-white" onclick="document.getElementById('heroFormOverlay').style.display='flex'">
+          Quick Form
+        </button>
+      </div>
     </div>
     <div class="scroll-indicator" aria-hidden="true">
       <span></span>
+    </div>
+    
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
+        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
+        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
+        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#ffffff"/>
+      </svg>
     </div>
   </section>
 
@@ -159,6 +205,16 @@
         <img src="images/american-farmland-sunset.jpg" alt="Beautiful American farmland at golden sunset" loading="lazy">
       </div>
     </div>
+    
+    <!-- Wave Divider -->
+    <div class="wave-divider inverted">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="transform: scaleY(-1);">
+        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
+        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
+        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
+        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#F5F0EB"/>
+      </svg>
+    </div>
   </section>
 
   <!-- Process Section -->
@@ -169,19 +225,19 @@
         <!-- Step 1 -->
         <div class="process-card fade-in">
           <div class="process-number">1</div>
-          <h2>Assessment &amp; Consulting</h2>
+          <h2>Assessment & Consulting</h2>
           <p>Tell Us About Your Land. Share the <strong>APN number, county, state,</strong> and <strong>property owner details</strong>—no paperwork is needed upfront. If you have any liens or details you'd like us to know, we'll listen.</p>
         </div>
         <!-- Step 2 -->
         <div class="process-card fade-in">
           <div class="process-number">2</div>
-          <h2>Smart Valuation &amp; Honest Offers</h2>
-          <p><strong>We evaluate &amp; make a fair offer.</strong> We use market expertise, advanced data tools, and good old-fashioned common sense to assess your land. We consider location, zoning, size, and current market trends to ensure you receive a fair, no-obligation offer within 48 hours.</p>
+          <h2>Smart Valuation & Honest Offers</h2>
+          <p><strong>We evaluate & make a fair offer.</strong> We use market expertise, advanced data tools, and good old-fashioned common sense to assess your land. We consider location, zoning, size, and current market trends to ensure you receive a fair, no-obligation offer within 48 hours.</p>
         </div>
         <!-- Step 3 -->
         <div class="process-card fade-in">
           <div class="process-number">3</div>
-          <h2>Fast &amp; Secure Closing</h2>
+          <h2>Fast & Secure Closing</h2>
           <p><strong>Get Paid in 1 to 3 Weeks!</strong> Once you accept the offer, we work with trusted and vetted title companies to handle all the paperwork and legal details. Most sellers receive their payment within 1 to 3 weeks, ensuring a smooth and secure transaction.</p>
           <p style="margin-top:14px">We handle <strong>title concerns, easements, and any other property-related issues</strong> upfront, so you don't have to worry about unexpected delays. Our goal is to close quickly while ensuring every step is done right.</p>
         </div>
@@ -192,6 +248,16 @@
           <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
       </div>
+    </div>
+    
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
+        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
+        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
+        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#ffffff"/>
+      </svg>
     </div>
   </section>
 
@@ -227,6 +293,16 @@
       <div class="why-image fade-in-right">
         <img src="images/happy-family-nature.jpg" alt="Family enjoying their land in beautiful natural setting" loading="lazy">
       </div>
+    </div>
+    
+    <!-- Wave Divider -->
+    <div class="wave-divider inverted">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="transform: scaleY(-1);">
+        <path d="M0,120V46.29c0-51.46,25.89-97.77,69.11-125.18C109.96-110.37,154.04-119.1,200-120c45.96.9,90.04,9.63,130.89,40.11
+        C374.11-51.48,400-5.17,400,46.29V120z M400,120V46.29c0-51.46,25.89-97.77,69.11-125.18c40.85-31.48,84.93-40.21,130.89-40.11
+        c45.96-0.1,90.04,8.63,130.89,40.11C774.11-51.48,800-5.17,800,46.29V120z M800,120V46.29c0-51.46,25.89-97.77,69.11-125.18
+        c40.85-31.48,84.93-40.21,130.89-40.11c45.96-0.1,90.04,8.63,130.89,40.11c43.22,27.41,69.11,73.72,69.11,125.18V120z" fill="#ffffff"/>
+      </svg>
     </div>
   </section>
 
