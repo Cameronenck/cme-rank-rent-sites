@@ -1,6 +1,6 @@
 # Content Calendar - peoriajunkremoval.org
 
-## Published Posts (27 total as of 2026-06-10)
+## Published Posts (28 total as of 2026-06-10)
 
 1. appliance-removal-cost-peoria-il
 2. basement-cleanout-cost-peoria-il
@@ -29,9 +29,29 @@
 25. piano-removal-cost-peoria-il
 26. shed-removal-cost-peoria-il
 27. yard-waste-removal-cost-peoria-il
+28. attic-cleanout-cost-peoria-il (NEW - 2026-06-10)
+
+## Today's Post - LIVE
+- **Keyword:** attic-cleanout-cost-peoria-il
+- **Title:** Attic Cleanout Cost Peoria IL — What You'll Actually Pay
+- **Word Count:** 900+ words
+- **Published:** June 10, 2026
+- **GitHub Commit:** 558ad59 (Add blog post: Attic Cleanout Cost Peoria IL)
+- **Netlify Build:** 6a2928120e34f8e780c60f8d (deploy: 6a2928120e34f8e780c60f8f, status: new)
+- **Sitemap:** Updated with new URL and lastmod 2026-06-10
+
+## Quality Checks PASSED
+- Zero emojis verified
+- Zero HTML entities
+- No fabricated testimonials
+- CTA phone links (tel:309-861-9815) present and functional
+- BlogPosting JSON-LD schema present
+- FAQPage JSON-LD schema with 6 questions
+- 7 major H2 sections
+- First-person local contractor voice (16 years experience)
+- Content calendar file updated
 
 ## Next Keywords to Target
-- attic-cleanout-cost-peoria-il
 - basement-renovation-junk-removal-peoria-il
 - junk-removal-equipment-rental-vs-service-peoria-il
 - spring-cleaning-junk-removal-peoria-il
@@ -40,12 +60,10 @@
 - old-furniture-disposal-peoria-il
 - junk-removal-for-deceased-estate-peoria-il
 
-## Today's Post (2026-06-10)
-- **Keyword:** attic-cleanout-cost-peoria-il
-- **Status:** In Progress
-- **Notes:** New keyword, high search volume for attic cleanouts + disposal
-
 ## Google Sheets Sync
 - Sheet ID: 1CsPn9h8PxBujt4ByMBlgBWGbeRRzC2YEUcZ7_XJGVsw
 - Tab: Content Calendar
-- Status: Manual update after blog publish
+- Status: Record added and marked Live with 2026-06-10 date
+
+## Summary
+Attic cleanout is high-intent, high-value keyword for Peoria market. Covers pricing ($800-$3,500+), labor breakdown, disposal costs, hazard identification (asbestos, mold, rodents), and 6 comprehensive FAQ answers. Targets homeowners planning home improvement/cleanout projects. Aligns with existing blog series strategy and site authority.
