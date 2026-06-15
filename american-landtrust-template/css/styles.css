@@ -648,20 +648,22 @@ a {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 40px 30px; /* FIXED: Increased gap for circle space */
   margin-bottom: 48px;
   align-items: stretch; /* Equal height cards */
+  padding: 30px 0; /* ADDED: Top padding for circles */
 }
 
 .process-card {
   position: relative;
   border-radius: 16px;
-  padding: 40px;
+  padding: 50px 40px 40px 40px; /* Increased top padding for circles */
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible; /* FIXED: was hidden, now visible for circles */
   color: white;
+  margin-top: 30px; /* Added margin for circle space */
 }
 
 .process-card::before {
@@ -692,7 +694,8 @@ a {
   justify-content: center;
   font-weight: 700;
   font-size: 18px;
-  z-index: 2;
+  z-index: 100; /* FIXED: Much higher z-index for visibility */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Added depth shadow */
 }
 
 .process-card h2 {
@@ -3530,3 +3533,221 @@ section, .section {
   .articles-grid { grid-template-columns: 1fr; }
   .header-cta { font-size: 12px; padding: 7px 10px; }
 }
+
+/* American Land Trust UI Fixes - June 11, 2026 - Cam Review */
+/* American Land Trust - UI Fixes
+   Applied: June 11, 2026
+   Fixes: Process step circles clipping, wave divider overlaps, section transitions */
+
+/* FIX 1: Process section numbered circles - prevent clipping */
+.process-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 50px 40px 40px 40px; /* Increase top padding for circle space */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  overflow: visible; /* Change from hidden to visible to show circles */
+  color: white;
+  margin-top: 30px; /* Add margin to accommodate circles */
+}
+
+.process-number {
+  position: absolute;
+  top: -26px; /* Keep negative positioning but now card shows overflow */
+  left: 40px;
+  width: 52px;
+  height: 52px;
+  background: white;
+  color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  z-index: 10; /* Ensure circles appear above cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Add shadow for depth */
+}
+
+/* FIX 2: Process section grid spacing to accommodate visible circles */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 30px; /* Increase vertical gap for circles */
+  padding: 30px 0; /* Add top padding for first row circles */
+}
+
+/* FIX 3: Ensure consistent background treatment for all step cards */
+.process-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+  z-index: 1;
+  border-radius: 16px;
+}
+
+/* Ensure step card backgrounds are consistent across all three */
+.process-card:nth-child(1)::before,
+.process-card:nth-child(2)::before, 
+.process-card:nth-child(3)::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+}
+
+/* FIX 4: Clean up wave dividers - remove overlapping and fix z-index */
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  height: 80px;
+  line-height: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 2px); /* Slight overflow to prevent gaps */
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  margin-left: -1px; /* Center the slight overflow */
+}
+
+/* FIX 5: Prevent wave divider stacking issues */
+.wave-divider + .wave-divider {
+  margin-top: -1px; /* Slight overlap to prevent gaps */
+}
+
+/* Remove duplicate/conflicting wave divider rules */
+.wave-divider:not(:first-of-type) {
+  position: relative;
+  z-index: 2;
+}
+
+/* FIX 6: Section spacing to prevent wave overlap issues */
+.section {
+  position: relative;
+  z-index: 5;
+}
+
+/* Ensure sections with waves have proper stacking */
+.hero { z-index: 10; }
+.testimonials-section { z-index: 9; }
+.process-section { z-index: 8; }
+.why-choose-section { z-index: 7; }
+.faq-section { z-index: 6; }
+.success-stories { z-index: 5; }
+.blog-section { z-index: 4; }
+.footer-main { z-index: 3; }
+
+/* FIX 7: Mobile responsive fixes for circles */
+@media (max-width: 768px) {
+  .process-card {
+    padding: 45px 30px 30px 30px;
+    margin-top: 30px;
+  }
+  
+  .process-number {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    left: 30px;
+  }
+  
+  .process-grid {
+    gap: 35px 20px;
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .process-card {
+    padding: 40px 20px 25px 20px;
+    margin-top: 25px;
+  }
+  
+  .process-number {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+    left: 20px;
+  }
+  
+  .wave-divider {
+    height: 60px;
+  }
+  
+  .wave-divider svg {
+    height: 60px;
+  }
+}
+
+/* FIX 8: Clean straight transitions option (if waves remain problematic) */
+.section-divider-clean {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  margin: 40px 0;
+}
+
+/* AMERICAN LAND TRUST UI FIXES - Mobile Responsive Overrides */
+@media (max-width: 768px) {
+  .process-card {
+    padding: 45px 30px 30px 30px !important;
+    margin-top: 30px !important;
+  }
+  
+  .process-number {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 16px !important;
+    left: 30px !important;
+  }
+  
+  .process-grid {
+    gap: 35px 20px !important;
+    padding: 25px 0 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .process-card {
+    padding: 40px 20px 25px 20px !important;
+    margin-top: 25px !important;
+  }
+  
+  .process-number {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 15px !important;
+    left: 20px !important;
+  }
+}
+
+/* Wave divider fixes */
+.wave-divider {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.wave-divider svg {
+  width: calc(100% + 2px) !important;
+  margin-left: -1px !important;
+}
+
+.wave-divider + .wave-divider {
+  margin-top: -1px !important;
+}
+
+/* Section z-index hierarchy */
+.hero { z-index: 10 !important; }
+.testimonials-section { z-index: 9 !important; }
+.process-section { z-index: 8 !important; }
+.why-choose-section { z-index: 7 !important; }
+.faq-section { z-index: 6 !important; }
+.success-stories { z-index: 5 !important; }
