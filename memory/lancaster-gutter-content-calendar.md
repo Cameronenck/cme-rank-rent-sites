@@ -2,6 +2,16 @@
 
 ## Published Posts (2026)
 
+### 2026-06-18
+- **Title:** Gutter Installation Winter Prep in Lancaster PA — Get Ready for Ice & Snow
+- **Slug:** gutter-installation-winter-prep-lancaster-pa
+- **Keyword:** gutter installation winter prep lancaster pa
+- **Word Count:** 950+ words
+- **Status:** Live (Deployed to GitHub, auto-deploy pending)
+- **Date Published:** June 18, 2026
+- **URL:** https://gutterinstallationlancaster.com/blog/gutter-installation-winter-prep-lancaster-pa/
+- **Notes:** First-person local contractor voice, 6 FAQ items, BlogPosting + FAQPage JSON-LD, CTA to call 717-716-6410. Comprehensive winter preparation guide. GitHub commit: 8267f5b. Sitemap updated with lastmod=2026-06-18.
+
 ### 2026-06-09
 - **Title:** Fall Gutter Maintenance in Lancaster PA — Leaf Cleanup & Prevention Guide
 - **Slug:** fall-gutter-maintenance-lancaster-pa
@@ -40,7 +50,6 @@
 25. seamless-gutters-vs-sectional-gutters-lancaster-pa
 
 ## Next Keywords to Target
-- gutter-installation-winter-prep-lancaster-pa
 - ice-dam-prevention-lancaster-pa
 - gutter-fascia-damage-lancaster-pa
 - spring-gutter-inspection-lancaster-pa
