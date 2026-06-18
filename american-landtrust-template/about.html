@@ -69,6 +69,7 @@
     <h1>Our Mission is to help landowners preserve their legacy while creating opportunities for the future.</h1>
   </section>
 
+  <!-- VERIFY WITH CLIENT: "10+ Years Experience" and "100+ Landowners Served" - confirm accuracy before launch -->
   <!-- Social Proof Banner -->
   <div class="social-proof-banner" id="about-content">
     <div class="proof-content" role="list" aria-label="Company achievements">
@@ -148,6 +149,7 @@
   <section class="team-section">
     <div class="container">
 
+      <!-- VERIFY WITH CLIENT: "active-duty service member in the United States Air Force" - confirm accuracy before launch -->
       <!-- Dan Roberts -->
       <div class="team-member-card fade-in">
         <div class="team-info">
@@ -284,6 +286,7 @@
             <a href="index.html#process">About the Process</a>
             <a href="about.html">About</a>
             <a href="blog/">Articles &amp; Insights</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
         <div class="footer-contact">
@@ -311,10 +314,31 @@
             <input type="tel" name="phone" placeholder="Phone" class="full-width" inputmode="tel" autocomplete="tel">
             <input type="email" name="email" placeholder="Email" class="full-width" inputmode="email" autocomplete="email">
             <textarea name="message" placeholder="Tell us about your land..."></textarea>
+            <div class="tcpa-consent">
+              <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message &amp; data rates may apply. Reply STOP to opt out.</small></p>
+            </div>
             <button type="submit" class="btn btn-red" style="width:100%">Send Message</button>
           </form>
         </div>
       </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="newsletter-section">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h4>Get Land Market Updates</h4>
+          <p>Subscribe for tips on selling land, market insights, and more.</p>
+        </div>
+        <form class="newsletter-form" name="newsletter-about" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter-about">
+          <p style="display:none"><input name="bot-field"></p>
+          <input type="email" name="email" placeholder="Your email address" required inputmode="email" autocomplete="email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 American Land Trust. All rights reserved.</span>
         <span>Built with trust and integrity.</span>

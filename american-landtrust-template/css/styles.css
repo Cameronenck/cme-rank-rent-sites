@@ -699,16 +699,21 @@ a {
 }
 
 .process-card h2 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--dark);
-  margin-bottom: 16px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  margin-bottom: 12px;
   margin-top: 12px;
+  letter-spacing: -0.01em;
 }
 
 .process-card p {
-  color: #555;
-  line-height: 1.7;
+  color: #ffffff;
+  opacity: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
   flex-grow: 1;
 }
 
