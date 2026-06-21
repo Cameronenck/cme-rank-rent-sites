@@ -18,7 +18,7 @@
   <meta name="twitter:image" content="images/hero-landscape-main.jpg">
   <meta name="theme-color" content="#1A1F36">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="canonical" href="https://american-landtrust-template.netlify.app/">
+  <link rel="canonical" href="https://american-landtrust.com/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231A1F36'/><text y='.72em' x='50' text-anchor='middle' font-size='55' fill='white'>ALT</text></svg>">
 
   <!-- Preload critical resources -->
@@ -58,94 +58,6 @@
     "priceRange": "$$"
   }
   </script>
-  
-  <!-- American Land Trust UI Fixes - June 11, 2026 -->
-  <style>
-/* FIX 1: Process section numbered circles - prevent clipping */
-.process-card {
-  overflow: visible !important; /* Override hidden to show circles */
-  padding: 50px 40px 40px 40px !important; /* Increase top padding for circle space */
-  margin-top: 30px !important; /* Add margin to accommodate circles */
-}
-
-.process-number {
-  z-index: 10 !important; /* Ensure circles appear above cards */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important; /* Add shadow for depth */
-}
-
-/* FIX 2: Process section grid spacing to accommodate visible circles */
-.process-grid {
-  gap: 40px 30px !important; /* Increase vertical gap for circles */
-  padding: 30px 0 !important; /* Add top padding for first row circles */
-}
-
-/* FIX 3: Ensure consistent background treatment for all step cards */
-.process-card:nth-child(1)::before,
-.process-card:nth-child(2)::before, 
-.process-card:nth-child(3)::before {
-  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)) !important;
-}
-
-/* FIX 4: Clean up wave dividers - remove overlapping and fix z-index */
-.wave-divider {
-  z-index: 1 !important;
-  position: relative !important;
-}
-
-.wave-divider svg {
-  width: calc(100% + 2px) !important; /* Slight overflow to prevent gaps */
-  margin-left: -1px !important; /* Center the slight overflow */
-}
-
-/* FIX 5: Prevent wave divider stacking issues */
-.wave-divider + .wave-divider {
-  margin-top: -1px !important; /* Slight overlap to prevent gaps */
-}
-
-/* FIX 6: Section spacing to prevent wave overlap issues */
-.hero { z-index: 10 !important; }
-.testimonials-section { z-index: 9 !important; }
-.process-section { z-index: 8 !important; }
-.why-choose-section { z-index: 7 !important; }
-.faq-section { z-index: 6 !important; }
-.success-stories { z-index: 5 !important; }
-.blog-section { z-index: 4 !important; }
-.footer-main { z-index: 3 !important; }
-
-/* FIX 7: Mobile responsive fixes for circles */
-@media (max-width: 768px) {
-  .process-card {
-    padding: 45px 30px 30px 30px !important;
-    margin-top: 30px !important;
-  }
-  
-  .process-number {
-    width: 48px !important;
-    height: 48px !important;
-    font-size: 16px !important;
-    left: 30px !important;
-  }
-  
-  .process-grid {
-    gap: 35px 20px !important;
-    padding: 25px 0 !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .process-card {
-    padding: 40px 20px 25px 20px !important;
-    margin-top: 25px !important;
-  }
-  
-  .process-number {
-    width: 44px !important;
-    height: 44px !important;
-    font-size: 15px !important;
-    left: 20px !important;
-  }
-}
-  </style>
 </head>
 <body>
 
@@ -438,7 +350,7 @@
         <p class="why-text">At <strong>American Land Trust</strong>, we're not just buying land—we're building trust, one deal at a time. If you're thinking about selling, let's talk. <strong>No pressure, just options.</strong></p>
       </div>
       <div class="why-image">
-        <img src="images/happy-family-nature.jpg" alt="Family enjoying their land in beautiful natural setting" loading="lazy">
+        <img src="images/hero-landscape-main.jpg" alt="Family enjoying their land in beautiful natural setting" loading="lazy">
       </div>
     </div>
   </section>
@@ -591,7 +503,7 @@
         <div class="lead-magnet-content">
           <h3>Free Download: The Landowner's Guide to Selling</h3>
           <p>Everything you need to know about selling your land — from valuation to closing. No fluff, just actionable advice.</p>
-          <a class='btn btn-red' href='/contact'>Get Your Free Guide →</a>
+          <a class='btn btn-red' href='#footer-form'>Get Your Free Guide →</a>
         </div>
       </div>
     </div>
@@ -789,7 +701,7 @@
     
     <div class="footer-copyright">
       <span>&copy; 2026 American Land Trust. All rights reserved.</span>
-      <span>Built with trust and integrity.</span>
+      <span>Built with trust and integrity. <a href="/privacy-policy" style="color: #D32F2F;">Privacy Policy</a></span>
     </div>
   </footer>
 
