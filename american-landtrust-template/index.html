@@ -39,7 +39,7 @@
     "name": "American Land Trust",
     "description": "American Land Trust offers fair cash offers for your land. Stress-free closings, honest deals, and American-sized integrity.",
     "url": "https://american-landtrust.com",
-    "telephone": "+1-832-558-3227",
+    "telephone": "+1-801-780-8393",
     "email": "hello@american-landtrust.com",
     "address": {
       "@type": "PostalAddress",
@@ -79,8 +79,8 @@
         <a href="blog/">Articles & Insights</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="tel:832-558-3227" class="header-cta" aria-label="Call us at 832-558-3227">
-        832-558-3227
+      <a href="tel:801-780-8393" class="header-cta" aria-label="Call us at 801-780-8393">
+        801-780-8393
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -101,13 +101,42 @@
       <div class="hero-content">
         <h1><strong>American Land Trust: The Trusted Way to Sell Your Land</strong></h1>
         <h3><strong>Fair cash offers, stress-free closings, and American-sized integrity.</strong></h3>
-        <div class="hero-cta-group">
-          <a href="#offer-form" class="btn btn-white">
-            Get Your Free Cash Offer →
-          </a>
-        </div>
+        <ul class="hero-trust-list">
+          <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5"/></svg> Cash offer in 48 hours</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5"/></svg> No fees, no commissions</li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5"/></svg> Close in as little as 14 days</li>
+        </ul>
       </div>
-      
+
+      <div class="hero-form-card">
+        <div class="hero-form-header">
+          <h3>Get Your Free Cash Offer</h3>
+          <p>No obligation. Takes 60 seconds.</p>
+        </div>
+        <form class="hero-form" name="hero-offer" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html">
+          <input type="hidden" name="form-name" value="hero-offer">
+          <input type="hidden" name="source" value="hero-form">
+          <p style="display:none"><input name="bot-field"></p>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <input type="text" name="property-address" placeholder="Property Address or Location" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <textarea name="property-details" placeholder="Tell us about your land (optional)" rows="2"></textarea>
+          </div>
+          <button type="submit" class="btn btn-red" style="width:100%;padding:14px;">Send My Info — Get a Free Offer →</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -191,58 +220,6 @@
         <div class="google-badge">
           <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
           <span>Google Review</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Single Offer Form Section -->
-  <section class="offer-form-section" id="offer-form">
-    <div class="container">
-      <div class="offer-form-wrap">
-        <div class="offer-form-copy">
-          <h2>Get Your Free Cash Offer</h2>
-          <p>Tell us about your land and we'll send you a fair, no-obligation cash offer within 48 hours. No fees. No commissions. No pressure.</p>
-          <ul class="offer-form-trust">
-            <li><svg viewBox="0 0 24 24" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Fair, market-driven offer in 48 hours</li>
-            <li><svg viewBox="0 0 24 24" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Zero fees, zero commissions</li>
-            <li><svg viewBox="0 0 24 24" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Close in as little as 1–3 weeks</li>
-            <li><svg viewBox="0 0 24 24" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> 100% no obligation</li>
-          </ul>
-        </div>
-        <div class="offer-form-card">
-          <h3>Tell Us About Your Land</h3>
-          <p>Free evaluation in 48 hours</p>
-          <form name="offer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="offer-contact">
-            <input type="hidden" name="source" value="main-offer-form">
-            <p style="display:none"><input name="bot-field"></p>
-            <div class="form-row">
-              <div class="form-group">
-                <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
-              </div>
-              <div class="form-group">
-                <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
-            </div>
-            <div class="form-group">
-              <input type="text" name="property-address" placeholder="Property Address" required autocomplete="street-address">
-            </div>
-            <div class="form-group">
-              <textarea name="message" placeholder="Tell us about your property (optional)" rows="3"></textarea>
-            </div>
-            <div class="tcpa-consent">
-              <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message & data rates may apply. Reply STOP to opt out.</small></p>
-            </div>
-            <button type="submit" class="btn btn-red" style="width:100%">Send My Info — Get a Free Offer →</button>
-            <div class="form-security-badge">
-              <svg viewBox="0 0 24 24" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <span>Your info is secure & confidential</span>
-            </div>
-          </form>
         </div>
       </div>
     </div>
@@ -416,35 +393,6 @@
     </div>
   </section>
 
-  <!-- "As Seen In" Media Bar -->
-  <div class="media-bar">
-    <p>As Featured In</p>
-    <div class="media-logos">
-      <span class="media-logo">Forbes</span>
-      <span class="media-logo">Wall Street Journal</span>
-      <span class="media-logo">REALTOR.COM</span>
-      <span class="media-logo">LAND REPORT</span>
-      <span class="media-logo">Business Insider</span>
-    </div>
-    <p style="font-size:0.72rem;color:#888;margin-top:12px;font-style:italic;">As seen in publications covering land real estate markets and investment opportunities.</p>
-  </div>
-
-  <!-- Lead Magnet CTA -->
-  <section style="padding:60px 0;background:#1A1F36;color:white;">
-    <div class="container">
-      <div class="lead-magnet">
-        <div class="lead-magnet-icon">
-          <svg viewBox="0 0 24 24" width="36" height="36"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
-        <div class="lead-magnet-content">
-          <h3>Get Your Free Cash Offer Today</h3>
-          <p>Ready to find out what your land is worth? Get a fair, no-obligation cash offer within 48 hours. No fees, no commissions, no pressure.</p>
-          <a href="contact.html" class="btn btn-red">Get My Free Cash Offer →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Articles Section -->
   <section class="articles-section" id="articles">
     <div class="container">
@@ -545,7 +493,7 @@
             <span class="icon-svg">
               <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </span>
-            <span><strong>Call or Text Us</strong><br><a href="tel:832-558-3227">832-558-3227</a></span>
+            <span><strong>Call or Text Us</strong><br><a href="tel:801-780-8393">801-780-8393</a></span>
           </p>
           <p>
             <span class="icon-svg">
@@ -564,72 +512,6 @@
       <span>Built with trust and integrity.</span>
     </div>
   </footer>
-
-  <!-- Sticky Mobile Bottom Bar -->
-  <div class="mobile-bottom-bar" id="mobileBottomBar">
-    <a href="tel:832-558-3227" class="mobile-bar-item" aria-label="Call 832-558-3227">
-      <span class="icon-svg">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </span>
-      Call Us
-    </a>
-    <a href="mailto:hello@american-landtrust.com" class="mobile-bar-item" aria-label="Email us">
-      <span class="icon-svg">
-        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </span>
-      Email
-    </a>
-    <a href="contact.html" class="mobile-bar-cta" aria-label="Get a cash offer">Get a Cash Offer!</a>
-  </div>
-
-  <!-- Exit Intent Popup -->
-  <div class="exit-popup-overlay" id="exitPopupOverlay">
-    <div class="exit-popup">
-      <button class="exit-popup-close" aria-label="Close popup">&times;</button>
-      <div class="exit-popup-header">
-        <h3>Wait — Don't Leave Empty-Handed!</h3>
-        <p>Get a free, no-obligation cash offer for your land in just 48 hours.</p>
-      </div>
-      <div class="exit-popup-body">
-        <form name="exit-intent" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="exit-intent">
-          <input type="hidden" name="source" value="exit-intent">
-          <p style="display:none"><input name="bot-field"></p>
-          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-          <input type="tel" name="phone" placeholder="Phone Number" required inputmode="tel" autocomplete="tel">
-          <input type="text" name="property-location" placeholder="Property Location (County, State)">
-          <button type="submit" class="btn btn-red" style="width:100%">Get My Free Offer →</button>
-        </form>
-        <div class="trust-badges" style="padding-top:16px;">
-          <span class="trust-badge"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 100% Secure</span>
-          <span class="trust-badge"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> No Obligation</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Exit Intent Banner -->
-  <div class="exit-banner" id="exitBanner" role="alert">
-    <div class="exit-banner-inner">
-      <span class="exit-banner-text">Wait! Get Your Free Cash Offer Before You Go</span>
-      <a href="contact.html" class="btn btn-red">Get My Free Offer →</a>
-      <button class="exit-banner-close" aria-label="Close banner" onclick="sessionStorage.setItem('exitShown','1');document.getElementById('exitBanner').classList.remove('show');this.parentElement.parentElement.style.display='none';">&times;</button>
-    </div>
-  </div>
-  <script>
-  (function(){
-    // Only show on desktop (screen width > 768px)
-    if(window.innerWidth <= 768) return;
-    // Only show once per browser session
-    if(sessionStorage.getItem('exitShown')) return;
-    document.addEventListener('mouseleave',function(e){
-      if(e.clientY<0){
-        sessionStorage.setItem('exitShown','1');
-        document.getElementById('exitBanner').classList.add('show');
-      }
-    },{once:true});
-  })();
-  </script>
 
   <!-- FAQPage Schema -->
   <script type="application/ld+json">
