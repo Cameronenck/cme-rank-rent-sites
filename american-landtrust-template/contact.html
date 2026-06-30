@@ -42,8 +42,8 @@
         <a href="blog/">Articles &amp; Insights</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
-      <a href="contact.html" class="header-cta" aria-label="Get a cash offer">
-        Get a Cash Offer
+      <a href="tel:801-780-8393" class="header-cta" aria-label="Call us at 801-780-8393">
+        801-780-8393
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -104,7 +104,7 @@
             </div>
             <div>
               <h4>Call or Text Us</h4>
-              <p><a href="tel:832-558-3227">832-558-3227</a></p>
+              <p><a href="tel:801-780-8393">801-780-8393</a></p>
             </div>
           </div>
           <div class="contact-detail">
@@ -140,12 +140,12 @@
             <input type="tel" name="phone" placeholder="Phone Number" inputmode="tel" autocomplete="tel">
           </div>
           <div class="form-group">
-            <label class="form-label">Email <span class="required-star">*</span></label>
-            <input type="email" name="email" required placeholder="Email Address" inputmode="email" autocomplete="email">
+            <label class="form-label">Property Address <span class="required-star">*</span></label>
+            <input type="text" name="property-address" required placeholder="Property Address" autocomplete="street-address">
           </div>
           <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea name="message" placeholder="Tell us about your land or ask us anything..." rows="4"></textarea>
+            <label class="form-label">Tell us about your land <span style="font-weight:400;color:#888;">(optional)</span></label>
+            <textarea name="message" placeholder="County, acreage, any details that might help us..." rows="4"></textarea>
           </div>
           <div class="tcpa-consent" style="margin-bottom:12px;">
             <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message &amp; data rates may apply. Reply STOP to opt out.</small></p>
@@ -196,67 +196,23 @@
           </p>
           <p>
             <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <span><strong>Call or Text Us</strong><br><a href="tel:832-558-3227" style="color:var(--cream)">832-558-3227</a></span>
+            <span><strong>Call or Text Us</strong><br><a href="tel:801-780-8393" style="color:var(--cream)">801-780-8393</a></span>
           </p>
           <p>
             <span class="icon-svg icon-md" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
             <span><strong>Email Us</strong><br><a href="mailto:hello@american-landtrust.com" style="color:var(--cream)">hello@american-landtrust.com</a></span>
           </p>
         </div>
-        <div class="footer-form">
-          <h3>Get in Touch</h3>
-          <form name="footer-contact-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="footer-contact-contact">
-            <p class="hidden" style="display:none"><input name="bot-field"></p>
-            <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
-            <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
-            <input type="tel" name="phone" placeholder="Phone" class="full-width" inputmode="tel" autocomplete="tel">
-            <input type="email" name="email" placeholder="Email" class="full-width" inputmode="email" autocomplete="email">
-            <textarea name="message" placeholder="Message"></textarea>
-            <div class="tcpa-consent">
-              <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message &amp; data rates may apply. Reply STOP to opt out.</small></p>
-            </div>
-            <button type="submit" class="btn btn-red" style="width:100%">Send</button>
-          </form>
         </div>
       </div>
     </div>
 
-    <!-- Newsletter Signup -->
-    <div class="newsletter-section">
-      <div class="newsletter-inner">
-        <div class="newsletter-text">
-          <h4>Get Land Market Updates</h4>
-          <p>Subscribe for tips on selling land, market insights, and more.</p>
-        </div>
-        <form class="newsletter-form" name="newsletter-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="newsletter-contact">
-          <p style="display:none"><input name="bot-field"></p>
-          <input type="email" name="email" placeholder="Your email address" required inputmode="email" autocomplete="email">
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-      <div class="footer-bottom">
-        <span>&copy; 2026 American Land Trust. All rights reserved.</span>
-        <span>Built with trust and integrity.</span>
-      </div>
+    <!-- Footer Bottom -->
+    <div class="footer-copyright">
+      <span>&copy; 2026 American Land Trust. All rights reserved.</span>
+      <span>Built with trust and integrity.</span>
     </div>
   </footer>
-
-  <!-- Floating Contact Bar -->
-  <div class="floating-bar" id="floatingBar" role="navigation" aria-label="Quick contact">
-    <a href="tel:832-558-3227" aria-label="Call 832-558-3227">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-      Call Us
-    </a>
-    <a href="mailto:hello@american-landtrust.com" aria-label="Email us">
-      <span class="icon-svg icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-      Email
-    </a>
-    <a href="contact.html" aria-label="Get a cash offer">Get a Cash Offer!</a>
-  </div>
 
 </body>
 </html>
