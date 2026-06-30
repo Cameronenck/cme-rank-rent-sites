@@ -3939,3 +3939,164 @@ section, .section {
     text-align: center;
   }
 }
+
+
+/* ============================================================ */
+/* PATCH: visual fixes 2026-06-30                                */
+/* ============================================================ */
+/* Hero trust list — white text on dark background */
+.hero-trust-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-trust-list li {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.hero-trust-list li svg {
+  stroke: #C8102E;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Stats bar — force horizontal row */
+.social-proof-banner {
+  background: var(--dark, #1A1F36);
+  padding: 20px 40px;
+}
+.proof-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.proof-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.proof-item svg,
+.proof-item .icon-svg {
+  color: #C8102E;
+  stroke: #C8102E;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .proof-content {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    justify-content: flex-start;
+  }
+}
+
+/* Remove stray dark left border from mission section */
+.about-mission-vision *,
+.about-mission-vision::before,
+.about-mission-vision::after,
+.mission-vision-card::before,
+.mission-vision-card::after {
+  border-left: none !important;
+}
+.about-mission-vision blockquote {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+/* The bullet/pin icon on the about page stats — suppress default list bullets */
+.social-proof-banner ul,
+.proof-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Footer grid — 3 columns: brand | information | contact */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-col h3 {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+/* Contact column */
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+}
+.footer-contact-item a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+.footer-contact-item a:hover { color: #ffffff; }
+/* Footer copyright */
+.footer-copyright {
+  padding-top: 24px;
+  text-align: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+}
+/* Mobile footer */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Fix contact-info text cutoff */
+.contact-grid {
+  overflow: hidden;
+}
+.contact-info {
+  overflow: hidden;
+  word-break: break-word;
+  min-width: 0;
+}
