@@ -277,47 +277,43 @@ a {
 .hero-container {
   position: relative;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 24px;
+  gap: 48px;
   padding: 120px 48px 80px;
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
 .hero-content h1 {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: white;
   line-height: 1.15;
   margin-bottom: 16px;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-content h3 {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: rgba(255,255,255,0.9);
   margin-bottom: 32px;
   font-weight: 400;
-  text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  max-width: 480px;
 }
 
 .hero-cta-group {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-/* Remove wave divider bleed — we don't use it in hero anymore */
+/* Remove wave divider bleed */
 .hero .wave-divider {
   display: none;
 }
@@ -1426,6 +1422,7 @@ a {
   }
   
   .hero-container {
+    display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 80px 20px 48px;
@@ -1445,6 +1442,7 @@ a {
     text-align: center;
     margin-bottom: 28px;
     line-height: 1.4;
+    max-width: 100%;
   }
   
   /* Hero CTA Buttons - stacked vertically, full width */
