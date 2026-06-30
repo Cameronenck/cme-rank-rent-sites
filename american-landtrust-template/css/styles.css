@@ -237,9 +237,10 @@ a {
    HERO SECTION — TWO COLUMN GRID FIX
    ======================================== */
 
+/* Hero - single column, text centered, no form, no wave bleed */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 85vh;
   height: auto;
   display: flex;
   align-items: center;
@@ -276,36 +277,49 @@ a {
 .hero-container {
   position: relative;
   z-index: 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 100px 80px;
-  max-width: 1400px;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+  padding: 120px 48px 80px;
+  max-width: 860px;
   margin: 0 auto;
   width: 100%;
 }
 
 .hero-content h1 {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 700;
   color: white;
-  line-height: 1.2;
-  margin-bottom: 24px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .hero-content h3 {
-  font-size: 18px;
-  color: white;
-  margin-bottom: 40px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 32px;
   font-weight: 400;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-cta-group {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Remove wave divider bleed — we don't use it in hero anymore */
+.hero .wave-divider {
+  display: none;
 }
 
 /* Hero Form Card — RIGHT COLUMN */
@@ -621,12 +635,120 @@ a {
 }
 
 /* ========================================
+   OFFER FORM SECTION — SINGLE CTA FORM
+   ======================================== */
+
+.offer-form-section {
+  background: var(--cream);
+  padding: 80px 0;
+}
+
+.offer-form-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.offer-form-copy h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.offer-form-copy p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.offer-form-trust {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.offer-form-trust li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.offer-form-trust li svg {
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 2.5;
+  flex-shrink: 0;
+}
+
+.offer-form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+}
+
+.offer-form-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.offer-form-card > p {
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.offer-form-card .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.offer-form-card .form-group {
+  margin-bottom: 14px;
+}
+
+.offer-form-card input,
+.offer-form-card textarea {
+  width: 100%;
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast);
+}
+
+.offer-form-card input:focus,
+.offer-form-card textarea:focus {
+  outline: none;
+  border-color: var(--red);
+}
+
+.offer-form-card textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ========================================
    PROCESS SECTION — EQUAL HEIGHT FIX
    ======================================== */
 
 .process-section {
   background: var(--cream);
-  padding: var(--section-padding);
+  padding: 60px 0 48px;
 }
 
 .container {
@@ -648,22 +770,22 @@ a {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px 30px; /* FIXED: Increased gap for circle space */
-  margin-bottom: 48px;
-  align-items: stretch; /* Equal height cards */
-  padding: 30px 0; /* ADDED: Top padding for circles */
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: stretch;
+  padding: 0;
 }
 
 .process-card {
   position: relative;
   border-radius: 16px;
-  padding: 50px 40px 40px 40px; /* Increased top padding for circles */
+  padding: 32px 28px 28px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  overflow: visible; /* FIXED: was hidden, now visible for circles */
+  overflow: hidden;
   color: white;
-  margin-top: 30px; /* Added margin for circle space */
+  margin-top: 0;
 }
 
 .process-card::before {
@@ -681,31 +803,31 @@ a {
 }
 
 .process-number {
-  position: absolute;
-  top: -26px;
-  left: 40px;
-  width: 52px;
-  height: 52px;
-  background: white;
-  color: var(--red);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 44px;
+  height: 44px;
+  background: var(--red);
+  color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 18px;
-  z-index: 100; /* FIXED: Much higher z-index for visibility */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Added depth shadow */
+  font-size: 16px;
+  z-index: 1;
+  margin-bottom: 16px;
+  flex-shrink: 0;
 }
 
 .process-card h2 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  margin-bottom: 12px;
-  margin-top: 12px;
+  margin-bottom: 10px;
+  margin-top: 0;
   letter-spacing: -0.01em;
 }
 
@@ -719,6 +841,7 @@ a {
 
 .process-cta {
   text-align: center;
+  margin-top: 4px;
 }
 
 /* ========================================
@@ -889,8 +1012,8 @@ a {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
 }
 
 .footer .logo {
@@ -994,10 +1117,14 @@ a {
   line-height: 1.4;
 }
 
-/* Footer Bottom Bar */
+/* Footer Bottom Bar — removed, was duplicate footer */
 .footer-bottom-bar {
-  background: var(--red);
-  padding: 12px 0;
+  display: none;
+}
+
+/* Newsletter section — removed */
+.newsletter-section {
+  display: none;
 }
 
 .footer-bottom-content {
@@ -1295,28 +1422,28 @@ a {
      ======================================== */
   .hero {
     min-height: auto;
-    max-height: 100svh;
     padding: 0;
   }
   
   .hero-container {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    flex-direction: column;
+    gap: 24px;
     padding: 80px 20px 48px;
-    text-align: left; /* LEFT-ALIGNED, not centered */
+    text-align: center;
+    max-width: 100%;
   }
   
   .hero-content h1 {
     font-size: clamp(28px, 8vw, 48px);
-    text-align: left;
+    text-align: center;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   
   .hero-content h3 {
-    font-size: 18px; /* Increased from 16px for better readability */
-    text-align: left;
-    margin-bottom: 32px;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 28px;
     line-height: 1.4;
   }
   
@@ -1324,79 +1451,19 @@ a {
   .hero-cta-group {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
-    margin-bottom: 24px;
   }
   
   .hero-cta-group .btn {
     width: 100%;
-    border-radius: 8px; /* Less rounded for mobile */
+    border-radius: 8px;
     padding: 16px 24px;
     font-size: 16px;
-    min-height: 48px; /* Touch target - increased from 44px */
-    margin-bottom: 0;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  /* "Get Your Free Cash Offer →" - white bg, red text */
-  .hero-cta-group .btn-white {
-    background: white;
-    color: #C8102E;
-    border: 2px solid #C8102E;
-  }
-  
-  .hero-cta-group .btn-white:hover {
-    background: #C8102E;
-    color: white;
-  }
-  
-  /* "Quick Form" - dark navy bg, white text */
-  .hero-cta-group .btn-dark {
-    background: #1A1F36;
-    color: white;
-    border: 2px solid #1A1F36;
-  }
-  
-  .hero-cta-group .btn-dark:hover {
-    background: rgba(26, 31, 54, 0.8);
-    color: white;
-  }
-  
-  /* Show hero form on mobile but move it below content */
-  .hero-form-card {
-    display: block;
-    margin-top: 32px;
-    padding: 24px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .hero-form-header h3 {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  
-  /* Form styling fixes for mobile */
-  .hero-form .form-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .hero-form input,
-  .hero-form textarea {
-    font-size: 16px; /* Prevent zoom on iOS */
-    padding: 14px;
-    min-height: 44px;
-  }
-  
-  .hero-form button {
     min-height: 48px;
-    font-size: 16px;
+    text-align: center;
     font-weight: 600;
   }
   
@@ -1477,12 +1544,14 @@ a {
   /* Process cards - single column stack */
   .process-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+    padding: 0;
   }
   
   .process-card {
-    padding: 32px 24px;
+    padding: 28px 24px;
     width: 100%;
+    margin-top: 0;
     text-align: center;
   }
   
@@ -1548,6 +1617,22 @@ a {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  
+  /* Offer form section - stack on mobile */
+  .offer-form-wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .offer-form-card .form-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .offer-form-card input,
+  .offer-form-card textarea {
+    font-size: 16px;
   }
   
   .footer-section h3 {
