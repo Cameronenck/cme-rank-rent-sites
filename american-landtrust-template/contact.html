@@ -42,9 +42,7 @@
         <a href="blog/">Articles &amp; Insights</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
-      <a href="tel:801-780-8393" class="header-cta" aria-label="Call us at 801-780-8393">
-        801-780-8393
-      </a>
+      <a href="tel:801-780-8393" class="header-cta" aria-label="Call us at 801-780-8393">801-780-8393</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -123,35 +121,17 @@
         <h3>Send Us a Message</h3>
 
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none"><input name="bot-field"></p>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">First Name <span class="required-star">*</span></label>
-              <input type="text" name="first-name" required placeholder="First Name" autocomplete="given-name">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none"><input name="bot-field"></p>
+            <div class="form-row">
+              <input type="text" name="first-name" placeholder="First Name" required autocomplete="given-name">
+              <input type="text" name="last-name" placeholder="Last Name" required autocomplete="family-name">
             </div>
-            <div class="form-group">
-              <label class="form-label">Last Name <span class="required-star">*</span></label>
-              <input type="text" name="last-name" required placeholder="Last Name" autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" name="phone" placeholder="Phone Number" inputmode="tel" autocomplete="tel">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Property Address <span class="required-star">*</span></label>
-            <input type="text" name="property-address" required placeholder="Property Address" autocomplete="street-address">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tell us about your land <span style="font-weight:400;color:#888;">(optional)</span></label>
-            <textarea name="message" placeholder="County, acreage, any details that might help us..." rows="4"></textarea>
-          </div>
-          <div class="tcpa-consent" style="margin-bottom:12px;">
-            <p><small>By submitting this form, you consent to receive SMS and phone calls from American Land Trust. Message &amp; data rates may apply. Reply STOP to opt out.</small></p>
-          </div>
-          <button type="submit" class="btn btn-red" style="width:100%">Send Message</button>
-        </form>
+            <input type="tel" name="phone" placeholder="Phone Number" class="full-width" required inputmode="tel" autocomplete="tel">
+            <input type="text" name="property-address" placeholder="Property Address" class="full-width" required>
+            <textarea name="land-details" placeholder="Tell us about your land (optional)" rows="4"></textarea>
+            <button type="submit" class="btn btn-red" style="width:100%">Get My Free Offer</button>
+</form>
 
         <!-- Trust signal below form ---->
         <div class="form-footer-trust">
@@ -166,21 +146,21 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="footer">
-    <div class="container">
+  <footer class="site-footer">
+    <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo" aria-label="American Land Trust - Home">
             <div class="logo-icon" aria-hidden="true">
               <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                <rect width="44" height="44" rx="8" fill="rgba(255,255,255,0.15)"/>
+                <rect width="44" height="44" rx="8" fill="rgba(255,255,255,0.12)"/>
                 <path d="M22 8L10 34h4l2-5h12l2 5h4L22 8zm0 9l4.5 11h-9L22 17z" fill="white"/>
                 <path d="M14 36h16v2H14z" fill="#c12037"/>
               </svg>
             </div>
             <span>American Land Trust</span>
           </a>
-          <div class="footer-links" style="margin-top:24px;">
+          <div class="footer-links" style="margin-top:28px;">
             <h3>Information</h3>
             <a href="index.html#process">About the Process</a>
             <a href="about.html">About</a>
@@ -203,16 +183,12 @@
             <span><strong>Email Us</strong><br><a href="mailto:hello@american-landtrust.com" style="color:var(--cream)">hello@american-landtrust.com</a></span>
           </p>
         </div>
-        </div>
       </div>
     </div>
-
-    <!-- Footer Bottom -->
     <div class="footer-copyright">
       <span>&copy; 2026 American Land Trust. All rights reserved.</span>
-      <span>Built with trust and integrity.</span>
     </div>
   </footer>
-
 </body>
 </html>
+
