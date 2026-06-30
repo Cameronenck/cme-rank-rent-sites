@@ -6,8 +6,8 @@ const SITE_CONFIG = {
   // Company Info
   companyName: "American Land Trust",
   companyTagline: "The Trusted Way to Sell Your Land",
-  phone: "832-558-3227",
-  phoneFormatted: "+1-832-558-3227",
+  phone: "801-780-8393",
+  phoneFormatted: "+1-801-780-8393",
   email: "hello@american-landtrust.com",
   address: "12605 East Fwy, #325, Houston, TX 77015",
 
@@ -116,10 +116,10 @@ const SITE_CONFIG = {
   // Team Members (About page)
   team: [
     {
-      name: "Dan Roberts",
+      name: "Demetri Suliman",
       role: "Managing Director",
       tagline: "A Man of Service, Integrity, and Trust",
-      bio: "I'm <strong>Dan Roberts</strong>, and I believe in hard work, integrity, and doing right by people. As an active-duty service member in the United States Air Force, I've dedicated my life to serving this great country, and that same commitment extends to the landowners I work with every day.",
+      bio: "I'm <strong>Demetri Suliman</strong>, and I believe in hard work, integrity, and doing right by people. As an active-duty service member in the United States Air Force, I've dedicated my life to serving this great country, and that same commitment extends to the landowners I work with every day.",
       bio2: "I'm a proud Texan who understands the value of land, legacy, and the trust that comes with making big decisions. Whether it's protecting our nation or helping landowners navigate the selling process, I approach everything with respect, honesty, and a firm handshake."
     },
     {
@@ -153,3 +153,4 @@ const SITE_CONFIG = {
   metaDescription: "American Land Trust offers fair cash offers for your land. Stress-free closings, honest deals, and American-sized integrity. Get your cash offer today!",
   metaKeywords: "sell land, cash offer land, land trust, sell property fast, land buyer"
 };
+
