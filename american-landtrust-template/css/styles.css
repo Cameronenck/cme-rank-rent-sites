@@ -4437,3 +4437,95 @@ section, .section {
     margin: 0 auto !important;
   }
 }
+
+/* ============================================================
+   PROCESS V2 — Clean rebuild. Fresh class names, no conflicts.
+   Palette: cream bg, white cards, navy text, red accents.
+   ============================================================ */
+
+.process-v2 {
+  background: #F5F0EB;
+  padding: 56px 0 48px;
+}
+
+/* Section label already handled by .section-label — just tighten its bottom margin here */
+.process-v2 .section-label {
+  margin-bottom: 32px;
+}
+
+.process-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.process-v2-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 2px 12px rgba(26, 31, 54, 0.07);
+  border-top: 3px solid #C8102E;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.process-v2-card:hover {
+  box-shadow: 0 6px 24px rgba(26, 31, 54, 0.13);
+  transform: translateY(-2px);
+}
+
+/* Step number — matches section-label style (red, caps, spaced) */
+.process-v2-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #C8102E;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Step heading — Playfair Display, navy, matches hero h1 energy */
+.process-v2-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1A1F36;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Body text — Inter, readable gray */
+.process-v2-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #555;
+  margin: 0;
+}
+
+.process-v2-body strong {
+  color: #1A1F36;
+  font-weight: 600;
+}
+
+/* CTA — tight, centered */
+.process-v2-cta {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .process-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .process-v2 {
+    padding: 40px 0 36px;
+  }
+}
