@@ -4100,3 +4100,267 @@ section, .section {
   word-break: break-word;
   min-width: 0;
 }
+
+/* ============================================================
+   REDESIGN OVERRIDES — 2026-07-01
+   ============================================================ */
+
+/* --- Issue 1: Process section — numbers inside cards, tighter spacing --- */
+.process-section {
+  padding: 48px 0 32px !important;
+}
+.process-number {
+  position: static !important;
+  transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  color: rgba(255,255,255,0.25) !important;
+  line-height: 1 !important;
+  margin-bottom: 12px !important;
+  display: block !important;
+  text-align: left !important;
+  z-index: auto !important;
+}
+.process-card {
+  padding: 32px 28px !important;
+  border-radius: 12px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.process-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3) !important;
+}
+.process-card h2 {
+  font-size: 1.15rem !important;
+  margin-bottom: 10px !important;
+  color: #ffffff !important;
+}
+.process-card p {
+  font-size: 0.92rem !important;
+  color: rgba(255,255,255,0.85) !important;
+  line-height: 1.55 !important;
+}
+.process-cta {
+  margin-top: 24px !important;
+}
+
+/* --- Issue 2: Footer — dark background, readable text (already dark but ensure) --- */
+.footer {
+  background: #0d1b2a !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+.footer-col h3,
+.footer-col ul li a,
+.footer-contact-item,
+.footer-contact-item a {
+  color: rgba(255,255,255,0.8) !important;
+}
+.footer-copyright {
+  color: rgba(255,255,255,0.45) !important;
+}
+
+/* --- Issue 3: Inline About section --- */
+.about-inline-section {
+  padding: 72px 0 80px !important;
+  background: #f9f7f4;
+}
+.about-inline-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-inline-photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.about-inline-content h2 {
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+.about-inline-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.about-tagline {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #2d5a27 !important;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px !important;
+}
+@media (max-width: 768px) {
+  .about-inline-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-inline-photo {
+    display: flex;
+    justify-content: center;
+  }
+  .about-inline-photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* --- Issue 4: Contact form polish --- */
+.contact-section,
+.contact-main {
+  padding: 64px 0 !important;
+}
+.contact-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
+.contact-form-wrapper h3,
+.contact-form-wrapper h2 {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 24px !important;
+  color: #1a1a1a !important;
+}
+.contact-form-wrapper input,
+.contact-form-wrapper textarea,
+.contact-form-wrapper select {
+  border: 1.5px solid #d0d0d0 !important;
+  border-radius: 8px !important;
+  background: #fafafa !important;
+  padding: 12px 16px !important;
+  margin-bottom: 16px !important;
+  width: 100% !important;
+  font-size: 0.95rem !important;
+  transition: border-color 0.2s !important;
+}
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+  border-color: #2d5a27 !important;
+  outline: none !important;
+  background: #fff !important;
+}
+.contact-trust-list,
+.why-trust-list {
+  margin-bottom: 40px !important;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- Footer class fix: site-footer needs dark background --- */
+.site-footer {
+  background: #0d1b2a !important;
+  color: rgba(255,255,255,0.85) !important;
+  padding: 60px 0 0 !important;
+}
+.site-footer .footer-brand span,
+.site-footer .footer-brand a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.site-footer .footer-col h3 {
+  color: rgba(255,255,255,0.55) !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 16px !important;
+}
+.site-footer .footer-col ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.site-footer .footer-col ul li {
+  margin-bottom: 10px !important;
+}
+.site-footer .footer-col ul li a,
+.site-footer .footer-contact-item,
+.site-footer .footer-contact-item a {
+  color: rgba(255,255,255,0.78) !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+}
+.site-footer .footer-col ul li a:hover,
+.site-footer .footer-contact-item a:hover {
+  color: #ffffff !important;
+}
+.site-footer .footer-copyright {
+  background: rgba(0,0,0,0.2) !important;
+  padding: 20px 0 !important;
+  text-align: center !important;
+  color: rgba(255,255,255,0.4) !important;
+  font-size: 0.8rem !important;
+  margin-top: 40px !important;
+}
+.site-footer svg {
+  stroke: rgba(255,255,255,0.6) !important;
+  flex-shrink: 0 !important;
+}
+.footer-inner {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* --- Contact section: proper container padding --- */
+.contact-main {
+  padding: 64px 0 !important;
+}
+.contact-main .contact-grid {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
+.contact-form-wrapper > h3,
+.contact-form-wrapper > h2 {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 24px !important;
+  color: #1a1a1a !important;
+}
+/* Inline-style override for form inputs via attribute selectors */
+.contact-form-wrapper input[type="text"],
+.contact-form-wrapper input[type="tel"],
+.contact-form-wrapper input[type="email"],
+.contact-form-wrapper textarea {
+  border: 1.5px solid #ccc !important;
+  border-radius: 8px !important;
+  background: #f8f8f8 !important;
+  padding: 12px 16px !important;
+  font-size: 0.95rem !important;
+}
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+  border-color: #2d5a27 !important;
+  background: #fff !important;
+  outline: none !important;
+}
+@media (max-width: 768px) {
+  .contact-main .contact-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+  }
+}
