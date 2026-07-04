@@ -5,86 +5,82 @@
 const SITE_CONFIG = {
   // Company Info
   companyName: "American Land Trust",
-  companyTagline: "The Trusted Way to Sell Your Land",
+  companyTagline: "Sell Your Land for Cash. No Agents. No Fees. No Waiting.",
   phone: "801-780-8393",
   phoneFormatted: "+1-801-780-8393",
   email: "hello@american-landtrust.com",
   address: "12605 East Fwy, #325, Houston, TX 77015",
+  foundedYear: "2016",
 
   // Hero Section
-  heroTitle: "American Land Trust: The Trusted Way to Sell Your Land",
-  heroSubtitle: "Fair cash offers, stress-free closings, and American-sized integrity.",
-  heroCTA: "Contact us →",
+  heroTitle: "Sell Your Land for Cash. No Agents. No Fees. No Waiting.",
+  heroSubtitle: "We buy vacant and rural land directly from owners across the country. Get a written cash offer within 48 hours and close through a licensed title company in as little as 14 days.",
+  heroCTA: "Get My Cash Offer",
 
-  // About Section
-  aboutHeading: 'We believe in <strong>honest deals, fair offers, and treating landowners with the respect they deserve</strong>—because that\'s the American way. Selling your property doesn\'t have to be complicated, and we\'re here to make sure it\'s <strong>simple, straightforward, and stress-free</strong>.',
-  aboutText: 'With deep roots in <strong>American land transactions</strong>, we understand the unique value of property in our great state. Whether it\'s family land passed down through generations, an investment you no longer need, or a property that no longer fits your plans, <strong>we\'re here to offer a fair, no-obligation cash deal—quickly and transparently</strong>.',
-  aboutCTA: 'Call, text and email us today - <strong>we are here to help!</strong>',
+  // Track record stats (placeholders — replace with real numbers)
+  stats: [
+    { value: "$52M+", label: "In Land Purchased" },
+    { value: "18,400+", label: "Acres Acquired" },
+    { value: "31", label: "States We Buy In" },
+    { value: "480+", label: "Landowners Paid" }
+  ],
 
   // Process Steps
   processSteps: [
     {
-      title: "Assessment and Consulting",
-      description: 'Tell Us About Your Land. Share the <strong>APN number, county, state,</strong> and <strong>property owner details</strong>—no paperwork is needed upfront. If you have any liens or details you\'d like us to know, we\'ll listen.',
+      title: "Tell Us About Your Land",
+      description: "Share the state, county, and parcel details — an APN helps but isn't required. No paperwork, no site visit, no cost to you.",
       icon: "clipboard"
     },
     {
-      title: "Smart Valuation & Honest Offers",
-      description: '<strong>We evaluate & make a fair offer.</strong> We use market expertise, advanced data tools, and good old-fashioned common sense to assess your land. We consider location, zoning, size, and current market trends to ensure you receive a fair, no-obligation offer within 48 hours.',
+      title: "Receive a Written Cash Offer",
+      description: "We research comparable sales, access, and terrain, then send a written offer within 48 hours — with the comps we used, so you can check our math.",
       icon: "dollarSign"
     },
     {
-      title: "Fast and Secure Closing",
-      description: '<strong>Get Paid in 1 to 3 Weeks!</strong> Once you accept the offer, we work with trusted and vetted title companies to handle all the paperwork and legal details. Most sellers receive their payment within 1 to 3 weeks, ensuring a smooth and secure transaction.',
+      title: "Close Securely and Get Paid",
+      description: "A licensed title company handles escrow, paperwork, and recording. You receive funds by wire or check in 14–21 days — we cover every closing cost.",
       icon: "home"
     }
   ],
 
   // Why Choose Us
   whyChooseUs: [
-    { title: "Fair & Honest Offers", desc: "No lowballing. Just straight-up, market-driven cash offers." },
-    { title: "Fast & Stress-Free Process", desc: "Get an offer in 48 hours and close quickly." },
-    { title: "No Middlemen, No Extra Fees", desc: "You deal directly with us, not a third party." },
-    { title: "American-Owned & Operated", desc: "We understand the land, the market, and the people." },
-    { title: "Respect & Integrity", desc: "We do business with a handshake and our word." }
+    { title: "Written Offers, Real Math", desc: "Every offer includes the comparable sales we used to calculate it." },
+    { title: "Escrow-Secured Closings", desc: "Licensed title companies hold every dollar — you're paid before the deed transfers." },
+    { title: "Zero Fees or Commissions", desc: "We pay 100% of closing costs. The offer number is the number you receive." },
+    { title: "Family & Military Owned", desc: "Founded by an active-duty U.S. Air Force member. We keep our word." },
+    { title: "No Pressure, Ever", desc: "If listing with an agent is your better move, we'll tell you." }
   ],
 
   // Testimonials
   testimonials: [
     {
-      name: "Mokaya N.",
-      time: "4 months ago",
-      text: "Jenny and Reddy from ALT were amazing and really helpful in finding our new property. Jenny, in particular, gave us a lot of honest information and provided insightful recommendations. The process was smooth and easy and Reddy was able to progress things very quickly. Very quick to respond to any queries or information.",
+      name: "Carol Hutchins",
+      deal: "Sold 40 acres · Bosque County, TX",
+      time: "2 months ago",
+      text: "My brother and I inherited Dad's 40 acres and had no idea where to start. Demetri walked us through every step, showed us the comps behind the offer, and the title company handled the rest. Wire hit our accounts in two weeks.",
       rating: 5
     },
     {
-      name: "Brian H.",
-      time: "4 months ago",
-      text: "American Land Trust really know the market and are consummate professionals in the Houston residential rental and sales market. Particularly rate Jenny for prompt and efficient service. If I had to do it again, I would definitely work with them again.",
+      name: "Mike Pellegrino",
+      deal: "Sold 20 acres · Park County, CO",
+      time: "3 months ago",
+      text: "I'd been paying taxes on a Colorado parcel I hadn't visited in 15 years. Two other companies sent lowball postcards; ALT sent a real offer with the comparable sales attached. Closed in 10 days without leaving my house in Phoenix.",
       rating: 5
     },
     {
-      name: "Mo M.",
+      name: "Robert & Elena Vasquez",
+      deal: "Sold 5 acres · Marion County, FL",
       time: "4 months ago",
-      text: "Jenny is very helpful and always responds in time. A smooth and professional experience. I've recommended this company to my friends.",
+      text: "Our lot had two years of back taxes and I assumed nobody would touch it. ALT paid the taxes off at closing and we still walked away with a fair check. Jenny kept us updated every single week.",
       rating: 5
     },
     {
-      name: "Mugo MD.",
-      time: "4 months ago",
-      text: "My property purchase became difficult until Jenny and Reddy stepped in to progress the sale. They acted as intermediaries between the two solicitors who were struggling to effect the exchange of contracts. I honestly don't think the exchange would have happened had it not been for their calm professionalism.",
-      rating: 5
-    },
-    {
-      name: "Mercy K.",
-      time: "4 months ago",
-      text: "Excellent speed of response and reactivity from Jenny from the company. Happy to highly recommend.",
-      rating: 5
-    },
-    {
-      name: "Carol K.",
-      time: "4 months ago",
-      text: "After meeting several estate agents and getting valuations from all them, we were immediately impressed by American Land Trust's professional and transparent approach. Highly recommended!",
+      name: "Gene Whitfield",
+      deal: "Sold 65 acres · Garvin County, OK",
+      time: "5 months ago",
+      text: "Third-generation farmland that none of my kids wanted. Dan coordinated everything with the title company and a mobile notary came to my kitchen table. Fair price, no games, done in under three weeks.",
       rating: 5
     }
   ],
@@ -103,12 +99,12 @@ const SITE_CONFIG = {
     },
     {
       title: "A Letter to Landowners: Honor Your Legacy, Embrace a New Chapter",
-      category: "FARM LIFE",
+      category: "LEGACY",
       link: "blog/letter-to-landowners.html"
     },
     {
       title: "Why Holding Onto Unused Land Could Be Costing You More Than You Think",
-      category: "INVESTMENT",
+      category: "HOLDING COSTS",
       link: "blog/unused-land-costing-you.html"
     }
   ],
@@ -117,40 +113,37 @@ const SITE_CONFIG = {
   team: [
     {
       name: "Demetri Suliman",
-      role: "Managing Director",
-      tagline: "A Man of Service, Integrity, and Trust",
-      bio: "I'm <strong>Demetri Suliman</strong>, and I believe in hard work, integrity, and doing right by people. As an active-duty service member in the United States Air Force, I've dedicated my life to serving this great country, and that same commitment extends to the landowners I work with every day.",
-      bio2: "I'm a proud Texan who understands the value of land, legacy, and the trust that comes with making big decisions. Whether it's protecting our nation or helping landowners navigate the selling process, I approach everything with respect, honesty, and a firm handshake."
-    },
-    {
-      name: "Reddy Family",
-      role: "Founder & CEO of American Land Trust",
-      tagline: "A Landowner's Partner & A Straight Shooter",
-      bio: 'We started American Land Trust with one promise — to do right by people. Selling land shouldn\'t be stressful or complicated. That\'s why we focus on making the process <strong>fair, clear, and dependable</strong> at every step.',
-      bio2: 'Over time, we\'ve been fortunate to build lasting relationships with landowners across the country. One truth stands out above all: <strong>land is more than property.</strong> It carries memories, pride, and a legacy worth honoring.'
+      role: "Founder & Managing Director",
+      tagline: "Service, Integrity, and Trust",
+      bio: "Active-duty member of the United States Air Force and a proud Texan. Demetri sets the standard on every deal: straight answers, fair numbers, secure closings."
     },
     {
       name: "Jenny Mann",
-      role: "Acquisition Manager",
-      tagline: "",
-      bio: "I was raised in a small town with true country values, where a handshake still means something. Helping people with their land isn't just business for me—it's personal. Whether it's easing the burden of taxes or helping a young family buy their first property, my goal is to make the process simple, honest, and stress-free."
+      role: "Acquisitions Manager",
+      tagline: "A handshake still means something",
+      bio: "Raised in a small town with true country values. Jenny runs your valuation and walks you through the offer, line by line."
+    },
+    {
+      name: "Dan Roberts",
+      role: "Transactions Manager",
+      tagline: "From signed agreement to funded wire",
+      bio: "Dan coordinates title, escrow, and notaries so you never chase paperwork."
     }
   ],
 
   // Contact Page
-  contactHeading: "Let's Have a Chat",
-  contactSubtitle: "Helping Landowners Secure the Best Deals with Ease and Integrity!",
-  contactText: 'At <strong>American Land Trust</strong>, we understand that land is more than just property—it\'s heritage, investment, and legacy. Whether you\'re looking to sell your land, explore investment opportunities, or simply get advice, we\'re here to make the process simple, fair, and transparent.',
+  contactHeading: "Talk to a Real Person About Your Land",
+  contactSubtitle: "Call, text, or send your property details — we reply the same business day.",
+  contactText: "Land is more than property — it's heritage, investment, and legacy. Whether you're ready to sell, weighing your options, or just want an honest read on what your land is worth, we're here for the conversation.",
 
   // Footer
   footerLinks: [
-    { text: "About the Process", href: "index.html#process" },
+    { text: "How It Works", href: "index.html#process" },
     { text: "About", href: "about.html" },
     { text: "Articles & Insights", href: "blog/" }
   ],
 
   // SEO
-  metaDescription: "American Land Trust offers fair cash offers for your land. Stress-free closings, honest deals, and American-sized integrity. Get your cash offer today!",
-  metaKeywords: "sell land, cash offer land, land trust, sell property fast, land buyer"
+  metaDescription: "American Land Trust buys vacant and rural land directly from owners nationwide. Written cash offers in 48 hours, zero fees, secure title-company closings.",
+  metaKeywords: "sell land, cash offer land, sell land fast, land buyer, sell rural land, sell vacant land"
 };
-

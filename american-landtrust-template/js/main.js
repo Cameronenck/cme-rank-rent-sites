@@ -18,9 +18,84 @@ document.addEventListener('DOMContentLoaded', () => {
   initTrustSignals();
   initHeroFormOverlay();
   initFaqAccordion();
+  initMultiStepForm();
+  initStatCounters();
   replaceEmojis();
   updateCopyrightYear();
 });
+
+/* ----------------------------------------
+   Multi-Step Offer Form
+   ---------------------------------------- */
+function initMultiStepForm() {
+  const form = document.getElementById('offerForm');
+  if (!form) return;
+
+  const steps = form.querySelectorAll('.msf-step');
+  const nextBtn = document.getElementById('msfNext');
+  const backBtn = document.getElementById('msfBack');
+  const label = document.getElementById('msfStepLabel');
+  const fill = document.getElementById('msfProgressFill');
+
+  function goTo(stepNum) {
+    steps.forEach(s => s.classList.toggle('active', s.dataset.step === String(stepNum)));
+    if (label) label.textContent = 'Step ' + stepNum + ' of 2';
+    if (fill) fill.style.width = stepNum === 1 ? '50%' : '100%';
+    if (stepNum === 2) {
+      const first = form.querySelector('.msf-step[data-step="2"] input');
+      if (first) first.focus();
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      let valid = true;
+      form.querySelectorAll('.msf-step[data-step="1"] [required]').forEach(field => {
+        if (!validateField(field)) valid = false;
+      });
+      if (valid) goTo(2);
+    });
+  }
+
+  if (backBtn) backBtn.addEventListener('click', () => goTo(1));
+}
+
+/* ----------------------------------------
+   Animated Stat Counters
+   ---------------------------------------- */
+function initStatCounters() {
+  const counters = document.querySelectorAll('.count[data-count]');
+  if (!counters.length) return;
+
+  function animate(el) {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = target.toLocaleString('en-US') + suffix;
+      return;
+    }
+    const duration = 1600;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString('en-US') + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach(el => observer.observe(el));
+}
 
 /* ----------------------------------------
    Mobile Quick Form Function
