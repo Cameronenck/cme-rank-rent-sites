@@ -49,7 +49,7 @@ const SITE_CONFIG = {
     { title: "Written Offers, Real Math", desc: "Every offer includes the comparable sales we used to calculate it." },
     { title: "Escrow-Secured Closings", desc: "Licensed title companies hold every dollar — you're paid before the deed transfers." },
     { title: "Zero Fees or Commissions", desc: "We pay 100% of closing costs. The offer number is the number you receive." },
-    { title: "Family & Veteran Owned", desc: "Founded by a U.S. Air Force veteran. We keep our word." },
+    { title: "Family Owned & Operated", desc: "A real family business, founder-led since 2016. We keep our word." },
     { title: "No Pressure, Ever", desc: "If listing with an agent is your better move, we'll tell you." }
   ],
 
@@ -114,8 +114,8 @@ const SITE_CONFIG = {
     {
       name: "Demetri Suliman",
       role: "Founder & Managing Director",
-      tagline: "Service, Integrity, and Trust",
-      bio: "United States Air Force veteran and a proud Texan. Demetri sets the standard on every deal: straight answers, fair numbers, secure closings."
+      tagline: "Honesty, Integrity, and Trust",
+      bio: "A proud Texan and family man. Demetri sets the standard on every deal: straight answers, fair numbers, secure closings."
     },
     {
       name: "Jenny Mann",
