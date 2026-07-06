@@ -4,7 +4,7 @@
  */
 const SITE_CONFIG = {
   // Company Info
-  companyName: "Help Sell My Home Fast",
+  companyName: "Help Sell My Land Fast",
   companyTagline: "Sell Your Land for Cash. No Agents. No Fees. No Waiting.",
   phone: "801-780-8393",
   phoneFormatted: "+1-801-780-8393",
@@ -144,6 +144,6 @@ const SITE_CONFIG = {
   ],
 
   // SEO
-  metaDescription: "Help Sell My Home Fast buys vacant and rural land directly from owners nationwide. Written cash offers in 48 hours, zero fees, secure title-company closings.",
+  metaDescription: "Help Sell My Land Fast buys vacant and rural land directly from owners nationwide. Written cash offers in 48 hours, zero fees, secure title-company closings.",
   metaKeywords: "sell land, cash offer land, sell land fast, land buyer, sell rural land, sell vacant land"
 };

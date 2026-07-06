@@ -1,5 +1,5 @@
 /* ========================================
-   Help Sell My Home Fast Template
+   Help Sell My Land Fast Template
    Main JavaScript — Enhanced & Mobile-First
    ======================================== */
 
