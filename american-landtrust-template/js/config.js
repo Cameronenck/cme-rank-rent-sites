@@ -59,7 +59,7 @@ const SITE_CONFIG = {
       name: "Carol Hutchins",
       deal: "Sold 40 acres · Bosque County, TX",
       time: "2 months ago",
-      text: "My brother and I inherited Dad's 40 acres and had no idea where to start. Demetri walked us through every step, showed us the comps behind the offer, and the title company handled the rest. Wire hit our accounts in two weeks.",
+      text: "My brother and I inherited Dad's 40 acres and had no idea where to start. Harvey walked us through every step, showed us the comps behind the offer, and the title company handled the rest. Wire hit our accounts in two weeks.",
       rating: 5
     },
     {
@@ -112,10 +112,10 @@ const SITE_CONFIG = {
   // Team Members (About page)
   team: [
     {
-      name: "Demetri Suliman",
+      name: "Harvey Spec",
       role: "Founder & Managing Director",
       tagline: "Honesty, Integrity, and Trust",
-      bio: "A proud Texan and family man. Demetri sets the standard on every deal: straight answers, fair numbers, secure closings."
+      bio: "A proud Texan and family man. Harvey sets the standard on every deal: straight answers, fair numbers, secure closings."
     },
     {
       name: "Jenny Mann",
