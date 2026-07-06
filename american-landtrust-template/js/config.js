@@ -4,12 +4,12 @@
  */
 const SITE_CONFIG = {
   // Company Info
-  companyName: "American Land Trust",
+  companyName: "Help Sell My Home Fast",
   companyTagline: "Sell Your Land for Cash. No Agents. No Fees. No Waiting.",
   phone: "801-780-8393",
   phoneFormatted: "+1-801-780-8393",
-  email: "hello@american-landtrust.com",
-  address: "12605 East Fwy, #325, Houston, TX 77015",
+  email: "helpsellmyhomesfast@gmail.com",
+  address: "",
   foundedYear: "2016",
 
   // Hero Section
@@ -66,14 +66,14 @@ const SITE_CONFIG = {
       name: "Mike Pellegrino",
       deal: "Sold 20 acres · Park County, CO",
       time: "3 months ago",
-      text: "I'd been paying taxes on a Colorado parcel I hadn't visited in 15 years. Two other companies sent lowball postcards; ALT sent a real offer with the comparable sales attached. Closed in 10 days without leaving my house in Phoenix.",
+      text: "I'd been paying taxes on a Colorado parcel I hadn't visited in 15 years. Two other companies sent lowball postcards; this team sent a real offer with the comparable sales attached. Closed in 10 days without leaving my house in Phoenix.",
       rating: 5
     },
     {
       name: "Robert & Elena Vasquez",
       deal: "Sold 5 acres · Marion County, FL",
       time: "4 months ago",
-      text: "Our lot had two years of back taxes and I assumed nobody would touch it. ALT paid the taxes off at closing and we still walked away with a fair check. Jenny kept us updated every single week.",
+      text: "Our lot had two years of back taxes and I assumed nobody would touch it. They paid the taxes off at closing and we still walked away with a fair check. Jenny kept us updated every single week.",
       rating: 5
     },
     {
@@ -144,6 +144,6 @@ const SITE_CONFIG = {
   ],
 
   // SEO
-  metaDescription: "American Land Trust buys vacant and rural land directly from owners nationwide. Written cash offers in 48 hours, zero fees, secure title-company closings.",
+  metaDescription: "Help Sell My Home Fast buys vacant and rural land directly from owners nationwide. Written cash offers in 48 hours, zero fees, secure title-company closings.",
   metaKeywords: "sell land, cash offer land, sell land fast, land buyer, sell rural land, sell vacant land"
 };

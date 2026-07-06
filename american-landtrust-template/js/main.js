@@ -1,5 +1,5 @@
 /* ========================================
-   American Land Trust Template
+   Help Sell My Home Fast Template
    Main JavaScript — Enhanced & Mobile-First
    ======================================== */
 
