@@ -6,8 +6,8 @@ const SITE_CONFIG = {
   // Company Info
   companyName: "Help Sell My Land Fast",
   companyTagline: "Sell Your Land for Cash. No Agents. No Fees. No Waiting.",
-  phone: "833-605-5889",
-  phoneFormatted: "+1-833-605-5889",
+  phone: "801-477-0960",
+  phoneFormatted: "+1-801-477-0960",
   email: "helpsellmyhomesfast@gmail.com",
   address: "",
   foundedYear: "2016",
