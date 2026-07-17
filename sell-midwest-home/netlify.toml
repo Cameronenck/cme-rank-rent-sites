@@ -1,7 +1,10 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Type = "text/html; charset=utf-8"
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
 
@@ -9,4 +12,3 @@
   for = "/*.html"
   [headers.values]
     Content-Type = "text/html; charset=utf-8"
-# restored 2026-05-27T15:33:38Z
