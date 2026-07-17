@@ -430,6 +430,40 @@ html, body { overflow-x: hidden; max-width: 100%; }
 @media(max-width:640px){.hero-ctas{flex-direction:column;align-items:center}.price-row{flex-direction:column;align-items:flex-start;gap:4px}}
 
 </style>
+
+<!-- QF-INJECTED -->
+<style>
+/* ── Netlify Quote Form ─────────────────────────────── */
+.qf-hp {position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;pointer-events:none}
+.qf-section {background:#f8f9fa;padding:64px 24px}
+.qf-section.qf-bottom {background:#ffffff;border-top:4px solid #ff8800;padding:56px 24px}
+.qf-wrap {max-width:740px;margin:0 auto}
+.qf-heading {text-align:center;margin-bottom:28px}
+.qf-title {font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(26px,4vw,40px);font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#1a3a52;margin-bottom:6px}
+.qf-sub {font-size:15px;color:#6b7280}
+.qf-sub a,.qf-phone {color:#ff8800;font-weight:700;text-decoration:none}
+.qf-form {background:#fff;border:1.5px solid #d1d5db;border-radius:10px;padding:28px 28px 24px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.qf-bottom .qf-form {border-color:#ff880044}
+.qf-row {display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.qf-field {display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.qf-row .qf-field {margin-bottom:0}
+.qf-full {margin-bottom:14px}
+.qf-label {font-size:12.5px;font-weight:600;color:#374151;letter-spacing:.3px;text-transform:uppercase}
+.qf-req {color:#ff8800}
+.qf-input {padding:9px 13px;border:1.5px solid #d1d5db;border-radius:6px;font-size:15px;font-family:inherit;color:#1a1a2e;background:#fff;transition:border-color .18s,box-shadow .18s;width:100%;box-sizing:border-box}
+.qf-input:focus {outline:none;border-color:#ff8800;box-shadow:0 0 0 3px #ff880025}
+textarea.qf-input {resize:vertical;min-height:76px;line-height:1.5}
+select.qf-input {cursor:pointer}
+.qf-btn {width:100%;padding:13px 24px;background:#ff8800;color:#ffffff;border:none;border-radius:6px;font-size:16px;font-weight:700;font-family:'Barlow Condensed',Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;transition:background .18s,transform .15s;margin-top:4px}
+.qf-btn:hover:not(:disabled) {background:#ea6c0a;transform:translateY(-1px)}
+.qf-btn:disabled {opacity:.7;cursor:not-allowed}
+.qf-success {background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:36px 28px;text-align:center}
+.qf-success h3 {font-family:'Barlow Condensed',Impact,sans-serif;font-size:26px;font-weight:800;text-transform:uppercase;color:#1a3a52;margin-bottom:8px}
+.qf-success p {color:#6b7280;font-size:15px;margin-bottom:18px;line-height:1.6}
+.qf-call-btn {display:inline-flex;align-items:center;gap:8px;background:#ff8800;color:#ffffff;padding:11px 26px;border-radius:6px;font-weight:700;font-size:16px;font-family:'Barlow Condensed',Impact,sans-serif;text-transform:uppercase;text-decoration:none;transition:background .18s}
+.qf-call-btn:hover {background:#ea6c0a}
+@media(max-width:600px){.qf-row{grid-template-columns:1fr}.qf-form{padding:20px 16px}}
+</style>
 </head>
 <body id="top">
 <div class="announce">
@@ -550,6 +584,58 @@ html, body { overflow-x: hidden; max-width: 100%; }
 </div>
 </section>
 
+<!-- QUOTE FORM -->
+<section class="qf-section qf-bottom" id="get-quote">
+  <div class="qf-wrap">
+    <div class="qf-heading">
+      <h2 class="qf-title">Request a Free Quote</h2>
+      <p class="qf-sub">Or call us directly: <a href="tel:3098619815" class="qf-phone">309-861-9815</a></p>
+    </div>
+    <form name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="qf-form" id="qf-form-sp">
+      <input type="hidden" name="form-name" value="quote-request">
+      <p class="qf-hp"><label>Don&#39;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="qf-row">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-name-sp">Your Name <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-name-sp" type="text" name="name" placeholder="First &amp; last name" required autocomplete="name">
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-phone-sp">Phone Number <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-phone-sp" type="tel" name="phone" placeholder="(555) 000-0000" required autocomplete="tel">
+        </div>
+      </div>
+      <div class="qf-row">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-email-sp">Email Address <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-email-sp" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-svc-sp">Service Needed <span class="qf-req">*</span></label>
+          <select class="qf-input" id="qf-svc-sp" name="service" required>
+            <option value="">Select a service…</option>
+            <option value="Furniture Removal">Furniture Removal</option>
+            <option value="Appliance Removal">Appliance Removal</option>
+            <option value="Construction Debris Removal">Construction Debris Removal</option>
+            <option value="Yard Waste Removal">Yard Waste Removal</option>
+            <option value="Estate Cleanouts">Estate Cleanouts</option>
+            <option value="Commercial Cleanouts">Commercial Cleanouts</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="qf-field qf-full">
+        <label class="qf-label" for="qf-desc-sp">Tell us about the job <span style="font-weight:400;color:#9ca3af;text-transform:none">(optional)</span></label>
+        <textarea class="qf-input" id="qf-desc-sp" name="description" rows="3" placeholder="e.g. "Old couch, 2 appliances, and boxes from the garage""></textarea>
+      </div>
+      <button type="submit" class="qf-btn">Get My Free Quote &rarr;</button>
+    </form>
+    <div class="qf-success" id="qf-success-sp" style="display:none">
+      <h3>Thanks &#8212; we&#39;ll be in touch shortly.</h3>
+      <p>One of our team will follow up within a few hours.<br>For urgent needs, call us now:</p>
+      <a href="tel:3098619815" class="qf-call-btn">&#128222;&nbsp; Call 309-861-9815</a>
+    </div>
+  </div>
+</section>
 <section class="sp-cta" id="quote">
 <h2>Get Your Free Quote Today</h2>
 <p>Serving Peoria, East Peoria, Dunlap, Morton, Washington, Chillicothe, and all of Peoria County.</p>
@@ -642,6 +728,26 @@ html, body { overflow-x: hidden; max-width: 100%; }
   document.querySelectorAll('.faq-item').forEach(function(item){
     var btn = item.querySelector('.faq-q');
     if(btn){ btn.addEventListener('click', function(){ item.classList.toggle('open'); }); }
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.qf-form').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=f.querySelector('.qf-btn');
+      btn.textContent='Sending…';btn.disabled=true;
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams(new FormData(f)).toString()
+      }).then(function(){
+        f.style.display='none';
+        f.nextElementSibling.style.display='block';
+      }).catch(function(){
+        btn.textContent='Get My Free Quote →';btn.disabled=false;
+        alert('Something went wrong — please call us directly.');
+      });
+    });
   });
 })();
 </script>

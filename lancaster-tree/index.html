@@ -883,6 +883,40 @@ background-image: url('./images/tree-removal-lancaster-pa.jpg');
 .svc-link{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--green);text-decoration:none;transition:color .2s}
 .svc-link:hover{color:var(--green-dark,#1a6b2a)}
 </style>
+
+<!-- QF-INJECTED -->
+<style>
+/* ── Netlify Quote Form ─────────────────────────────── */
+.qf-hp {position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;pointer-events:none}
+.qf-section {background:#f5f0e8;padding:64px 24px}
+.qf-section.qf-bottom {background:#ffffff;border-top:4px solid #1a4731;padding:56px 24px}
+.qf-wrap {max-width:740px;margin:0 auto}
+.qf-heading {text-align:center;margin-bottom:28px}
+.qf-title {font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(26px,4vw,40px);font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#1a4731;margin-bottom:6px}
+.qf-sub {font-size:15px;color:#6b7280}
+.qf-sub a,.qf-phone {color:#1a4731;font-weight:700;text-decoration:none}
+.qf-form {background:#fff;border:1.5px solid #d4c4a8;border-radius:10px;padding:28px 28px 24px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.qf-bottom .qf-form {border-color:#1a473144}
+.qf-row {display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.qf-field {display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.qf-row .qf-field {margin-bottom:0}
+.qf-full {margin-bottom:14px}
+.qf-label {font-size:12.5px;font-weight:600;color:#3d3d3d;letter-spacing:.3px;text-transform:uppercase}
+.qf-req {color:#1a4731}
+.qf-input {padding:9px 13px;border:1.5px solid #d4c4a8;border-radius:6px;font-size:15px;font-family:inherit;color:#2c2c2c;background:#fff;transition:border-color .18s,box-shadow .18s;width:100%;box-sizing:border-box}
+.qf-input:focus {outline:none;border-color:#1a4731;box-shadow:0 0 0 3px #1a473125}
+textarea.qf-input {resize:vertical;min-height:76px;line-height:1.5}
+select.qf-input {cursor:pointer}
+.qf-btn {width:100%;padding:13px 24px;background:#1a4731;color:#ffffff;border:none;border-radius:6px;font-size:16px;font-weight:700;font-family:'Barlow Condensed',Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;transition:background .18s,transform .15s;margin-top:4px}
+.qf-btn:hover:not(:disabled) {background:#0f2c1e;transform:translateY(-1px)}
+.qf-btn:disabled {opacity:.7;cursor:not-allowed}
+.qf-success {background:#f0fdf4;border:1.5px solid #a7f3d0;border-radius:10px;padding:36px 28px;text-align:center}
+.qf-success h3 {font-family:'Barlow Condensed',Impact,sans-serif;font-size:26px;font-weight:800;text-transform:uppercase;color:#1a4731;margin-bottom:8px}
+.qf-success p {color:#6b7280;font-size:15px;margin-bottom:18px;line-height:1.6}
+.qf-call-btn {display:inline-flex;align-items:center;gap:8px;background:#1a4731;color:#ffffff;padding:11px 26px;border-radius:6px;font-weight:700;font-size:16px;font-family:'Barlow Condensed',Impact,sans-serif;text-transform:uppercase;text-decoration:none;transition:background .18s}
+.qf-call-btn:hover {background:#0f2c1e}
+@media(max-width:600px){.qf-row{grid-template-columns:1fr}.qf-form{padding:20px 16px}}
+</style>
 </head>
 <body>
 <!-- ANNOUNCEMENT BAR -->
@@ -928,6 +962,58 @@ Free Estimates &nbsp;·&nbsp; Licensed &amp; Insured &nbsp;·&nbsp; Same-Day Ser
 <div class="trust-badge"><span>Licensed & Insured</span></div><div class="trust-badge"><span>Same-Day Service</span></div><div class="trust-badge"><span>Free Estimates</span></div><div class="trust-badge"><span>Locally Owned</span></div>
 </div>
 </div>
+</section>
+<!-- QUOTE FORM 1 -->
+<section class="qf-section" id="get-quote">
+  <div class="qf-wrap">
+    <div class="qf-heading">
+      <h2 class="qf-title">Get Your Free Quote</h2>
+      <p class="qf-sub">Prefer to talk? Call <a href="tel:7172971693" class="qf-phone">717-297-1693</a></p>
+    </div>
+    <form name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="qf-form" id="qf-form-1">
+      <input type="hidden" name="form-name" value="quote-request">
+      <p class="qf-hp"><label>Don&#39;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="qf-row">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-name-1">Your Name <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-name-1" type="text" name="name" placeholder="First &amp; last name" required autocomplete="name">
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-phone-1">Phone Number <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-phone-1" type="tel" name="phone" placeholder="(555) 000-0000" required autocomplete="tel">
+        </div>
+      </div>
+      <div class="qf-row">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-email-1">Email Address <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-email-1" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-svc-1">Service Needed <span class="qf-req">*</span></label>
+          <select class="qf-input" id="qf-svc-1" name="service" required>
+            <option value="">Select a service…</option>
+            <option value="Tree Removal">Tree Removal</option>
+            <option value="Tree Trimming">Tree Trimming</option>
+            <option value="Stump Grinding">Stump Grinding</option>
+            <option value="Emergency Tree Service">Emergency Tree Service</option>
+            <option value="Lot Clearing">Lot Clearing</option>
+            <option value="Tree Health Assessment">Tree Health Assessment</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="qf-field qf-full">
+        <label class="qf-label" for="qf-desc-1">Tell us about the job <span style="font-weight:400;color:#9ca3af;text-transform:none">(optional)</span></label>
+        <textarea class="qf-input" id="qf-desc-1" name="description" rows="3" placeholder="e.g. "Large oak near fence line, half-dead, backyard""></textarea>
+      </div>
+      <button type="submit" class="qf-btn">Get My Free Quote &rarr;</button>
+    </form>
+    <div class="qf-success" id="qf-success-1" style="display:none">
+      <h3>Thanks &#8212; we&#39;ll be in touch shortly.</h3>
+      <p>One of our team will follow up within a few hours.<br>For urgent needs, call us now:</p>
+      <a href="tel:7172971693" class="qf-call-btn">&#128222;&nbsp; Call 717-297-1693</a>
+    </div>
+  </div>
 </section>
 <!-- STATS BAR -->
 <section class="stats-bar">
@@ -1159,6 +1245,58 @@ Always. Debris, branches, wood rounds — we haul all of it away. We rake and bl
 </div>
 </div>
 </section>
+<!-- QUOTE FORM 2 -->
+<section class="qf-section qf-bottom" id="get-quote-2">
+  <div class="qf-wrap">
+    <div class="qf-heading">
+      <h2 class="qf-title">Need a Quote? Leave Your Info Below</h2>
+      <p class="qf-sub">Or call us now: <a href="tel:7172971693" class="qf-phone">717-297-1693</a></p>
+    </div>
+    <form name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="qf-form" id="qf-form-2">
+      <input type="hidden" name="form-name" value="quote-request">
+      <p class="qf-hp"><label>Don&#39;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="qf-row">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-name-2">Your Name <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-name-2" type="text" name="name" placeholder="First &amp; last name" required autocomplete="name">
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-phone-2">Phone Number <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-phone-2" type="tel" name="phone" placeholder="(555) 000-0000" required autocomplete="tel">
+        </div>
+      </div>
+      <div class="qf-row">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-email-2">Email Address <span class="qf-req">*</span></label>
+          <input class="qf-input" id="qf-email-2" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-svc-2">Service Needed <span class="qf-req">*</span></label>
+          <select class="qf-input" id="qf-svc-2" name="service" required>
+            <option value="">Select a service…</option>
+            <option value="Tree Removal">Tree Removal</option>
+            <option value="Tree Trimming">Tree Trimming</option>
+            <option value="Stump Grinding">Stump Grinding</option>
+            <option value="Emergency Tree Service">Emergency Tree Service</option>
+            <option value="Lot Clearing">Lot Clearing</option>
+            <option value="Tree Health Assessment">Tree Health Assessment</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="qf-field qf-full">
+        <label class="qf-label" for="qf-desc-2">Tell us about the job <span style="font-weight:400;color:#9ca3af;text-transform:none">(optional)</span></label>
+        <textarea class="qf-input" id="qf-desc-2" name="description" rows="3" placeholder="e.g. "Large oak near fence line, half-dead, backyard""></textarea>
+      </div>
+      <button type="submit" class="qf-btn">Get My Free Quote &rarr;</button>
+    </form>
+    <div class="qf-success" id="qf-success-2" style="display:none">
+      <h3>Thanks &#8212; we&#39;ll be in touch shortly.</h3>
+      <p>One of our team will follow up within a few hours.<br>For urgent needs, call us now:</p>
+      <a href="tel:7172971693" class="qf-call-btn">&#128222;&nbsp; Call 717-297-1693</a>
+    </div>
+  </div>
+</section>
 <!-- CTA BANNER -->
 <section class="cta-banner" id="contact">
 <div class="container">
@@ -1236,6 +1374,26 @@ document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
 if (!isOpen) item.classList.add('open');
 });
 });
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.qf-form').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=f.querySelector('.qf-btn');
+      btn.textContent='Sending…';btn.disabled=true;
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams(new FormData(f)).toString()
+      }).then(function(){
+        f.style.display='none';
+        f.nextElementSibling.style.display='block';
+      }).catch(function(){
+        btn.textContent='Get My Free Quote →';btn.disabled=false;
+        alert('Something went wrong — please call us directly.');
+      });
+    });
+  });
+})();
 </script>
 </body>
 </html>
