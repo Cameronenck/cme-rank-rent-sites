@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://powerwashinglancaster.com/sitemap.xml
+
+# LLM Content
+LLMs-txt: https://powerwashinglancaster.com/llms.txt
