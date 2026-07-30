@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://peoriaepoxyflooring.org/sitemap.xml
+# LLM Content
+LLMs-txt: https://peoriaepoxyflooring.org/llms.txt
