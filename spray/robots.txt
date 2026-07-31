@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://peoriasprayfoam.org/sitemap.xml
+
+# LLM Content
+LLMs-txt: https://peoriasprayfoam.org/llms.txt
