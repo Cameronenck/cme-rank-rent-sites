@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gutterinstallationlancaster.com/sitemap.xml
+
+# LLM Content
+LLMs-txt: https://gutterinstallationlancaster.com/llms.txt

@@ -7,8 +7,9 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/lancaster-gutter"
+publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/lancaster-gutter/lancaster-gutter"
 publishOrigin = "ui"
+base = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/lancaster-gutter"
 
 [build.environment]
 
