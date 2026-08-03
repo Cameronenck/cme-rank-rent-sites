@@ -1,0 +1,42 @@
+functionsDirectory = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/sell-midwest-home/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[build]
+publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/sell-midwest-home"
+publishOrigin = "config"
+base = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/sell-midwest-home"
+functions = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/sell-midwest-home/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[functions]
+
+[functions."*"]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"
+X-Content-Type-Options = "nosniff"
+
+[[headers]]
+for = "/*.html"
+
+[headers.values]
+Content-Type = "text/html; charset=utf-8"
