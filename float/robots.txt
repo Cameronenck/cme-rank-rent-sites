@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lancasterfloatco.com/sitemap.xml

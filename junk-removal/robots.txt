@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peoriajunkremoval.org/sitemap.xml
+# LLM Content
+LLMs-txt: https://peoriajunkremoval.org/llms.txt

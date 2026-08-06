@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — Lancaster Float Co.</title>
+  <meta name="description" content="Thanks for reaching out to Lancaster Float Co. We can't wait to help make your event unforgettable!">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:        #FDFBF6;
+      --cream:        #F6F0E3;
+      --cream-2:      #EFE5D0;
+      --gold:         #C09A4E;
+      --gold-soft:    #D8BC82;
+      --gold-pale:    #F0E6CB;
+      --accent:       #9B8EC1;
+      --accent-hover: #7B6EA8;
+      --accent-dark:  #5E4F8B;
+      --primary-950:  #1E1528;
+      --primary:      #2D2438;
+      --primary-700:  #3D3350;
+      --ink:          #1B2135;
+      --body-color:   #414A61;
+      --muted:        #6E7488;
+      --star-gold:    #E3A82B;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--body-color); background: var(--paper); line-height: 1.7; font-size: 16px; }
+    h1,h2,h3,h4 { font-family: 'Fraunces', serif; color: var(--ink); line-height: 1.2; }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* TOPBAR */
+    .topbar {
+      background: var(--primary-950); color: #e8d8f5;
+      text-align: center; padding: 10px 20px;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+    }
+    .topbar a { color: var(--gold-soft); font-weight: 700; }
+
+    /* HEADER */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(253,251,246,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cream-2); padding: 0 40px;
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; height: 72px;
+    }
+    .logo { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+    .logo span { color: var(--accent); }
+    nav { display: flex; gap: 24px; }
+    nav a { font-size: 14px; font-weight: 500; color: var(--body-color); transition: color 0.2s; }
+    nav a:hover { color: var(--accent); }
+    .cta-btn {
+      background: var(--accent); color: #fff !important;
+      padding: 10px 22px; border-radius: 6px;
+      font-size: 14px; font-weight: 600; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--accent-hover); }
+
+    /* MAIN */
+    main { min-height: 70vh; }
+
+    /* THANK YOU SECTION */
+    .ty-section {
+      background: var(--paper);
+      padding: 96px 32px 120px;
+      text-align: center;
+    }
+    .ty-inner { max-width: 640px; margin: 0 auto; }
+
+    /* Balloon confetti animation */
+    .ty-balloons {
+      font-size: 56px; margin-bottom: 28px; line-height: 1;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .ty-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 16px;
+    }
+    .ty-heading {
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700;
+      color: var(--ink); margin-bottom: 20px;
+    }
+    .ty-heading em { color: var(--accent); font-style: italic; }
+    .ty-body {
+      font-size: 1.1rem; color: var(--body-color); line-height: 1.75;
+      max-width: 520px; margin: 0 auto 40px;
+    }
+    .ty-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--accent); color: #fff;
+      font-family: 'Fraunces', serif;
+      font-weight: 700; font-size: 16px;
+      padding: 16px 36px; border-radius: 8px;
+      box-shadow: 0 10px 24px -8px rgba(155,142,193,0.55);
+      transition: background 0.2s, transform 0.18s;
+      margin-bottom: 40px;
+    }
+    .ty-cta:hover { background: var(--accent-hover); transform: translateY(-2px); color: #fff; }
+    .ty-cta svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .ty-phone-note { font-size: 0.95rem; color: var(--muted); }
+    .ty-phone-note a { color: var(--ink); font-weight: 700; }
+    .ty-phone-note a:hover { color: var(--accent); }
+
+    /* Stars strip */
+    .ty-stars {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin-bottom: 24px; color: var(--star-gold);
+      font-size: 22px; letter-spacing: 4px;
+    }
+    .ty-stars span { font-size: 13px; color: var(--muted); letter-spacing: normal; font-family: 'Inter', sans-serif; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--primary-950); color: rgba(255,255,255,0.65);
+      padding: 56px 40px 0;
+    }
+    .footer-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+      padding-bottom: 40px;
+    }
+    .brand-name { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .footer-grid .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.55); }
+    .footer-insta { display: inline-flex; align-items: center; gap: 8px; color: var(--gold-soft); font-size: 13px; margin-top: 16px; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.55); font-size: 13.5px; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold-soft); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      max-width: 1200px; margin: 0 auto;
+      padding: 18px 0; display: flex;
+      align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+      font-size: 12.5px; color: rgba(255,255,255,0.35);
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-col:not(:first-child) { display: none; }
+      nav, .cta-btn { display: none; }
+      .ty-section { padding: 64px 20px 80px; }
+      .header { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  Balloon arches, garlands &amp; event styling &mdash; Lancaster, PA &mdash; <a href="tel:7175370549">717-537-0549</a>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">Lancaster <span>Float Co.</span></div>
+    <nav>
+      <a href="/#services">Services</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/#about">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a href="tel:7175370549" class="cta-btn">Request a Quote</a>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <section class="ty-section">
+    <div class="ty-inner">
+      <div class="ty-balloons">🎈🎀🎈</div>
+      <div class="ty-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>Lancaster, PA's event styling team</span></div>
+      <p class="ty-eyebrow">You're on the list!</p>
+      <h1 class="ty-heading">Thanks for reaching out — <em>we're so excited!</em></h1>
+      <p class="ty-body">We can't wait to help make your event unforgettable. We've received your request and will be in touch within 24 hours to talk through your vision, timeline, and all the beautiful details.</p>
+      <a href="/" class="ty-cta">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to Home
+      </a>
+      <p class="ty-phone-note">Questions? Call us at <a href="tel:7175370549">717-537-0549</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name">Lancaster Float Co.</div>
+      <p>Custom balloon arches, garlands, and event styling for weddings, birthdays, baby showers, and more. Serving Lancaster County and Central PA.</p>
+      <a href="https://instagram.com/lancasterfloatco" class="footer-insta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @lancasterfloatco
+      </a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/balloon-arches-lancaster-pa/">Balloon Arches</a></li>
+        <li><a href="/balloon-garlands-lancaster-pa/">Balloon Garlands</a></li>
+        <li><a href="/wedding-balloons-lancaster-pa/">Wedding Decor</a></li>
+        <li><a href="/birthday-party-balloons-lancaster-pa/">Birthday Parties</a></li>
+        <li><a href="/corporate-event-decorations-lancaster-pa/">Corporate Events</a></li>
+        <li><a href="/baby-shower-balloon-decor-lancaster-pa/">Baby Showers</a></li>
+        <li><a href="/graduation-party-balloons-lancaster-pa/">Graduations</a></li>
+        <li><a href="/event-decorations-lancaster-pa/">Custom Styling</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:7175370549">717-537-0549</a></li>
+        <li><a href="/contact/">Request a Quote</a></li>
+        <li><a href="https://instagram.com/lancasterfloatco" target="_blank" rel="noopener">@lancasterfloatco</a></li>
+      </ul>
+      <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.5)">Serving Lancaster, Lititz, Ephrata, Manheim, Mount Joy, Elizabethtown, and all of Lancaster County, PA.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 Lancaster Float Company. All rights reserved.</span>
+    <span>Lancaster, PA &mdash; 717-537-0549</span>
+  </div>
+</footer>
+
+</body>
+</html>

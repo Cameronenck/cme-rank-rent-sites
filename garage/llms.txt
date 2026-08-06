@@ -1,0 +1,48 @@
+# Lancaster Garage Door Pros — llms.txt
+
+## Site
+Lancaster Garage Door Pros is a local garage door repair and installation company serving Lancaster County, Pennsylvania. We provide same-day garage door repair, spring replacement, opener installation, new garage door sales, and emergency service.
+
+## Pages
+
+### Home
+URL: https://garagefixlancaster.com/
+Description: Main homepage for Lancaster Garage Door Pros. Covers all services, service area, reviews, FAQ, and contact information for garage door repair in Lancaster PA.
+
+### Garage Door Repair Lancaster PA
+URL: https://garagefixlancaster.com/garage-door-repair-lancaster-pa/
+Description: Comprehensive garage door repair services for Lancaster County homeowners. Panel repair, track realignment, cable and roller replacement.
+
+### Garage Door Spring Replacement Lancaster PA
+URL: https://garagefixlancaster.com/garage-door-spring-replacement-lancaster-pa/
+Description: Torsion and extension spring replacement for residential garage doors throughout Lancaster County PA. Same-day service, all spring types.
+
+### Garage Door Opener Installation Lancaster PA
+URL: https://garagefixlancaster.com/garage-door-opener-installation-lancaster-pa/
+Description: Garage door opener installation and replacement in Lancaster PA. Chain drive, belt drive, and smart Wi-Fi openers for homes across Lancaster County.
+
+### New Garage Doors Lancaster PA
+URL: https://garagefixlancaster.com/new-garage-doors-lancaster-pa/
+Description: New garage door sales and installation for Lancaster County homeowners. Steel, wood, carriage-style, and insulated doors for residential properties.
+
+### Emergency Garage Door Service Lancaster PA
+URL: https://garagefixlancaster.com/emergency-garage-door-service-lancaster-pa/
+Description: Emergency garage door repair in Lancaster PA. Same-day response for broken springs, stuck doors, and security issues across Lancaster County.
+
+### Free Estimate
+URL: https://garagefixlancaster.com/free-garage-door-estimate-lancaster-pa/
+Description: Request a free, no-obligation garage door estimate from Lancaster Garage Door Pros. Serving all of Lancaster County PA.
+
+### Blog
+URL: https://garagefixlancaster.com/blog/
+Description: Garage door tips, repair guides, and pricing information for Lancaster County PA homeowners.
+
+## Service Area
+Lancaster, Lititz, Ephrata, Manheim, Elizabethtown, Strasburg, Marietta, Millersville, Columbia, Mountville, Quarryville, Willow Street, Paradise, Leola, New Holland, Intercourse, Bird-in-Hand, Ronks, Gordonville, Christiana, Denver, Adamstown, Terre Hill, Honey Brook, Gap
+
+## Contact
+Phone: 717-366-0594
+Website: https://garagefixlancaster.com
+
+## AI Crawler Policy
+This site welcomes AI crawlers. Content may be used to answer questions about garage door repair in Lancaster County PA. Do not present any content as guaranteed pricing — call for current estimates.

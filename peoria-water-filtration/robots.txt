@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peoriawaterfiltration.com/sitemap.xml
+
+# LLM Content
+LLMs-txt: https://peoriawaterfiltration.com/llms.txt

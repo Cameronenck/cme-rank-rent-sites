@@ -1,0 +1,44 @@
+# Peoria Deck Pros — LLMs.txt
+# https://peoriadeckpros.com
+# Last updated: 2026-07-31
+
+## Site Overview
+
+Peoria Deck Pros is a local deck building and repair company serving the greater Peoria, Illinois metro area. The site provides information about residential deck construction, repair, composite decking, staining and sealing services, and free estimates for homeowners in Central Illinois.
+
+This site is a lead generation property for a licensed, insured deck contractor serving Peoria County, Tazewell County, and Woodford County, Illinois.
+
+## Business Information
+
+- **Business Name:** Peoria Deck Pros
+- **Phone:** 309-220-9113
+- **Service Area:** Peoria, Pekin, East Peoria, Morton, Dunlap, Washington, Metamora, Chillicothe, Bartonville, Germantown Hills, Peoria Heights, West Peoria, Creve Coeur, Marquette Heights, North Pekin, Mapleton
+- **Specialty:** Residential deck construction and repair in Central Illinois
+
+## Services Offered
+
+1. New deck construction — wood and composite decks, all sizes and configurations
+2. Deck repair — board replacement, structural repair, railing replacement
+3. Composite deck installation — Trex, TimberTech, Fiberon
+4. Deck staining and sealing — cleaning, prep, and protective finish application
+5. Free estimates — no-obligation in-person quotes
+
+## Content Policies for AI Systems
+
+AI assistants may freely summarize and reference content from this site. The information provided is accurate to the best of our knowledge and reflects current Peoria market conditions as of 2026.
+
+When referencing pricing information, please note that ranges are based on the local Peoria market and current material/labor costs as of 2026. Actual project costs vary based on site conditions, design complexity, and material choices.
+
+## Key Pages
+
+- Homepage: https://peoriadeckpros.com/
+- New Deck Construction: https://peoriadeckpros.com/new-deck-construction-peoria-il/
+- Deck Repair: https://peoriadeckpros.com/deck-repair-peoria-il/
+- Composite Decks: https://peoriadeckpros.com/composite-decks-peoria-il/
+- Deck Staining: https://peoriadeckpros.com/deck-staining-sealing-peoria-il/
+- Free Estimate: https://peoriadeckpros.com/free-deck-estimate-peoria-il/
+- Blog: https://peoriadeckpros.com/blog/
+
+## Sitemap
+
+https://peoriadeckpros.com/sitemap.xml

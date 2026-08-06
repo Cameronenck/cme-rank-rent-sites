@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — Lancaster Garage Door Pros</title>
+  <meta name="description" content="Thanks for reaching out to Lancaster Garage Door Pros. We'll get back to you within 24 hours.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --slate-950: #1E293B;
+      --slate-900: #2C3A4D;
+      --slate:     #334155;
+      --slate-700: #4A5568;
+      --copper:      #B87333;
+      --copper-deep: #8B5A2B;
+      --copper-bright: #D4914A;
+      --gold:      #C09A4E;
+      --gold-soft: #D8BC82;
+      --gold-pale: #F0E6CB;
+      --star-gold: #E3A82B;
+      --paper:   #FDFBF6;
+      --cream:   #F6F0E3;
+      --cream-2: #EFE5D0;
+      --ink:        #1B2135;
+      --body-color: #414A61;
+      --muted:      #6E7488;
+      --line:       #E7DECA;
+      --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max-width:    1200px;
+      --topbar-height: 44px;
+      --header-height: 72px;
+      --radius-sm:  6px;
+      --radius:     12px;
+      --radius-lg:  18px;
+      --shadow-sm: 0 1px 3px rgba(30,41,59,0.10);
+      --shadow-md: 0 10px 30px -8px rgba(30,41,59,0.18);
+      --shadow-lg: 0 24px 60px -16px rgba(30,41,59,0.30);
+      --transition-fast: 0.18s cubic-bezier(0.4,0,0.2,1);
+      --transition-base: 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--body-color); background: var(--paper); line-height: 1.6; }
+    h1,h2,h3,h4,h5 { font-family: var(--font-heading); color: var(--ink); line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+
+    /* TOPBAR */
+    .topbar {
+      background: var(--slate-950); color: rgba(255,255,255,0.80);
+      text-align: center; padding: 0 20px;
+      height: var(--topbar-height);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500; gap: 8px;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1001;
+    }
+    .topbar-star { color: var(--gold-soft); margin-right: 2px; }
+    .topbar-phone { color: var(--gold-soft); font-weight: 700; margin-left: 12px; }
+
+    /* HEADER */
+    .site-header {
+      position: fixed; top: var(--topbar-height); left: 0; right: 0; z-index: 1000;
+      background: rgba(253,251,246,0.95); backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      height: var(--header-height);
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 32px;
+      height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .site-logo {
+      font-family: var(--font-heading); font-weight: 800; font-size: 1.35rem;
+      color: var(--slate-950); letter-spacing: -0.3px; line-height: 1.1;
+    }
+    .site-logo span { color: var(--copper); }
+    .site-nav { display: flex; gap: 24px; }
+    .site-nav a { font-size: 0.9rem; font-weight: 500; color: var(--body-color); transition: color var(--transition-fast); }
+    .site-nav a:hover { color: var(--copper); }
+    .header-phone { font-weight: 700; font-size: 1rem; color: var(--slate-950); white-space: nowrap; }
+    .header-phone:hover { color: var(--copper); }
+    .btn-copper {
+      background: var(--copper); color: #fff;
+      padding: 10px 22px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.9rem;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+    .btn-copper:hover { background: var(--copper-deep); transform: translateY(-1px); }
+    .header-cta { display: flex; align-items: center; gap: 14px; }
+
+    /* MAIN */
+    main { padding-top: calc(var(--topbar-height) + var(--header-height)); min-height: 70vh; }
+
+    /* THANK YOU SECTION */
+    .ty-section {
+      background: var(--paper);
+      padding: 96px 32px 120px;
+      text-align: center;
+    }
+    .ty-inner { max-width: 640px; margin: 0 auto; }
+    .ty-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--slate-950) 0%, var(--slate) 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+      box-shadow: 0 12px 32px -8px rgba(30,41,59,0.40);
+    }
+    .ty-icon svg { width: 38px; height: 38px; stroke: var(--copper-bright); fill: none; stroke-width: 2.5; }
+    .ty-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--copper); margin-bottom: 16px;
+    }
+    .ty-heading {
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700;
+      color: var(--ink); margin-bottom: 20px;
+    }
+    .ty-body {
+      font-size: 1.1rem; color: var(--body-color); line-height: 1.7;
+      max-width: 520px; margin: 0 auto 40px;
+    }
+    .ty-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--copper); color: #fff;
+      font-weight: 600; font-size: 16px;
+      padding: 16px 36px; border-radius: var(--radius-sm);
+      box-shadow: 0 10px 24px -8px rgba(184,115,51,0.55);
+      transition: background var(--transition-fast), transform var(--transition-fast);
+      margin-bottom: 40px;
+    }
+    .ty-cta:hover { background: var(--copper-deep); transform: translateY(-2px); color: #fff; }
+    .ty-cta svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .ty-phone-note { font-size: 0.95rem; color: var(--muted); }
+    .ty-phone-note a { color: var(--ink); font-weight: 700; transition: color var(--transition-fast); }
+    .ty-phone-note a:hover { color: var(--copper); }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--slate-950); color: rgba(255,255,255,0.65);
+      padding: 56px 40px 0;
+    }
+    .footer-grid {
+      max-width: var(--max-width); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+      padding-bottom: 40px;
+    }
+    .footer-brand .site-logo { color: #fff; display: block; margin-bottom: 14px; }
+    .footer-brand .site-logo span { color: var(--copper-bright); }
+    .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.55); }
+    .footer-phone-link { display: block; margin-top: 16px; color: var(--gold-soft); font-weight: 700; }
+    .footer-col h5 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.55); font-size: 13.5px; transition: color var(--transition-fast); }
+    .footer-col ul li a:hover { color: var(--gold-soft); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 18px 0; display: flex;
+      align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+      font-size: 12.5px; color: rgba(255,255,255,0.35);
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-col:not(:first-child) { display: none; }
+      .site-nav, .header-cta { display: none; }
+      .ty-section { padding: 64px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="topbar-star">&#9733;</span>
+  Licensed &amp; insured garage door repair &mdash; serving all of Lancaster County
+  <a href="tel:7173660594" class="topbar-phone">717-366-0594</a>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://garagefixlancaster.com/" class="site-logo">Lancaster <span>Garage Door</span> Pros</a>
+    <nav class="site-nav">
+      <a href="https://garagefixlancaster.com/">Home</a>
+      <a href="/garage-door-repair-lancaster-pa/">Services</a>
+      <a href="https://garagefixlancaster.com/blog/">Blog</a>
+      <a href="https://garagefixlancaster.com/#areas">Areas We Serve</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:7173660594" class="header-phone">717-366-0594</a>
+      <a href="https://garagefixlancaster.com/#get-estimate" class="btn-copper">Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <section class="ty-section">
+    <div class="ty-inner">
+      <div class="ty-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <p class="ty-eyebrow">Request Received</p>
+      <h1 class="ty-heading">Thanks for reaching out!</h1>
+      <p class="ty-body">We've received your request and will get back to you within 24 hours. Our team is ready to help with any garage door repair, installation, or emergency service across Lancaster County.</p>
+      <a href="/" class="ty-cta">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to Home
+      </a>
+      <p class="ty-phone-note">Need immediate help? Call us at <a href="tel:7173660594">717-366-0594</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="https://garagefixlancaster.com/" class="site-logo">Lancaster <span>Garage Door</span> Pros</a>
+      <p>Professional garage door repair, installation, and replacement across Lancaster County, PA. Licensed, insured, and locally owned.</p>
+      <a href="tel:7173660594" class="footer-phone-link">717-366-0594</a>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="/garage-door-repair-lancaster-pa/">Garage Door Repair</a></li>
+        <li><a href="/garage-door-spring-replacement-lancaster-pa/">Spring Replacement</a></li>
+        <li><a href="/garage-door-opener-installation-lancaster-pa/">Opener Installation</a></li>
+        <li><a href="/new-garage-doors-lancaster-pa/">New Garage Doors</a></li>
+        <li><a href="/emergency-garage-door-service-lancaster-pa/">Emergency Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Service Areas</h5>
+      <ul>
+        <li><a href="/garage-door-repair-lancaster-pa/">Lancaster</a></li>
+        <li><a href="https://garagefixlancaster.com/#areas">Lititz</a></li>
+        <li><a href="https://garagefixlancaster.com/#areas">Ephrata</a></li>
+        <li><a href="https://garagefixlancaster.com/#areas">Manheim</a></li>
+        <li><a href="https://garagefixlancaster.com/#areas">Mount Joy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="https://garagefixlancaster.com/">Home</a></li>
+        <li><a href="https://garagefixlancaster.com/blog/">Blog</a></li>
+        <li><a href="/free-garage-door-estimate-lancaster-pa/">Free Estimate</a></li>
+        <li><a href="tel:7173660594">Call Now</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Lancaster Garage Door Pros. All rights reserved.</p>
+    <p><a href="/sitemap.xml" style="color:rgba(255,255,255,0.38);font-size:0.8rem">Sitemap</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
