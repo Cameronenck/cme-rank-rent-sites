@@ -62,6 +62,16 @@ footer a{color:var(--accent)}
 .mob-call{display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;border-radius:var(--r-btn);padding:14px;font-family:var(--heading);font-size:1.15rem;font-weight:700}
 @media(max-width:768px){nav{display:none}.nav-toggle{display:flex}.mob-sticky{display:block}body{padding-bottom:70px}}
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body id="top">
 <div class="announce">AC not cooling? Same-day service available in Ohio — Call <a href="tel:6143444851" style="color:#fff;text-decoration:underline">614-344-4851</a></div>

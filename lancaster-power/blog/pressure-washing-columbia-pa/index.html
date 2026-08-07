@@ -629,6 +629,16 @@ body { padding-bottom:60px; }
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 <div class="topbar">

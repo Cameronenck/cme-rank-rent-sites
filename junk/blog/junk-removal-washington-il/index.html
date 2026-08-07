@@ -121,6 +121,16 @@ footer{background:var(--footer-bg);color:rgba(255,255,255,.6);padding:48px 24px 
 .ftr-copy{font-size:13px;margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);text-align:center}
 @media(max-width:640px){.hdr{height:60px} nav{display:none} .blog-hero h1{font-size:26px}}
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 <div class="announce">📞 Free Estimates — Call <a href="tel:3098619815" style="color:#fff;text-decoration:underline">309-861-9815</a></div>

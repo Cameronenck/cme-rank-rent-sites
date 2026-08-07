@@ -116,6 +116,16 @@ footer{background:var(--footer-bg);padding:64px 24px 28px}
 *{box-sizing:border-box}
 html,body{overflow-x:hidden;max-width:100%}
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body id="top">
 <div class="announce">

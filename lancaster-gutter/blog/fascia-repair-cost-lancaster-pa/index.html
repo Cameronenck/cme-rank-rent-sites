@@ -526,6 +526,16 @@ body { padding-bottom:60px; }
 .breadcrumb { background: var(--cream-2); padding: 12px 24px; font-size: 13px; color: var(--muted); }
 .breadcrumb a { color: var(--primary-700); }
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 

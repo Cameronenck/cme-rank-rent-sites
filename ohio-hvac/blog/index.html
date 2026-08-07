@@ -45,6 +45,16 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:40px 24px 24px}
 @media(max-width:768px){.blog-grid{grid-template-columns:1fr}nav{display:none}}
 @media(max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 <div class="announce">Ohio HVAC Resources &mdash; Free Quotes Available &mdash; <a href="tel:6143444851" style="color:#fff;font-weight:700">614-344-4851</a></div>

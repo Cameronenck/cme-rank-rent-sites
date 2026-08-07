@@ -141,6 +141,16 @@ footer a{color:var(--accent)}
   .hero h1{font-size:28px}
 }
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 <div class="announce">Free HVAC quotes in Ohio — Call 614-344-4851</div>

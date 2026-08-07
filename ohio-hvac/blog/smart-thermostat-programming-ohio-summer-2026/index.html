@@ -113,6 +113,16 @@ p { margin: 15px 0; color: #555; }
 footer { background: #1f2937; color: #fff; padding: 30px; text-align: center; margin-top: 60px; }
 footer p { margin: 10px 0; font-size: 0.9rem; }
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 <header>

@@ -464,6 +464,16 @@ select.qf-input {cursor:pointer}
 .qf-call-btn:hover {background:#ea6c0a}
 @media(max-width:600px){.qf-row{grid-template-columns:1fr}.qf-form{padding:20px 16px}}
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body id="top">
 <div class="announce">

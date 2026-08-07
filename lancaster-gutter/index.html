@@ -235,6 +235,16 @@ footer { background:var(--primary-950); color:rgba(255,255,255,.7); padding:60px
 .mobile-cta { display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--accent); color:#fff; text-align:center; padding:16px; font-size:16px; font-weight:700; font-family:var(--font-body); }
 @media (max-width:600px) { .mobile-cta { display:block; } body { padding-bottom:60px; } }
 </style>
+
+<style>
+/* mobile-overflow-fix — injected by fix_mobile_overflow.py */
+html,body{overflow-x:hidden}
+@media(max-width:600px){
+  .header-cta{display:none!important}
+  .site-header,.header-inner{padding-left:16px!important;padding-right:16px!important}
+  .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
+}
+</style>
 </head>
 <body>
 
