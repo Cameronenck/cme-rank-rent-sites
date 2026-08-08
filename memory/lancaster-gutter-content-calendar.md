@@ -2,6 +2,16 @@
 
 ## Published Posts (2026)
 
+### 2026-08-05
+- **Title:** Ice Dam Prevention in Lancaster PA — Expert Gutter Solutions
+- **Slug:** ice-dam-prevention-lancaster-pa
+- **Keyword:** ice dam prevention lancaster pa
+- **Word Count:** 1,100+ words
+- **Status:** Live (Deployed to GitHub, Netlify)
+- **Date Published:** August 5, 2026
+- **URL:** https://gutterinstallationlancaster.com/blog/ice-dam-prevention-lancaster-pa/
+- **Notes:** Winter prevention guide, 6 FAQ items, BlogPosting + FAQPage JSON-LD, CTA to call 717-716-6410. Covers causes, prevention methods, costs, heating cables, insulation. Local Lancaster winter context.
+
 ### 2026-06-18
 - **Title:** Gutter Installation Winter Prep in Lancaster PA — Get Ready for Ice & Snow
 - **Slug:** gutter-installation-winter-prep-lancaster-pa
