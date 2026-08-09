@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tree Removal in Mountville PA: Mature Trees, Compact Lots, Free Estimates — 717-297-1693</title>
-  <meta name="description" content="Need tree removal in Mountville PA? We serve Mountville Borough and Manor Township — mature oak and maple removal, stump grinding, emergency storm service. Free estimates. Call 717-297-1693.">
-  <link rel="canonical" href="https://treeremovallancaster.com/blog/tree-removal-mountville-pa/">
+  <meta name="description" content="Need tree removal in Mountville PA? We serve Mountville Borough and Manor Township — mature oak and maple removal, stump grinding, emergency storm service. Free estimates. Call 717-297-1693." />
+  <link rel="canonical" href="https://treeremovallancaster.com/blog/tree-removal-mountville-pa/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -615,6 +615,98 @@
 /* Breadcrumb (standalone, outside hero) */
 .breadcrumb { background: var(--cream-2); padding: 12px 24px; font-size: 13px; color: var(--muted); }
 .breadcrumb a { color: var(--primary-700); }
+
+/* ============================================================
+   POST / SERVICE — two-column grid + sidebar  (injected by fix_layout_generic.py)
+   ============================================================ */
+.post-section        { padding: 56px 0 80px; }
+.post-grid           { display: grid; grid-template-columns: 1fr 330px; gap: 48px; align-items: start; }
+@media (max-width: 900px) {
+  .post-grid          { grid-template-columns: 1fr; }
+  .post-sidebar       { order: -1; }
+  .svc-sidebar-col    { order: -1; }
+}
+
+/* BREADCRUMB */
+.post-breadcrumb     { font-size: 13px; color: var(--muted); margin-bottom: 28px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.post-breadcrumb a   { color: var(--primary-700, #1d4ed8); }
+.post-breadcrumb .bc-sep { color: var(--muted); }
+
+/* POST HEADER */
+.post-badge          { display: inline-block; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+.post-headline       { font-family: var(--font-heading); font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 800; color: var(--ink); line-height: 1.15; margin-bottom: 10px; }
+.post-meta-bar       { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+.post-hero-placeholder { width: 100%; border-radius: var(--radius); margin-bottom: 28px; height: 220px; background: linear-gradient(135deg, var(--primary), var(--primary-700)); display: flex; align-items: center; justify-content: center; }
+
+/* PROSE */
+.prose p             { margin-bottom: 1.3em; color: var(--body-color); line-height: 1.8; font-size: 15.5px; }
+.prose h2            { font-family: var(--font-heading); font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--ink); margin: 38px 0 12px; padding-top: 6px; border-top: 2px solid var(--line, #e5e7eb); }
+.prose h2:first-child { border-top: none; margin-top: 0; }
+.prose h3            { font-family: var(--font-heading); font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 700; color: var(--ink); margin: 26px 0 10px; }
+.prose h4            { font-weight: 700; color: var(--ink); margin: 18px 0 8px; font-size: 1rem; }
+.prose ul, .prose ol { margin: 0 0 1.3em; padding-left: 0; list-style: none; }
+.prose ul li         { position: relative; padding: 7px 0 7px 24px; border-bottom: 1px solid var(--line, #e5e7eb); font-size: 15px; line-height: 1.7; color: var(--body-color); }
+.prose ul li:last-child { border-bottom: none; }
+.prose ul li::before { content: ''; position: absolute; left: 0; top: 18px; width: 8px; height: 8px; background: var(--accent, #f59e0b); border-radius: 50%; }
+.prose ol            { list-style: decimal; padding-left: 20px; }
+.prose ol li         { padding: 5px 0; font-size: 15px; line-height: 1.7; color: var(--body-color); }
+.prose a             { color: var(--primary-700, #1d4ed8); text-decoration: underline; }
+.prose strong        { color: var(--ink); font-weight: 600; }
+.prose blockquote    { border-left: 4px solid var(--accent, #f59e0b); background: #fffbeb; margin: 26px 0; padding: 16px 20px; border-radius: 0 8px 8px 0; font-style: italic; color: var(--body-color); font-size: 15px; line-height: 1.75; }
+.prose table         { width: 100%; border-collapse: collapse; margin: 1.5em 0 2em; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.prose table thead th{ background: var(--primary); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 13px 15px; text-align: left; }
+.prose table tbody td{ padding: 12px 15px; border-bottom: 1px solid var(--line, #e5e7eb); font-size: 14px; color: var(--body-color); background: #fff; }
+.prose table tbody tr:nth-child(even) td { background: #f9fafb; }
+.prose table tbody tr:last-child td { border-bottom: none; }
+
+/* INLINE CTA */
+.post-inline-cta     { background: var(--primary); border-radius: 12px; padding: 34px; text-align: center; margin: 2.5em 0; }
+.post-inline-cta h3  { font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.post-inline-cta p   { color: rgba(255,255,255,.8); margin-bottom: 20px; }
+.post-inline-cta a   { display: inline-block; background: var(--accent); color: var(--ink); font-size: 16px; font-weight: 700; padding: 13px 34px; border-radius: 8px; transition: transform .2s; }
+.post-inline-cta a:hover { transform: translateY(-2px); }
+
+/* SIDEBAR */
+.post-sidebar        { position: sticky; top: 104px; display: flex; flex-direction: column; gap: 22px; }
+.svc-sidebar-col     { position: sticky; top: 104px; display: flex; flex-direction: column; gap: 22px; }
+.sb-card             { background: #fff; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08); padding: 22px; border: 1px solid var(--line, #e5e7eb); }
+.sb-card.sb-cta      { background: #0f172a; border-color: #0f172a; text-align: center; padding: 26px 22px; }
+.sb-card.sb-cta h3   { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.sb-card.sb-cta p    { font-size: 13px; color: rgba(255,255,255,.7); margin-bottom: 16px; line-height: 1.5; }
+.sb-phone            { display: block; font-size: 1.3rem; font-weight: 800; color: #fbbf24; margin-bottom: 13px; font-family: var(--font-heading); }
+.sb-phone:hover      { color: #fff; }
+.sb-btn              { display: block; background: var(--accent); color: var(--ink); font-size: 14px; font-weight: 700; padding: 12px 18px; border-radius: 8px; text-align: center; transition: transform .2s; }
+.sb-btn:hover        { transform: translateY(-2px); }
+.sb-card h3          { font-family: var(--font-heading); font-size: .95rem; font-weight: 700; color: var(--ink); margin-bottom: 12px; padding-bottom: 9px; border-bottom: 1px solid var(--line, #e5e7eb); }
+.sb-related          { display: flex; flex-direction: column; gap: 11px; }
+.sb-related-item a   { font-size: 13px; color: var(--primary-700, #1d4ed8); line-height: 1.4; display: block; font-weight: 500; }
+.sb-related-item a:hover { text-decoration: underline; }
+.sb-related-cat      { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-top: 2px; }
+.sb-services         { list-style: none; padding: 0; margin: 0; }
+.sb-services li a    { font-size: 13px; color: var(--body-color); display: flex; align-items: center; gap: 6px; padding: 8px 0; border-bottom: 1px solid var(--line, #e5e7eb); transition: color .2s; }
+.sb-services li:last-child a { border-bottom: none; }
+.sb-services li a:hover { color: var(--primary-700, #1d4ed8); }
+.sb-services li a::before { content: '\2192'; color: var(--accent); font-size: 11px; flex-shrink: 0; }
+
+/* SERVICE GRID wrapper */
+.svc-two-col         { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: start; padding: 48px 0; }
+@media (max-width: 900px) { .svc-two-col { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   MOBILE RESPONSIVE — overflow + header CTA
+   (injected by fix_layout_generic.py)
+   ============================================================ */
+html, body { overflow-x: hidden; }
+@media (max-width: 600px) {
+  /* Hide desktop header CTA — sticky call bar handles mobile CTAs */
+  .header-cta { display: none !important; }
+  .header-inner { padding: 0 16px !important; }
+  .topbar { padding: 0 16px !important; font-size: 0.78rem !important; }
+  /* Sidebar collapses below content on mobile */
+  .post-grid { grid-template-columns: 1fr; }
+  .post-sidebar, .svc-sidebar-col { position: static; order: 2; }
+}
+
 </style>
 </head>
 <body>
@@ -666,17 +758,32 @@
       </button>
     </div>
   </header>
-  <div class="nav-overlay" id="nav-overlay"></div>
 
-<div class="blog-hero">
-  <h1>Tree Removal in Mountville PA: Mature Trees, Compact Lots, Free Estimates</h1>
-  <p class="meta">Published <strong>2026-06-02</strong> · Lancaster Tree Removal Pros</p>
-</div>
-<div class="breadcrumb">
-  <a href="https://treeremovallancaster.com/">Home</a> › <a href="https://treeremovallancaster.com/blog/">Blog</a> › Tree Removal in Mountville PA
-</div>
-<div class="blog-body">
-
+  <!-- POST SECTION — rebuilt by fix_layout_generic.py -->
+  <section class="post-section">
+    <div class="inner">
+      <nav class="post-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="bc-sep">&rsaquo;</span>
+        <a href="/blog/">Blog</a>
+        <span class="bc-sep">&rsaquo;</span>
+        <span aria-current="page">Tree Removal in Mountville PA: Mature Trees, Compact Lots, Free Estimates</span>
+      </nav>
+      <div class="post-grid">
+        <article>
+          <span class="post-badge">Resources</span>
+          <h1 class="post-headline">Tree Removal in Mountville PA: Mature Trees, Compact Lots, Free Estimates</h1>
+          <div class="post-meta-bar">
+            <span>June 2026</span>
+            <span>&bull;</span>
+            <span>Lancaster Tree Removal Pros</span>
+            <span>&bull;</span>
+            <span>35 min read</span>
+          </div>
+          <div class="post-hero-placeholder" aria-hidden="true">
+            <svg width="56" height="56" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="12" fill="rgba(255,255,255,.06)"/><path d="M14 46 L26 28 L34 37 L42 24 L50 46Z" stroke="rgba(255,255,255,.25)" stroke-width="2" fill="none"/><circle cx="20" cy="21" r="4" stroke="rgba(255,255,255,.25)" stroke-width="2" fill="none"/></svg>
+          </div>
+          <div class="prose">
 <p>Mountville Borough is a small tight-knit community sitting right along Lincoln Highway in western Lancaster County, just a few miles from Lancaster city and tucked into Manor Township. I've worked in this area for most of my 15 years in the tree business, and Mountville has a specific character that shapes how every job here gets done: postwar housing stock on compact lots, streets lined with trees that have been growing for 50 or 60 years, and no shortage of mature oaks, silver maples, and Bradford pears that have outgrown the space they were planted in.</p>
 
 <p>If you're dealing with a problem tree in Mountville — a storm-damaged oak, a dead ash that's been declining since the emerald ash borer came through, or a silver maple that's started dropping major limbs — here's what you're looking at in terms of cost, process, and what makes tree work in this borough different from a job in a more open suburban setting.</p>
@@ -777,6 +884,59 @@
 </div>
 
   <!-- FOOTER -->
+          </div>
+          <div class="post-inline-cta">
+            <h3>Get a Free Estimate Today</h3>
+            <p>Serving Lancaster, Lititz, Manheim, Ephrata & all of Lancaster County.</p>
+            <a href="tel:7172692335">Call 717-269-2335</a>
+          </div>
+        </article>
+        <aside class="post-sidebar" aria-label="Sidebar">
+          <div class="sb-card sb-cta">
+            <h3>Free Tree Removal Estimate</h3>
+            <p>Serving Lancaster, Lititz, Manheim, Ephrata & all of Lancaster County.</p>
+            <a href="tel:7172692335" class="sb-phone">717-269-2335</a>
+            <a href="/#estimate" class="sb-btn">Request Online</a>
+          </div>
+          <div class="sb-card">
+            <h3>Related Articles</h3>
+            <div class="sb-related">
+            <div class="sb-related-item">
+              <a href="/blog/arborist-cost-lancaster-pa/">Arborist Cost Lancaster PA: What to Expect in 2026</a>
+              <div class="sb-related-cat">Cost Guide</div>
+            </div>
+            <div class="sb-related-item">
+              <a href="/blog/certified-tree-service-insurance-lancaster-pa/">Certified Tree Service &amp; Insurance in Lancaster PA</a>
+              <div class="sb-related-cat">Local Service</div>
+            </div>
+            <div class="sb-related-item">
+              <a href="/blog/dead-tree-removal-lancaster-pa/">Dead Tree Removal in Lancaster PA — When to Act and What It Costs</a>
+              <div class="sb-related-cat">Cost Guide</div>
+            </div>
+            <div class="sb-related-item">
+              <a href="/blog/emergency-tree-removal-vs-standard-removal-lancaster-pa/">Emergency Tree Removal vs Standard Removal in Lancaster PA — What's the Real Difference?</a>
+              <div class="sb-related-cat">Comparison</div>
+            </div>
+            </div>
+          </div>
+          <div class="sb-card">
+            <h3>All Services</h3>
+            <ul class="sb-services">
+          <li><a href="/emergency-tree-service-lancaster-pa/">Emergency Tree Service</a></li>
+          <li><a href="/lot-clearing-lancaster-pa/">Lot Clearing</a></li>
+          <li><a href="/stump-grinding-lancaster-pa/">Stump Grinding</a></li>
+          <li><a href="/thank-you/">Your Request Has Been Received</a></li>
+          <li><a href="/tree-health-assessment-lancaster-pa/">Tree Health Assessment</a></li>
+          <li><a href="/tree-removal-lancaster-pa/">Tree Removal</a></li>
+          <li><a href="/tree-trimming-lancaster-pa/">Tree Trimming</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
