@@ -274,7 +274,19 @@ footer{background:#080f1a;color:rgba(255,255,255,.7);padding:60px 24px 24px}
   .footer-top{padding:0 4px}
   .form-group input,.form-group select,.form-group textarea{font-size:16px;padding:12px 14px}
 }
-</style>
+
+    /* FAQ Section */
+    .faq-section { background: #fff; padding: 80px 0; }
+    .faq-section h2 { font-family: var(--heading); font-size: clamp(1.8rem,3.5vw,2.6rem); color: var(--navy); margin-bottom: 12px; text-transform: uppercase; letter-spacing: .5px; }
+    .section-intro { color: var(--text-mid); font-size: 1.05rem; margin-bottom: 36px; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--offwhite); border-radius: var(--r-card); border: 1px solid var(--grey); overflow: hidden; }
+    .faq-q { padding: 18px 22px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--navy); }
+    .faq-q::after { content: '+'; font-size: 22px; color: var(--orange); font-weight: 300; }
+    .faq-body { padding: 0 22px 18px; color: var(--text-mid); line-height: 1.7; display: none; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-item.open .faq-body { display: block; }
+    </style>
 <script src="//cdn.callrail.com/companies/209039279/feee2673bb472b064f05/12/swap.js"></script>
 
 <style>
@@ -340,6 +352,62 @@ html,body{overflow-x:hidden}
   "serviceType": "HVAC",
   "priceRange": "$$",
   "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does HVAC replacement cost in Ohio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HVAC system replacement in Ohio typically runs between $3,000 and $12,000 for a standard residential unit. Central air conditioning alone averages $3,500\u2013$7,500 installed. A gas furnace runs $2,500\u2013$6,000 installed. A full combined heating and cooling system (air handler, furnace, and AC) can reach $8,000\u2013$15,000 depending on the size of your home and efficiency rating you choose. We connect you with licensed Ohio contractors who provide free in-home estimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I have my HVAC system serviced?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Twice a year is the industry standard\u2014once in spring before cooling season, and once in fall before heating season. Regular tune-ups catch refrigerant leaks, dirty coils, and worn belts before they become emergency repairs. Systems that receive annual maintenance typically last 5\u20137 years longer and operate 15\u201320% more efficiently than neglected systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a heat pump and a furnace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A furnace burns fuel (natural gas, propane, or oil) to generate heat. A heat pump moves heat from outside air or the ground into your home\u2014it doesn't create heat, it transfers it, which makes it 2\u20134x more energy efficient in mild climates. Ohio winters can dip well below freezing, so most Ohio homeowners choose a dual-fuel system: a heat pump for moderate temperatures paired with a gas furnace for backup when temperatures drop below 30\u00b0F."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do HVAC contractors in Ohio offer emergency repair service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The licensed contractors in our network offer 24/7 emergency HVAC repair across Ohio, including Columbus, Cleveland, Cincinnati, Dayton, and Akron. If your heat or AC has failed, call 614-344-4851 and we'll connect you with a technician available in your area today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if I need a new AC unit or just a repair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key signs it's time to replace: the unit is 12\u201315+ years old, you've had two or more significant repairs in the past two years, it uses R-22 refrigerant (phased out and now expensive), or your electric bills have climbed significantly without a change in usage. If the repair cost exceeds 50% of the replacement cost on an older unit, replacement almost always wins on a 5-year cost basis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What HVAC brands do Ohio contractors typically recommend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most commonly installed brands in Ohio are Carrier, Lennox, Trane, Rheem, and Goodman. Carrier and Trane sit at the premium tier with 20-year compressor warranties. Goodman and Rheem offer solid mid-tier value. The brand matters less than the contractor's installation quality\u2014a properly installed mid-tier unit will outperform a premium unit installed sloppily. All contractors in our network are factory-authorized on the brands they install."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -931,7 +999,42 @@ html,body{overflow-x:hidden}
 </section>
 
 <!-- FOOTER -->
-<footer>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions — HVAC Services in Ohio</h2>
+      <p class="section-intro">Answers to the most common questions about HVAC repair, replacement, and maintenance in Ohio.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">How much does HVAC replacement cost in Ohio?</div>
+          <div class="faq-body"><p>HVAC system replacement in Ohio typically runs between $3,000 and $12,000 for a standard residential unit. Central air conditioning alone averages $3,500–$7,500 installed. A gas furnace runs $2,500–$6,000 installed. A full combined heating and cooling system (air handler, furnace, and AC) can reach $8,000–$15,000 depending on the size of your home and efficiency rating you choose. We connect you with licensed Ohio contractors who provide free in-home estimates.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I have my HVAC system serviced?</div>
+          <div class="faq-body"><p>Twice a year is the industry standard—once in spring before cooling season, and once in fall before heating season. Regular tune-ups catch refrigerant leaks, dirty coils, and worn belts before they become emergency repairs. Systems that receive annual maintenance typically last 5–7 years longer and operate 15–20% more efficiently than neglected systems.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the difference between a heat pump and a furnace?</div>
+          <div class="faq-body"><p>A furnace burns fuel (natural gas, propane, or oil) to generate heat. A heat pump moves heat from outside air or the ground into your home—it doesn't create heat, it transfers it, which makes it 2–4x more energy efficient in mild climates. Ohio winters can dip well below freezing, so most Ohio homeowners choose a dual-fuel system: a heat pump for moderate temperatures paired with a gas furnace for backup when temperatures drop below 30°F.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do HVAC contractors in Ohio offer emergency repair service?</div>
+          <div class="faq-body"><p>Yes. The licensed contractors in our network offer 24/7 emergency HVAC repair across Ohio, including Columbus, Cleveland, Cincinnati, Dayton, and Akron. If your heat or AC has failed, call <a href="tel:6143444851">614-344-4851</a> and we'll connect you with a technician available in your area today.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I know if I need a new AC unit or just a repair?</div>
+          <div class="faq-body"><p>Key signs it's time to replace: the unit is 12–15+ years old, you've had two or more significant repairs in the past two years, it uses R-22 refrigerant (phased out and now expensive), or your electric bills have climbed significantly without a change in usage. If the repair cost exceeds 50% of the replacement cost on an older unit, replacement almost always wins on a 5-year cost basis.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What HVAC brands do Ohio contractors typically recommend?</div>
+          <div class="faq-body"><p>The most commonly installed brands in Ohio are Carrier, Lennox, Trane, Rheem, and Goodman. Carrier and Trane sit at the premium tier with 20-year compressor warranties. Goodman and Rheem offer solid mid-tier value. The brand matters less than the contractor's installation quality—a properly installed mid-tier unit will outperform a premium unit installed sloppily. All contractors in our network are factory-authorized on the brands they install.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
   <div class="footer-top">
     <div class="footer-brand">
       <a href="/" class="logo">Ohio <span>HVAC</span> Pros</a>
@@ -1354,5 +1457,15 @@ const ohioCities = [
 
 </script>
 <script src="/js/form-handler.js"></script>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
