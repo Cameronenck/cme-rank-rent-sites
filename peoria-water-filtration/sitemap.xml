@@ -55,4 +55,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://peoriawaterfiltration.com/blog/water-filtration-pekin-il/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peoriawaterfiltration.com/blog/water-filtration-washington-il/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://peoriawaterfiltration.com/east-peoria-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/pekin-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/morton-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/washington-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/bartonville-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/chillicothe-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/dunlap-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/germantown-hills-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/metamora-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://peoriawaterfiltration.com/groveland-water-filtration-il/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
