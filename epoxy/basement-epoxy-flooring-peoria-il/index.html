@@ -439,6 +439,54 @@ textarea{resize:vertical;min-height:80px}
   .final-cta-actions{flex-direction:column}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will epoxy work on a damp basement floor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the moisture vapor emission rate. We test every basement before quoting. Low-to-moderate vapor transmission can be managed with a vapor barrier primer. High transmission or active water intrusion needs to be addressed separately before any coating makes sense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to fix cracks in my basement floor first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We handle crack repair as part of the installation. Dormant cracks get rigid epoxy fill; cracks that show movement get flexible polyurea caulk. Pre-existing crack repair is included in our prep process \u2014 you don't need to have it done separately beforehand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I put epoxy over old tile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes. If the tile is fully adhered with no hollow spots and the surface is flat, epoxy can go over it after grinding the glaze off. If tiles are loose, broken, or the adhesive is failing, they need to come up first. We check this during the estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does epoxy handle Peoria's humidity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once cured, epoxy is not affected by ambient humidity. The concern is during installation \u2014 applying in conditions that are too humid or cold can affect adhesion and cure. We monitor conditions and schedule accordingly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is epoxy safe for a finished basement I use as living space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once fully cured (typically 7 days), epoxy is inert, odorless, and non-toxic. It's used in commercial food prep environments and residential spaces alike. The installation does have odor during application \u2014 plan to ventilate and stay out of the space for 24 to 48 hours while it cures."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -628,5 +676,13 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city links from service page -->
+<section style="background:#f8f6f0;padding:18px 24px;text-align:center;font-size:13px;"><strong>Also serving:</strong> <a href="/east-peoria-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in East Peoria</a> &bull; <a href="/pekin-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Pekin</a> &bull; <a href="/morton-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton</a></section>
+
+
+<!-- Internal: related blog posts -->
+<section style="background:#fff;padding:20px 24px;max-width:800px;margin:0 auto;"><strong>Related Reading:</strong><ul style="margin:8px 0 0 18px;"><li><a href="/blog/epoxy-flooring-morton-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton IL: What Homeowners Near Peoria Need to Know</a></li><li><a href="/blog/commercial-epoxy-flooring-cost-peoria-il/" style="color:inherit;text-decoration:underline;">Commercial Epoxy Flooring Cost in Peoria IL | Peoria Epoxy Flooring Pros</a></li></ul></section>
+
 </body>
 </html>

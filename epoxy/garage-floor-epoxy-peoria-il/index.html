@@ -404,6 +404,62 @@ textarea{resize:vertical;min-height:80px}
   .final-cta-actions{flex-direction:column}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does garage floor epoxy last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A properly installed system with diamond-ground prep and quality polyaspartic topcoat typically lasts 10 to 20 years in a residential garage. DIY kits from hardware stores use lower-grade materials and often fail within 2 to 3 years under tire heat and freeze-thaw cycling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can epoxy go over painted concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly. Paint needs to be removed before epoxy can bond to the concrete. Our diamond grinding process removes the paint layer and opens the concrete profile at the same time. If paint is left in place, the epoxy bonds to it and peels when the paint lets go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do I have to stay off the floor after installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Light foot traffic is safe within 24 hours. We recommend waiting 48 to 72 hours before driving vehicles onto the floor. Avoid parking on it immediately after a long highway drive for the first week while the topcoat fully cures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to empty the entire garage before you start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 the floor needs to be completely clear for grinding and coating. We can work in sections on an occupied garage if clearing everything at once isn't practical, though this adds to the timeline. Most Peoria homeowners find it easier to park vehicles outside for a weekend and clear everything in one go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will epoxy crack in Illinois winters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A quality polyaspartic topcoat is flexible enough to handle normal freeze-thaw cycling in Central Illinois. Cracking typically occurs in pre-existing concrete cracks that weren't properly filled before coating \u2014 the crack movement telegraphs through. We fill active cracks during prep to prevent this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between flake and metallic epoxy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flake epoxy uses vinyl chip broadcast into a base coat, sealed under clear coat \u2014 a textured, uniform appearance with good slip resistance. Metallic epoxy uses mica pigments in the resin itself, hand-manipulated to create flowing three-dimensional patterns. Metallic typically costs 50 to 100 percent more than a standard flake system."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -596,5 +652,13 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city links from service page -->
+<section style="background:#f8f6f0;padding:18px 24px;text-align:center;font-size:13px;"><strong>Also serving:</strong> <a href="/east-peoria-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in East Peoria</a> &bull; <a href="/pekin-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Pekin</a> &bull; <a href="/morton-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton</a></section>
+
+
+<!-- Internal: related blog posts -->
+<section style="background:#fff;padding:20px 24px;max-width:800px;margin:0 auto;"><strong>Related Reading:</strong><ul style="margin:8px 0 0 18px;"><li><a href="/blog/epoxy-flooring-morton-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton IL: What Homeowners Near Peoria Need to Know</a></li><li><a href="/blog/commercial-epoxy-flooring-cost-peoria-il/" style="color:inherit;text-decoration:underline;">Commercial Epoxy Flooring Cost in Peoria IL | Peoria Epoxy Flooring Pros</a></li></ul></section>
+
 </body>
 </html>

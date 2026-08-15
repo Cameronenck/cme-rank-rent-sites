@@ -741,5 +741,9 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city page link from blog -->
+<div style="background:#f8f6f0;padding:14px 18px;margin:24px 0;font-size:14px;">Serving East Peoria: <a href="/east-peoria-epoxy-flooring-il/" style="font-weight:600;">Epoxy Flooring in East Peoria, IL</a></div>
+
 </body>
 </html>

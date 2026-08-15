@@ -404,6 +404,54 @@ textarea{resize:vertical;min-height:80px}
   .final-cta-actions{flex-direction:column}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you match a specific color I have in mind?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can work toward a direction \u2014 gold, silver, dark charcoal, ocean blue \u2014 using reference images or color samples. What we can't guarantee is an exact pixel-for-pixel match to a specific sample floor. Metallic epoxy creates unique patterns as it cures, which is part of the appeal but also means no two floors are identical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is metallic epoxy durable or just decorative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. The metallic pigments are encapsulated in the resin and sealed under commercial-grade polyaspartic clear coat. The surface hardness and chemical resistance are equivalent to industrial floor coatings. It handles vehicles, foot traffic, and daily use the same as any other professionally installed epoxy system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is metallic epoxy different from a standard flake system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flake epoxy uses vinyl chip broadcast into a base coat \u2014 the pattern is random but fairly uniform across the floor. Metallic epoxy uses mica pigments in the resin itself, manipulated by the installer while still wet to create flowing, layered patterns. Metallic costs more, takes longer to install, and produces a dramatically different visual result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can metallic epoxy be installed in a home garage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it's a popular choice for collectors and hobbyists who use their garage as a showcase space. The installation requirements are the same as any other epoxy floor \u2014 proper concrete prep, moisture testing, diamond grinding. The only additional consideration is adequate ventilation during installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I clean and maintain a metallic epoxy floor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The same way you'd maintain any epoxy floor: sweep regularly to remove grit and debris, mop with a pH-neutral cleaner as needed, and avoid dragging abrasive materials across the surface. The polyaspartic topcoat is highly resistant to chemicals, so household cleaners won't damage it. Do not use abrasive scrubbing pads on the surface."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -591,5 +639,13 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city links from service page -->
+<section style="background:#f8f6f0;padding:18px 24px;text-align:center;font-size:13px;"><strong>Also serving:</strong> <a href="/east-peoria-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in East Peoria</a> &bull; <a href="/pekin-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Pekin</a> &bull; <a href="/morton-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton</a></section>
+
+
+<!-- Internal: related blog posts -->
+<section style="background:#fff;padding:20px 24px;max-width:800px;margin:0 auto;"><strong>Related Reading:</strong><ul style="margin:8px 0 0 18px;"><li><a href="/blog/epoxy-flooring-morton-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton IL: What Homeowners Near Peoria Need to Know</a></li><li><a href="/blog/commercial-epoxy-flooring-cost-peoria-il/" style="color:inherit;text-decoration:underline;">Commercial Epoxy Flooring Cost in Peoria IL | Peoria Epoxy Flooring Pros</a></li></ul></section>
+
 </body>
 </html>

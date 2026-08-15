@@ -465,6 +465,46 @@ html,body{overflow-x:hidden}
   .topbar{padding-left:16px!important;padding-right:16px!important;font-size:0.78rem!important}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What factors affect junk removal cost the most?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Volume is the biggest one \u2014 the more truck space your stuff takes up, the more you pay. After that, it's weight (heavy materials like concrete cost more to dump), location of the junk (second floor vs. driveway), and whether anything needs to be broken down before loading. Special items like tires, paint, or electronics can also add to the price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you do same-day junk removal in Peoria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, most of the time. If you call before noon, there's a solid chance we can get out the same day. We can't always guarantee it during our busiest weeks, but we'll always tell you straight what's available when you call. Text or call 309-861-9815 for current availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What items won't you take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can't haul hazardous waste: paint, chemicals, asbestos, propane tanks (unless empty), medical waste, or large amounts of oil. Tires are a maybe \u2014 ask when you call. Pretty much everything else is fair game: appliances, furniture, yard waste, construction debris, electronics, hot tubs, you name it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I lower my junk removal bill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A few things help: move the junk to one central spot so loading is faster, separate anything that's clearly donatable (we'll often haul donation-ready items at a reduced rate), and book during our slower midweek slots rather than weekend rush. Also \u2014 don't wait until the load doubles before calling. Smaller, more frequent pickups can actually cost less per trip than one massive cleanout."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -700,5 +740,9 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city page link from blog -->
+<div style="background:#f8f6f0;padding:14px 18px;margin:24px 0;font-size:14px;">Serving East Peoria: <a href="/east-peoria-junk-removal-il/" style="font-weight:600;">Junk Removal in East Peoria, IL</a></div>
+
 </body>
 </html>

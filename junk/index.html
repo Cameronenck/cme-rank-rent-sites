@@ -1111,5 +1111,9 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city service area links -->
+<section style="background:#f8f6f0;padding:24px;text-align:center;font-size:14px;"><strong>Service Areas:</strong> <a href="/east-peoria-junk-removal-il/" style="display:inline-block;margin:4px 8px;color:inherit;text-decoration:underline;">Junk Removal in East Peoria</a><a href="/pekin-junk-removal-il/" style="display:inline-block;margin:4px 8px;color:inherit;text-decoration:underline;">Junk Removal in Pekin</a><a href="/morton-junk-removal-il/" style="display:inline-block;margin:4px 8px;color:inherit;text-decoration:underline;">Junk Removal in Morton</a><a href="/washington-junk-removal-il/" style="display:inline-block;margin:4px 8px;color:inherit;text-decoration:underline;">Junk Removal in Washington</a><a href="/bartonville-junk-removal-il/" style="display:inline-block;margin:4px 8px;color:inherit;text-decoration:underline;">Junk Removal in Bartonville</a><a href="/blog/" style="display:inline-block;margin:4px 8px;color:inherit;text-decoration:underline;">Tips &amp; Resources &rsaquo;</a></section>
+
 </body>
 </html>

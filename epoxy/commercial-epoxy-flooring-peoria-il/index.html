@@ -404,6 +404,54 @@ textarea{resize:vertical;min-height:80px}
   .final-cta-actions{flex-direction:column}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you work nights or weekends to avoid disrupting my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most of our commercial work in Peoria happens outside normal business hours. We schedule around your operations, not the other way around. Fast-cure polyaspartic topcoats let us complete sections overnight and have them ready for foot traffic by morning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can a commercial floor return to service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Foot traffic typically within 6 to 8 hours with polyaspartic topcoats. Light vehicle traffic (cars, small carts) within 24 hours. Forklift and heavy vehicle traffic typically after 72 hours. We'll give you exact timeline expectations based on the system specified for your project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about forklift traffic? Can epoxy handle that?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Industrial-spec epoxy systems are designed for forklift traffic. The key is correct specification: system thickness, aggregate type in the body coat, and topcoat hardness all need to match the actual load and traffic pattern. We specify based on what the floor will see, not a generic commercial product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do warehouse floor striping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Traffic lane striping, rack aisle marking, pedestrian zones, and hazard marking can all be applied over the cured epoxy base system. Striping over epoxy is more durable and sharper-looking than striping applied directly to concrete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need a food-safe floor for a commercial kitchen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We install NSF-compliant epoxy systems for food service environments. These use specific topcoat chemistry that resists microbial growth, tolerates high-pressure cleaning, and can handle sanitizing chemicals. Kitchen floors also need to address slip resistance \u2014 we spec the appropriate anti-slip aggregate for the application."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -590,5 +638,13 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city links from service page -->
+<section style="background:#f8f6f0;padding:18px 24px;text-align:center;font-size:13px;"><strong>Also serving:</strong> <a href="/east-peoria-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in East Peoria</a> &bull; <a href="/pekin-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Pekin</a> &bull; <a href="/morton-epoxy-flooring-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton</a></section>
+
+
+<!-- Internal: related blog posts -->
+<section style="background:#fff;padding:20px 24px;max-width:800px;margin:0 auto;"><strong>Related Reading:</strong><ul style="margin:8px 0 0 18px;"><li><a href="/blog/epoxy-flooring-morton-il/" style="color:inherit;text-decoration:underline;">Epoxy Flooring in Morton IL: What Homeowners Near Peoria Need to Know</a></li><li><a href="/blog/commercial-epoxy-flooring-cost-peoria-il/" style="color:inherit;text-decoration:underline;">Commercial Epoxy Flooring Cost in Peoria IL | Peoria Epoxy Flooring Pros</a></li></ul></section>
+
 </body>
 </html>

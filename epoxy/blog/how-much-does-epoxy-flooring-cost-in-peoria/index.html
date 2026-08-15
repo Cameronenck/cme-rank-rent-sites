@@ -427,6 +427,46 @@ textarea{resize:vertical;min-height:80px}
   .final-cta-actions{flex-direction:column}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does epoxy flooring last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A properly installed professional epoxy system in a garage or basement typically lasts 10\u201320 years with normal use. The lifespan depends heavily on prep quality, coating thickness, and how hard the floor gets used. Hot tire pickup, chemicals, and heavy impacts are the main things that wear it down faster. We use 100% solids systems with polyaspartic topcoats specifically because they hold up to real-world abuse better than cheaper water-based products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you epoxy over an existing floor coating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on what's down there. If the existing coating is well-bonded, we can sometimes scuff and overcoat. If it's peeling, bubbling, or if there's moisture under it \u2014 it needs to come off first. Skipping that step is the number-one reason epoxy jobs fail. We'll check the existing floor before we quote you and tell you exactly what's needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best epoxy system for a garage floor in Peoria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a typical Peoria homeowner garage, we'd recommend a 100% solids epoxy base coat with a vinyl chip broadcast and a polyaspartic topcoat. It's slip-resistant, handles Illinois temperature swings well, cleans up easily, and looks sharp for years. The polyaspartic topcoat is key \u2014 it's UV-stable so it won't yellow from sunlight and cures fast enough that you can park on it within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you maintain an epoxy floor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Epoxy is about as easy to maintain as flooring gets. Regular sweeping and mopping with a pH-neutral cleaner is all it takes. Avoid harsh chemicals like bleach or ammonia. If you notice any chips or worn spots along the edges, address them early before moisture gets underneath. Most epoxy floors in garages just need a quick sweep and hose-down to look good for years."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -653,5 +693,9 @@ const counters=document.querySelectorAll('[data-target]');
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=+el.dataset.target;const duration=1800;const start=performance.now();const run=t=>{const elapsed=t-start;const progress=Math.min(elapsed/duration,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(ease*target).toLocaleString()+(el.dataset.suffix||'');if(progress<1)requestAnimationFrame(run);};requestAnimationFrame(run);obs.unobserve(el);}})},{threshold:.3});
 counters.forEach(c=>obs.observe(c));
 </script>
+
+<!-- Internal: city page link from blog -->
+<div style="background:#f8f6f0;padding:14px 18px;margin:24px 0;font-size:14px;">Serving East Peoria: <a href="/east-peoria-epoxy-flooring-il/" style="font-weight:600;">Epoxy Flooring in East Peoria, IL</a></div>
+
 </body>
 </html>
