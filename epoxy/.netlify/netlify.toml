@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/epoxy/epoxy"
+publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/epoxy"
 publishOrigin = "ui"
 base = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/epoxy"
 
