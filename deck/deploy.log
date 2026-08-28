@@ -1,0 +1,16 @@
+Walking site directory...
+Found 60 files
+Creating deploy...
+Deploy response status: 200
+Deploy ID: 6a9097b4753d552c52a5f7b7
+Files required for upload: 2
+Uploading: /blog/deck-maintenance-peoria-freeze-thaw/index.html (18461 bytes)
+  -> 200 OK
+Uploading: /deploy.log (26 bytes)
+  -> 200 OK
+
+Waiting for deploy to go live...
+  State: ready
+
+Deploy is LIVE!
+URL: http://6a9097b4753d552c52a5f7b7--peoria-deck-pros.netlify.app

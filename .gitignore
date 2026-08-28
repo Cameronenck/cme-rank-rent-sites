@@ -1,2 +1,5 @@
 .openclaw/
 .pi/
+
+# Local Netlify folder
+.netlify

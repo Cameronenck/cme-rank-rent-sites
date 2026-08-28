@@ -7,8 +7,9 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites"
+publish = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/float"
 publishOrigin = "default"
+base = "/Users/bert-aiagent/apollo-workspace/cme-rank-rent-sites/float"
 
 [build.environment]
 
