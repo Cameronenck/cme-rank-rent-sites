@@ -46,3 +46,19 @@ Both added. Sitemap drift check now reports "OK: no sitemap drift" (51 dirs).
 - **Verified live:** homepage HTTP 200, post HTTP 200, title tag correct, keywords present, no emoji on live HTML, tel link live, index card live, sitemap live
 - **Git push:** 403 (known read-only PAT defect — unchanged). Commit 252e322 recorded locally. Post is live via Netlify API (approved path).
 - **Note:** shared repo has many sibling agents' uncommitted changes on disk (float, peoria-water-filtration, ohio-hvac, deck, memory). deploy.js deploy is scoped to this site's directory tree only — those are unaffected.
+
+---
+
+## 2026-10-02 — Blog deploy (lancaster-gutter)
+
+- **Post:** "Gutter Installation Cost in Columbia PA: What to Expect in 2026"
+- **Slug:** gutter-installation-cost-columbia-pa
+- **Topic:** City-specific gutter installation cost guide. Gap check: Columbia PA had only 1 post (a generic city page) and no dedicated cost guide — every other major target city (Lancaster, York, Lebanon, Harrisburg, Manheim) already had one.
+- **Word count:** 1204 (all-inclusive incl. 16 table cells; 1128 prose words) | **Sections:** 9 h2 + 8 h3 + intro + CTA = 19
+- **Cities:** Columbia Borough, Mountville, Wrightsville, Marietta, Lancaster, Lebanon, York
+- **Quality gate:** PASS (no emoji, 0 numeric entities, balanced tags p26/26 div4/4 h2 9/9 h3 8/8 table 1/1 td16/16, tel:+17177166410 x2, 0 "555", Inter via Google Fonts CDN, no template contamination)
+- **Sitemap:** entry added at top, XML parses OK, drift check = no drift (52 blog posts before this, 53 now)
+- **Blog index:** new card inserted first (October 2026)
+- **Deploy:** `node deploy.js` → 90-file manifest, 4 files uploaded (post, blog/index.html, sitemap.xml, memory log), deploy ID 6abfabf77f1d78566a46e1fe
+- **Verified live:** homepage HTTP 200, post HTTP 200, title tag correct, keywords present (Columbia PA x16, Columbia Borough x7), 0 emoji on live HTML, tel link live, index card live, sitemap live. 7 other pages spot-checked HTTP 200 (no wipe).
+- **Git push:** 403 (known read-only PAT defect — unchanged). Commit 5c8bd45 recorded locally. Post is live via deploy.js / Netlify API (approved path).
