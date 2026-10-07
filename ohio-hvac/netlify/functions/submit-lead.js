@@ -77,7 +77,7 @@ exports.handler = async (event) => {
   const slackToken = process.env.TO_SLACK_TOKEN;
   const siteStr = ((data.site || data.source || data.siteName || '') + '').toLowerCase();
   const isSellMidwest = siteStr.includes('sellmidwest');
-  if (slackToken && isSellMidWest) {
+  if (slackToken && isSellMidwest) {
     const channel = process.env.SLACK_LEAD_CHANNEL || 'C0B2JA21Y30';
     const text = [
       `:house: *New Lead — ${site}*`,
