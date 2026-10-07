@@ -73,9 +73,11 @@ exports.handler = async (event) => {
     results.email = 'no SENDGRID_API_KEY';
   }
 
-  // 2. Slack (only if token configured)
+  // 2. Slack — ONLY for sellmidwesthome (route per site: ohiohvac = email only)
   const slackToken = process.env.TO_SLACK_TOKEN;
-  if (slackToken) {
+  const siteStr = ((data.site || data.source || data.siteName || '') + '').toLowerCase();
+  const isSellMidwest = siteStr.includes('sellmidwest');
+  if (slackToken && isSellMidWest) {
     const channel = process.env.SLACK_LEAD_CHANNEL || 'C0B2JA21Y30';
     const text = [
       `:house: *New Lead — ${site}*`,
@@ -100,7 +102,7 @@ exports.handler = async (event) => {
       results.slack = 'error: ' + err.message;
     }
   } else {
-    results.slack = 'skipped (no token)';
+    results.slack = isSellMidwest ? 'skipped (no token)' : 'skipped (not sellmidwest)';
   }
 
   return { statusCode: 200, headers, body: JSON.stringify({ ok: true, results }) };
