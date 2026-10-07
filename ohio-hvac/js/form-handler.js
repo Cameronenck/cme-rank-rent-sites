@@ -26,10 +26,10 @@
       }
     }
 
-    fetch('/.netlify/functions/submit-lead', {
+    fetch('/', {
       method:  'POST',
-      headers: {'Content-Type': 'application/json'},
-      body:    JSON.stringify(Object.assign({site: 'ohiohvacpros.com'}, data))
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body:    encode(data)
     })
     .then(function(resp){
       if(resp.ok){
