@@ -68,25 +68,53 @@
 ## Summary
 Attic cleanout is high-intent, high-value keyword for Peoria market. Covers pricing ($800-$3,500+), labor breakdown, disposal costs, hazard identification (asbestos, mold, rodents), and 6 comprehensive FAQ answers. Targets homeowners planning home improvement/cleanout projects. Aligns with existing blog series strategy and site authority.
 
-## Latest Post - IN DEPLOYMENT
-- **Keyword:** spring-cleaning-junk-removal-chillicothe-il
-- **Title:** Spring Cleaning Junk Removal in Chillicothe IL — How to Declutter Your Home
-- **Word Count:** ~1,100+ words (2,515 HTML words)
-- **Sections:** 21+ (H2 and H3 headings)
-- **Published Date:** August 7, 2026 (deployed to repo)
-- **GitHub Commit:** 941a6be (Add blog post: Spring Cleaning Junk Removal in Chillicothe IL)
-- **Blog Index:** Updated - post is FIRST card in grid
-- **Sitemap:** Updated with URL and lastmod 2026-08-07
-- **Status:** Files committed and pushed. Awaiting Netlify build completion.
+## Latest Post - LIVE (Sep 25, 2026)
+- **Keyword:** shed-cleanout-cost-east-peoria-il
+- **Title:** Shed Cleanout Cost in East Peoria IL — What You'll Pay in 2026
+- **Word Count:** ~1,060 narrative (1,332 incl FAQ)
+- **Sections:** 10 h2 + intro + price table + CTA + FAQ = 14 blocks
+- **Published:** September 25, 2026
+- **Deployed to:** `junk/` (LIVE source tree) — deploy.js, deploy ID 6ab67f4375f30bb67b6559bd
+- **Git Commit:** 6849712
+- **Blog Index:** Updated - post is FIRST card in grid (junk/blog/index.html)
+- **Sitemap:** Updated with new URL + repaired drift (how-to-choose-a-junk-removal-company-in-peoria-il was missing)
+- **Verified:** HTTP 200 post, homepage 200, index 200, sitemap 200; keywords present; 7 tel links; zero emojis
+
+## CRITICAL — junk/ vs junk-removal/ (STILL ACTIVE as of 2026-09-25)
+- **LIVE source tree = `junk/`** (has deploy.js wired to Netlify UUID 062fd7b5-2968-49fd-a39e-17ce4c28523e, 77 files)
+- **`junk-removal/` is OBSOLETE** (no deploy.js, 60 files, missing live city pages)
+- **11 posts written to `junk-removal/blog/` by prior cron runs are 404 live:** office-cleanout-junk-removal-peoria-il, basement-cleanout-cost-springfield-il, hoarding-cleanout-tips-strategies-peoria-il, estate-cleanout-washington-il, junk-removal-cost-bloomington-il, junk-removal-galesburg-il, moving-prep-junk-removal-washington-il, shed-cleanout-cost-peoria-il, spring-cleaning-junk-removal-chillicothe-il, spring-cleaning-junk-removal-normal-il, washer-dryer-removal-cost-peoria-il
+- **This run wrote to `junk/` (correct).** Resolution of the two-tree split requires Cam — retire `junk-removal/` or migrate its 11 posts into `junk/`.
+
+## Latest Post - LIVE (Oct 6, 2026)
+- **Keyword:** what-cant-be-thrown-in-trash-peoria-il
+- **Title:** What Can't Be Thrown in the Trash in Peoria IL? | Junk Disposal Rules
+- **Word Count:** 1,087 narrative
+- **Sections:** 11 h2 + intro + price table + CTA + FAQ = 15 blocks
+- **Published:** October 6, 2026
+- **Deployed to:** `junk/` (LIVE source tree) — deploy.js, deploy ID 6ac4ffb23ee092207e92778e (79 files manifest, 3 uploaded)
+- **Git Commit:** eb2f098 (LOCAL only — git push returned 403, known credential block; deploy.js bypasses git so post is live)
+- **Blog Index:** Updated - post is FIRST card in grid (junk/blog/index.html)
+- **Sitemap:** Updated with new URL + lastmod 2026-10-06 (now 64 loc entries; XML validated)
+- **Verified:** HTTP 200 post, homepage 200, index card present live, sitemap entry live, 8 tel links, zero emojis, canonical correct. Spot-checked 6 other pages all 200.
+- **Note:** Top-level `/chillicothe-junk-removal-il/` landing page already live (200) — do NOT write a Chillicothe city blog post, it would cannibalize. Considered and rejected this run.
+
+## CRITICAL — junk/ vs junk-removal/ (STILL ACTIVE as of 2026-10-06)
+- **LIVE source tree = `junk/`** (has deploy.js wired to Netlify UUID 062fd7b5-2968-49fd-a39e-17ce4c28523e, 79 files)
+- **`junk-removal/` is OBSOLETE** (no deploy.js, missing live city pages). Task prompt still says to write to `junk-removal/` — this is a persistent job-config defect. Job spec MUST be updated to point at `junk/`.
+- **Posts written to `junk-removal/blog/` by prior cron runs are 404 live:** office-cleanout-junk-removal-peoria-il, basement-cleanout-cost-springfield-il, hoarding-cleanout-tips-strategies-peoria-il, estate-cleanout-washington-il, junk-removal-cost-bloomington-il, junk-removal-galesburg-il, moving-prep-junk-removal-washington-il, shed-cleanout-cost-peoria-il, spring-cleaning-junk-removal-chillicothe-il, spring-cleaning-junk-removal-normal-il, washer-dryer-removal-cost-peoria-il
+- **This run wrote to `junk/` (correct).** Resolution of the two-tree split requires Cam — retire `junk-removal/` or migrate its posts into `junk/`. Also requires updating the cron job prompt.
+
+## Published Posts (junk/ live tree, 41 total as of 2026-10-06)
 
 ## Quality Checks PASSED
-- Zero emojis verified
+- Zero emojis verified (live page)
 - Zero HTML entities
 - No fabricated testimonials
-- CTA phone links (tel:+13098619815) present x6
+- CTA phone links (tel:+13098619815) present x8
 - BlogPosting JSON-LD schema present
-- FAQPage JSON-LD schema with 6 questions
-- 21+ major section headings
-- Local Chillicothe voice and tips
+- FAQPage JSON-LD schema with 5 questions
+- 11 h2 sections + tables/CTAs = 15 blocks
+- Internal links: homepage + 3 service pages + 2 blog posts
 - Content calendar file updated
-- Blog index card added as FIRST item (before shed-cleanout)
+- Blog index card added as FIRST item
