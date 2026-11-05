@@ -1,32 +1,23 @@
-// sellmidwesthome.com — form lead handler (Netlify Function)
+// {Brand} — form lead handler (Netlify Function)
 //
 // 1) Post the lead to Slack (#website-form-leads) in Cam's exact format.
-// 2) Push the lead into REsimpli, deduping against an existing OPEN lead
-//    (phone OR address) — no full lead scans, targeted searches only.
+// 2) Push the lead into REsimpli via the Open API (RESIMPLI_API_KEY ONLY — no JWT fallback),
+//    deduping against an existing OPEN lead (phone OR address).
 // 3) Append "REsimpli: <link>" to the Slack post on success, or
 //    "⚠️ Not in REsimpli: <reason>. Add manually." on failure.
 // 4) Flag-only spam check (city/state mismatch or far area code) — never blocks.
 // Zero npm dependencies (global fetch, Node 18+).
 //
-// Auth — two REsimpli APIs on the same host, never mixed:
-//   RESIMPLI_API_KEY  (Open API,   Authorization: <hex key>)  — PRIMARY
-//   RESIMPLI_JWT      (dashboard,  authorization: <raw JWT>)  — FALLBACK (only
-//                     used when RESIMPLI_API_KEY is absent or its key is invalid)
-//
-// Env vars (Netlify dashboard):
+// Env vars (Netlify dashboard, site-level):
 //   TO_SLACK_TOKEN           (existing)
-//   SLACK_LEAD_CHANNEL       (existing; default C0B2JA21Y30)
-//   RESIMPLI_API_KEY         (NEW — REsimpli Open API hex key)
-//   RESIMPLI_JWT             (NEW — REsimpli dashboard JWT, fallback only)
-//   RESIMPLI_CAMPAIGN_NAME   (optional; default "Peoria | SEO | Peoria Cash Buyers")
+//   SLACK_LEAD_CHANNEL       (optional; default C0B2JA21Y30)
+//   RESIMPLI_API_KEY         (REsimpli Open API hex key — from 1Password "TO – RESIMPLI")
+//   RESIMPLI_CAMPAIGN_NAME   (optional; default below)
 
 const OPENAPI_BASE = 'https://api.resimpli.com/api/v6/openapi';
-const DASHBOARD_BASE = 'https://api.resimpli.com/api/v6';
-const DASHBOARD_REFERER = 'https://dashboard.resimpli.com/';
 
-// Account IDs (shared by both APIs — same account).
+// Account IDs (Open API).
 const IDS = {
-  LEADS_MODULE: '5faa63fdfd20cd581703d255',     // activity/save module for leads (dashboard)
   MARKET_PRIMARY: '6539f23624b7f90043123d7c',   // "Primary Market"
   PIPELINE_ACTIVE: '6aa4dd1bd18014f8fc6529c3',  // "Active Leads"
   STATUS_NEW: '6aa4dd1bd18014f8fc6529c4',       // "New Leads" (first stage)
@@ -38,15 +29,10 @@ const CLOSED_STATUS_TITLES = new Set(['Dead Lead', 'Sold', 'Closed']);
 // property's state list is flagged as possible spam. (flag-only, never blocks)
 const STATE_AREA_CODES = {
   IL: ['217','224','309','312','331','464','618','630','708','773','815','847','872'],
-  OH: ['216','220','234','326','330','380','419','440','513','567','614','740','937'],
-  IN: ['219','260','317','463','574','765','812','930'],
-  MI: ['231','248','269','313','517','586','616','734','810','906','947','989'],
-  MO: ['314','417','557','573','636','660','816'],
-  KY: ['270','364','502','606','859'],
 };
 
 // Well-known US cities -> state (uppercase 2-letter). Used only to flag a
-// city/state mismatch (e.g. "El Paso" is in TX, so "El Paso, OH" is spam).
+// city/state mismatch (e.g. "El Paso" is in TX, so "El Paso, IL" is spam).
 // Unknown cities are NOT flagged — light heuristic, not a gazetteer.
 const CITY_STATE = {
   'akron':'OH','canton':'OH','cincinnati':'OH','cleveland':'OH','columbus':'OH',
@@ -56,8 +42,10 @@ const CITY_STATE = {
   'aurora':'IL','berwyn':'IL','bloomington':'IL','bolingbrook':'IL','champaign':'IL',
   'chicago':'IL','cicero':'IL','danville':'IL','decatur':'IL','downers grove':'IL',
   'elgin':'IL','joliet':'IL','moline':'IL','naperville':'IL','normal':'IL',
-  'palatine':'IL','peoria':'IL','rockford':'IL','schaumburg':'IL','waukegan':'IL',
-  'wheaton':'IL',
+  'palatine':'IL','peoria':'IL','pekin':'IL','peoria heights':'IL','bartonville':'IL',
+  'west peoria':'IL','chillicothe':'IL','east peoria':'IL','morton':'IL',
+  'washington':'IL','creve coeur':'IL','tremont':'IL','rockford':'IL',
+  'schaumburg':'IL','waukegan':'IL','wheaton':'IL',
   'anderson':'IN','carmel':'IN','evansville':'IN','fishers':'IN','fort wayne':'IN',
   'gary':'IN','greenwood':'IN','hammond':'IN','indianapolis':'IN','kokomo':'IN',
   'lafayette':'IN','muncie':'IN','noblesville':'IN','south bend':'IN','terre haute':'IN',
@@ -68,9 +56,6 @@ const CITY_STATE = {
   'blue springs':'MO','columbia':'MO','independence':'MO','kansas city':'MO',
   "lee's summit":'MO',"o'fallon":'MO','st. charles':'MO','st. joseph':'MO',
   'st. louis':'MO','st. peters':'MO',
-  'bowling green':'KY','covington':'KY','florence':'KY','georgetown':'KY',
-  'henderson':'KY','hopkinsville':'KY','lexington':'KY','louisville':'KY',
-  'owensboro':'KY','richmond':'KY',
   'el paso':'TX','los angeles':'CA','san francisco':'CA','san diego':'CA','sacramento':'CA',
   'new york':'NY','brooklyn':'NY','buffalo':'NY','rochester':'NY','syracuse':'NY',
   'miami':'FL','tampa':'FL','orlando':'FL','jacksonville':'FL',
@@ -95,7 +80,6 @@ function toE164(raw) {
   return '+' + d;
 }
 
-// Normalize an address to its street portion (lowercase, punctuation stripped).
 function normStreet(s) {
   return String(s || '')
     .split(',')[0]
@@ -134,14 +118,7 @@ function spamCheck({ city, state, phone }) {
   return reasons.length ? `⚠️ Check: possible spam (${reasons.join('; ')})` : null;
 }
 
-// Market mapping. Site is multi-state (6 Midwest states); REsimpli has NO
-// "Midwest" market, so every lead files under "Primary Market" (same catch-all
-// as "All Markets | JV"). Alt: OH -> "Columbus, OH", MO -> "St.Louis, MO".
-function marketIdFor(_state) {
-  return IDS.MARKET_PRIMARY;
-}
-
-// ---- REsimpli clients ------------------------------------------------------
+// ---- REsimpli Open API client ---------------------------------------------
 
 async function openApi(path, body, apiKey) {
   const r = await fetch(`${OPENAPI_BASE}/${path}`, {
@@ -153,33 +130,15 @@ async function openApi(path, body, apiKey) {
   return j;
 }
 
-async function dashboard(path, body, jwt) {
-  const r = await fetch(`${DASHBOARD_BASE}/${path}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', authorization: jwt, Referer: DASHBOARD_REFERER },
-    body: JSON.stringify(body),
-  });
-  let j; try { j = await r.json(); } catch { j = { statusCode: r.status, message: 'non-json' }; }
-  return j;
+function ok(j) {
+  return !!(j && (j.statusCode === 200 || j.statusCode === 201 || j.status === 200 || j.data));
 }
 
-// Find campaign by exact name -> _id or null.
-async function findCampaignByName(name, { apiKey, jwt }) {
-  if (apiKey) {
-    const r = await openApi('marketingCampaignList', { campaignType: 1 }, apiKey);
-    const items = (r && (r.data && (r.data.items || r.data))) || [];
-    for (const c of items) if (c.name === name) return c._id;
-    return null;
-  }
-  let page = 1;
-  while (true) {
-    const r = await dashboard('marketingCampaign/list', { page, limit: 100 }, jwt);
-    const items = (r && r.data && r.data.items) || [];
-    if (!items.length) break;
-    for (const c of items) if (c.name === name && !c.isDeleted) return c._id;
-    if (items.length < 100) break;
-    page++;
-  }
+// Find campaign by exact name -> _id or null (Open API only).
+async function findCampaignByName(name, apiKey) {
+  const r = await openApi('marketingCampaignList', { campaignType: 1 }, apiKey);
+  const items = (r && (r.data && (r.data.items || r.data))) || [];
+  for (const c of items) if (c.name === name) return c._id;
   return null;
 }
 
@@ -202,31 +161,16 @@ function leadPhones(lead) {
   return out;
 }
 
-// Targeted de-dupe (NO full scans).
-// Open API: lead/list {searchStr} — search by address street and by phone.
-// Dashboard: contact/search by phone (fast). Returns { leadId } or null.
-async function findExistingOpenLead({ streetNorm, phoneDigits, apiKey, jwt }) {
-  if (apiKey) {
-    for (const q of [streetNorm, phoneDigits]) {
-      if (!q) continue;
-      const r = await openApi('lead/list', { searchStr: q, page: 1, limit: 100 }, apiKey);
-      const items = (r && r.data && (r.data.items || r.data)) || [];
-      for (const lead of items) {
-        if (!isOpenLead(lead)) continue;
-        if (streetNorm && normStreet(lead.address) === streetNorm) return { leadId: lead._id };
-        if (phoneDigits && leadPhones(lead).includes(phoneDigits)) return { leadId: lead._id };
-      }
-    }
-    return null;
-  }
-
-  // Dashboard fallback: phone only (contact/search is the fast targeted path).
-  if (phoneDigits) {
-    const r = await dashboard('contact/search', { searchString: phoneDigits }, jwt);
-    const items = (r && r.data && r.data.items) || [];
-    for (const c of items) {
-      const phones = (c.phoneNumbers || []).map((p) => last10(p.phoneNumber));
-      if (phones.includes(phoneDigits)) return { contactExists: true, contactId: c._id };
+// Targeted de-dupe (NO full scans) — search by address street and by phone.
+async function findExistingOpenLead({ streetNorm, phoneDigits, apiKey }) {
+  for (const q of [streetNorm, phoneDigits]) {
+    if (!q) continue;
+    const r = await openApi('lead/list', { searchStr: q, page: 1, limit: 100 }, apiKey);
+    const items = (r && r.data && (r.data.items || r.data)) || [];
+    for (const lead of items) {
+      if (!isOpenLead(lead)) continue;
+      if (streetNorm && normStreet(lead.address) === streetNorm) return { leadId: lead._id };
+      if (phoneDigits && leadPhones(lead).includes(phoneDigits)) return { leadId: lead._id };
     }
   }
   return null;
@@ -234,7 +178,7 @@ async function findExistingOpenLead({ streetNorm, phoneDigits, apiKey, jwt }) {
 
 function buildNote({ situation, timeline, email, source, submitted }) {
   return [
-    'Source: Peoria Cash Buyers website form',
+    `Source: Peoria Cash Buyers website form`,
     situation ? `Situation: ${situation}` : null,
     timeline ? `Timeline: ${timeline}` : null,
     email ? `Email: ${email}` : null,
@@ -243,8 +187,8 @@ function buildNote({ situation, timeline, email, source, submitted }) {
   ].filter(Boolean).join('\n');
 }
 
-// Push the lead. Returns { leadId, existing } or { error }.
-async function pushLead(fields, { apiKey, jwt }) {
+// Push the lead (Open API only). Returns { leadId, existing } or { error }.
+async function pushLead(fields, { apiKey }) {
   const { name, phone, address, city, state, situation, timeline, email, source, submitted, campaignId } = fields;
   const phoneDigits = last10(phone);
   const e164 = toE164(phone);
@@ -254,86 +198,43 @@ async function pushLead(fields, { apiKey, jwt }) {
     return { error: 'no valid phone (lead requires a phone)' };
   }
 
-  const existing = await findExistingOpenLead({ streetNorm, phoneDigits, apiKey, jwt });
+  const existing = await findExistingOpenLead({ streetNorm, phoneDigits, apiKey });
   const note = buildNote({ situation, timeline, email, source, submitted });
 
   // Existing OPEN lead -> add a note (don't duplicate).
   if (existing && existing.leadId) {
-    const addNote = apiKey
-      ? await openApi('activity/add', { moduleId: 1, subModuleId: existing.leadId, comment: note }, apiKey)
-      : await dashboard('activity/save', { moduleId: IDS.LEADS_MODULE, subModuleId: existing.leadId, comment: note, activityType: 8 }, jwt);
-    const ok = addNote && (addNote.statusCode === 200 || addNote.statusCode === 201 || addNote.status === 200);
-    return ok ? { leadId: existing.leadId, existing: true } : { error: `note on existing lead failed: ${(addNote && addNote.message) || 'unknown'}`, leadId: existing.leadId };
+    const addNote = await openApi('activity/add', { moduleId: 1, subModuleId: existing.leadId, comment: note }, apiKey);
+    return ok(addNote)
+      ? { leadId: existing.leadId, existing: true }
+      : { error: `note on existing lead failed: ${(addNote && addNote.message) || 'unknown'}`, leadId: existing.leadId };
   }
 
   // New lead.
-  if (apiKey) {
-    const contactDetails = {
-      firstName: (name || 'Seller').trim().split(/\s+/)[0] || 'Seller',
-      lastName: (name || 'Seller').trim().split(/\s+/).slice(1).join(' '),
-      phoneNumbers: [{ phoneNumber: phoneDigits, isPrimary: true }],
-    };
-    if (email) contactDetails.emails = [{ email, isPrimary: true }];
-
-    const fullAddress = [address, city, state].filter(Boolean).join(', ');
-    const l = await openApi('lead/add', {
-      contactDetails,
-      propertyType: 'residential',
-      address: fullAddress,
-      marketingCampignId: campaignId,
-      marketId: marketIdFor(state),
-      pipelineId: IDS.PIPELINE_ACTIVE,
-      mainStatusId: IDS.STATUS_NEW,
-      leadCreated: new Date().toISOString(),
-    }, apiKey);
-    const leadId = (l && l.data && (l.data._id || l.data.leadId || l.data.id)) || (l && l.leadId);
-    if (!leadId) return { error: `lead/add failed: ${(l && l.message) || 'unknown'}` };
-    // Write the note ONCE via activity/add (lead/add's comment may not persist as a note).
-    const n = await openApi('activity/add', { moduleId: 1, subModuleId: leadId, comment: note }, apiKey);
-    const noteOk = !!(n && (n.statusCode === 200 || n.statusCode === 201 || n.status === 200));
-    return { leadId, existing: false, noteOk };
-  }
-
-  // Dashboard fallback: contact find-or-create -> lead/save -> activity/save.
-  let contactId = (existing && existing.contactId) || null;
-  if (!contactId) {
-    const s = await dashboard('contact/search', { searchString: phoneDigits }, jwt);
-    const items = (s && s.data && s.data.items) || [];
-    for (const c of items) {
-      const phones = (c.phoneNumbers || []).map((p) => last10(p.phoneNumber));
-      if (phones.includes(phoneDigits)) { contactId = c._id; break; }
-    }
-  }
-  if (!contactId) {
-    const [first, ...rest] = (name || 'Seller').trim().split(/\s+/);
-    const body = {
-      firstName: first || 'Seller',
-      lastName: rest.join(' '),
-      phoneNumbers: [{ phoneNumber: e164, isPrimary: true }],
-    };
-    if (email) body.emails = [{ email }];
-    const c = await dashboard('contact/save', body, jwt);
-    contactId = c && c.data && (c.data._id || c.data.contactId);
-    if (!contactId) return { error: `contact/save failed: ${(c && c.message) || 'unknown'}` };
-  }
+  const contactDetails = {
+    firstName: (name || 'Seller').trim().split(/\s+/)[0] || 'Seller',
+    lastName: (name || 'Seller').trim().split(/\s+/).slice(1).join(' '),
+    phoneNumbers: [{ phoneNumber: phoneDigits, isPrimary: true }],
+  };
+  if (email) contactDetails.emails = [{ email, isPrimary: true }];
 
   const fullAddress = [address, city, state].filter(Boolean).join(', ');
-  const l = await dashboard('lead/save', {
+  const l = await openApi('lead/add', {
+    contactDetails,
     propertyType: 'residential',
+    address: fullAddress,
     marketingCampignId: campaignId,
-    marketId: marketIdFor(state),
+    marketId: IDS.MARKET_PRIMARY,
     pipelineId: IDS.PIPELINE_ACTIVE,
     mainStatusId: IDS.STATUS_NEW,
-    leadCreated: Date.now(),
-    isContactExists: true,
-    contactInfo: [{ contactId, isPrimary: true }],
-    address: fullAddress,
-  }, jwt);
-  const leadId = l && l.data && l.data._id;
-  if (!leadId) return { error: `lead/save failed: ${(l && l.message) || 'unknown'}` };
+    leadCreated: new Date().toISOString(),
+  }, apiKey);
+  const leadId = (l && l.data && (l.data._id || l.data.leadId || l.data.id)) || (l && l.leadId);
+  if (!leadId) return { error: `lead/add failed: ${(l && l.message) || 'unknown'}` };
 
-  await dashboard('activity/save', { moduleId: IDS.LEADS_MODULE, subModuleId: leadId, comment: note, activityType: 8 }, jwt);
-  return { leadId, existing: false };
+  // Write the note ONCE via activity/add (lead/add's comment may not persist as a note).
+  const n = await openApi('activity/add', { moduleId: 1, subModuleId: leadId, comment: note }, apiKey);
+  const noteOk = ok(n);
+  return { leadId, existing: false, noteOk };
 }
 
 // ---- Slack -----------------------------------------------------------------
@@ -380,7 +281,7 @@ exports.handler = async (event) => {
   const email = String(data.email || '').trim();
   const address = String(data.address || '').trim();
   const city = String(data.city || '').trim();
-  const state = String(data.state || '').trim();
+  const state = String(data.state || 'IL').trim();
   const situation = String(data.situation || '').trim();
   const timeline = String(data.timeline || '').trim();
   const source = String(data.source || '').trim();
@@ -414,43 +315,28 @@ exports.handler = async (event) => {
     timing.slackPost = `${Date.now() - s0}ms`;
   }
 
-  // REsimpli push (Open API primary, JWT fallback).
+  // REsimpli push (Open API only — no JWT fallback).
   const apiKey = (process.env.RESIMPLI_API_KEY || '').trim();
-  const jwt = (process.env.RESIMPLI_JWT || '').trim();
   const campaignName = (process.env.RESIMPLI_CAMPAIGN_NAME || 'Peoria | SEO | Peoria Cash Buyers').trim();
 
-  let resimpli = { status: 'skipped', reason: 'no RESIMPLI_API_KEY or RESIMPLI_JWT configured' };
-  let authMode = null;
+  let resimpli = { status: 'skipped', reason: 'no RESIMPLI_API_KEY configured' };
 
-  if (apiKey || jwt) {
+  if (apiKey) {
     const r0 = Date.now();
     try {
-      if (apiKey) {
-        const info = await openApi('getUserInfo', {}, apiKey);
-        authMode = (info && (info.statusCode === 200 || info.data)) ? 'openapi' : (jwt ? 'jwt' : null);
-      } else if (jwt) {
-        authMode = 'jwt';
-      }
-
-      if (authMode) {
-        const campaignId = await findCampaignByName(campaignName, {
-          apiKey: authMode === 'openapi' ? apiKey : null,
-          jwt: authMode === 'jwt' ? jwt : null,
-        });
-
+      const info = await openApi('getUserInfo', {}, apiKey);
+      if (!ok(info)) {
+        resimpli = { status: 'skipped', reason: 'RESIMPLI_API_KEY invalid' };
+      } else {
+        const campaignId = await findCampaignByName(campaignName, apiKey);
         if (!campaignId) {
           resimpli = { status: 'skipped', reason: `campaign "${campaignName}" not found (create it in REsimpli)` };
         } else {
           resimpli = await pushLead({
             name, phone, address, city, state, situation, timeline, email, source, submitted, campaignId,
-          }, {
-            apiKey: authMode === 'openapi' ? apiKey : null,
-            jwt: authMode === 'jwt' ? jwt : null,
-          });
-          resimpli.auth = authMode;
+          }, { apiKey });
+          resimpli.auth = 'openapi';
         }
-      } else {
-        resimpli = { status: 'skipped', reason: 'RESIMPLI_API_KEY invalid and no RESIMPLI_JWT fallback' };
       }
     } catch (err) {
       resimpli = { status: 'error', reason: err.message };
