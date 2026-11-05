@@ -285,13 +285,13 @@ async function pushLead(fields, { apiKey, jwt }) {
       pipelineId: IDS.PIPELINE_ACTIVE,
       mainStatusId: IDS.STATUS_NEW,
       leadCreated: new Date().toISOString(),
-      comment: note,
     }, apiKey);
     const leadId = (l && l.data && (l.data._id || l.data.leadId || l.data.id)) || (l && l.leadId);
     if (!leadId) return { error: `lead/add failed: ${(l && l.message) || 'unknown'}` };
-    // Also write the note explicitly (comment on lead/add may not persist as a note).
-    await openApi('activity/add', { moduleId: 1, subModuleId: leadId, comment: note }, apiKey);
-    return { leadId, existing: false };
+    // Write the note ONCE via activity/add (lead/add's comment may not persist as a note).
+    const n = await openApi('activity/add', { moduleId: 1, subModuleId: leadId, comment: note }, apiKey);
+    const noteOk = !!(n && (n.statusCode === 200 || n.statusCode === 201 || n.status === 200));
+    return { leadId, existing: false, noteOk };
   }
 
   // Dashboard fallback: contact find-or-create -> lead/save -> activity/save.
