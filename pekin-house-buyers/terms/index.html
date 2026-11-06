@@ -23,38 +23,38 @@
 </script>
 
 <style>
-:root {--navy-950:#0E1A16;--navy-900:#12231D;--navy:#16291F;--navy-700:#23412F;--red:#B45309;--red-deep:#92400E;--red-bright:#D97706;--gold:#C0814B;--gold-soft:#D8A878;--gold-pale:#F0E0CE;--star-gold:#D9A23F;}
+:root {--navy-950:#0B1F14;--navy-900:#10291A;--navy:#163722;--navy-700:#1E4B2E;--red:#A65A2A;--red-deep:#7E411C;--red-bright:#C1703A;--gold:#C98A5B;--gold-soft:#D9A878;--gold-pale:#F2E3D0;--star-gold:#C9823F;}
 
     /* ============================================================
-       PEORIA DECK PROS — Heritage Design System
-       Deep navy · Crimson · Brass · Cream
+       PEKIN HOUSE BUYERS — Prairie Design System
+       Forest green · Warm cream · Copper
        Fraunces (display) + Inter (body)
        ============================================================ */
 
     :root {
-      --navy-950: #0B1024;
-      --navy-900: #101731;
-      --navy: #151D3B;
-      --navy-700: #222C55;
+      --navy-950: #0B1F14;
+      --navy-900: #10291A;
+      --navy: #163722;
+      --navy-700: #1E4B2E;
       --navy-line: rgba(255,255,255,0.12);
 
-      --red: #9E1B2F;
-      --red-deep: #7F1425;
-      --red-bright: #C8102E;
+      --red: #A65A2A;
+      --red-deep: #7E411C;
+      --red-bright: #C1703A;
 
-      --gold: #C09A4E;
-      --gold-soft: #D8BC82;
-      --gold-pale: #F0E6CB;
-      --star-gold: #E3A82B;
+      --gold: #C98A5B;
+      --gold-soft: #D9A878;
+      --gold-pale: #F2E3D0;
+      --star-gold: #C9823F;
 
-      --paper: #FDFBF6;
-      --cream: #F6F0E3;
-      --cream-2: #EFE5D0;
+      --paper: #FDF9F1;
+      --cream: #F7EFDF;
+      --cream-2: #EFE4CE;
 
-      --ink: #1B2135;
-      --body-color: #414A61;
-      --muted: #6E7488;
-      --line: #E7DECA;
+      --ink: #1A2A1F;
+      --body-color: #3F4A41;
+      --muted: #6B7468;
+      --line: #E8DEC8;
 
       --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -66,9 +66,9 @@
       --radius: 12px;
       --radius-lg: 18px;
 
-      --shadow-sm: 0 1px 3px rgba(16,23,49,0.08);
-      --shadow-md: 0 10px 30px -8px rgba(16,23,49,0.16);
-      --shadow-lg: 0 24px 60px -16px rgba(16,23,49,0.28);
+      --shadow-sm: 0 1px 3px rgba(16,41,26,0.08);
+      --shadow-md: 0 10px 30px -8px rgba(16,41,26,0.16);
+      --shadow-lg: 0 24px 60px -16px rgba(16,41,26,0.28);
 
       --transition-fast: 0.18s cubic-bezier(0.4,0,0.2,1);
       --transition-base: 0.32s cubic-bezier(0.4,0,0.2,1);
@@ -141,7 +141,7 @@
     /* ============================================================ HEADER ============================================================ */
     .header {
       position: fixed; top: var(--topbar-height); left: 0; right: 0; z-index: 1000;
-      background: rgba(253,251,246,0.94); backdrop-filter: blur(12px);
+      background: rgba(253,249,241,0.94); backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
       height: var(--header-height);
@@ -170,7 +170,7 @@
       background: var(--red); color: #fff !important;
       font-weight: 600; font-size: 15px; border-radius: var(--radius-sm);
       padding: 12px 24px; text-align: center;
-      box-shadow: 0 6px 18px -6px rgba(158,27,47,0.55);
+      box-shadow: 0 6px 18px -6px rgba(166,90,42,0.55);
       transition: background var(--transition-fast), transform var(--transition-fast);
     }
     .header-cta:hover { background: var(--red-deep); transform: translateY(-1px); }
@@ -179,7 +179,7 @@
     .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
     .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-overlay { position: fixed; inset: 0; background: rgba(11,16,36,0.5); opacity: 0; pointer-events: none; transition: opacity var(--transition-base); z-index: 998; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(11,31,20,0.5); opacity: 0; pointer-events: none; transition: opacity var(--transition-base); z-index: 998; }
     .nav-overlay.active { opacity: 1; pointer-events: auto; }
 
     /* ============================================================ BUTTONS ============================================================ */
@@ -189,7 +189,7 @@
       padding: 16px 32px; border-radius: var(--radius-sm); border: none;
       cursor: pointer; transition: all var(--transition-fast); line-height: 1.2;
     }
-    .btn-red { background: var(--red); color: #fff; box-shadow: 0 10px 24px -8px rgba(158,27,47,0.6); }
+    .btn-red { background: var(--red); color: #fff; box-shadow: 0 10px 24px -8px rgba(166,90,42,0.6); }
     .btn-red:hover { background: var(--red-deep); transform: translateY(-2px); color: #fff; }
     .btn-navy { background: var(--navy); color: #fff; }
     .btn-navy:hover { background: var(--navy-700); transform: translateY(-2px); }
@@ -197,7 +197,7 @@
     .btn-outline:hover { border-color: var(--red); color: var(--red); }
     .btn-outline-light { background: transparent; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; }
     .btn-outline-light:hover { border-color: var(--gold); color: var(--gold-soft); }
-    .btn-gold { background: var(--gold); color: var(--navy-950); box-shadow: 0 10px 24px -8px rgba(192,154,78,0.55); }
+    .btn-gold { background: var(--gold); color: var(--navy-950); box-shadow: 0 10px 24px -8px rgba(201,138,91,0.55); }
     .btn-gold:hover { background: var(--gold-soft); transform: translateY(-2px); }
     .icon-svg { display: inline-flex; }
     .icon-svg svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
@@ -213,8 +213,8 @@
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
     .hero-overlay {
       position: absolute; inset: 0; z-index: -1;
-      background: linear-gradient(100deg, rgba(11,16,36,0.92) 0%, rgba(11,16,36,0.78) 42%, rgba(11,16,36,0.42) 100%),
-                  linear-gradient(0deg, rgba(11,16,36,0.5) 0%, rgba(11,16,36,0) 40%);
+      background: linear-gradient(100deg, rgba(11,31,20,0.92) 0%, rgba(11,31,20,0.78) 42%, rgba(11,31,20,0.42) 100%),
+                  linear-gradient(0deg, rgba(11,31,20,0.5) 0%, rgba(11,31,20,0) 40%);
     }
     .hero-container {
       max-width: var(--max-width); margin: 0 auto; padding: 0 32px; width: 100%;
@@ -257,7 +257,7 @@
       font-size: 15.5px; font-family: var(--font-body); color: var(--ink); background: #fff;
       transition: border-color var(--transition-fast), box-shadow var(--transition-fast); appearance: none;
     }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(21,29,59,0.1); }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(22,55,34,0.1); }
     textarea { resize: vertical; }
     .form-secure { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 13px; color: var(--muted); }
     .form-secure svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; }
@@ -284,7 +284,7 @@
     .guarantee-band h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); color: #fff; margin-bottom: 18px; }
     .guarantee-band h2 em { font-style: italic; color: var(--gold-soft); }
     .guarantee-band p { color: rgba(255,255,255,0.75); font-size: 1.06rem; margin-bottom: 30px; }
-    .guarantee-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(192,154,78,0.15); border: 2px solid rgba(192,154,78,0.4); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+    .guarantee-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(201,138,91,0.15); border: 2px solid rgba(201,138,91,0.4); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
     .guarantee-icon svg { width: 32px; height: 32px; stroke: var(--gold-soft); fill: none; stroke-width: 1.8; }
 
     /* ============================================================ PROCESS ============================================================ */
@@ -301,13 +301,13 @@
 
     /* ============================================================ LOCAL FACTORS (WHY PEORIA) ============================================================ */
     .factors-section {
-      background: radial-gradient(1200px 500px at 85% -10%, rgba(192,154,78,0.12), transparent 60%), var(--navy);
+      background: radial-gradient(1200px 500px at 85% -10%, rgba(201,138,91,0.12), transparent 60%), var(--navy);
       color: #fff;
     }
     .factors-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
     .factor-card { background: rgba(255,255,255,0.045); border: 1px solid var(--navy-line); border-radius: var(--radius); padding: 30px 26px; transition: background var(--transition-base), border-color var(--transition-base); }
-    .factor-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(192,154,78,0.5); }
-    .factor-icon { width: 46px; height: 46px; border-radius: 10px; background: rgba(192,154,78,0.14); border: 1px solid rgba(192,154,78,0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .factor-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(201,138,91,0.5); }
+    .factor-icon { width: 46px; height: 46px; border-radius: 10px; background: rgba(201,138,91,0.14); border: 1px solid rgba(201,138,91,0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
     .factor-icon svg { width: 22px; height: 22px; stroke: var(--gold-soft); fill: none; stroke-width: 2; }
     .factor-card h3 { color: #fff; font-size: 1.12rem; margin-bottom: 10px; }
     .factor-card p { color: rgba(255,255,255,0.68); font-size: 14.5px; line-height: 1.65; }
@@ -320,7 +320,7 @@
     .compare-table thead th { font-family: var(--font-heading); font-size: 1.05rem; color: var(--ink); background: var(--paper); border-bottom: 2px solid var(--line); }
     .compare-table thead th.col-alt { background: var(--navy); color: #fff; }
     .compare-table thead th.col-alt .star { color: var(--gold); margin-right: 6px; }
-    .compare-table td.col-alt { background: rgba(21,29,59,0.035); font-weight: 600; color: var(--ink); }
+    .compare-table td.col-alt { background: rgba(22,55,34,0.035); font-weight: 600; color: var(--ink); }
     .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: none; }
     .compare-table tbody th { font-family: var(--font-body); font-weight: 600; color: var(--ink); font-size: 14.5px; white-space: nowrap; }
     .compare-table td { color: var(--muted); }
@@ -334,7 +334,7 @@
     .gallery-img { position: relative; aspect-ratio: 4 / 2.7; overflow: hidden; }
     .gallery-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
     .gallery-card:hover .gallery-img img { transform: scale(1.05); }
-    .gallery-tag { position: absolute; top: 14px; left: 14px; background: rgba(11,16,36,0.85); backdrop-filter: blur(4px); color: var(--gold-soft); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px; border-radius: 40px; }
+    .gallery-tag { position: absolute; top: 14px; left: 14px; background: rgba(11,31,20,0.85); backdrop-filter: blur(4px); color: var(--gold-soft); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px; border-radius: 40px; }
     .gallery-status { position: absolute; bottom: 14px; right: 14px; background: var(--red); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; border-radius: 40px; }
     .gallery-body { padding: 22px 22px 24px; }
     .gallery-body h3 { font-size: 1.12rem; margin-bottom: 4px; }
@@ -393,7 +393,7 @@
     .area-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 40px; font-size: 14px; font-weight: 600; }
     .area-chip.primary { background: var(--red); color: #fff; }
     .area-chip.secondary { background: rgba(255,255,255,0.08); border: 1px solid var(--navy-line); color: rgba(255,255,255,0.85); }
-    .area-chip.secondary:hover { background: rgba(255,255,255,0.14); border-color: rgba(192,154,78,0.4); }
+    .area-chip.secondary:hover { background: rgba(255,255,255,0.14); border-color: rgba(201,138,91,0.4); }
     .area-chip svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
 
     /* ============================================================ FAQ ============================================================ */
@@ -412,7 +412,7 @@
     .cta-band { position: relative; padding: 120px 0; text-align: center; isolation: isolate; }
     .cta-band-bg { position: absolute; inset: 0; z-index: -2; }
     .cta-band-bg img { width: 100%; height: 100%; object-fit: cover; }
-    .cta-band-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(11,16,36,0.92) 0%, rgba(11,16,36,0.72) 100%); }
+    .cta-band-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(11,31,20,0.92) 0%, rgba(11,31,20,0.72) 100%); }
     .cta-band .container { position: relative; }
     .cta-band h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); color: #fff; margin-bottom: 18px; }
     .cta-band h2 em { font-style: italic; color: var(--gold-soft); }
@@ -527,7 +527,7 @@
 <header class="header" id="header">
 <div class="header-inner">
 <a class="logo" href="/">
-<div class="logo-icon"><svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect fill="#151D3B" height="44" rx="8" width="44"></rect><path d="M8 30 L22 16 L36 30" stroke="#C09A4E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M13 30 L13 34 L31 34 L31 30" stroke="#FDFBF6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M10 34 L34 34" stroke="#9E1B2F" stroke-linecap="round" stroke-width="2"></path></svg></div>
+<div class="logo-icon"><svg fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect fill="#163722" height="44" rx="8" width="44"></rect><path d="M8 30 L22 16 L36 30" stroke="#C98A5B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M13 30 L13 34 L31 34 L31 30" stroke="#FDF9F1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M10 34 L34 34" stroke="#A65A2A" stroke-linecap="round" stroke-width="2"></path></svg></div>
 <span>Pekin House Buyers</span>
 </a>
 <nav class="nav" id="main-nav">
@@ -584,7 +584,7 @@
 </select>
 </div>
 <button class="btn btn-red" style="width:100%" type="submit">Get My Cash Offer</button>
-<p style="font-size:12px;color:#6E7488;margin-top:12px;text-align:center;">By submitting, you agree to receive calls and texts from Pekin House Buyers, including automated messages. Reply STOP to opt out.</p>
+<p style="font-size:12px;color:#6B7468;margin-top:12px;text-align:center;">By submitting, you agree to receive calls and texts from Pekin House Buyers, including automated messages. Reply STOP to opt out.</p>
 <p class="section-note" id="form-status" style="display:none;"></p>
 </form>
 </div>
@@ -613,7 +613,7 @@ async function submitLead(e) {
 <div class="container">
 <div class="footer-grid">
 <div class="footer-brand">
-<a class="logo" href="/"><div class="logo-icon" style="width:36px;height:36px"><svg fill="none" viewbox="0 0 44 44"><rect fill="#222C55" height="44" rx="8" width="44"></rect><path d="M8 30 L22 16 L36 30" stroke="#C09A4E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M13 30 L13 34 L31 34 L31 30" stroke="#D8BC82" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M10 34 L34 34" stroke="#9E1B2F" stroke-linecap="round" stroke-width="2"></path></svg></div><span>Pekin House Buyers</span></a>
+<a class="logo" href="/"><div class="logo-icon" style="width:36px;height:36px"><svg fill="none" viewbox="0 0 44 44"><rect fill="#1E4B2E" height="44" rx="8" width="44"></rect><path d="M8 30 L22 16 L36 30" stroke="#C98A5B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M13 30 L13 34 L31 34 L31 30" stroke="#D9A878" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M10 34 L34 34" stroke="#A65A2A" stroke-linecap="round" stroke-width="2"></path></svg></div><span>Pekin House Buyers</span></a>
 <p>We buy houses for cash in Tazewell County, Illinois. No fees, no agent commissions, no repairs. A local Peoria-area cash buyer.</p>
 </div>
 <div class="footer-col"><h4>Ways We Buy</h4><ul>
