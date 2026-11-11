@@ -35,28 +35,13 @@ SITES = {
 
 
 def gen_flip(site, cfg, dry_run):
-    """Flip site_url -> real domain and noindex True -> False in the generator."""
-    src = open(GEN).read()
-    url_line = f'"site_url": "{cfg["preview"]}",'
-    new_url_line = f'"site_url": "https://{cfg["domain"]}",'
-    assert url_line in src, f"site_url line not found for {site}"
-
-    # noindex flag immediately follows site_url in the same entry
-    idx = src.index(url_line)
-    nxt = src.index('"noindex":', idx)
-    noidx_line = src[nxt:src.index('\n', nxt) + 1]
-
-    changed = src.replace(url_line, new_url_line, 1)
-    changed = changed.replace(noidx_line, '        "noindex": False,\n', 1)
-
-    print(f"[content] site_url  {cfg['preview']}  ->  https://{cfg['domain']}")
-    print(f"[content] noindex   True -> False")
-    print(f"[content] canonicals + sitemap regenerate via build_seller_sites.py")
-    if not dry_run:
-        open(GEN, "w").write(changed)
-        subprocess.run(["python3", "build_seller_sites.py"], cwd=os.path.dirname(GEN), check=True)
-        print(f"[content] regenerated {site} (noindex removed, canonicals -> real domain)")
-    return changed
+    """DISABLED — build_seller_sites.py was never committed and has been pruned from the
+    scratch cache. The committed HTML is the source of truth for the seller sites."""
+    print(f"[content] BLOCKED — build_seller_sites.py is gone (never committed to the repo; "
+          f"pruned from ~/.hermes/cache/scratch/). Committed HTML under {site}/ is the source of "
+          f"truth. To launch, apply the site_url -> https://{cfg['domain']} and noindex True -> False "
+          f"flip directly to the committed HTML pages, not via the generator.")
+    sys.exit(2)
 
 
 def env_vars(site, cfg, dry_run):
