@@ -279,7 +279,7 @@
     textarea { resize: vertical; }
     .form-secure { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 13px; color: var(--muted); }
     .form-secure svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; }
-    .hp-field { position: absolute; left: -9999px; height: 1px; width: 1px; overflow: hidden; }
+    .hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
     /* ============================================================ STATS BAND ============================================================ */
     .stats-band { background: var(--navy-950); border-top: 1px solid var(--navy-line); padding: 56px 0; }
@@ -514,7 +514,7 @@
 <div class="topbar">
 <div class="topbar-inner">
 <span class="flag-note"><span class="star">★</span> We buy houses for cash in Tazewell County, IL — close in as little as 7 days</span>
-<div class="topbar-right"><span class="hours">Local Tazewell County buyer</span> <a data-tel href="#offer"><span data-phone></span></a></div>
+<div class="topbar-right"><span class="hours">Local Tazewell County buyer</span> <a href="tel:+13092716949">(309) 271-6949</a></div>
 </div>
 </div>
 
@@ -532,7 +532,7 @@
 <a href="/about/">About</a>
 </nav>
 <div class="header-actions">
-<a class="header-phone" data-tel href="#offer"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span data-phone></span></a>
+<a class="header-phone" href="tel:+13092716949"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(309) 271-6949</a>
 <a class="header-cta" href="#offer">Get My Cash Offer</a>
 </div>
 <button aria-label="Toggle menu" class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
@@ -543,20 +543,20 @@
 <main id="main-content">
 
 <section class="hero">
-<div class="hero-bg" style="background:linear-gradient(120deg,var(--navy-950) 0%,var(--navy) 55%,var(--navy-700) 100%)"><img src="/assets/hero.webp" alt="Two-story frame house with a front porch in Pekin, Illinois" width="1600" height="900" fetchpriority="high"></div>
+<div class="hero-bg" style="background:linear-gradient(120deg,var(--navy-950) 0%,var(--navy) 55%,var(--navy-700) 100%)"><img src="/assets/hero.webp" alt="Two-story frame house with a front porch" width="1600" height="900" fetchpriority="high"></div>
 <div class="hero-overlay"></div>
 <div class="hero-container">
 <div class="hero-content">
 <div class="hero-eyebrow"><span class="star">★</span> Tazewell County, Illinois</div>
 <h1>We Buy Houses in Pekin for Cash <em>No fees. No repairs. A fair cash offer.</em></h1>
-<p class="hero-sub">We buy houses in Pekin and across Tazewell County for cash — in any condition. Skip the listing and the repairs, get a fair cash offer, and close on your timeline, in as little as 7 days.</p>
+<p class="hero-sub">We buy houses in Pekin and across Tazewell County for cash — as-is. Skip the listing and the repairs, get a fair cash offer, and close on your timeline, in as little as 7 days.</p>
 <ul class="hero-trust-list">
 <li><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> No fees &mdash; we cover closing costs</li>
 <li><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> No agent commissions</li>
 <li><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Buy as-is &mdash; no repairs needed</li>
 <li><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Close in as little as 7 days</li>
 </ul>
-<div class="hero-phone-row"><a data-tel href="#offer"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span data-phone></span></a></div>
+<div class="hero-phone-row"><a href="tel:+13092716949"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(309) 271-6949</a></div>
 </div>
 <div class="hero-form-card">
 <div class="hero-form-header"><h2>Get Your Cash Offer</h2><p>No obligation. No pressure.</p></div>
@@ -587,12 +587,12 @@
 <div class="stat"><div class="stat-value"><span class="accent">7</span></div><div class="stat-label">Days to Close (as little as)</div></div>
 <div class="stat"><div class="stat-value"><span class="accent">$0</span></div><div class="stat-label">Fees &amp; Commissions</div></div>
 <div class="stat"><div class="stat-value"><span class="accent">16</span></div><div class="stat-label">Tazewell County Towns</div></div>
-</div></div>
+</div><p style="text-align:center;color:rgba(255,255,255,0.65);font-size:13.5px;margin:20px auto 0;max-width:760px;">Close in as little as 7 days, or on the date you choose. Most sellers pick 2&ndash;6 weeks out.</p></div>
 
 <div class="cred-strip"><div class="cred-inner">
 <div class="cred-item"><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> No Fees &mdash; We Cover Closing Costs</div>
 <div class="cred-item"><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> No Agent Commissions</div>
-<div class="cred-item"><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Buy As-Is, Any Condition</div>
+<div class="cred-item"><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Buy As-Is</div>
 <div class="cred-item"><svg viewbox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2.5;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Cash Offer Usually Same Day</div>
 </div></div>
 
@@ -607,7 +607,7 @@
 </div>
 <div class="process-cta">
 <a class="btn btn-red" href="#offer">Get My Cash Offer</a>
-<span class="note">Prefer to talk it through? Call <a data-tel href="#offer"><span data-phone></span></a>.</span>
+<span class="note">Prefer to talk it through? Call <a href="tel:+13092716949">(309) 271-6949</a>.</span>
 <p style="max-width:720px;margin:28px auto 0;font-size:14.5px;color:var(--muted);text-align:center;">What you provide: access for a quick walk-through, and your usual seller documents at closing. Once you accept an offer, we put down earnest money as a good-faith deposit, and the title company handles the title work, escrow, and the closing. You can say no at any point before you sign.</p>
 </div>
 </div>
@@ -635,10 +635,11 @@
 <div class="section-head on-dark"><div class="eyebrow on-dark">Selling in Pekin</div><h2>What&rsquo;s Different About Selling Here</h2><p>Pekin and Tazewell County have their own realities. Here&rsquo;s what homeowners here often run into.</p></div>
 <div class="factors-grid">
 <div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path></svg></div><h3>Older Housing Stock</h3><p>Many Pekin homes were built decades ago. Buyers commonly flag aging roofs, foundations, and outdated electrical and plumbing. A cash offer accounts for those instead of asking you to fix them first.</p></div>
-<div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M12 3v18M5 7l7-4 7 4M4 21h16"></path><path d="M8 11h.01M12 11h.01M16 11h.01"></path></svg></div><h3>Judicial Foreclosure</h3><p>Illinois is a judicial foreclosure state &mdash; the lender files in circuit court, and the process typically runs 12&ndash;15 months. If you&rsquo;re behind, a cash sale can be a way to settle the loan and move on before it plays out.</p></div>
-<div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"></path></svg></div><h3>Inherited Houses &amp; Probate</h3><p>An inherited home in Illinois goes through probate at the Tazewell County Courthouse in Pekin, often 6&ndash;12 months. We can help you understand the timeline and buy once title is clear.</p></div>
-<div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11"></path><path d="M8 21v-7h8v7"></path></svg></div><h3>Tired Landlords</h3><p>Illinois eviction timelines stretch from a 5-day nonpayment notice to 30&ndash;60 days or more for a contested case. We buy rental properties with tenants in place, so you can exit without an eviction.</p></div>
+<div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M12 3v18M5 7l7-4 7 4M4 21h16"></path><path d="M8 11h.01M12 11h.01M16 11h.01"></path></svg></div><h3>Judicial Foreclosure</h3><p>Illinois is a judicial foreclosure state &mdash; the lender files in circuit court, and the process can take many months to a year or more. If you&rsquo;re behind, a cash sale can be a way to settle the loan and move on before it plays out.</p></div>
+<div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"></path></svg></div><h3>Inherited Houses &amp; Probate</h3><p>An inherited home in Illinois goes through probate at the Tazewell County Courthouse in Pekin, which can take many months to a year or more. We can help you understand the timeline and buy once title is clear.</p></div>
+<div class="factor-card"><div class="factor-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11"></path><path d="M8 21v-7h8v7"></path></svg></div><h3>Tired Landlords</h3><p>Illinois evictions can be slow &mdash; a contested case can take many months to a year or more. We buy rental properties with tenants in place, so you can sell with tenants in place rather than work through an eviction.</p></div>
 </div>
+<p style="text-align:center;font-size:13px;color:rgba(255,255,255,0.55);margin-top:28px;">General information, not legal advice.</p>
 </div>
 </section>
 
@@ -667,7 +668,7 @@
 <div class="recent-card"><h3 class="recent-town">East Peoria, IL</h3><p class="recent-type">2-bedroom, 1-bath single-family home</p><div class="recent-close">Closed in 22 days</div></div>
 <div class="recent-card"><h3 class="recent-town">Washington, IL</h3><p class="recent-type">2-bedroom, 1-bath single-family home</p><div class="recent-close">Closed in 43 days</div></div>
 </div>
-<p class="recent-note">Home counts and closing timelines reflect our actual purchases. Every home and every seller is different, so your timeline may vary.</p>
+<p class="recent-note">Close in as little as 7 days, or on the date you choose. Most sellers pick 2&ndash;6 weeks out. Home counts and closing timelines reflect our actual purchases &mdash; every home and every seller is different, so your timeline may vary.</p>
 </div>
 </section>
 
@@ -678,7 +679,7 @@
 -->
 <section class="reviews-section section-pad" id="reviews">
 <div class="container">
-<div class="section-head"><div class="eyebrow">What Sellers Say</div><h2>Real Reviews, in Their Own Words</h2><p>Experiences shared on Google by people who sold to TruOffer.</p></div>
+<div class="section-head"><div class="eyebrow">What Sellers Say</div><h2>What sellers say about TruOffer, the team behind Pekin House Buyers</h2><p>Experiences shared on Google by people who sold to TruOffer.</p></div>
 <div class="reviews-grid">
 <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">&ldquo;Excellent company to work with. They helped through the entire process to relieve any anxiety and help everything go as smooth as possible. Thank you!&rdquo;</p><div class="review-footer"><div class="review-avatar">B</div><div><div class="review-name">Brenda C.</div><div class="review-deal">Google review</div></div></div></div>
 <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">&ldquo;Great to work with, communicative, and transparent&rdquo;</p><div class="review-footer"><div class="review-avatar">A</div><div><div class="review-name">Asad A.</div><div class="review-deal">Google review</div></div></div></div>
@@ -697,7 +698,7 @@
 <tbody>
 <tr><th scope="row">Commission</th><td class="col-alt">$0 &mdash; no agent commissions</td><td>Typically 5&ndash;6% of the sale price</td></tr>
 <tr><th scope="row">Repairs</th><td class="col-alt">None &mdash; we buy as-is</td><td>Often expected to repair and stage</td></tr>
-<tr><th scope="row">Showings &amp; open houses</th><td class="col-alt">None &mdash; you sell directly to us</td><td>Showings and open houses to find a buyer</td></tr>
+<tr><th scope="row">Showings &amp; open houses</th><td class="col-alt">One quick walkthrough</td><td>Showings and open houses to find a buyer</td></tr>
 <tr><th scope="row">Closing costs</th><td class="col-alt">We cover them</td><td>Seller typically pays some</td></tr>
 <tr><th scope="row">Time to close</th><td class="col-alt">As little as 7 days</td><td>Often 30&ndash;90+ days</td></tr>
 <tr><th scope="row">Certainty</th><td class="col-alt">Direct offer, no financing contingency</td><td>Depends on the buyer&rsquo;s financing</td></tr>
@@ -716,7 +717,7 @@
 <ol class="calc-steps">
 <li><span class="step-num">1</span><div><h3>After-repair value (ARV)</h3><p>What your house would sell for after it&rsquo;s fully fixed up &mdash; based on comparable recent sales nearby.</p></div></li>
 <li><span class="step-num">2</span><div><h3>Minus repair costs</h3><p>An estimate of what it would cost to bring the home to that finished condition &mdash; roof, systems, cosmetic work, and holding costs.</p></div></li>
-<li><span class="step-num">3</span><div><h3>Minus our costs</h3><p>Our closing costs, holding costs, and a fair margin for taking on the work and risk.</p></div></li>
+<li><span class="step-num">3</span><div><h3>Minus our costs</h3><p>Our resale and holding costs, plus a fair margin for taking on the work and risk.</p></div></li>
 <li><span class="step-num">4</span><div><h3>Your cash offer</h3><p>What&rsquo;s left is the cash offer &mdash; the amount you&rsquo;d receive, with no fees and no commissions taken out.</p></div></li>
 </ol>
 </div>
@@ -725,7 +726,7 @@
 <h3>An Illustrated Example</h3>
 <div class="calc-line"><span class="lbl">After-repair value (ARV)</span><span class="val">$160,000</span></div>
 <div class="calc-line"><span class="lbl">&minus; Estimated repairs</span><span class="val">&minus;$30,000</span></div>
-<div class="calc-line"><span class="lbl">&minus; Our costs &amp; margin</span><span class="val">&minus;$25,000</span></div>
+<div class="calc-line"><span class="lbl">&minus; Our resale/holding costs and margin</span><span class="val">&minus;$25,000</span></div>
 <div class="calc-line total"><span class="lbl">Cash offer</span><span class="val">$105,000</span></div>
 <p class="calc-disclaimer">This is a simplified illustration. Actual numbers depend on your home&rsquo;s condition, its location, and the local market &mdash; every house is different.</p>
 </div>
@@ -744,7 +745,7 @@
 <p>We&rsquo;ve bought more than 100 homes, and we treat every seller the same way: a clear offer, an honest conversation, and a closing date that works for you. You decide where to go from there &mdash; and you can say no at any point.</p>
 <div class="about-person">
 <div class="person-icon">MT</div>
-<div><div class="person-name">Michael Thompson</div><div class="person-role">Acquisitions Manager, TruOffer</div><a class="person-phone" data-tel2 href="#offer"><span data-phone2></span></a></div>
+<div><div class="person-name">Michael Thompson</div><div class="person-role">Acquisitions Manager, TruOffer</div><a class="person-phone" href="tel:+13093600095">(309) 360-0095</a></div>
 </div>
 </div>
 </div>
@@ -790,7 +791,7 @@
 <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How fast can we close?<svg viewbox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button><div class="faq-a"><p>We can close in as little as 7 days. Need more time? You choose a closing date that works for you.</p></div></div>
 <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens if I change my mind?<svg viewbox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button><div class="faq-a"><p>You can say no at any point. Requesting an offer is free, and nothing obligates you to sell until you sign a contract and close.</p></div></div>
 <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are there any fees or commissions?<svg viewbox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button><div class="faq-a"><p>No fees and no agent commissions when you sell to us. We cover the closing costs, too.</p></div></div>
-<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I get started?<svg viewbox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button><div class="faq-a"><p>Fill out the form on this page or call <a data-tel href="#offer" style="color:var(--red);font-weight:700"><span data-phone></span></a> with a few details about your house, and we&rsquo;ll follow up with a no-obligation cash offer.</p></div></div>
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I get started?<svg viewbox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button><div class="faq-a"><p>Fill out the form on this page or call <a href="tel:+13092716949" style="color:var(--red);font-weight:700">(309) 271-6949</a> with a few details about your house, and we&rsquo;ll follow up with a no-obligation cash offer.</p></div></div>
 </div>
 </div>
 </section>
@@ -813,7 +814,7 @@
 <h2>Ready to Sell? <em>Get Your Offer Today.</em></h2>
 <p>No fees. No repairs. No obligation. Get a fair cash offer and close in as little as 7 days.</p>
 <div class="cta-band-btns"><a class="btn btn-red" href="#offer">Get My Cash Offer</a></div>
-<a class="cta-band-phone" data-tel href="#offer"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span data-phone></span></a>
+<a class="cta-band-phone" href="tel:+13092716949"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(309) 271-6949</a>
 <span class="cta-note">No fees &middot; No obligation &middot; No pressure</span>
 </div>
 </section>
@@ -826,7 +827,7 @@
 <div class="footer-brand">
 <a class="logo" href="/"><div class="logo-icon" style="width:36px;height:36px"><svg fill="none" viewbox="0 0 44 44"><rect fill="#1E4B2E" height="44" rx="8" width="44"></rect><path d="M8 30 L22 16 L36 30" stroke="#C98A5B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M13 30 L13 34 L31 34 L31 30" stroke="#D9A878" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M10 34 L34 34" stroke="#9f5628" stroke-linecap="round" stroke-width="2"></path></svg></div><span>Pekin House Buyers</span></a>
 <p>We buy houses for cash in Tazewell County, Illinois. No fees, no agent commissions, no repairs. A local Tazewell County cash buyer.</p>
-<a class="footer-phone" data-tel href="#offer"><svg viewbox="0 0 24 24" style="width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span data-phone></span></a>
+<a class="footer-phone" href="tel:+13092716949"><svg viewbox="0 0 24 24" style="width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(309) 271-6949</a>
 </div>
 <div class="footer-col"><h3>Ways We Buy</h3><ul>
 <li><a href="/we-buy-houses/">We Buy Houses</a></li>
@@ -855,39 +856,13 @@
 </footer>
 
 <div class="mobile-cta-bar">
-<a class="mob-call" data-tel href="#offer"><span data-phone></span></a>
+<a class="mob-call" href="tel:+13092716949">(309) 271-6949</a>
 <a class="mob-estimate" href="#offer">Get Offer</a>
 </div>
 
-<!--
-  SINGLE SOURCE OF TRUTH FOR THE PHONE NUMBER.
-  Swap tracking numbers here — every phone link + label on the page is filled
-  from these two values via the populate script below.
-  (The LocalBusiness JSON-LD in <head> also carries the phone; update
-  "telephone" there when you change it.)
--->
-<script id="site-config">
-window.SITE_PHONE = '(309) 271-6949';
-window.SITE_PHONE_HREF = 'tel:+13092716949';
-window.SITE_PHONE_2 = '(309) 360-0095';       /* Michael Thompson, acquisitions */
-window.SITE_PHONE_2_HREF = 'tel:+13093600095';
-</script>
+<!-- Phone (309) 271-6949 is hardcoded in the HTML (topbar/header/hero/process/CTA/footer/mobile bar)
+     and in the LocalBusiness JSON-LD "telephone" field. Update both when swapping tracking numbers. -->
 <script>
-/* Populate phone links + labels from the single config above. */
-(function () {
-  var d = document;
-  function setPhone(sel, txt, href) {
-    d.querySelectorAll(sel).forEach(function (el) {
-      if (el.hasAttribute('data-phone')) el.textContent = txt;
-      if (el.hasAttribute('data-phone2')) el.textContent = window.SITE_PHONE_2;
-      if (el.hasAttribute('data-tel')) el.setAttribute('href', href);
-      if (el.hasAttribute('data-tel2')) el.setAttribute('href', window.SITE_PHONE_2_HREF);
-    });
-  }
-  setPhone('[data-phone], [data-tel]', window.SITE_PHONE, window.SITE_PHONE_HREF);
-  setPhone('[data-phone2], [data-tel2]', window.SITE_PHONE_2, window.SITE_PHONE_2_HREF);
-})();
-
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
 const toggle = document.getElementById('menu-toggle');
