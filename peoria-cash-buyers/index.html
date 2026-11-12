@@ -677,6 +677,23 @@ const overlay = document.getElementById('nav-overlay');
 toggle.addEventListener('click', () => { toggle.classList.toggle('active'); nav.classList.toggle('mobile-open'); overlay.classList.toggle('active'); });
 overlay.addEventListener('click', () => { toggle.classList.remove('active'); nav.classList.remove('mobile-open'); overlay.classList.remove('active'); });
 function toggleFaq(btn) { const item = btn.closest('.faq-item'); const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }
+async function submitLead(e) {
+  e.preventDefault();
+  const f = document.getElementById('lead-form');
+  const data = Object.fromEntries(new FormData(f).entries());
+  const status = document.getElementById('form-status');
+  status.style.display = 'block';
+  status.textContent = 'Submitting…';
+  try {
+    const r = await fetch('/.netlify/functions/submit-lead', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+    const j = await r.json();
+    if (r.ok) { f.reset(); status.textContent = 'Thank you — we received your info and will reach out shortly.'; }
+    else { status.textContent = 'Something went wrong. Please try again or email us directly.'; }
+  } catch (err) {
+    status.textContent = 'Something went wrong. Please try again in a moment.';
+  }
+  return false;
+}
 </script>
 </body>
 </html>
